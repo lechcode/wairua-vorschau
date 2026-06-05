@@ -23,12 +23,13 @@ Schreib Claude Code, was du möchtest – z. B.:
 Claude Code macht die Änderung und zeigt dir das Ergebnis in einer Vorschau.
 
 ## 4) Änderungen ins Netz stellen (live)
-Deine Seite veröffentlicht sich automatisch über **GitHub**. Damit *deine* Änderungen live gehen, brauchst du einmalig Zugang zum Projekt:
-- Erstelle dir ein **kostenloses GitHub-Konto** auf https://github.com (falls noch nicht vorhanden) und schick Lenny deinen Benutzernamen.
-- Lenny gibt dir dann Zugriff aufs Projekt (oder überträgt es dir ganz – kurz miteinander klären).
-- Danach sagst du Claude Code einfach **„veröffentliche meine Änderungen"** – in ~1 Minute ist es auf wairua-spirit.de live.
+Deine Seite veröffentlicht sich automatisch über **GitHub Pages**. Dein Zugang ist schon eingerichtet:
 
-> Bis das eingerichtet ist, kannst du **lokal** schon alles ändern und in der Vorschau ansehen – nur das „Live-Stellen" braucht den GitHub-Zugang.
+1. **Einladung annehmen:** Du hast (als GitHub-User `wairua-spirit`) eine Einladung zum Projekt bekommen – per E-Mail oder direkt hier: **https://github.com/ComingHomeMira/wairua-vorschau/invitations** → einmal auf **„Accept"** klicken.
+2. **Projekt holen:** Sag Claude Code: *„Klone https://github.com/ComingHomeMira/wairua-vorschau und öffne es."* → So arbeitest du direkt an der Live-Version. (Das ZIP ist nur deine Sicherheitskopie – fürs Live-Stellen arbeitest du am geklonten Ordner.)
+3. **Ändern & live stellen:** Änderung machen → Claude Code sagen *„veröffentliche meine Änderungen"* → in ~1 Minute ist es auf wairua-spirit.de live.
+
+> Lokal (auch aus dem ZIP) kannst du jederzeit alles ändern & in der Vorschau ansehen – nur das **Live-Stellen** läuft über den geklonten GitHub-Ordner.
 
 ## ⚠️ Drei Dinge beachten
 1. Die Datei **`CNAME` nicht löschen** – die verbindet deine Domain.
