@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<!--
+  Unterseite: "Dein Kanu-Partner – Im Fluss des Lebens" (Einzelbegleitung)
+  Teil des wairua-Redesigns · gleiche dunkle Bildsprache · Single-File.
+-->
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex, nofollow" />
+<title>Dein Kanu-Partner · wairua</title>
+<meta name="description" content="Dein Kanu-Partner – Im Fluss des Lebens. Eine Einzelbegleitung in der Natur: ein Tag, eine echte Kanutour, und der Weg zurück zu deinem inneren Kompass." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0c0e0b;--bg2:#11140e;--panel:#161a12;--bone:#f1eadf;--bone-dim:#cdc6b7;--muted:#988f7f;
+    --gold:#d8a85a;--gold-2:#e8c585;--moss:#8a9a6b;--clay:#bc8155;--line:rgba(241,234,223,.13);
+    --serif:"Cormorant Garamond",Georgia,serif;--sans:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+    --shadow:0 30px 70px -30px rgba(0,0,0,.8);
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{background:var(--bg);color:var(--bone);font-family:var(--sans);line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+  h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.06;letter-spacing:-.01em;}
+  a{color:inherit;text-decoration:none;}
+  img{max-width:100%;display:block;}
+  .wrap{width:min(1100px,92vw);margin-inline:auto;}
+  .eyebrow{font-size:12px;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);font-weight:500;}
+  em{font-style:italic;}
+  .koru{display:inline-block;-webkit-mask:url('assets/logo.png') center/contain no-repeat;mask:url('assets/logo.png') center/contain no-repeat;background:currentColor;}
+  .grain{position:fixed;inset:0;z-index:9998;pointer-events:none;opacity:.05;mix-blend-mode:soft-light;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");}
+
+  nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;
+    padding:20px clamp(20px,5vw,56px);transition:background .5s,backdrop-filter .5s,padding .5s,border-color .5s;border-bottom:1px solid transparent;}
+  nav.scrolled{background:rgba(12,14,11,.72);backdrop-filter:saturate(150%) blur(16px);-webkit-backdrop-filter:saturate(150%) blur(16px);border-bottom:1px solid var(--line);padding-top:13px;padding-bottom:13px;}
+  nav .brand{display:flex;align-items:center;gap:11px;font-family:var(--serif);font-size:24px;font-weight:600;letter-spacing:.02em;}
+  nav .brand .koru{width:26px;height:26px;color:var(--bone);}
+  nav .links{display:flex;gap:clamp(16px,2.4vw,30px);align-items:center;font-size:14px;color:var(--bone-dim);}
+  nav .links a:hover{color:var(--bone);}
+  nav .links a.cta{border:1px solid var(--gold);color:var(--gold-2);padding:9px 20px;border-radius:999px;transition:background .3s,color .3s;}
+  nav .links a.cta:hover{background:var(--gold);color:#1a140a;}
+
+  .btn{display:inline-flex;align-items:center;gap:9px;font-size:15px;font-weight:500;padding:15px 30px;border-radius:999px;cursor:pointer;border:1px solid transparent;transition:transform .25s,box-shadow .25s,background .25s,color .25s,border-color .25s;}
+  .btn-primary{background:var(--gold);color:#1a140a;box-shadow:0 16px 40px -16px rgba(216,168,90,.7);}
+  .btn-primary:hover{transform:translateY(-2px);background:var(--gold-2);box-shadow:0 22px 50px -16px rgba(216,168,90,.85);}
+  .btn-ghost{border-color:var(--line);color:var(--bone);}
+  .btn-ghost:hover{border-color:var(--gold);color:var(--gold-2);}
+
+  header.hero{position:relative;min-height:92svh;display:flex;align-items:flex-end;overflow:hidden;}
+  .hero-bg{position:absolute;inset:0;z-index:0;}
+  .hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 45%;transform:scale(1.05);animation:kb 26s ease-in-out infinite alternate;}
+  @keyframes kb{0%{transform:scale(1.05);}100%{transform:scale(1.15);}}
+  .hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,14,11,.5) 0%,rgba(12,14,11,.05) 35%,rgba(12,14,11,.5) 65%,rgba(12,14,11,.97) 100%);}
+  .hero-koru{position:absolute;z-index:1;top:42%;left:50%;width:min(70vw,600px);height:min(70vw,600px);transform:translate(-50%,-50%);color:var(--gold);opacity:.07;animation:spin 120s linear infinite;}
+  @keyframes spin{to{transform:translate(-50%,-50%) rotate(360deg);}}
+  .hero-inner{position:relative;z-index:2;padding:0 0 clamp(56px,10vh,120px);}
+  .hero .back{display:inline-flex;align-items:center;gap:7px;font-size:13px;letter-spacing:.04em;color:var(--bone-dim);margin-bottom:22px;opacity:0;animation:rise .9s ease .1s forwards;}
+  .hero .back:hover{color:var(--gold-2);}
+  .hero h1{font-size:clamp(46px,8.5vw,104px);font-weight:400;margin:14px 0 18px;opacity:0;animation:rise 1.1s ease .35s forwards;}
+  .hero h1 em{color:var(--gold-2);}
+  .hero .sub{font-family:var(--serif);font-style:italic;font-size:clamp(22px,3vw,34px);color:var(--bone);max-width:24ch;opacity:0;animation:rise 1.1s ease .55s forwards;}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:32px;opacity:0;animation:rise 1.1s ease .75s forwards;}
+  @keyframes rise{from{opacity:0;transform:translateY(28px);}to{opacity:1;transform:none;}}
+
+  section{position:relative;padding:clamp(72px,12vw,140px) 0;}
+  .quoteband{background:var(--bg2);text-align:center;}
+  .quoteband .q{font-family:var(--serif);font-style:italic;font-size:clamp(26px,4.4vw,50px);font-weight:400;line-height:1.2;max-width:18ch;margin:0 auto;color:var(--bone);}
+  .quoteband .q em{color:var(--gold-2);}
+
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(34px,5vw,72px);align-items:center;}
+  .split .visual{position:relative;border-radius:18px;overflow:hidden;aspect-ratio:4/5;box-shadow:var(--shadow);}
+  .split .visual img{width:100%;height:100%;object-fit:cover;}
+  .split .visual .koru{position:absolute;right:18px;bottom:18px;width:50px;height:50px;color:var(--gold);opacity:.85;}
+  .split h2{font-size:clamp(30px,4.4vw,52px);font-weight:400;margin:16px 0 20px;}
+  .split h2 em{color:var(--gold-2);}
+  .split p{color:var(--bone-dim);font-size:16.5px;margin-bottom:16px;}
+
+  .sec-head{max-width:640px;margin:0 auto 56px;text-align:center;}
+  .sec-head h2{font-size:clamp(32px,5vw,56px);font-weight:400;margin:14px 0 16px;}
+  .sec-head h2 em{color:var(--gold-2);}
+  .sec-head p{color:var(--bone-dim);font-size:17px;}
+
+  .aspects{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;counter-reset:a;}
+  .aspect{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:34px 28px;transition:transform .4s,border-color .4s;}
+  .aspect:hover{transform:translateY(-6px);border-color:rgba(216,168,90,.45);}
+  .aspect .n{counter-increment:a;content:counter(a);font-family:var(--serif);font-size:46px;color:var(--gold);opacity:.85;line-height:1;}
+  .aspect .n::before{content:"0" counter(a);}
+  .aspect h3{font-size:24px;font-weight:500;margin:10px 0 10px;}
+  .aspect p{font-size:15px;color:var(--bone-dim);}
+
+  .forwhom{background:var(--bg2);}
+  .forwhom .inner{max-width:760px;margin:0 auto;text-align:center;}
+  .forwhom ul{list-style:none;display:flex;flex-direction:column;gap:14px;margin-top:30px;text-align:left;max-width:560px;margin-inline:auto;}
+  .forwhom li{display:flex;gap:14px;align-items:flex-start;font-size:16.5px;color:var(--bone-dim);}
+  .forwhom li .koru{flex:none;width:20px;height:20px;color:var(--gold);margin-top:5px;}
+
+  .ablauf-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:10px;}
+  .ablauf-grid figure{border-radius:16px;overflow:hidden;aspect-ratio:5/4;}
+  .ablauf-grid img{width:100%;height:100%;object-fit:cover;transition:transform 1.1s cubic-bezier(.2,.7,.2,1);}
+  .ablauf-grid figure:hover img{transform:scale(1.06);}
+
+  .cta-final{position:relative;text-align:center;overflow:hidden;}
+  .cta-final .koru-wm{position:absolute;top:50%;left:50%;width:min(78vw,560px);height:min(78vw,560px);transform:translate(-50%,-50%);color:var(--gold);opacity:.06;animation:spin 140s linear infinite;}
+  .cta-final .inner{position:relative;z-index:2;max-width:640px;margin:0 auto;}
+  .cta-final h2{font-size:clamp(32px,5.5vw,62px);font-weight:400;margin:18px 0 18px;}
+  .cta-final h2 em{color:var(--gold-2);}
+  .cta-final p{color:var(--bone-dim);font-size:18px;margin-bottom:32px;}
+
+  footer{border-top:1px solid var(--line);padding:48px 0 30px;text-align:center;}
+  footer .brand{display:inline-flex;align-items:center;gap:11px;font-family:var(--serif);font-size:24px;font-weight:600;margin-bottom:10px;}
+  footer .brand .koru{width:24px;height:24px;color:var(--bone);}
+  footer p{font-size:13px;color:var(--muted);}
+  footer a{color:var(--gold-2);}
+
+  .reveal{opacity:0;transform:translateY(32px);transition:opacity 1s ease,transform 1s cubic-bezier(.2,.7,.2,1);}
+  .reveal.in{opacity:1;transform:none;}
+  .reveal.d1{transition-delay:.1s;}.reveal.d2{transition-delay:.2s;}
+
+  @media(max-width:900px){
+    .split{grid-template-columns:1fr;}.split .visual{order:-1;aspect-ratio:4/4;max-height:60vh;}
+    .aspects{grid-template-columns:1fr;}
+  }
+  @media(max-width:540px){.ablauf-grid{grid-template-columns:1fr;}}
+  @media(prefers-reduced-motion:reduce){*{animation:none !important;}.reveal{opacity:1;transform:none;}}
+</style>
+</head>
+<body>
+  <div class="grain"></div>
+
+  <nav id="nav">
+    <a href="index.html" class="brand"><span class="koru"></span>wairua</a>
+    <div class="links">
+      <a href="index.html">Startseite</a>
+      <a href="https://wa.me/491602302132" class="cta">Schreib mir</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-bg"><img src="assets/begleitung-1.jpg" alt="Kanutour auf dem Fluss" /></div>
+    <span class="koru hero-koru"></span>
+    <div class="wrap hero-inner">
+      <a href="index.html" class="back">← zurück zu wairua</a>
+      <div class="eyebrow">Einzelbegleitung in der Natur</div>
+      <h1>Dein <em>Kanu-Partner</em></h1>
+      <div class="sub">Im Fluss des Lebens.</div>
+      <div class="hero-cta">
+        <a href="#kontakt" class="btn btn-primary">Lass uns sprechen →</a>
+        <a href="#worum" class="btn btn-ghost">So läuft ein Tag</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="quoteband">
+    <div class="wrap">
+      <div class="q reveal">„Wir sitzen in einem Boot und blicken <em>gemeinsam nach vorne</em>."</div>
+    </div>
+  </section>
+
+  <section id="worum">
+    <div class="wrap split">
+      <div class="visual reveal">
+        <img src="assets/begleitung-3.jpg" alt="Michael am Wasser mit Kanu" loading="lazy" />
+        <span class="koru"></span>
+      </div>
+      <div class="reveal d1">
+        <div class="eyebrow">Worum es geht</div>
+        <h2>Ein Tag, ein Fluss, <em>eine neue Richtung</em>.</h2>
+        <p>Im Rahmen meiner Einzelbegleitung gestalten wir gemeinsam einen Tag draußen in der Natur. Eine echte Kanutour aufs Wasser gehört dazu – und vor allem Raum für das, was in dir gerade Bewegung sucht.</p>
+        <p>Manchmal stecken wir fest. Im Kopf, im Alltag, in alten Mustern. Auf dem Wasser wird vieles wieder leicht: Du kommst zur Ruhe, spürst dich – und findest Schritt für Schritt zurück zu dir.</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="eyebrow">Drei Bewegungen</div>
+        <h2>Was wir <em>gemeinsam finden</em></h2>
+      </div>
+      <div class="aspects">
+        <div class="aspect reveal"><div class="n"></div><h3>Wiederverbindung</h3><p>Zurück in Verbindung – mit der Natur und mit deinem inneren Kompass. Dort, wo du wieder weißt, was wirklich zählt.</p></div>
+        <div class="aspect reveal d1"><div class="n"></div><h3>Blockaden spüren</h3><p>Bewusst wahrnehmen, was dich festhält. Nicht wegdenken, sondern fühlen – und dadurch lösen.</p></div>
+        <div class="aspect reveal d2"><div class="n"></div><h3>Richtung finden</h3><p>Eine Lebensrichtung, die sich stimmig anfühlt. Nicht von außen gesetzt – aus dir heraus.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="forwhom">
+    <div class="wrap inner">
+      <div class="eyebrow reveal">Für wen</div>
+      <h2 class="reveal d1" style="font-family:var(--serif);font-weight:400;font-size:clamp(30px,4.6vw,52px);margin:14px 0 6px;">Wenn du dich <em style="color:var(--gold-2)">festgefahren</em> fühlst</h2>
+      <ul class="reveal d2">
+        <li><span class="koru"></span><span>Du stehst an einem Wendepunkt und suchst Klarheit für den nächsten Schritt.</span></li>
+        <li><span class="koru"></span><span>Du funktionierst – aber spürst, dass etwas fehlt. Mehr Sein, weniger Tun.</span></li>
+        <li><span class="koru"></span><span>Du sehnst dich nach echter Verbindung: zu dir, zur Natur, zum Leben.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="eyebrow">In der Natur</div>
+        <h2>So kann ein <em>Tag aussehen</em></h2>
+        <p>Kein starres Programm – wir folgen dem, was dran ist. Kanu, Stille, Bewegung, Gespräch.</p>
+      </div>
+      <div class="ablauf-grid reveal">
+        <figure><img src="assets/begleitung-2.jpg" alt="Im Kreis am Wasser" loading="lazy" /></figure>
+        <figure><img src="assets/begleitung-4.jpg" alt="Begleitung mit den Händen" loading="lazy" /></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="quoteband">
+    <div class="wrap">
+      <div class="q reveal">„Du musst den Fluss nicht beherrschen – du darfst lernen, <em>mit ihm zu fließen</em>."</div>
+    </div>
+  </section>
+
+  <section class="cta-final" id="kontakt">
+    <span class="koru koru-wm"></span>
+    <div class="wrap inner">
+      <div class="eyebrow reveal">Weniger Tun – mehr Sein</div>
+      <h2 class="reveal d1">Bereit, in deinen <em>Fluss</em> zu kommen?</h2>
+      <p class="reveal d2">Schreib mir einfach – erzähl mir, wo du gerade stehst. Wir finden gemeinsam heraus, ob ein Tag auf dem Wasser für dich der richtige nächste Schritt ist.</p>
+      <div class="hero-cta reveal d2" style="justify-content:center;display:flex;gap:14px;flex-wrap:wrap;">
+        <a href="https://wa.me/491602302132" class="btn btn-primary">Auf WhatsApp schreiben</a>
+        <a href="index.html" class="btn btn-ghost">← zurück zu wairua</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <div class="brand"><span class="koru"></span>wairua</div>
+      <p>Dein Kanu-Partner · Im Fluss des Lebens · <a href="index.html">wairua.spirit</a></p>
+      <p style="margin-top:8px;opacity:.7;">Neugestaltung als Vorschau · Entwurf</p>
+    </div>
+  </footer>
+
+  <script>
+    const nav=document.getElementById('nav');
+    addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>30),{passive:true});
+    const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.14});
+    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  </script>
+</body>
+</html>
