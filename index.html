@@ -144,18 +144,18 @@
   .about .ueber-quote-src{color:var(--gold-2);font-family:var(--sans);font-size:13px;letter-spacing:.18em;text-transform:uppercase;margin-bottom:24px;}
   .tags{display:flex;flex-wrap:wrap;gap:9px;margin-top:26px;}
   .tags span{font-size:12.5px;letter-spacing:.04em;color:var(--bone-dim);border:1px solid var(--line);border-radius:999px;padding:7px 15px;}
-  .about-video{margin-top:clamp(40px,6vw,72px);max-width:780px;margin-inline:auto;text-align:center;}
+  .about-video{margin-top:clamp(36px,5vw,60px);max-width:600px;margin-inline:auto;text-align:center;}
   .video-facade{position:relative;cursor:pointer;border-radius:16px;overflow:hidden;aspect-ratio:16/9;box-shadow:var(--shadow);background:var(--panel);}
   .video-facade img{width:100%;height:100%;object-fit:cover;transition:transform 1.1s cubic-bezier(.2,.7,.2,1),filter .4s;}
   .video-facade::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,12,9,.12),rgba(10,12,9,.5));transition:opacity .4s;}
   .video-facade:hover img{transform:scale(1.04);}
-  .video-facade .play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:84px;height:84px;border-radius:50%;background:rgba(216,168,90,.93);z-index:2;box-shadow:0 16px 40px -12px rgba(0,0,0,.6);transition:transform .3s,background .3s;}
-  .video-facade .play::before{content:"";position:absolute;top:50%;left:54%;transform:translate(-50%,-50%);border-style:solid;border-width:14px 0 14px 24px;border-color:transparent transparent transparent #1a140a;}
+  .video-facade .play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:72px;height:72px;border-radius:50%;background:rgba(216,168,90,.93);z-index:2;box-shadow:0 16px 40px -12px rgba(0,0,0,.6);transition:transform .3s,background .3s;}
+  .video-facade .play::before{content:"";position:absolute;top:50%;left:54%;transform:translate(-50%,-50%);border-style:solid;border-width:12px 0 12px 20px;border-color:transparent transparent transparent #1a140a;}
   .video-facade:hover .play{transform:translate(-50%,-50%) scale(1.08);background:var(--gold-2);}
   .video-facade.playing{cursor:default;}
   .video-facade.playing::after,.video-facade.playing .play{display:none;}
   .video-facade iframe{position:absolute;inset:0;width:100%;height:100%;border:0;}
-  .about-video .video-cap{margin-top:18px;font-family:var(--serif);font-style:italic;font-size:clamp(18px,2.2vw,24px);color:var(--gold-2);}
+  .about-video .video-cap{margin:0 0 16px;font-family:var(--serif);font-style:italic;font-size:clamp(17px,2vw,22px);color:var(--gold-2);line-height:1.3;}
 
   /* angebote / kanu */
   .offers{background:var(--bg2);}
@@ -358,11 +358,11 @@
     </div>
     <div class="wrap">
       <div class="about-video reveal">
+        <p class="video-cap">Mehr über mich und meinen Weg zur Naturverbindung</p>
         <div class="video-facade" data-id="Oycoo_5ajwk" role="button" tabindex="0" aria-label="Video über Michael abspielen">
           <img src="assets/Bild1.jpg" alt="Michael im Interview – Ausschnitt aus dem Video" loading="lazy" />
           <span class="play" aria-hidden="true"></span>
         </div>
-        <p class="video-cap">Mehr über mich und meinen Weg zur Naturverbindung</p>
       </div>
     </div>
   </section>
