@@ -21,7 +21,7 @@ Statische Website, **eine Datei pro Seite** — kein Build-System, kein npm, kei
 `index.html` einfach im Browser öffnen — oder Claude Code bitten, eine lokale Vorschau zu starten.
 
 ## Live stellen (deployen)
-Die Seite liegt im GitHub-Repo **https://github.com/ComingHomeMira/wairua-vorschau** und veröffentlicht sich **automatisch via GitHub Pages** auf wairua-spirit.de.
+Die Seite liegt im GitHub-Repo **https://github.com/Lechcode/wairua-vorschau** und veröffentlicht sich **automatisch via GitHub Pages** auf wairua-spirit.de.
 → Änderungen live bringen: **committen + `git push` auf `main`**. GitHub baut in ~1 Minute neu.
 
 ## Domain & E-Mail (läuft bereits – nur zur Info)
