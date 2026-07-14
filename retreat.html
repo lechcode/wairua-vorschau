@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<!--
+  Unterseite: "Winter-Retreat für Männer" (Nordsee, Dezember 2026)
+  Teil des Wairua.Spirit-Designs · gleiche dunkle Bildsprache · Single-File.
+  Entwurf – noch nicht in die Haupt-Navigation eingebunden.
+-->
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex, nofollow" />
+<title>Winter-Retreat für Männer an der Nordsee · Dez 2026 | Wairua.Spirit</title>
+<meta name="description" content="Winter-Retreat für Männer an der Nordsee, Dezember 2026. Fünf Tage Einkehr: Kakaozeremonie, Breathwork, Lagerfeuer, Natur & echte Verbindung im Seminarhaus Alte Schule." />
+<link rel="canonical" href="https://wairua-spirit.de/retreat.html" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Winter-Retreat für Männer an der Nordsee · Dez 2026" />
+<meta property="og:description" content="Fünf Tage Einkehr in der dunklen Jahreszeit: Kakaozeremonie, Breathwork, Lagerfeuer, Natur & echte Verbindung – an der Nordsee." />
+<meta property="og:image" content="https://wairua-spirit.de/assets/retreat-feuerkreis.jpg" />
+<meta property="og:url" content="https://wairua-spirit.de/retreat.html" />
+<meta property="og:locale" content="de_DE" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="stylesheet" href="assets/fonts.css" />
+<style>
+  :root{
+    --bg:#0c0e0b;--bg2:#11140e;--panel:#161a12;--bone:#f1eadf;--bone-dim:#cdc6b7;--muted:#988f7f;
+    --gold:#d8a85a;--gold-2:#e8c585;--moss:#8a9a6b;--clay:#bc8155;--ember:#e0873f;
+    --line:rgba(241,234,223,.13);
+    --serif:"Cormorant Garamond",Georgia,"Times New Roman",serif;
+    --sans:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+    --shadow:0 30px 70px -30px rgba(0,0,0,.8);
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{background:var(--bg);color:var(--bone);font-family:var(--sans);line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+  h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.08;letter-spacing:-.01em;}
+  a{color:inherit;text-decoration:none;}
+  img{max-width:100%;display:block;}
+  .wrap{width:min(1180px,92vw);margin-inline:auto;}
+  .narrow{max-width:760px;margin-inline:auto;}
+  .eyebrow{font-size:12px;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);font-weight:500;}
+  em{font-style:italic;}
+  .koru{display:inline-block;-webkit-mask:url('assets/logo.png') center/contain no-repeat;mask:url('assets/logo.png') center/contain no-repeat;background:currentColor;}
+  .grain{position:fixed;inset:0;z-index:9998;pointer-events:none;opacity:.05;mix-blend-mode:soft-light;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");}
+
+  nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;
+    padding:20px clamp(20px,5vw,56px);transition:background .5s,backdrop-filter .5s,padding .5s,border-color .5s;border-bottom:1px solid transparent;}
+  nav.scrolled{background:rgba(12,14,11,.72);backdrop-filter:saturate(150%) blur(16px);-webkit-backdrop-filter:saturate(150%) blur(16px);border-bottom:1px solid var(--line);padding-top:13px;padding-bottom:13px;}
+  nav .brand{display:flex;align-items:center;gap:11px;font-family:var(--serif);font-size:24px;font-weight:600;letter-spacing:.02em;}
+  nav .brand .brand-logo{width:32px;height:32px;object-fit:contain;filter:drop-shadow(0 1px 3px rgba(0,0,0,.5));}
+  nav .links{display:flex;gap:clamp(16px,2.4vw,30px);align-items:center;font-size:14px;color:var(--bone-dim);}
+  nav .links a:hover{color:var(--bone);}
+  nav .links a.cta{border:1px solid var(--gold);color:var(--gold-2);padding:9px 20px;border-radius:999px;transition:background .3s,color .3s;}
+  nav .links a.cta:hover{background:var(--gold);color:#1a140a;}
+
+  .btn{display:inline-flex;align-items:center;gap:9px;font-size:15px;font-weight:500;padding:15px 30px;border-radius:999px;cursor:pointer;border:1px solid transparent;transition:transform .25s,box-shadow .25s,background .25s,color .25s,border-color .25s;}
+  .btn-primary{background:var(--gold);color:#1a140a;box-shadow:0 16px 40px -16px rgba(216,168,90,.7);}
+  .btn-primary:hover{transform:translateY(-2px);background:var(--gold-2);box-shadow:0 22px 50px -16px rgba(216,168,90,.85);}
+  .btn-ghost{border-color:var(--line);color:var(--bone);}
+  .btn-ghost:hover{border-color:var(--gold);color:var(--gold-2);}
+
+  /* hero */
+  header.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;overflow:hidden;padding-top:clamp(96px,14vh,150px);}
+  .hero-bg{position:absolute;inset:0;z-index:0;}
+  .hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 50%;transform:scale(1.05);animation:kb 30s ease-in-out infinite alternate;}
+  @keyframes kb{0%{transform:scale(1.05);}100%{transform:scale(1.15);}}
+  .hero-bg::after{content:"";position:absolute;inset:0;
+    background:linear-gradient(180deg,rgba(12,10,8,.6) 0%,rgba(12,10,8,.15) 30%,rgba(12,10,8,.55) 62%,rgba(10,8,6,.97) 100%);}
+  .hero-inner{position:relative;z-index:2;padding:0 0 clamp(56px,10vh,120px);text-shadow:0 2px 26px rgba(0,0,0,.6);}
+  .hero .back{display:inline-flex;align-items:center;gap:7px;font-size:13px;letter-spacing:.04em;color:var(--bone-dim);margin-bottom:22px;opacity:0;animation:rise .9s ease .1s forwards;}
+  .hero .back:hover{color:var(--gold-2);}
+  .hero h1{font-size:clamp(44px,8vw,100px);font-weight:400;margin:14px 0 20px;max-width:16ch;opacity:0;animation:rise 1.1s ease .35s forwards;}
+  .hero h1 em{color:var(--gold-2);}
+  .hero .sub{font-family:var(--serif);font-style:italic;font-size:clamp(21px,3vw,32px);color:var(--bone);max-width:26ch;opacity:0;animation:rise 1.1s ease .55s forwards;}
+  .hero .meta{display:flex;gap:26px;flex-wrap:wrap;margin-top:26px;font-size:14px;letter-spacing:.03em;color:var(--bone-dim);opacity:0;animation:rise 1.1s ease .7s forwards;}
+  .hero .meta b{color:var(--gold-2);font-weight:500;}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:32px;opacity:0;animation:rise 1.1s ease .85s forwards;}
+  @keyframes rise{from{opacity:0;transform:translateY(28px);}to{opacity:1;transform:none;}}
+
+  section{position:relative;padding:clamp(74px,12vw,140px) 0;}
+  .quoteband{background:var(--bg2);text-align:center;}
+  .quoteband .q{font-family:var(--serif);font-style:italic;font-size:clamp(26px,4.4vw,50px);font-weight:400;line-height:1.2;max-width:20ch;margin:0 auto;color:var(--bone);}
+  .quoteband .q em{color:var(--gold-2);}
+
+  .sec-head{max-width:680px;margin:0 auto clamp(44px,6vw,66px);text-align:center;}
+  .sec-head h2{font-size:clamp(32px,5vw,58px);font-weight:400;margin:14px 0 16px;}
+  .sec-head h2 em{color:var(--gold-2);}
+  .sec-head p{color:var(--bone-dim);font-size:17px;}
+
+  .lead-text p{color:var(--bone-dim);font-size:clamp(16px,1.9vw,19px);margin-bottom:18px;}
+  .lead-text p:last-child{margin-bottom:0;}
+  .lead-text em{color:var(--gold-2);font-style:italic;}
+
+  /* kernthemen */
+  .themen{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  .thema{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:32px 28px;transition:transform .4s,border-color .4s;}
+  .thema:hover{transform:translateY(-6px);border-color:rgba(216,168,90,.45);}
+  .thema .ic{width:34px;height:34px;color:var(--gold);margin-bottom:16px;}
+  .thema h3{font-size:23px;font-weight:500;margin-bottom:10px;}
+  .thema p{font-size:15px;color:var(--bone-dim);}
+
+  /* ort */
+  .ort{background:var(--bg2);}
+  .ort-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:190px;gap:14px;grid-auto-flow:dense;margin-top:8px;}
+  .ort-grid figure{position:relative;overflow:hidden;border-radius:14px;}
+  .ort-grid img{width:100%;height:100%;object-fit:cover;transition:transform 1.1s cubic-bezier(.2,.7,.2,1);}
+  .ort-grid figure:hover img{transform:scale(1.06);}
+  .ort-grid .big{grid-column:span 2;grid-row:span 2;}
+  .ort-grid .wide{grid-column:span 2;}
+  .ort-note{text-align:center;font-size:13px;color:var(--muted);margin-top:16px;}
+  .ort-note a{color:var(--gold-2);}
+
+  /* guides */
+  .guides-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(32px,5vw,64px);align-items:center;}
+  .guides-portraits{display:flex;justify-content:center;align-items:flex-start;padding-top:10px;}
+  .guides-portraits figure{position:relative;flex:none;width:56%;aspect-ratio:1/1;border-radius:16px;overflow:hidden;box-shadow:0 30px 60px -22px rgba(0,0,0,.85);border:3px solid var(--panel);background:var(--panel);}
+  .guides-portraits img{width:100%;height:100%;object-fit:cover;}
+  .guides-portraits figcaption{position:absolute;left:0;right:0;bottom:0;padding:24px 10px 11px;font-family:var(--serif);font-style:italic;font-size:16px;color:var(--bone);text-align:center;background:linear-gradient(transparent,rgba(8,7,5,.75));}
+  .guides-portraits .gp-1{z-index:1;}
+  .guides-portraits .gp-2{margin-left:-13%;margin-top:46px;z-index:2;}
+  .guides-body h2{font-size:clamp(30px,4.4vw,50px);font-weight:400;margin:14px 0 18px;}
+  .guides-body h2 em{color:var(--gold-2);}
+  .guides-body p{color:var(--bone-dim);font-size:16.5px;margin-bottom:16px;}
+  .guides-body .names{font-family:var(--serif);font-size:20px;color:var(--gold-2);font-style:italic;}
+
+  /* naturrituale */
+  .trio{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+  .trio figure{overflow:hidden;border-radius:14px;aspect-ratio:4/3;box-shadow:var(--shadow);}
+  .trio img{width:100%;height:100%;object-fit:cover;filter:saturate(.97);transition:transform 1.1s cubic-bezier(.2,.7,.2,1);}
+  .trio figure:hover img{transform:scale(1.06);}
+  /* feuer-band (Vollbild-Zäsur) */
+  .feuerband{position:relative;min-height:clamp(340px,55vh,560px);display:flex;align-items:center;justify-content:center;overflow:hidden;padding:0;text-align:center;}
+  .feuerband img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+  .feuerband::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,8,6,.5),rgba(10,8,6,.78));}
+  .feuerband .q{position:relative;z-index:2;font-family:var(--serif);font-style:italic;font-size:clamp(24px,4vw,44px);line-height:1.25;max-width:22ch;color:var(--bone);padding:0 24px;text-shadow:0 2px 20px rgba(0,0,0,.6);}
+  .feuerband .q em{color:var(--gold-2);}
+
+  /* essen */
+  .essen{position:relative;background:#0c0a08 url('assets/essen-buffet.jpg') center 42%/cover no-repeat;text-align:center;overflow:hidden;}
+  .essen::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,8,6,.58) 0%,rgba(10,8,6,.8) 55%,rgba(10,8,6,.92) 100%);}
+  .essen .inner{position:relative;z-index:2;max-width:720px;margin:0 auto;}
+  .essen h2,.essen .lead-text p{text-shadow:0 2px 18px rgba(0,0,0,.7);}
+  .essen .who{font-family:var(--serif);font-style:italic;font-size:clamp(20px,2.6vw,28px);color:var(--gold-2);margin-top:22px;text-shadow:0 2px 18px rgba(0,0,0,.7);}
+
+  /* details */
+  .details-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:8px;}
+  .detail{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:28px 26px;}
+  .detail .k{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:9px;}
+  .detail .v{font-family:var(--serif);font-size:clamp(22px,2.6vw,28px);line-height:1.2;}
+  .detail .v small{display:block;font-family:var(--sans);font-size:13px;color:var(--bone-dim);letter-spacing:0;margin-top:7px;text-transform:none;}
+
+  /* ablauf timeline */
+  .tage{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:34px;}
+  .tag{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:22px 18px;text-align:center;}
+  .tag .d{font-family:var(--serif);font-size:34px;color:var(--gold);line-height:1;}
+  .tag h4{font-size:15px;font-weight:600;margin:10px 0 6px;}
+  .tag p{font-size:13px;color:var(--bone-dim);}
+
+  /* anmeldung */
+  .anmeldung{position:relative;text-align:center;overflow:hidden;background:var(--bg2);}
+  .anmeldung .koru-wm{position:absolute;top:50%;left:50%;width:min(80vw,560px);height:min(80vw,560px);transform:translate(-50%,-50%);color:var(--gold);opacity:.05;animation:spin 150s linear infinite;}
+  @keyframes spin{to{transform:translate(-50%,-50%) rotate(360deg);}}
+  .anmeldung .inner{position:relative;z-index:2;max-width:640px;margin:0 auto;}
+  .form{margin-top:36px;text-align:left;display:grid;gap:16px;}
+  .form .row{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  .form label{display:block;font-size:13px;letter-spacing:.04em;color:var(--bone-dim);margin-bottom:7px;}
+  .form input,.form textarea{width:100%;background:rgba(241,234,223,.04);border:1px solid var(--line);border-radius:12px;padding:13px 15px;color:var(--bone);font-family:var(--sans);font-size:15px;transition:border-color .3s;}
+  .form input:focus,.form textarea:focus{outline:none;border-color:var(--gold);}
+  .form textarea{min-height:120px;resize:vertical;}
+  .form .btn{justify-content:center;width:100%;margin-top:6px;}
+  .form-hint{font-size:12.5px;color:var(--muted);margin-top:14px;}
+
+  footer{border-top:1px solid var(--line);padding:48px 0 30px;text-align:center;}
+  footer .brand{display:inline-flex;align-items:center;gap:11px;font-family:var(--serif);font-size:24px;font-weight:600;margin-bottom:10px;}
+  footer .brand .brand-logo{width:28px;height:28px;object-fit:contain;}
+  footer p{font-size:13px;color:var(--muted);}
+  footer a{color:var(--gold-2);}
+  footer .f-links{margin-top:12px;display:flex;gap:18px;justify-content:center;flex-wrap:wrap;font-size:14px;}
+  footer .f-links a{color:var(--bone-dim);}
+  footer .f-links a:hover{color:var(--gold-2);}
+
+  .reveal{opacity:0;transform:translateY(32px);transition:opacity 1s ease,transform 1s cubic-bezier(.2,.7,.2,1);}
+  .reveal.in{opacity:1;transform:none;}
+  .reveal.d1{transition-delay:.1s;}.reveal.d2{transition-delay:.2s;}
+
+  @media(max-width:900px){
+    .themen{grid-template-columns:1fr;}
+    .guides-grid{grid-template-columns:1fr;}
+    .guides-portraits{order:-1;max-width:360px;}
+    .details-grid{grid-template-columns:1fr;}
+    .tage{grid-template-columns:1fr 1fr;}
+    .ort-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:clamp(150px,30vw,210px);}
+    .trio{grid-template-columns:1fr;}
+    .form .row{grid-template-columns:1fr;}
+  }
+  @media(max-width:540px){ .tage{grid-template-columns:1fr;} }
+  @media(prefers-reduced-motion:reduce){*{animation:none !important;}.reveal{opacity:1;transform:none;}}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "Winter-Retreat für Männer – Wairua.Spirit",
+  "startDate": "2026-12",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "description": "Fünf Tage Einkehr in der dunklen Jahreszeit: Kakaozeremonie, Breathwork, Lagerfeuer, Natur und echte Verbindung – ein Winter-Retreat für Männer an der Nordsee.",
+  "image": "https://wairua-spirit.de/assets/retreat-feuerkreis.jpg",
+  "location": {
+    "@type": "Place",
+    "name": "Seminarhaus Alte Schule",
+    "address": { "@type": "PostalAddress", "addressLocality": "Bordelum (Büttjebüll)", "addressRegion": "Nordfriesland", "addressCountry": "DE" }
+  },
+  "organizer": { "@type": "Person", "name": "Michael Storz", "url": "https://wairua-spirit.de" },
+  "offers": { "@type": "Offer", "price": "1000", "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "url": "https://wairua-spirit.de/retreat.html" }
+}
+</script>
+</head>
+<body>
+  <div class="grain"></div>
+
+  <nav id="nav">
+    <a href="index.html" class="brand"><img class="brand-logo" src="assets/logo-cream.png" alt="" />Wairua.Spirit</a>
+    <div class="links">
+      <a href="index.html">Startseite</a>
+      <a href="#anmeldung" class="cta">Anmelden</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-bg"><img src="assets/moment-fire.jpg" alt="Mann am Feuer in der Dämmerung – Winter-Retreat für Männer" /></div>
+    <div class="wrap hero-inner">
+      <a href="index.html" class="back">← zurück zu Wairua.Spirit</a>
+      <div class="eyebrow">Winter-Retreat für Männer · Nordsee</div>
+      <h1>Wenn das Jahr zur <em>Ruhe</em> kommt</h1>
+      <div class="sub">Fünf Tage Einkehr, Feuer und echte Verbindung – in der dunklen Jahreszeit an der Nordsee.</div>
+      <div class="meta">
+        <span><b>Dezember 2026</b> · 5 Tage</span>
+        <span>Seminarhaus Alte Schule · <b>Nordfriesland</b></span>
+        <span>nur für <b>Männer</b></span>
+      </div>
+      <div class="hero-cta">
+        <a href="#anmeldung" class="btn btn-primary">Platz sichern →</a>
+        <a href="#worum" class="btn btn-ghost">Worum es geht</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="quoteband">
+    <div class="wrap">
+      <div class="q reveal">„Die dunkle Jahreszeit lädt uns ein, <em>innezuhalten</em> – und wieder bei uns anzukommen."</div>
+    </div>
+  </section>
+
+  <section id="worum">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="eyebrow">Die Einladung</div>
+        <h2>Das Jahr <em>abschließen</em> – gemeinsam</h2>
+      </div>
+      <div class="lead-text narrow reveal d1">
+        <p>Wenn die Tage kürzer werden und die Natur sich zurückzieht, liegt darin eine besondere Qualität: die Einladung, langsamer zu werden, nach innen zu schauen und das vergangene Jahr wirklich abzuschließen.</p>
+        <p>Dieses Retreat ist ein Raum für Männer, um in der dunklen Jahreszeit anzukommen – bei sich selbst und miteinander. Fünf Tage zum <em>Stillwerden, Reflektieren und Erinnern</em>, wer wir jenseits von Leistung und Alltag wirklich sind.</p>
+        <p>Am Feuer, in der Zeremonie, im Atem und in der weiten Landschaft der Nordsee entsteht etwas, das im Alltag oft fehlt: echte Verbindung – zu dir, zu anderen Männern und zur Natur, die uns hält.</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <h2>Was dich <em>erwartet</em></h2>
+      </div>
+      <div class="themen">
+        <div class="thema reveal"><span class="koru ic"></span><h3>Kakaozeremonie</h3><p>Zeremonieller Kakao öffnet das Herz und schafft einen sanften, wachen Raum, um tiefer zu fühlen und präsent zu sein.</p></div>
+        <div class="thema reveal d1"><span class="koru ic"></span><h3>Breathwork</h3><p>Eine kraftvolle Atemreise, die Blockaden löst, Emotionen bewegt und dich mit deiner Lebenskraft verbindet.</p></div>
+        <div class="thema reveal d2"><span class="koru ic"></span><h3>Zeit am Lagerfeuer</h3><p>Am Feuer sitzen, erzählen, schweigen. Die Wärme, das Licht und die Runde der Männer als Ort echter Begegnung.</p></div>
+        <div class="thema reveal"><span class="koru ic"></span><h3>Natur & Wattenmeer</h3><p>Die weite, raue Landschaft der Nordsee. Spaziergänge am Deich, Stille in der Heide, die Elemente als Lehrer.</p></div>
+        <div class="thema reveal d1"><span class="koru ic"></span><h3>Gemeinschaft & Verbindung</h3><p>Gesehen werden, dazugehören, gemeinsam wachsen – die Kernwerte von Wairua, gelebt in einer Runde von Männern.</p></div>
+        <div class="thema reveal d2"><span class="koru ic"></span><h3>Einkehr & Reflexion</h3><p>Raum, um das Jahr zu würdigen, loszulassen, was gehen darf, und mit klarer Absicht ins Neue zu gehen.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ort" id="ort">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="eyebrow">Der Ort</div>
+        <h2>Seminarhaus <em>Alte Schule</em> · Nordsee</h2>
+        <p>Eine historische Schule von 1872 in idyllischer Alleinlage am Rande eines Naturschutzgebiets – nur wenige Kilometer vom Meer.</p>
+      </div>
+      <div class="lead-text narrow reveal d1" style="margin-bottom:36px;">
+        <p>In Büttjebüll, Nordfriesland, liegt unser Zuhause für diese fünf Tage: ein liebevoll renoviertes Backsteinhaus mit Lehmputz-Wänden, großen Fenstern, hellen Räumen und warmen Holzböden. Ein großer Seminarraum, Kaminöfen und ein weiter Garten mit windgeschützter Dünen-Feuerstelle schaffen genau die Geborgenheit, die es in der dunklen Jahreszeit braucht.</p>
+        <p>Rundherum: die Bordelumer Heide mit Wäldern, Wiesen und Heideflächen – und das <em>Wattenmeer</em>, das die Weite und Ruhe des Nordens in den Raum trägt.</p>
+      </div>
+      <div class="ort-grid reveal">
+        <figure class="big"><img src="assets/venue-winter.webp" alt="Das Seminarhaus im Schnee – Winterlandschaft in Nordfriesland" loading="lazy" /></figure>
+        <figure><img src="assets/venue-seminarraum.webp" alt="Heller Seminarraum mit Gong und Kaminofen" loading="lazy" /></figure>
+        <figure><img src="assets/venue-ecke.webp" alt="Gemütliche Fensterecke mit Sitzkissen" loading="lazy" /></figure>
+        <figure><img src="assets/venue-zimmer.webp" alt="Mehrbettzimmer mit Holzboden" loading="lazy" /></figure>
+        <figure><img src="assets/venue-duene.webp" alt="Das Haus hinter der Düne – Nordseecharakter" loading="lazy" /></figure>
+      </div>
+      <p class="ort-note">Bilder der Räumlichkeiten: <a href="https://seminarhaus-alte-schule.de/seminarhaus-nordsee/" target="_blank" rel="noopener">Seminarhaus Alte Schule</a></p>
+    </div>
+  </section>
+
+  <section id="guides">
+    <div class="wrap guides-grid">
+      <div class="guides-portraits reveal">
+        <figure class="gp-1"><img src="assets/guide-michael.jpg" alt="Michael Storz" loading="lazy" /></figure>
+        <figure class="gp-2"><img src="assets/guide-oskar.jpg" alt="Oskar" loading="lazy" /></figure>
+      </div>
+      <div class="guides-body reveal d1">
+        <div class="eyebrow">Deine Begleiter</div>
+        <h2>Gehalten von <em>zwei</em>, die vorangehen</h2>
+        <p>Wir leiten dieses Retreat gemeinsam – aus tiefer Freundschaft und geteilter Erfahrung in der Arbeit mit Männern, Natur und Zeremonie. Michael bringt seinen Weg der Naturverbindung und der Māori-inspirierten Wairua-Philosophie ein, Oskar seine eigene Kraft und Präsenz.</p>
+        <p>Gemeinsam halten wir einen sicheren, klaren Raum, in dem du wirklich ankommen und dich zeigen darfst.</p>
+        <div class="names">Michael &amp; Oskar</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="rituale" style="background:var(--bg2);border-top:1px solid var(--line);">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="eyebrow">Verwurzelt in der Natur</div>
+        <h2>Alte <em>Naturrituale</em></h2>
+        <p>Einfache, kraftvolle Rituale, die uns mit der Erde und den Zyklen des Lebens verbinden.</p>
+      </div>
+      <div class="lead-text narrow reveal d1" style="text-align:center;margin-bottom:38px;">
+        <p>Wir arbeiten mit alten, schlichten Ritualen in der Natur: eine Feuerzeremonie, das Schlagen der Trommel, kleine Gaben an die Erde. Sie markieren Übergänge, ehren die dunkle Jahreszeit und öffnen einen Raum, in dem etwas <em>Tieferes</em> berührt werden darf – jenseits von Worten.</p>
+      </div>
+      <div class="trio reveal">
+        <figure><img src="assets/moment-stones.jpg" alt="Naturritual mit Steinen am Boden" loading="lazy" /></figure>
+        <figure><img src="assets/moment-drum.jpg" alt="Trommel im Ritual" loading="lazy" /></figure>
+        <figure><img src="assets/retreat-verbindung.jpg" alt="Verbindung von Herz zu Herz" loading="lazy" /></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="essen" id="essen">
+    <div class="wrap">
+      <div class="inner reveal">
+        <div class="eyebrow">Genährt werden</div>
+        <h2 style="font-size:clamp(30px,4.6vw,52px);font-weight:400;margin:14px 0 18px;">Liebevoll gekocht, <em>rein pflanzlich</em></h2>
+        <div class="lead-text">
+          <p>Gutes Essen ist Teil der Fürsorge. Während des Retreats werdet ihr mit frischer, vollwertiger <em>veganer und vegetarischer</em> Küche verwöhnt – zubereitet mit Hingabe, die den Körper nährt und die Gemeinschaft am Tisch zusammenbringt.</p>
+        </div>
+        <div class="who">Küche von Madhu &amp; Moon</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="details">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="eyebrow">Der Rahmen</div>
+        <h2>Alles auf einen <em>Blick</em></h2>
+      </div>
+      <div class="details-grid reveal">
+        <div class="detail"><div class="k">Termin</div><div class="v">Dezember 2026<small>Genaue Tage folgen</small></div></div>
+        <div class="detail"><div class="k">Dauer</div><div class="v">5 Tage<small>Anreise · 3 volle Tage · Abreise</small></div></div>
+        <div class="detail"><div class="k">Ort</div><div class="v">Nordsee<small>Seminarhaus Alte Schule, Nordfriesland</small></div></div>
+        <div class="detail"><div class="k">Für</div><div class="v">Männer<small>In einer geschlossenen Gruppe</small></div></div>
+        <div class="detail"><div class="k">Unterkunft</div><div class="v">Mehrbettzimmer<small>Gemeinschaftlich, mit Vollverpflegung</small></div></div>
+        <div class="detail"><div class="k">Beitrag</div><div class="v">ca. 1.000 €<small>Endpreis folgt</small></div></div>
+      </div>
+      <div class="tage reveal d1">
+        <div class="tag"><div class="d">1</div><h4>Ankommen</h4><p>Anreise, erstes Zusammenfinden, Feuer &amp; Eröffnung.</p></div>
+        <div class="tag"><div class="d">2</div><h4>Öffnen</h4><p>Kakaozeremonie, Natur, erste Runden der Verbindung.</p></div>
+        <div class="tag"><div class="d">3</div><h4>Vertiefen</h4><p>Breathwork, Reflexion, Zeit am Wattenmeer.</p></div>
+        <div class="tag"><div class="d">4</div><h4>Würdigen</h4><p>Das Jahr abschließen, Loslassen, Absicht fürs Neue.</p></div>
+        <div class="tag"><div class="d">5</div><h4>Abschied</h4><p>Integration, gemeinsamer Abschluss, Abreise.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="anmeldung" id="anmeldung">
+    <span class="koru koru-wm"></span>
+    <div class="wrap inner">
+      <div class="eyebrow reveal">Dabei sein</div>
+      <h2 class="reveal d1" style="font-size:clamp(32px,5.5vw,60px);font-weight:400;margin:16px 0 16px;">Sichere dir deinen <em>Platz</em></h2>
+      <p class="reveal d2" style="color:var(--bone-dim);font-size:18px;">Die Gruppe ist bewusst klein. Schreib uns über das Formular – wir melden uns persönlich bei dir und klären alle Details.</p>
+      <form class="form reveal d2" id="anmeldeForm">
+        <div class="row">
+          <div><label for="name">Name</label><input type="text" id="name" name="name" required /></div>
+          <div><label for="email">E-Mail</label><input type="email" id="email" name="email" required /></div>
+        </div>
+        <div><label for="tel">Telefon (optional)</label><input type="tel" id="tel" name="tel" /></div>
+        <div><label for="msg">Deine Nachricht</label><textarea id="msg" name="msg" placeholder="Warum möchtest du dabei sein? Fragen?"></textarea></div>
+        <button type="submit" class="btn btn-primary">Anfrage senden →</button>
+      </form>
+      <p class="form-hint">Alternativ direkt per <a href="https://wa.me/491602302132" style="color:var(--gold-2)">WhatsApp</a> oder E-Mail an <a href="mailto:info@wairua-spirit.de" style="color:var(--gold-2)">info@wairua-spirit.de</a>.</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <div class="brand"><img class="brand-logo" src="assets/logo-cream.png" alt="" />Wairua.Spirit</div>
+      <p>Winter-Retreat für Männer · Nordsee · Dezember 2026</p>
+      <div class="f-links">
+        <a href="index.html">Startseite</a>
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const nav=document.getElementById('nav');
+    addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>30),{passive:true});
+    const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.14});
+    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+    // Anmeldeformular: oeffnet vorausgefuellte E-Mail (bis ein Formulardienst angebunden ist)
+    const f=document.getElementById('anmeldeForm');
+    f.addEventListener('submit',(e)=>{
+      e.preventDefault();
+      const name=encodeURIComponent(f.name.value), email=encodeURIComponent(f.email.value), tel=encodeURIComponent(f.tel.value), msg=encodeURIComponent(f.msg.value);
+      const body='Name: '+name+'%0D%0AE-Mail: '+email+'%0D%0ATelefon: '+tel+'%0D%0A%0D%0ANachricht:%0D%0A'+msg;
+      window.location.href='mailto:info@wairua-spirit.de?subject='+encodeURIComponent('Anmeldung Winter-Retreat 2026')+'&body='+body;
+    });
+  </script>
+</body>
+</html>
