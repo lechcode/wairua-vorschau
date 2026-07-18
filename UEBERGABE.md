@@ -4,7 +4,8 @@ Stand: siehe letzter Commit unten. Diese Datei ist eine Arbeitsnotiz für die n�
 
 ## 1. Wo alles liegt
 
-- **Lokal (Arbeitsordner):** `C:\Users\m-sto\OneDrive\Desktop\wairua-spirit-fuer-michael\wairua-vorschau\`
+- **Lokal (Arbeitsordner):** `C:\Users\m-sto\OneDrive\Desktop\Lechcode\Kundenprojekte\16-wairua-spirit\website\`
+  (bis 18.07.2026 lag das Projekt separat unter `Desktop\wairua-spirit-fuer-michael\wairua-vorschau\` — jetzt wie ein reguläres Lechcode-Projekt eingegliedert, s. `Kundenprojekte/README.md`. Lokale Vorschau: `preview_start` mit Name `wairua-spirit-preview`, Port 8796, Server-Skript in `../_projekt/serve.ps1`.)
 - **GitHub-Repo (Source of Truth):** `github.com/lechcode/wairua-vorschau`, Branch `main`
   (migriert von `ComingHomeMira` → `Lechcode`; altes Konto nicht mehr nutzen)
 - **Workflow:** Änderung machen → **sofort committen + `git push origin main`**, ohne Rückfrage (feste Nutzervorgabe seit 2026-06-08: „bitte immer direkt pushen ab jetzt – nicht mehr fragen"). Lokale Vorschau vorher öffnen ist ok, aber kein Blocker.
