@@ -1,16 +1,24 @@
 <!DOCTYPE html>
 <!--
-  Unterseite: "Rituale" — Platzhalter, Inhalt folgt in einer der naechsten Sitzungen.
+  Unterseite: "Rituale"
   Teil des Wairua.Spirit-Designs · gleiche dunkle Bildsprache · Single-File.
+  Offen: Details zum Samhain-Ritual (Ort, Uhrzeit, Beitrag) + Stripe-Anbindung.
 -->
 <html lang="de">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="robots" content="noindex, nofollow" />
-<title>Rituale | Wairua.Spirit</title>
-<meta name="description" content="Rituale mit Michael Storz – innehalten und erinnern, ein Rahmen für Achtsamkeit und Verbindung. Seite im Aufbau." />
+<title>Rituale &amp; Jahreskreisfeste | Wairua.Spirit</title>
+<meta name="description" content="Rituale mit Michael Storz – Abende entlang der alten Jahreskreisfeste. Innehalten, erinnern und gemeinsam Übergänge feiern. Nächstes Ritual: Samhain am 31. Oktober." />
 <link rel="canonical" href="https://wairua-spirit.de/rituale.html" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Rituale &amp; Jahreskreisfeste | Wairua.Spirit" />
+<meta property="og:description" content="Abende entlang der alten Jahreskreisfeste – innehalten, erinnern und gemeinsam Übergänge feiern." />
+<meta property="og:image" content="https://wairua-spirit.de/assets/moment-drum.jpg" />
+<meta property="og:url" content="https://wairua-spirit.de/rituale.html" />
+<meta property="og:locale" content="de_DE" />
+<meta name="twitter:card" content="summary_large_image" />
 <link rel="stylesheet" href="assets/fonts.css" />
 <style>
   :root{
@@ -28,8 +36,10 @@
   a{color:inherit;text-decoration:none;}
   img{max-width:100%;display:block;}
   .wrap{width:min(1180px,92vw);margin-inline:auto;}
+  .narrow{max-width:760px;margin-inline:auto;}
   .eyebrow{font-size:12px;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);font-weight:500;}
   em{font-style:italic;}
+  section{position:relative;padding:clamp(70px,11vw,130px) 0;}
   .koru{display:inline-block;-webkit-mask:url('assets/logo.png') center/contain no-repeat;mask:url('assets/logo.png') center/contain no-repeat;background:currentColor;}
   .grain{position:fixed;inset:0;z-index:9998;pointer-events:none;opacity:.05;mix-blend-mode:soft-light;
     background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");}
@@ -50,20 +60,57 @@
   .btn-ghost{border-color:var(--line);color:var(--bone);}
   .btn-ghost:hover{border-color:var(--gold);color:var(--gold-2);}
 
-  .hero{position:relative;min-height:78vh;display:flex;align-items:flex-end;overflow:hidden;}
+  .hero{position:relative;min-height:80vh;display:flex;align-items:flex-end;overflow:hidden;}
   .hero-bg{position:absolute;inset:0;z-index:0;}
   .hero-bg img{width:100%;height:100%;object-fit:cover;}
   .hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,12,9,.35) 0%,rgba(10,12,9,.45) 50%,rgba(10,12,9,.96) 100%);}
   .hero-inner{position:relative;z-index:2;padding-bottom:clamp(48px,8vw,84px);}
   .hero .back{display:inline-block;margin-bottom:20px;font-size:13px;color:var(--bone-dim);border-bottom:1px solid transparent;}
   .hero .back:hover{color:var(--gold-2);border-color:var(--gold-2);}
-  .hero h1{font-size:clamp(42px,7vw,78px);font-weight:400;margin:14px 0 18px;}
+  .hero h1{font-size:clamp(46px,8vw,86px);font-weight:400;margin:14px 0 18px;}
   .hero h1 em{color:var(--gold-2);}
-  .hero .sub{font-size:clamp(16px,1.8vw,20px);color:var(--bone-dim);max-width:56ch;margin-bottom:30px;}
+  .hero .sub{font-size:clamp(16px,1.8vw,20px);color:var(--bone-dim);max-width:52ch;margin-bottom:30px;}
 
-  .in-progress{padding:clamp(70px,10vw,120px) 0;text-align:center;}
-  .in-progress .narrow{max-width:640px;margin-inline:auto;}
-  .in-progress p{color:var(--bone-dim);font-size:16.5px;margin:16px 0 32px;}
+  /* Termin-Hinweis im Hero – springt zur Anmeldung */
+  .next-date{display:inline-flex;align-items:center;gap:13px;background:rgba(12,14,11,.55);
+    -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border:1px solid rgba(216,168,90,.5);
+    color:var(--bone);padding:13px 24px;border-radius:999px;font-size:15px;
+    transition:border-color .3s,background .3s,transform .25s;}
+  .next-date:hover{border-color:var(--gold);background:rgba(216,168,90,.14);transform:translateY(-2px);}
+  .next-date .dot{width:9px;height:9px;border-radius:50%;background:var(--gold);flex:none;animation:pulse 2.6s infinite;}
+  .next-date b{color:var(--gold-2);font-weight:600;}
+  .next-date .arr{color:var(--gold-2);}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(216,168,90,.6);}70%{box-shadow:0 0 0 13px rgba(216,168,90,0);}100%{box-shadow:0 0 0 0 rgba(216,168,90,0);}}
+
+  .sec-head{max-width:660px;margin-bottom:clamp(28px,5vw,48px);}
+  .sec-head h2{font-size:clamp(30px,4.4vw,50px);font-weight:400;margin:14px 0 0;}
+  .sec-head h2 em{color:var(--gold-2);}
+  .lead-text p{color:var(--bone-dim);font-size:17px;margin-bottom:20px;}
+  .lead-text p:last-child{margin-bottom:0;}
+  .lead-text em{color:var(--bone);}
+
+  /* Naechstes Ritual */
+  .termin{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .termin-card{display:grid;grid-template-columns:auto 1fr;gap:clamp(24px,4vw,48px);align-items:center;
+    background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:clamp(28px,4vw,46px);box-shadow:var(--shadow);}
+  .termin-datum{text-align:center;border-right:1px solid var(--line);padding-right:clamp(20px,3vw,40px);}
+  .termin-datum .tag{font-family:var(--serif);font-size:clamp(56px,8vw,88px);line-height:.95;color:var(--gold-2);}
+  .termin-datum .monat{font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-top:8px;}
+  .termin-body h3{font-size:clamp(26px,3.4vw,38px);font-weight:400;margin-bottom:14px;}
+  .termin-body h3 em{color:var(--gold-2);}
+  .termin-body p{color:var(--bone-dim);margin-bottom:20px;}
+  .termin-meta{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:24px;}
+  .termin-meta span{font-size:12.5px;border:1px solid var(--line);border-radius:999px;padding:7px 15px;color:var(--bone-dim);}
+  .termin-meta span b{color:var(--bone);font-weight:500;}
+
+  /* Anmeldung */
+  .anmeldung{text-align:center;overflow:hidden;}
+  .anmeldung .koru-wm{position:absolute;right:-70px;top:-50px;width:340px;height:340px;color:var(--gold);opacity:.05;pointer-events:none;}
+  .anmeldung h2{font-size:clamp(32px,5.5vw,60px);font-weight:400;margin:16px 0;}
+  .anmeldung h2 em{color:var(--gold-2);}
+  .anmeldung .lead{color:var(--bone-dim);font-size:18px;max-width:56ch;margin:0 auto 34px;}
+  .anmeldung .cta-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+  .pay-note{margin-top:22px;font-size:13.5px;color:var(--muted);}
 
   footer{padding:56px 0 40px;border-top:1px solid var(--line);text-align:center;}
   footer .brand{display:inline-flex;align-items:center;gap:10px;font-family:var(--serif);font-size:21px;margin-bottom:10px;}
@@ -74,6 +121,14 @@
 
   .reveal{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s ease;}
   .reveal.in{opacity:1;transform:none;}
+  .reveal.d1{transition-delay:.12s;} .reveal.d2{transition-delay:.24s;}
+
+  @media(max-width:760px){
+    .termin-card{grid-template-columns:1fr;text-align:left;}
+    .termin-datum{border-right:0;border-bottom:1px solid var(--line);padding-right:0;padding-bottom:22px;text-align:left;display:flex;align-items:baseline;gap:14px;}
+    .termin-datum .monat{margin-top:0;}
+    .next-date{font-size:14px;padding:12px 18px;}
+  }
   @media(prefers-reduced-motion:reduce){*{animation:none !important;}.reveal{opacity:1;transform:none;}}
 </style>
 </head>
@@ -84,36 +139,87 @@
     <a href="index.html" class="brand"><img class="brand-logo" src="assets/logo-cream.png" alt="" />Wairua.Spirit</a>
     <div class="links">
       <a href="index.html">Startseite</a>
-      <a href="index.html#kontakt" class="cta">Verbindung aufnehmen</a>
+      <a href="#anmeldung" class="cta">31. Okt · Anmelden</a>
     </div>
   </nav>
 
   <header class="hero">
-    <div class="hero-bg"><img src="assets/angebot-workshops.jpg" alt="Ritual-Kreis aus Naturmaterialien, von Hand gelegt" /></div>
+    <div class="hero-bg"><img src="assets/moment-drum.jpg" alt="Schamanentrommel in der Hand, draußen in der Natur" /></div>
     <div class="wrap hero-inner">
       <a href="index.html#angebote" class="back">← zurück zu den Angeboten</a>
       <div class="eyebrow">Rituale</div>
-      <h1>Innehalten und <em>erinnern</em></h1>
-      <div class="sub">Ein Rahmen für Achtsamkeit, echte Begegnung und Verbindung – Momente, die uns zurückholen zu uns selbst. Diese Seite entsteht gerade.</div>
+      <h1><em>Innehalten</em></h1>
+      <div class="sub">Ein paar Mal im Jahr, entlang der alten Jahreskreisfeste – Abende, an denen wir Übergängen wieder einen Ort geben.</div>
+      <a href="#anmeldung" class="next-date">
+        <span class="dot" aria-hidden="true"></span>
+        <span>Nächstes Ritual: <b>31. Oktober</b> · Samhain</span>
+        <span class="arr" aria-hidden="true">→</span>
+      </a>
     </div>
   </header>
 
-  <section class="in-progress reveal">
-    <div class="wrap narrow">
-      <div class="eyebrow">Im Aufbau</div>
-      <h2 style="font-size:clamp(26px,3.5vw,36px);font-weight:400;margin:14px 0 4px;">Diese Seite ist noch <em>in Arbeit</em></h2>
-      <p>Hier entstehen bald die Rituale von Wairua.Spirit. Schreib mir gern direkt, wenn du dich schon jetzt dafür interessierst.</p>
-      <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
-        <a href="https://wa.me/491602302132" class="btn btn-primary">Auf WhatsApp schreiben</a>
-        <a href="index.html" class="btn btn-ghost">Zurück zur Startseite</a>
+  <section id="was">
+    <div class="wrap">
+      <div class="sec-head narrow reveal" style="text-align:center;">
+        <div class="eyebrow">Worum es geht</div>
+        <h2>Innehalten und <em>erinnern</em></h2>
       </div>
+      <div class="lead-text narrow reveal d1">
+        <p>Kennst du das Gefühl, wenn du merkst, dass die Zeit einfach vorbeigezogen ist? Der Sommer ist gegangen, der Herbst schon halb vorbei, und man könnte nicht mehr sagen, wann das eine ins andere übergegangen ist. Das Leben läuft weiter, von Termin zu Termin, von einer Aufgabe zur nächsten – und selbst der Feierabend ist meist nur die Pause vor dem, was morgen wieder ansteht. Wir haben verlernt, den Übergängen einen Ort zu geben, und es fehlen uns die Momente, in denen wir spüren, dass gerade etwas endet und etwas anderes beginnt.</p>
+        <p>Über Jahrtausende war das anders. Menschen haben sich an dem orientiert, was um sie herum geschah: an den Sonnenwenden und den Phasen des Mondes, an der Ernte, am ersten Frost, an der Rückkehr des Lichts. Es gab Nächte im Jahr, in denen man zusammenkam, weil dieser Moment etwas bedeutete – und in denen gesungen, getanzt, ein Feuer entzündet oder auch nur gemeinsam geschwiegen wurde. Nicht, weil es schön aussah, sondern um zu begreifen, was gerade geschieht, und es nicht allein tragen zu müssen. Nicht der Kalender hat den Takt vorgegeben, sondern das Leben selbst.</p>
+        <p>Ein Ritual ist nichts Kompliziertes und verlangt weder einen bestimmten Glauben noch Vorerfahrung. Es braucht einen Rahmen und Menschen, die sich darauf einlassen. Manchmal ist es eine Schale Kakao, die von Hand zu Hand wandert, manchmal ein Feuer, in das man etwas hineingibt, das man nicht länger tragen möchte, manchmal ein Lied, das niemand perfekt singen muss. Was dabei entsteht, lässt sich schwer erklären und umso leichter spüren: Man kommt zur Ruhe, ohne sich dazu zwingen zu müssen, man ist nicht mehr allein mit dem, was einen beschäftigt, man wird gesehen – und kommt zurück zu seinem eigenen Rhythmus.</p>
+        <p>Genau dafür sind diese Abende gedacht. Ein paar Mal im Jahr lade ich zu Ritualen ein, meist entlang der alten Jahreskreisfeste, und jedes hat seinen eigenen Charakter: mal still, mal in Bewegung, mal draußen am Feuer. Was bleibt, ist immer dasselbe – ein Ort, an dem du für ein paar Stunden nichts leisten musst, sondern einfach da sein darfst.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PLATZHALTER: Text zum Samhain-Ritual folgt noch (Ort, Uhrzeit, Ablauf, Beitrag) -->
+  <section class="termin" id="naechstes">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="eyebrow">Das nächste Ritual</div>
+        <h2>Samhain – wenn das Jahr sich <em>neigt</em></h2>
+      </div>
+      <div class="termin-card reveal d1">
+        <div class="termin-datum">
+          <div class="tag">31</div>
+          <div class="monat">Oktober</div>
+        </div>
+        <div class="termin-body">
+          <h3>Samhain-Ritual</h3>
+          <p>Samhain markiert im alten Jahreskreis das Ende der Erntezeit und den Beginn der dunklen Jahreszeit – die Nacht, in der wir zurückschauen auf das, was war, und loslassen, was nicht mit ins neue Jahr gehen soll.</p>
+          <p><em>Die ausführliche Beschreibung zu diesem Abend folgt in Kürze.</em></p>
+          <div class="termin-meta">
+            <span><b>31. Oktober</b></span>
+            <span>Uhrzeit folgt</span>
+            <span>Ort folgt</span>
+            <span>Beitrag folgt</span>
+          </div>
+          <a href="#anmeldung" class="btn btn-primary">Zur Anmeldung →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="anmeldung" id="anmeldung">
+    <span class="koru koru-wm"></span>
+    <div class="wrap narrow">
+      <div class="eyebrow reveal">Dabei sein</div>
+      <h2 class="reveal d1">Sichere dir deinen <em>Platz</em></h2>
+      <p class="lead reveal d1">Die Runde ist bewusst klein. Schreib mir kurz – ich melde mich persönlich bei dir und wir klären alles Weitere.</p>
+      <div class="cta-row reveal d2">
+        <!-- STRIPE: hier spaeter den Stripe-Payment-Link bzw. Checkout-Button einsetzen -->
+        <a href="https://wa.me/491602302132" class="btn btn-primary">Platz anfragen</a>
+        <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=info@wairua-spirit.de&amp;su=Anmeldung%20Samhain-Ritual%2031.%20Oktober" target="_blank" rel="noopener" class="btn btn-ghost">E-Mail schreiben</a>
+      </div>
+      <p class="pay-note reveal d2">Die direkte Buchung inklusive Bezahlung folgt in Kürze an dieser Stelle.</p>
     </div>
   </section>
 
   <footer>
     <div class="wrap">
       <div class="brand"><img class="brand-logo" src="assets/logo-cream.png" alt="" />Wairua.Spirit</div>
-      <p>Rituale · Seite im Aufbau</p>
+      <p>Rituale &amp; Jahreskreisfeste · Landsberg am Lech</p>
       <div class="f-links">
         <a href="index.html">Startseite</a>
         <a href="impressum.html">Impressum</a>
