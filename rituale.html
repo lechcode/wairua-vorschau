@@ -90,8 +90,17 @@
   .lead-text p:last-child{margin-bottom:0;}
   .lead-text em{color:var(--bone);}
 
+  /* Bild-Band als Uebergang zwischen den Abschnitten */
+  .bild-band{position:relative;height:clamp(240px,40vh,460px);overflow:hidden;}
+  .bild-band img{width:100%;height:100%;object-fit:cover;}
+  .bild-band::after{content:"";position:absolute;inset:0;
+    background:linear-gradient(180deg,var(--bg) 0%,rgba(12,14,11,.04) 22%,rgba(17,20,14,.10) 72%,var(--bg2) 100%);}
+
   /* Naechstes Ritual */
-  .termin{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .termin{background:var(--bg2);border-bottom:1px solid var(--line);}
+  .ritual-bild{max-width:430px;margin:clamp(42px,6vw,66px) auto 0;border-radius:18px;overflow:hidden;
+    box-shadow:0 40px 80px -32px rgba(0,0,0,.95),0 0 70px -24px rgba(216,168,90,.28);}
+  .ritual-bild img{width:100%;height:auto;}
   .datum-zeile{font-family:var(--serif);font-style:italic;font-size:clamp(20px,2.6vw,26px);color:var(--gold-2);margin-top:16px;}
   .sub-head{text-align:center;margin:clamp(46px,7vw,78px) 0 clamp(18px,3vw,26px);}
   .details-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
@@ -177,6 +186,10 @@
     </div>
   </section>
 
+  <div class="bild-band">
+    <img src="assets/ritual-sonnenuntergang.jpg" alt="Sonnenuntergang über kahlen Bäumen – das Licht weicht" loading="lazy" />
+  </div>
+
   <section class="termin" id="naechstes">
     <div class="wrap">
       <div class="sec-head narrow reveal" style="text-align:center;margin-bottom:clamp(20px,3vw,32px);">
@@ -189,6 +202,10 @@
         <p>Was von diesem Ritual heute übrig geblieben ist, sind Kostüme und Tüten voller Süßigkeiten. Und doch trägt jeder von uns Dinge in sich, die in diesem Jahr zu Ende gegangen sind.</p>
         <p>Genau darum geht es an diesem Abend: diesen Dingen einen Platz zu geben, sie zu würdigen und ziehen zu lassen.</p>
       </div>
+
+      <figure class="ritual-bild reveal d1">
+        <img src="assets/ritual-kerzen.jpg" alt="Kerzen, Feder und Herbstlaub auf dem Boden – der Platz in der Mitte des Kreises" loading="lazy" />
+      </figure>
 
       <div class="sub-head reveal">
         <div class="eyebrow">Was uns erwartet</div>
