@@ -7,12 +7,12 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Einzelbegleitung in der Natur – ein Tag draußen | Wairua.Spirit</title>
-<meta name="description" content="Einzelbegleitung in der Natur rund um Landsberg am Lech: ein Tag draußen, ganz für dich. Zeit, Zuhören und Klarheit für deinen nächsten Schritt." />
+<title>Einzelbegleitung in der Natur, Landsberg | Wairua.Spirit</title>
+<meta name="description" content="Ein Tag draußen rund um Landsberg am Lech, ganz für dich: gehen, sitzen, reden, schweigen. Ich höre zu und gehe ein Stück mit. Schreib mir, wenn du magst." />
 <link rel="canonical" href="https://wairua-spirit.de/begleitung.html" />
 <meta property="og:type" content="article" />
-<meta property="og:title" content="Einzelbegleitung in der Natur – ein Tag draußen | Wairua.Spirit" />
-<meta property="og:description" content="Ein Tag draußen, ganz für dich. Einzelbegleitung im Raum Landsberg am Lech." />
+<meta property="og:title" content="Einzelbegleitung in der Natur, Landsberg | Wairua.Spirit" />
+<meta property="og:description" content="Ein Tag draußen rund um Landsberg am Lech, ganz für dich: gehen, sitzen, reden, schweigen." />
 <meta property="og:image" content="https://wairua-spirit.de/assets/og-begleitung.jpg" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
@@ -66,6 +66,20 @@
   .textblock p:last-child{margin-bottom:0;}
   .koru-list{margin-bottom:26px;}
 
+  /* Fakten-Kacheln: fuenf kompakte, zentrierte - Rest kommt aus base.css */
+  .details-grid{grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px;margin-top:clamp(30px,4vw,44px);}
+  .detail{border-radius:14px;padding:24px 18px;text-align:center;}
+  .detail .k{font-size:11.5px;letter-spacing:.2em;margin-bottom:10px;}
+  .detail .v{font-size:clamp(19px,2vw,23px);color:var(--bone);line-height:1.25;}
+  .detail .v small{font-size:12.5px;color:var(--muted);margin-top:8px;}
+
+  /* Ablauf in drei Schritten */
+  .ablauf{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,3vw,34px);max-width:900px;margin-inline:auto;}
+  .schritt .nr{font-family:var(--serif);font-size:34px;color:var(--gold);line-height:1;margin-bottom:10px;}
+  .schritt h3{font-size:21px;font-weight:500;margin-bottom:9px;}
+  .schritt p{font-size:15.5px;color:var(--bone-dim);}
+  @media(max-width:900px){ .ablauf{grid-template-columns:1fr;} }
+
   .cta-final{position:relative;text-align:center;overflow:hidden;}
   .cta-final .koru-wm{position:absolute;top:50%;left:50%;width:min(78vw,560px);height:min(78vw,560px);transform:translate(-50%,-50%);color:var(--gold);opacity:.06;animation:spin 140s linear infinite;}
   .cta-final .inner{position:relative;z-index:2;max-width:640px;margin:0 auto;}
@@ -98,15 +112,15 @@
     <a href="index.html" class="brand"><img class="brand-logo" src="assets/logo-cream.png" alt="" width="160" height="145" />Wairua.Spirit</a>
     <div class="links">
       <a href="index.html">Startseite</a>
-      <a href="https://wa.me/491602302132" class="cta">Schreib mir</a>
+      <a href="https://wa.me/491602302132" class="cta">Lass uns sprechen</a>
     </div>
     <button class="burger" id="burger" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
   </nav>
   <div class="mobile-menu" id="mobileMenu" inert>
     <a href="index.html">Startseite</a>
     <a href="#worum">Worum es geht</a>
+    <a href="#ablauf">Wie es abläuft</a>
     <a href="#kontakt">Lass uns sprechen</a>
-    <a href="https://wa.me/491602302132">Schreib mir</a>
   </div>
 
   <header class="hero">
@@ -116,7 +130,7 @@
       <a href="index.html" class="back">← zurück zu Wairua.Spirit</a>
       <div class="eyebrow">Einzelbegleitung in der Natur</div>
       <h1>Wieder ins <em>Fließen</em> kommen</h1>
-      <div class="sub">Ein Tag draußen, ganz für dich.</div>
+      <div class="sub">Ein Tag draußen rund um Landsberg am Lech, ganz für dich.</div>
       <div class="hero-cta">
         <a href="#kontakt" class="btn btn-primary">Lass uns sprechen →</a>
         <a href="#worum" class="btn btn-ghost">Worum es geht</a>
@@ -142,7 +156,7 @@
   <section class="forwhom" style="background:var(--bg);">
     <div class="wrap inner">
       <div class="eyebrow reveal">Für wen</div>
-      <h2 class="reveal d1" style="font-family:var(--serif);font-weight:400;font-size:clamp(30px,4.6vw,52px);margin:14px 0 22px;">Wenn eigentlich alles <em style="color:var(--gold-2)">okay ist</em> – und trotzdem etwas fehlt</h2>
+      <h2 class="reveal d1" style="font-family:var(--serif);font-weight:400;font-size:clamp(30px,4.6vw,52px);margin:14px 0 22px;">Wenn eigentlich alles okay ist – und trotzdem etwas fehlt</h2>
       <p class="reveal d1">Von außen betrachtet stimmt vieles. Und trotzdem meldet sich da etwas, leise aber beharrlich: eine Unzufriedenheit, die sich schwer benennen lässt, oder das Gefühl, dass sich etwas verändern will. Für genau diesen Punkt ist dieser Tag gedacht.</p>
       <ul class="reveal d2">
         <li><span class="koru"></span><span>Du willst nicht die nächste Lösung finden, sondern erst einmal aus dem Dauer-Tun heraus.</span></li>
@@ -152,6 +166,11 @@
         <li><span class="koru"></span><span>Du stehst vielleicht an einem Wendepunkt und möchtest erst sortieren, bevor du entscheidest.</span></li>
       </ul>
       <p class="reveal d2" style="margin-top:30px;">Was hier nicht passiert: eine weitere To-do-Liste, ein Plan, den du danach abarbeitest. Es geht nicht ums Tun, sondern ums Sein – für einen Tag darfst du nichts erreichen müssen.</p>
+
+      <div class="textblock reveal d2" style="margin-top:clamp(38px,5vw,56px);">
+        <h3 style="font-size:clamp(22px,2.8vw,28px);font-weight:500;margin-bottom:14px;">Und wofür dieser Tag nicht da ist</h3>
+        <p>Ich bin Wildnispädagoge und Wegbegleiter, kein Therapeut. Wenn du gerade in einer echten Krise steckst, wenn dich Angst oder eine Depression fest im Griff hat, dann ist eine Therapeutin oder dein Arzt die bessere erste Adresse. Ich sage das lieber vorher als hinterher – und wenn du magst, kommst du danach trotzdem gern raus mit mir.</p>
+      </div>
     </div>
   </section>
 
@@ -159,7 +178,7 @@
     <div class="wrap">
       <div class="sec-head reveal">
         <div class="eyebrow">Was du davon hast</div>
-        <h2>Warum es zu zweit <em>leichter geht</em></h2>
+        <h2>Warum es zu zweit leichter geht</h2>
       </div>
       <div class="textblock reveal d1">
         <p>Manches sehen wir bei uns selbst einfach nicht. Wir drehen die gleichen Gedanken seit Monaten, kommen zu denselben Schlüssen und halten das für Nachdenken. Daher hilft es, wenn dir jemand von außen gegenübersitzt.</p>
@@ -168,12 +187,45 @@
       <ul class="koru-list reveal d1">
         <li><span class="koru"></span><span>Ich bin dein Spiegel. Ich sage dir, was ich sehe und höre – oft ist genau das der Moment, in dem etwas klar wird.</span></li>
         <li><span class="koru"></span><span>Ich stelle andere Fragen als die Menschen in deinem gewohnten Umfeld.</span></li>
-        <li><span class="koru"></span><span>Ich höre wirklich zu. Ohne Ratschlag, Bewertung und Erwartung an dich.</span></li>
+        <li><span class="koru"></span><span>Ich höre wirklich zu. Ohne Ratschlag, ohne Bewertung, ohne dass du danach irgendwas tun müsstest.</span></li>
         <li><span class="koru"></span><span>Ich bringe Erfahrung mit und spüre, wann es Bewegung braucht und wann es besser ist, einfach still zu bleiben.</span></li>
         <li><span class="koru"></span><span>Ich halte den Raum, auch wenn es herausfordernd wird.</span></li>
       </ul>
       <div class="textblock reveal d2">
         <p>Am Ende des Tages nimmst du vielleicht keine fertige Antwort mit. Aber fast immer etwas, das mehr wert ist: Du siehst deine Situation klarer als seit Langem – und du spürst, was dein nächster Schritt sein könnte.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="ablauf">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="eyebrow">Wie es abläuft</div>
+        <h2>Von der ersten Nachricht bis zum Tag draußen</h2>
+      </div>
+      <div class="ablauf reveal d1">
+        <div class="schritt">
+          <div class="nr" aria-hidden="true">①</div>
+          <h3>Du schreibst mir</h3>
+          <p>Ein paar Sätze reichen. Du musst nicht wissen, was du suchst.</p>
+        </div>
+        <div class="schritt">
+          <div class="nr" aria-hidden="true">②</div>
+          <h3>Wir telefonieren</h3>
+          <p>Kostenlos und unverbindlich. Du erzählst mir, wo du gerade stehst. Ich sage dir ehrlich, ob ich der Richtige dafür bin. Dabei machen wir auch Termin und Treffpunkt aus, und ich sage dir, was du anziehen und mitnehmen solltest.</p>
+        </div>
+        <div class="schritt">
+          <div class="nr" aria-hidden="true">③</div>
+          <h3>Der Tag</h3>
+          <p>Wir sind einen Tag draußen, rund um Landsberg am Lech. Gehen, sitzen, reden, schweigen. Der Tag hat keinen Fahrplan, er hat eine Richtung.</p>
+        </div>
+      </div>
+      <div class="details-grid reveal d2">
+        <div class="detail"><div class="k">Vorgespräch</div><div class="v">Kostenlos<small>am Telefon, vorab</small></div></div>
+        <div class="detail"><div class="k">Dauer</div><div class="v">Ein Tag<small>Zeiten machen wir im Vorgespräch aus</small></div></div>
+        <div class="detail"><div class="k">Wo</div><div class="v">Draußen<small>rund um Landsberg am Lech</small></div></div>
+        <div class="detail"><div class="k">Beitrag</div><div class="v">300 €<small>für den ganzen Tag</small></div></div>
+        <div class="detail"><div class="k">Für wen</div><div class="v">Für alle<small>mit oder ohne Erfahrung draußen</small></div></div>
       </div>
     </div>
   </section>
@@ -185,7 +237,7 @@
       <h2 class="reveal d1">Bereit für einen Tag <em>nur für dich</em>?</h2>
       <p class="reveal d2">Schreib mir einfach und erzähl mir, wo du gerade stehst. Du musst noch nicht wissen, was du suchst – wir telefonieren vorher in Ruhe und schauen gemeinsam, ob das für dich der richtige nächste Schritt ist.</p>
       <div class="hero-cta reveal d2" style="justify-content:center;display:flex;gap:14px;flex-wrap:wrap;">
-        <a href="https://wa.me/491602302132" class="btn btn-primary">Auf WhatsApp schreiben</a>
+        <a href="https://wa.me/491602302132" class="btn btn-primary">Lass uns sprechen</a>
         <a href="index.html" class="btn btn-ghost">← zurück zu Wairua.Spirit</a>
       </div>
     </div>
