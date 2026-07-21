@@ -115,6 +115,13 @@ section{position:relative;padding:clamp(74px,12vw,140px) 0;}
 .lead-text p{color:var(--bone-dim);font-size:clamp(16px,1.9vw,19px);margin-bottom:18px;}
 .lead-text p:last-child{margin-bottom:0;}
 
+/* --- Fakten-Kacheln (Retreat, Rituale, Einzelbegleitung) ----------------- */
+.details-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:8px;}
+.detail{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:28px 26px;}
+.detail .k{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:9px;}
+.detail .v{font-family:var(--serif);font-size:clamp(22px,2.6vw,28px);line-height:1.2;}
+.detail .v small{display:block;font-family:var(--sans);font-size:13px;color:var(--bone-dim);letter-spacing:0;margin-top:7px;text-transform:none;line-height:1.5;}
+
 /* --- Footer (Standard: zentriert; die Startseite ueberschreibt das) ------ */
 footer{border-top:1px solid var(--line);padding:48px 0 30px;text-align:center;}
 footer .brand{display:inline-flex;align-items:center;gap:11px;font-family:var(--serif);font-size:24px;font-weight:600;margin-bottom:10px;}
@@ -136,6 +143,7 @@ footer .f-links a:hover{color:var(--gold-2);}
 @media(max-width:900px){
   nav .links{display:none;}
   .burger{display:flex;}
+  .details-grid{grid-template-columns:1fr;}
 }
 
 /* --- Bewegungsreduktion -------------------------------------------------- */
