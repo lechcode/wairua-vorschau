@@ -15,80 +15,42 @@
 <meta property="og:type" content="website" />
 <meta property="og:title" content="Winter-Retreat für Männer an der Nordsee · Dez 2026" />
 <meta property="og:description" content="Fünf Tage Einkehr in der dunklen Jahreszeit: Kakaozeremonie, Breathwork, Lagerfeuer, Natur & echte Verbindung – an der Nordsee." />
-<meta property="og:image" content="https://wairua-spirit.de/assets/retreat-feuerkreis.jpg" />
+<meta property="og:image" content="https://wairua-spirit.de/assets/og-retreat.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Männer im Kreis am Lagerfeuer" />
 <meta property="og:url" content="https://wairua-spirit.de/retreat.html" />
 <meta property="og:locale" content="de_DE" />
 <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://wairua-spirit.de/assets/og-retreat.jpg" />
+<link rel="preload" href="assets/fonts/co3bmX5slCNuHLi8bLeY9MK7whWMhyjYqXtK.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="assets/fonts/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2" as="font" type="font/woff2" crossorigin />
 <link rel="stylesheet" href="assets/fonts.css" />
+<link rel="stylesheet" href="assets/base.css" />
+<link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png" />
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+<meta name="theme-color" content="#0c0e0b" />
+<script src="assets/site.js" defer></script>
 <style>
-  :root{
-    --bg:#0c0e0b;--bg2:#11140e;--panel:#161a12;--bone:#f1eadf;--bone-dim:#cdc6b7;--muted:#988f7f;
-    --gold:#d8a85a;--gold-2:#e8c585;--moss:#8a9a6b;--clay:#bc8155;--ember:#e0873f;
-    --line:rgba(241,234,223,.13);
-    --serif:"Cormorant Garamond",Georgia,"Times New Roman",serif;
-    --sans:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
-    --shadow:0 30px 70px -30px rgba(0,0,0,.8);
-  }
-  *{margin:0;padding:0;box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
-  body{background:var(--bg);color:var(--bone);font-family:var(--sans);line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
-  h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.08;letter-spacing:-.01em;}
-  a{color:inherit;text-decoration:none;}
-  img{max-width:100%;display:block;}
-  .wrap{width:min(1180px,92vw);margin-inline:auto;}
-  .narrow{max-width:760px;margin-inline:auto;}
-  .eyebrow{font-size:12px;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);font-weight:500;}
-  em{font-style:italic;}
-  .koru{display:inline-block;-webkit-mask:url('assets/logo.png') center/contain no-repeat;mask:url('assets/logo.png') center/contain no-repeat;background:currentColor;}
-  .grain{position:fixed;inset:0;z-index:9998;pointer-events:none;opacity:.05;mix-blend-mode:soft-light;
-    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");}
-
-  nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;
-    padding:20px clamp(20px,5vw,56px);transition:background .5s,backdrop-filter .5s,padding .5s,border-color .5s;border-bottom:1px solid transparent;}
-  nav.scrolled{background:rgba(12,14,11,.72);backdrop-filter:saturate(150%) blur(16px);-webkit-backdrop-filter:saturate(150%) blur(16px);border-bottom:1px solid var(--line);padding-top:13px;padding-bottom:13px;}
-  nav .brand{display:flex;align-items:center;gap:11px;font-family:var(--serif);font-size:24px;font-weight:600;letter-spacing:.02em;}
-  nav .brand .brand-logo{width:32px;height:32px;object-fit:contain;filter:drop-shadow(0 1px 3px rgba(0,0,0,.5));}
-  nav .links{display:flex;gap:clamp(16px,2.4vw,30px);align-items:center;font-size:14px;color:var(--bone-dim);}
-  nav .links a:hover{color:var(--bone);}
-  nav .links a.cta{border:1px solid var(--gold);color:var(--gold-2);padding:9px 20px;border-radius:999px;transition:background .3s,color .3s;}
-  nav .links a.cta:hover{background:var(--gold);color:#1a140a;}
-
-  .btn{display:inline-flex;align-items:center;gap:9px;font-size:15px;font-weight:500;padding:15px 30px;border-radius:999px;cursor:pointer;border:1px solid transparent;transition:transform .25s,box-shadow .25s,background .25s,color .25s,border-color .25s;}
-  .btn-primary{background:var(--gold);color:#1a140a;box-shadow:0 16px 40px -16px rgba(216,168,90,.7);}
-  .btn-primary:hover{transform:translateY(-2px);background:var(--gold-2);box-shadow:0 22px 50px -16px rgba(216,168,90,.85);}
-  .btn-ghost{border-color:var(--line);color:var(--bone);}
-  .btn-ghost:hover{border-color:var(--gold);color:var(--gold-2);}
-
-  /* hero */
-  header.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;overflow:hidden;padding-top:clamp(96px,14vh,150px);}
-  .hero-bg{position:absolute;inset:0;z-index:0;}
-  .hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 50%;transform:scale(1.05);animation:kb 30s ease-in-out infinite alternate;}
-  @keyframes kb{0%{transform:scale(1.05);}100%{transform:scale(1.15);}}
+  /* --- Hero ------------------------------------------------------------- */
+  .hero-bg img{object-position:center 50%;transform:scale(1.05);animation:kb 30s ease-in-out infinite alternate;}
   .hero-bg::after{content:"";position:absolute;inset:0;
     background:linear-gradient(180deg,rgba(12,10,8,.6) 0%,rgba(12,10,8,.15) 30%,rgba(12,10,8,.55) 62%,rgba(10,8,6,.97) 100%);}
-  .hero-inner{position:relative;z-index:2;padding:0 0 clamp(56px,10vh,120px);text-shadow:0 2px 26px rgba(0,0,0,.6);}
-  .hero .back{display:inline-flex;align-items:center;gap:7px;font-size:13px;letter-spacing:.04em;color:var(--bone-dim);margin-bottom:22px;opacity:0;animation:rise .9s ease .1s forwards;}
-  .hero .back:hover{color:var(--gold-2);}
+  .hero-inner{text-shadow:0 2px 26px rgba(0,0,0,.6);}
+  .hero .back{opacity:0;animation:rise .9s ease .1s forwards;}
   .hero h1{font-size:clamp(44px,8vw,100px);font-weight:400;margin:14px 0 20px;max-width:16ch;opacity:0;animation:rise 1.1s ease .35s forwards;}
-  .hero h1 em{color:var(--gold-2);}
   .hero .sub{font-family:var(--serif);font-style:italic;font-size:clamp(21px,3vw,32px);color:var(--bone);max-width:26ch;opacity:0;animation:rise 1.1s ease .55s forwards;}
   .hero .meta{display:flex;gap:26px;flex-wrap:wrap;margin-top:26px;font-size:14px;letter-spacing:.03em;color:var(--bone-dim);opacity:0;animation:rise 1.1s ease .7s forwards;}
   .hero .meta b{color:var(--gold-2);font-weight:500;}
-  .hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:32px;opacity:0;animation:rise 1.1s ease .85s forwards;}
-  @keyframes rise{from{opacity:0;transform:translateY(28px);}to{opacity:1;transform:none;}}
+  .hero-cta{margin-top:32px;opacity:0;animation:rise 1.1s ease .85s forwards;}
 
-  section{position:relative;padding:clamp(74px,12vw,140px) 0;}
   .quoteband{background:var(--bg2);text-align:center;}
   .quoteband .q{font-family:var(--serif);font-style:italic;font-size:clamp(26px,4.4vw,50px);font-weight:400;line-height:1.2;max-width:20ch;margin:0 auto;color:var(--bone);}
   .quoteband .q em{color:var(--gold-2);}
 
   .sec-head{max-width:680px;margin:0 auto clamp(44px,6vw,66px);text-align:center;}
   .sec-head h2{font-size:clamp(32px,5vw,58px);font-weight:400;margin:14px 0 16px;}
-  .sec-head h2 em{color:var(--gold-2);}
-  .sec-head p{color:var(--bone-dim);font-size:17px;}
 
-  .lead-text p{color:var(--bone-dim);font-size:clamp(16px,1.9vw,19px);margin-bottom:18px;}
-  .lead-text p:last-child{margin-bottom:0;}
   .lead-text em{color:var(--gold-2);font-style:italic;}
 
   /* kernthemen */
@@ -106,7 +68,6 @@
   .ort-grid img{width:100%;height:100%;object-fit:cover;transition:transform 1.1s cubic-bezier(.2,.7,.2,1);}
   .ort-grid figure:hover img{transform:scale(1.06);}
   .ort-grid .big{grid-column:span 2;grid-row:span 2;}
-  .ort-grid .wide{grid-column:span 2;}
   .ort-note{text-align:center;font-size:13px;color:var(--muted);margin-top:16px;}
   .ort-note a{color:var(--gold-2);}
 
@@ -129,12 +90,6 @@
   .trio figure{overflow:hidden;border-radius:14px;aspect-ratio:4/3;box-shadow:var(--shadow);}
   .trio img{width:100%;height:100%;object-fit:cover;filter:saturate(.97);transition:transform 1.1s cubic-bezier(.2,.7,.2,1);}
   .trio figure:hover img{transform:scale(1.06);}
-  /* feuer-band (Vollbild-Zäsur) */
-  .feuerband{position:relative;min-height:clamp(340px,55vh,560px);display:flex;align-items:center;justify-content:center;overflow:hidden;padding:0;text-align:center;}
-  .feuerband img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
-  .feuerband::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,8,6,.5),rgba(10,8,6,.78));}
-  .feuerband .q{position:relative;z-index:2;font-family:var(--serif);font-style:italic;font-size:clamp(24px,4vw,44px);line-height:1.25;max-width:22ch;color:var(--bone);padding:0 24px;text-shadow:0 2px 20px rgba(0,0,0,.6);}
-  .feuerband .q em{color:var(--gold-2);}
 
   /* essen */
   .essen{position:relative;background:#0c0a08 url('assets/essen-buffet.jpg') center 42%/cover no-repeat;text-align:center;overflow:hidden;}
@@ -152,86 +107,58 @@
   .detail .v{font-family:var(--serif);font-size:clamp(22px,2.6vw,28px);line-height:1.2;}
   .detail .v small{display:block;font-family:var(--sans);font-size:13px;color:var(--bone-dim);letter-spacing:0;margin-top:7px;text-transform:none;}
 
-  /* ablauf timeline */
-  .tage{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:34px;}
-  .tag{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:22px 18px;text-align:center;}
-  .tag .d{font-family:var(--serif);font-size:34px;color:var(--gold);line-height:1;}
-  .tag h4{font-size:15px;font-weight:600;margin:10px 0 6px;}
-  .tag p{font-size:13px;color:var(--bone-dim);}
-
   /* anmeldung */
   .anmeldung{position:relative;text-align:center;overflow:hidden;background:var(--bg2);}
   .anmeldung .koru-wm{position:absolute;top:50%;left:50%;width:min(80vw,560px);height:min(80vw,560px);transform:translate(-50%,-50%);color:var(--gold);opacity:.05;animation:spin 150s linear infinite;}
-  @keyframes spin{to{transform:translate(-50%,-50%) rotate(360deg);}}
   .anmeldung .inner{position:relative;z-index:2;max-width:640px;margin:0 auto;}
   .form{margin-top:36px;text-align:left;display:grid;gap:16px;}
   .form .row{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
   .form label{display:block;font-size:13px;letter-spacing:.04em;color:var(--bone-dim);margin-bottom:7px;}
   .form input,.form textarea{width:100%;background:rgba(241,234,223,.04);border:1px solid var(--line);border-radius:12px;padding:13px 15px;color:var(--bone);font-family:var(--sans);font-size:15px;transition:border-color .3s;}
-  .form input:focus,.form textarea:focus{outline:none;border-color:var(--gold);}
+  .form input:focus-visible,.form textarea:focus-visible{border-color:var(--gold);}
   .form textarea{min-height:120px;resize:vertical;}
   .form .btn{justify-content:center;width:100%;margin-top:6px;}
   .form-hint{font-size:12.5px;color:var(--muted);margin-top:14px;}
-
-  footer{border-top:1px solid var(--line);padding:48px 0 30px;text-align:center;}
-  footer .brand{display:inline-flex;align-items:center;gap:11px;font-family:var(--serif);font-size:24px;font-weight:600;margin-bottom:10px;}
-  footer .brand .brand-logo{width:28px;height:28px;object-fit:contain;}
-  footer p{font-size:13px;color:var(--muted);}
-  footer a{color:var(--gold-2);}
-  footer .f-links{margin-top:12px;display:flex;gap:18px;justify-content:center;flex-wrap:wrap;font-size:14px;}
-  footer .f-links a{color:var(--bone-dim);}
-  footer .f-links a:hover{color:var(--gold-2);}
-
-  .reveal{opacity:0;transform:translateY(32px);transition:opacity 1s ease,transform 1s cubic-bezier(.2,.7,.2,1);}
-  .reveal.in{opacity:1;transform:none;}
-  .reveal.d1{transition-delay:.1s;}.reveal.d2{transition-delay:.2s;}
 
   @media(max-width:900px){
     .themen{grid-template-columns:1fr;}
     .guides-grid{grid-template-columns:1fr;}
     .guides-portraits{order:-1;max-width:360px;}
     .details-grid{grid-template-columns:1fr;}
-    .tage{grid-template-columns:1fr 1fr;}
     .ort-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:clamp(150px,30vw,210px);}
     .trio{grid-template-columns:1fr;}
     .form .row{grid-template-columns:1fr;}
   }
-  @media(max-width:540px){ .tage{grid-template-columns:1fr;} }
-  @media(prefers-reduced-motion:reduce){*{animation:none !important;}.reveal{opacity:1;transform:none;}}
 </style>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Event",
-  "name": "Winter-Retreat für Männer – Wairua.Spirit",
-  "startDate": "2026-12",
-  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-  "eventStatus": "https://schema.org/EventScheduled",
-  "description": "Fünf Tage Einkehr in der dunklen Jahreszeit: Kakaozeremonie, Breathwork, Lagerfeuer, Natur und echte Verbindung – ein Winter-Retreat für Männer an der Nordsee.",
-  "image": "https://wairua-spirit.de/assets/retreat-feuerkreis.jpg",
-  "location": {
-    "@type": "Place",
-    "name": "Seminarhaus Alte Schule",
-    "address": { "@type": "PostalAddress", "addressLocality": "Bordelum (Büttjebüll)", "addressRegion": "Nordfriesland", "addressCountry": "DE" }
-  },
-  "organizer": { "@type": "Person", "name": "Michael Storz", "url": "https://wairua-spirit.de" },
-  "offers": { "@type": "Offer", "price": "1000", "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "url": "https://wairua-spirit.de/retreat.html" }
-}
-</script>
+<!--
+  Event-Schema bewusst noch nicht eingebunden.
+  Ein Event braucht ein gueltiges startDate ("2026-12" ist keins) und darf
+  keinen Preis behaupten, solange die Seite selbst "ca. 1.000 EUR, Endpreis
+  folgt" sagt. Sobald Termin und Beitrag feststehen, hier ein vollstaendiges
+  Event-Schema ergaenzen - Vorlage steht in rituale.html.
+-->
 </head>
 <body>
   <div class="grain"></div>
 
   <nav id="nav">
-    <a href="index.html" class="brand"><img class="brand-logo" src="assets/logo-cream.png" alt="" />Wairua.Spirit</a>
+    <a href="index.html" class="brand"><img class="brand-logo" src="assets/logo-cream.png" alt="" width="160" height="145" />Wairua.Spirit</a>
     <div class="links">
       <a href="index.html">Startseite</a>
       <a href="#anmeldung" class="cta">Anmelden</a>
     </div>
+    <button class="burger" id="burger" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
   </nav>
+  <div class="mobile-menu" id="mobileMenu" inert>
+    <a href="index.html">Startseite</a>
+    <a href="#worum">Worum es geht</a>
+    <a href="#ort">Der Ort</a>
+    <a href="#details">Der Rahmen</a>
+    <a href="#anmeldung">Anmelden</a>
+  </div>
 
   <header class="hero">
-    <div class="hero-bg"><img src="assets/moment-fire.jpg" alt="Mann am Feuer in der Dämmerung – Winter-Retreat für Männer" /></div>
+    <div class="hero-bg"><img src="assets/moment-fire.jpg" srcset="assets/moment-fire-800.jpg 800w, assets/moment-fire.jpg 1400w" sizes="100vw" width="1400" height="933" fetchpriority="high" alt="Mann am Feuer in der Dämmerung – Winter-Retreat für Männer" /></div>
     <div class="wrap hero-inner">
       <a href="index.html" class="back">← zurück zu Wairua.Spirit</a>
       <div class="eyebrow">Winter-Retreat für Männer · Nordsee</div>
@@ -297,11 +224,11 @@
         <p>Rundherum: die Bordelumer Heide mit Wäldern, Wiesen und Heideflächen – und das <em>Wattenmeer</em>, das die Weite und Ruhe des Nordens in den Raum trägt.</p>
       </div>
       <div class="ort-grid reveal">
-        <figure class="big"><img src="assets/venue-winter.webp" alt="Das Seminarhaus im Schnee – Winterlandschaft in Nordfriesland" loading="lazy" /></figure>
-        <figure><img src="assets/venue-seminarraum.webp" alt="Heller Seminarraum mit Gong und Kaminofen" loading="lazy" /></figure>
-        <figure><img src="assets/venue-ecke.webp" alt="Gemütliche Fensterecke mit Sitzkissen" loading="lazy" /></figure>
-        <figure><img src="assets/venue-zimmer.webp" alt="Mehrbettzimmer mit Holzboden" loading="lazy" /></figure>
-        <figure><img src="assets/venue-duene.webp" alt="Das Haus hinter der Düne – Nordseecharakter" loading="lazy" /></figure>
+        <figure class="big"><img src="assets/venue-winter.webp" width="2016" height="908" alt="Das Seminarhaus im Schnee – Winterlandschaft in Nordfriesland" loading="lazy" /></figure>
+        <figure><img src="assets/venue-seminarraum.webp" width="1600" height="720" alt="Heller Seminarraum mit Gong und Kaminofen" loading="lazy" /></figure>
+        <figure><img src="assets/venue-ecke.webp" width="1600" height="720" alt="Gemütliche Fensterecke mit Sitzkissen" loading="lazy" /></figure>
+        <figure><img src="assets/venue-zimmer.webp" width="1600" height="720" alt="Mehrbettzimmer mit Holzboden" loading="lazy" /></figure>
+        <figure><img src="assets/venue-duene.webp" width="1600" height="720" alt="Das Haus hinter der Düne – Nordseecharakter" loading="lazy" /></figure>
       </div>
       <p class="ort-note">Bilder der Räumlichkeiten: <a href="https://seminarhaus-alte-schule.de/seminarhaus-nordsee/" target="_blank" rel="noopener">Seminarhaus Alte Schule</a></p>
     </div>
@@ -310,8 +237,8 @@
   <section id="guides">
     <div class="wrap guides-grid">
       <div class="guides-portraits reveal">
-        <figure class="gp-1"><img src="assets/guide-michael.jpg" alt="Michael Storz" loading="lazy" /></figure>
-        <figure class="gp-2"><img src="assets/guide-oskar.jpg" alt="Oskar" loading="lazy" /></figure>
+        <figure class="gp-1"><img src="assets/guide-michael.jpg" width="800" height="803" alt="Michael Storz" loading="lazy" /></figure>
+        <figure class="gp-2"><img src="assets/guide-oskar.jpg" width="800" height="721" alt="Oskar" loading="lazy" /></figure>
       </div>
       <div class="guides-body reveal d1">
         <div class="eyebrow">Deine Begleiter</div>
@@ -334,9 +261,9 @@
         <p>Wir arbeiten mit alten, schlichten Ritualen in der Natur: eine Feuerzeremonie, das Schlagen der Trommel, kleine Gaben an die Erde. Sie markieren Übergänge, ehren die dunkle Jahreszeit und öffnen einen Raum, in dem etwas <em>Tieferes</em> berührt werden darf – jenseits von Worten.</p>
       </div>
       <div class="trio reveal">
-        <figure><img src="assets/moment-stones.jpg" alt="Naturritual mit Steinen am Boden" loading="lazy" /></figure>
-        <figure><img src="assets/moment-drum.jpg" alt="Trommel im Ritual" loading="lazy" /></figure>
-        <figure><img src="assets/retreat-verbindung.jpg" alt="Verbindung von Herz zu Herz" loading="lazy" /></figure>
+        <figure><img src="assets/moment-stones.jpg" width="1000" height="666" alt="Naturritual mit Steinen am Boden" loading="lazy" /></figure>
+        <figure><img src="assets/moment-drum.jpg" width="1400" height="935" alt="Trommel im Ritual" loading="lazy" /></figure>
+        <figure><img src="assets/retreat-verbindung.jpg" width="1000" height="667" alt="Verbindung von Herz zu Herz" loading="lazy" /></figure>
       </div>
     </div>
   </section>
@@ -350,7 +277,7 @@
           <p>Gutes Essen ist Teil der Fürsorge. Während des Retreats werdet ihr mit frischer, vollwertiger <em>veganer und vegetarischer</em> Küche verwöhnt – zubereitet mit Hingabe, die den Körper nährt und die Gemeinschaft am Tisch zusammenbringt.</p>
         </div>
         <div class="who">Küche von Madhu &amp; Moon</div>
-        <div class="who-avatar"><img src="assets/madhu-moon.jpg" alt="Madhu und Moon" loading="lazy" /></div>
+        <div class="who-avatar"><img src="assets/madhu-moon.jpg" width="300" height="300" alt="Madhu und Moon" loading="lazy" /></div>
       </div>
     </div>
   </section>
@@ -393,7 +320,7 @@
 
   <footer>
     <div class="wrap">
-      <div class="brand"><img class="brand-logo" src="assets/logo-cream.png" alt="" />Wairua.Spirit</div>
+      <div class="brand"><img class="brand-logo" src="assets/logo-cream.png" alt="" width="160" height="145" loading="lazy" />Wairua.Spirit</div>
       <p>Winter-Retreat für Männer · Nordsee · Dezember 2026</p>
       <div class="f-links">
         <a href="index.html">Startseite</a>
@@ -404,10 +331,6 @@
   </footer>
 
   <script>
-    const nav=document.getElementById('nav');
-    addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>30),{passive:true});
-    const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.14});
-    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
     // Anmeldeformular: oeffnet vorausgefuellte E-Mail (bis ein Formulardienst angebunden ist)
     const f=document.getElementById('anmeldeForm');
     f.addEventListener('submit',(e)=>{
