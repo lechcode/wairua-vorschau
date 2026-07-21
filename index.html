@@ -190,12 +190,15 @@
 
   /* stimmen */
   .voices{background:var(--bg);}
-  .voices-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;}
-  .voice{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:34px 32px;position:relative;}
+  .voices-marquee{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);}
+  .voices-track{display:flex;gap:22px;width:max-content;animation:voices-scroll 42s linear infinite;}
+  .voices-track:hover{animation-play-state:paused;}
+  .voice{flex:0 0 clamp(280px,34vw,380px);background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:34px 32px;position:relative;}
   .voice .mark{font-family:var(--serif);font-size:64px;line-height:.6;color:var(--gold);opacity:.5;}
   .voice p{font-family:var(--serif);font-style:italic;font-size:21px;line-height:1.4;color:var(--bone);margin:6px 0 18px;}
   .voice .who{font-size:13px;letter-spacing:.04em;color:var(--muted);}
   .voice .who b{color:var(--gold-2);font-weight:500;}
+  @keyframes voices-scroll{from{transform:translateX(0);}to{transform:translateX(-50%);}}
 
   /* kontakt */
   .contact{position:relative;text-align:center;overflow:hidden;background:var(--bg2);}
@@ -249,7 +252,7 @@
     .saeulen-grid{grid-template-columns:1fr;}
     .about-grid{grid-template-columns:1fr;}
     .about-visual{aspect-ratio:4/4;max-height:62vh;}
-    .offers-grid,.voices-grid{grid-template-columns:1fr;}
+    .offers-grid{grid-template-columns:1fr;}
     #partner .partners{grid-template-columns:1fr;}
     footer .f-grid{grid-template-columns:1fr 1fr;}
     .hero-koru{opacity:.05;}
@@ -463,11 +466,17 @@
         <div class="eyebrow">Stimmen</div>
         <h2>Was Menschen <em>erleben</em></h2>
       </div>
-      <div class="voices-grid">
-        <div class="voice reveal"><div class="mark">„</div><p>An Michael schätze ich die besondere Verbindung aus Sanftheit und Wildheit. In seiner Gegenwart fühlt man sich geborgen und gesehen.</p><div class="who"><b>Marie Wackenhut</b></div></div>
-        <div class="voice reveal d1"><div class="mark">„</div><p>Mit Michael in der Natur unterwegs zu sein, ist jedes Mal eine Bereicherung – Feingefühl, Sympathie und Achtsamkeit auf wunderbare Weise vereint.</p><div class="who"><b>Ingmar Gröhn</b></div></div>
-        <div class="voice reveal"><div class="mark">„</div><p>Was ich an Michael am meisten bewundere, ist seine Fähigkeit, von Herz zu Herz zuzuhören – mit Liebe und Offenheit präsent zu sein.</p><div class="who"><b>Lenny Schönbach</b></div></div>
-        <div class="voice reveal d1"><div class="mark">„</div><p>Es wurde ein absolut sicherer Raum geschaffen, in dem ich meine tiefen Emotionen anschauen und einen Zugang zu meiner Spiritualität entwickeln konnte.</p><div class="who"><b>Teilnehmer</b> · Retreat 2025</div></div>
+      <div class="voices-marquee">
+        <div class="voices-track">
+          <div class="voice"><div class="mark">„</div><p>An Michael schätze ich die besondere Verbindung aus Sanftheit und Wildheit. In seiner Gegenwart fühlt man sich geborgen und gesehen.</p><div class="who"><b>Marie Wackenhut</b></div></div>
+          <div class="voice"><div class="mark">„</div><p>Mit meinem Freund Michael in der Natur unterwegs zu sein, ist jedes Mal eine Bereicherung. Er verbindet Feingefühl und Achtsamkeit mit einer klaren, kraftvollen Präsenz – und schafft Räume für Leichtigkeit, Vertrauen und echtes Wachstum. Seine Arbeit ist eine Einladung, die Natur und sich selbst tiefer zu entdecken.</p><div class="who"><b>Ingmar Gröhn</b> · Gründer, Wildnisschule Naturgefühl</div></div>
+          <div class="voice"><div class="mark">„</div><p>Was ich an Michael am meisten bewundere, ist seine Fähigkeit, von Herz zu Herz zuzuhören – mit Liebe und Offenheit präsent zu sein.</p><div class="who"><b>Lenny Schönbach</b></div></div>
+          <div class="voice"><div class="mark">„</div><p>Und die Begegnungen mit den Männern haben mir gezeigt, wie viel Kraft im Miteinander liegt, wenn wir uns erlauben, echt zu sein. Es waren Tage voller Tiefe, Freude, Heilung und Verbundenheit – Tage, an die ich mich mein ganzes Leben erinnern werde.</p><div class="who"><b>Teilnehmer</b> · Retreat 2025</div></div>
+          <div class="voice" aria-hidden="true"><div class="mark">„</div><p>An Michael schätze ich die besondere Verbindung aus Sanftheit und Wildheit. In seiner Gegenwart fühlt man sich geborgen und gesehen.</p><div class="who"><b>Marie Wackenhut</b></div></div>
+          <div class="voice" aria-hidden="true"><div class="mark">„</div><p>Mit meinem Freund Michael in der Natur unterwegs zu sein, ist jedes Mal eine Bereicherung. Er verbindet Feingefühl und Achtsamkeit mit einer klaren, kraftvollen Präsenz – und schafft Räume für Leichtigkeit, Vertrauen und echtes Wachstum. Seine Arbeit ist eine Einladung, die Natur und sich selbst tiefer zu entdecken.</p><div class="who"><b>Ingmar Gröhn</b> · Gründer, Wildnisschule Naturgefühl</div></div>
+          <div class="voice" aria-hidden="true"><div class="mark">„</div><p>Was ich an Michael am meisten bewundere, ist seine Fähigkeit, von Herz zu Herz zuzuhören – mit Liebe und Offenheit präsent zu sein.</p><div class="who"><b>Lenny Schönbach</b></div></div>
+          <div class="voice" aria-hidden="true"><div class="mark">„</div><p>Und die Begegnungen mit den Männern haben mir gezeigt, wie viel Kraft im Miteinander liegt, wenn wir uns erlauben, echt zu sein. Es waren Tage voller Tiefe, Freude, Heilung und Verbundenheit – Tage, an die ich mich mein ganzes Leben erinnern werde.</p><div class="who"><b>Teilnehmer</b> · Retreat 2025</div></div>
+        </div>
       </div>
     </div>
   </section>
