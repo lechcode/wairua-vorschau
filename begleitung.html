@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <!--
-  Unterseite: "Dein Kanu-Partner – Im Fluss des Lebens" (Einzelbegleitung)
+  Unterseite: "Einzelbegleitung in der Natur – ein Tag draußen"
   Teil des wairua-Redesigns · gleiche dunkle Bildsprache · Single-File.
 -->
 <html lang="de">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Einzelbegleitung in der Natur – Kanu-Tag | Wairua.Spirit</title>
-<meta name="description" content="Einzelbegleitung in der Natur: ein Tag auf dem Wasser bei einer Kanutour. Finde Klarheit &amp; neue Richtung im Raum Landsberg / Bayern. Schreib mir für deinen Termin." />
+<title>Einzelbegleitung in der Natur – ein Tag draußen | Wairua.Spirit</title>
+<meta name="description" content="Einzelbegleitung in der Natur rund um Landsberg am Lech: ein Tag draußen, ganz für dich. Zeit, Zuhören und Klarheit für deinen nächsten Schritt." />
 <link rel="canonical" href="https://wairua-spirit.de/begleitung.html" />
 <meta property="og:type" content="article" />
-<meta property="og:title" content="Einzelbegleitung in der Natur – Kanu-Tag | Wairua.Spirit" />
-<meta property="og:description" content="Ein Tag draußen: Kanutour, Klarheit und neue Richtung. Einzelbegleitung im Raum Landsberg / Bayern." />
+<meta property="og:title" content="Einzelbegleitung in der Natur – ein Tag draußen | Wairua.Spirit" />
+<meta property="og:description" content="Ein Tag draußen, ganz für dich. Einzelbegleitung im Raum Landsberg am Lech." />
 <meta property="og:image" content="https://wairua-spirit.de/assets/begleitung-1.jpg" />
 <meta property="og:url" content="https://wairua-spirit.de/begleitung.html" />
 <meta property="og:locale" content="de_DE" />
@@ -98,9 +98,20 @@
 
   .forwhom{background:var(--bg2);}
   .forwhom .inner{max-width:760px;margin:0 auto;text-align:center;}
-  .forwhom ul{list-style:none;display:flex;flex-direction:column;gap:14px;margin-top:30px;text-align:left;max-width:560px;margin-inline:auto;}
-  .forwhom li{display:flex;gap:14px;align-items:flex-start;font-size:16.5px;color:var(--bone-dim);}
-  .forwhom li .koru{flex:none;width:20px;height:20px;color:var(--gold);margin-top:5px;}
+  .forwhom ul,.koru-list{list-style:none;display:flex;flex-direction:column;gap:14px;margin-top:30px;text-align:left;max-width:600px;margin-inline:auto;}
+  .forwhom li,.koru-list li{display:flex;gap:14px;align-items:flex-start;font-size:16.5px;color:var(--bone-dim);}
+  .forwhom li .koru,.koru-list li .koru{flex:none;width:20px;height:20px;color:var(--gold);margin-top:5px;}
+
+  .textblock{max-width:720px;margin:0 auto;text-align:center;}
+  .textblock p{color:var(--bone-dim);font-size:16.5px;margin-bottom:16px;}
+  .textblock p:last-child{margin-bottom:0;}
+  .koru-list{margin-bottom:26px;}
+
+  .haltung{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .haltung .inner{max-width:720px;margin:0 auto;text-align:center;}
+  .haltung h3{font-size:clamp(26px,3.6vw,40px);font-weight:400;margin:14px 0 18px;}
+  .haltung h3 em{color:var(--gold-2);}
+  .haltung p{color:var(--bone-dim);font-size:16.5px;}
 
   .ablauf-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:10px;}
   .ablauf-grid figure{border-radius:16px;overflow:hidden;aspect-ratio:5/4;}
@@ -136,8 +147,8 @@
   "@context": "https://schema.org",
   "@type": "Service",
   "serviceType": "Einzelbegleitung in der Natur (Naturcoaching)",
-  "name": "Dein Kanu-Partner – Einzelbegleitung in der Natur",
-  "description": "Ein Tag draußen in der Natur mit einer Kanutour: Wiederverbindung, Blockaden lösen und eine neue Lebensrichtung finden.",
+  "name": "Einzelbegleitung in der Natur – ein Tag draußen",
+  "description": "Ein Tag draußen in der Natur rund um Landsberg am Lech, ganz für dich: Zeit, Zuhören und Klarheit für deinen nächsten Schritt.",
   "provider": { "@type": "Person", "name": "Michael Storz", "url": "https://wairua-spirit.de" },
   "areaServed": "Bayern",
   "url": "https://wairua-spirit.de/begleitung.html"
@@ -156,37 +167,37 @@
   </nav>
 
   <header class="hero">
-    <div class="hero-bg"><img src="assets/begleitung-1.jpg" alt="Kanutour auf dem Fluss" /></div>
+    <div class="hero-bg"><img src="assets/begleitung-1.jpg" alt="Flusslauf zwischen Wald und Wiesen" /></div>
     <span class="koru hero-koru"></span>
     <div class="wrap hero-inner">
       <a href="index.html" class="back">← zurück zu Wairua.Spirit</a>
       <div class="eyebrow">Einzelbegleitung in der Natur</div>
-      <h1>Dein <em>Kanu-Partner</em></h1>
-      <div class="sub">Im Fluss des Lebens.</div>
+      <h1>Wieder ins <em>Fließen</em> kommen</h1>
+      <div class="sub">Ein Tag draußen, ganz für dich.</div>
       <div class="hero-cta">
         <a href="#kontakt" class="btn btn-primary">Lass uns sprechen →</a>
-        <a href="#worum" class="btn btn-ghost">So läuft ein Tag</a>
+        <a href="#worum" class="btn btn-ghost">Worum es geht</a>
       </div>
     </div>
   </header>
 
   <section class="quoteband">
     <div class="wrap">
-      <div class="q reveal">„Wir sitzen in einem Boot und blicken <em>gemeinsam nach vorne</em>."</div>
+      <div class="q reveal">„Ich habe keinen Plan für dein Leben – aber ein gutes Gespür dafür, <em>wie ein Weg entsteht</em>."</div>
     </div>
   </section>
 
   <section id="worum">
     <div class="wrap split">
       <div class="visual reveal">
-        <img src="assets/begleitung-3.jpg" alt="Michael am Wasser mit Kanu" loading="lazy" />
+        <img src="assets/begleitung-baum.jpg" alt="Hand an einer Baumrinde – Verbindung zur Natur" loading="lazy" />
         <span class="koru"></span>
       </div>
       <div class="reveal d1">
         <div class="eyebrow">Worum es geht</div>
-        <h2>Ein Tag, ein Fluss, <em>eine neue Richtung</em>.</h2>
-        <p>Im Rahmen meiner Einzelbegleitung gestalten wir gemeinsam einen Tag draußen in der Natur. Eine echte Kanutour aufs Wasser gehört dazu – und vor allem Raum für das, was in dir gerade Bewegung sucht.</p>
-        <p>Manchmal stecken wir fest. Im Kopf, im Alltag, in alten Mustern. Auf dem Wasser wird vieles wieder leicht: Du kommst zur Ruhe, spürst dich – und findest Schritt für Schritt zurück zu dir.</p>
+        <h2>Kein Programm. Sondern <em>jemand, der mitgeht</em>.</h2>
+        <p>Wir verbringen einen Tag draußen in der Natur rund um Landsberg am Lech – gehen, sitzen, schweigen, sprechen, je nachdem, was gerade dran ist. Ich bringe keinen festen Ablauf mit, den ich über dich lege, sondern etwas, das mehr trägt: ein Gespür dafür, was bei dir gerade wirklich ansteht.</p>
+        <p>Denn oft ist das, was wir zuerst erzählen, noch nicht das eigentliche Thema. Ich höre in Ruhe hin, ich frage dort nach, wo es interessant wird, und ich teile mit dir, was ich wahrnehme. Was ich dabei mitbringe, ist über Jahre gewachsen: viel Zeit auf Reisen und in Begegnung mit Menschen, eine Ausbildung in Wildnispädagogik und unzählige Stunden draußen in der Natur. Daraus ist ein Gespür entstanden – dafür, wann es Bewegung braucht und wann Stille, wann eine Frage weiterhilft und wann es besser ist, einfach nur da zu sein. Der Tag hat keinen Fahrplan – aber er hat eine Richtung.</p>
       </div>
     </div>
   </section>
@@ -195,12 +206,38 @@
     <div class="wrap">
       <div class="sec-head reveal">
         <div class="eyebrow">Drei Bewegungen</div>
-        <h2>Was wir <em>gemeinsam finden</em></h2>
+        <h2>Was dabei <em>entstehen darf</em></h2>
       </div>
       <div class="aspects">
-        <div class="aspect reveal"><div class="n"></div><h3>Wiederverbindung</h3><p>Zurück in Verbindung – mit der Natur und mit deinem inneren Kompass. Dort, wo du wieder weißt, was wirklich zählt.</p></div>
-        <div class="aspect reveal d1"><div class="n"></div><h3>Blockaden spüren</h3><p>Bewusst wahrnehmen, was dich festhält. Nicht wegdenken, sondern fühlen – und dadurch lösen.</p></div>
-        <div class="aspect reveal d2"><div class="n"></div><h3>Richtung finden</h3><p>Eine Lebensrichtung, die sich stimmig anfühlt. Nicht von außen gesetzt – aus dir heraus.</p></div>
+        <div class="aspect reveal"><div class="n"></div><h3>Ankommen</h3><p>Kein Ziel, keine Uhr, kein Anspruch. Zeit, in der du nichts leisten und nichts erklären musst – bis der Kopf leiser wird und du dich wieder spürst.</p></div>
+        <div class="aspect reveal d1"><div class="n"></div><h3>Hinschauen</h3><p>Was dich beschäftigt, darf da sein und ausgesprochen werden. Nicht analysiert und weggedacht, sondern in Ruhe angeschaut, mit jemandem an deiner Seite.</p></div>
+        <div class="aspect reveal d2"><div class="n"></div><h3>Ins Fließen kommen</h3><p>Ein Fluss staut sich, wenn etwas im Weg liegt. Meist braucht es keine große Lösung, sondern nur eine kleine Bewegung an der richtigen Stelle – dann fließt es von allein weiter.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="eyebrow">Was du davon hast</div>
+        <h2>Warum es zu zweit <em>leichter geht</em></h2>
+      </div>
+      <div class="textblock reveal d1">
+        <p>Manches sehen wir bei uns selbst einfach nicht. Wir drehen die gleichen Gedanken seit Monaten, kommen zu denselben Schlüssen und halten das für Nachdenken. Ein Tag allein draußen bringt dich schon ein gutes Stück – an der entscheidenden Stelle hilft es aber, wenn jemand von außen mitschaut.</p>
+        <p>Genau da bin ich für dich da:</p>
+      </div>
+      <ul class="koru-list reveal d1">
+        <li><span class="koru"></span><span>Ich höre auch das, was zwischen den Zeilen liegt – und spreche es an, wenn es dir weiterhilft.</span></li>
+        <li><span class="koru"></span><span>Ich stelle die Fragen, auf die man allein selten kommt.</span></li>
+        <li><span class="koru"></span><span>Ich halte den Raum, wenn es dicht wird, damit du nicht ausweichen musst.</span></li>
+        <li><span class="koru"></span><span>Ich kenne das Gelände, draußen wie innen, und weiß, welcher Ort zu welchem Moment passt.</span></li>
+      </ul>
+      <div class="textblock reveal d2" style="margin-bottom:clamp(36px,5vw,56px);">
+        <p>Am Ende des Tages nimmst du selten eine fertige Antwort mit. Aber fast immer etwas, das mehr wert ist: Du siehst deine Situation klarer als seit Langem – und du spürst, was dein nächster Schritt sein könnte.</p>
+      </div>
+      <div class="ablauf-grid reveal d2">
+        <figure><img src="assets/begleitung-2.jpg" alt="Menschen sitzen still am Flussufer" loading="lazy" /></figure>
+        <figure><img src="assets/begleitung-4.jpg" alt="Michael begleitet eine Einzelsitzung mit den Händen" loading="lazy" /></figure>
       </div>
     </div>
   </section>
@@ -208,32 +245,27 @@
   <section class="forwhom">
     <div class="wrap inner">
       <div class="eyebrow reveal">Für wen</div>
-      <h2 class="reveal d1" style="font-family:var(--serif);font-weight:400;font-size:clamp(30px,4.6vw,52px);margin:14px 0 6px;">Wenn du dich <em style="color:var(--gold-2)">festgefahren</em> fühlst</h2>
+      <h2 class="reveal d1" style="font-family:var(--serif);font-weight:400;font-size:clamp(30px,4.6vw,52px);margin:14px 0 6px;">Wenn gerade etwas <em style="color:var(--gold-2)">feststeckt</em></h2>
       <ul class="reveal d2">
-        <li><span class="koru"></span><span>Du stehst an einem Wendepunkt und suchst Klarheit für den nächsten Schritt.</span></li>
-        <li><span class="koru"></span><span>Du funktionierst – aber spürst, dass etwas fehlt. Mehr Sein, weniger Tun.</span></li>
-        <li><span class="koru"></span><span>Du sehnst dich nach echter Verbindung: zu dir, zur Natur, zum Leben.</span></li>
+        <li><span class="koru"></span><span>Du stehst an einem Wendepunkt und möchtest erst einmal sortieren, bevor du entscheidest.</span></li>
+        <li><span class="koru"></span><span>Du funktionierst gut – aber irgendetwas fehlt, und du kommst allein nicht dahinter, was.</span></li>
+        <li><span class="koru"></span><span>Du trägst etwas mit dir herum, das du gern einmal aussprechen würdest, ohne dass jemand es sofort lösen will.</span></li>
+        <li><span class="koru"></span><span>Du sehnst dich nach Zeit draußen, die mehr ist als ein Spaziergang.</span></li>
       </ul>
     </div>
   </section>
 
-  <section>
+  <section class="quoteband" style="background:var(--bg);">
     <div class="wrap">
-      <div class="sec-head reveal">
-        <div class="eyebrow">In der Natur</div>
-        <h2>So kann ein <em>Tag aussehen</em></h2>
-        <p>Kein starres Programm – wir folgen dem, was dran ist. Kanu, Stille, Bewegung, Gespräch.</p>
-      </div>
-      <div class="ablauf-grid reveal">
-        <figure><img src="assets/begleitung-2.jpg" alt="Im Kreis am Wasser" loading="lazy" /></figure>
-        <figure><img src="assets/begleitung-4.jpg" alt="Begleitung mit den Händen" loading="lazy" /></figure>
-      </div>
+      <div class="q reveal">„Du musst den Fluss nicht beherrschen – du darfst lernen, <em>mit ihm zu fließen</em>."</div>
     </div>
   </section>
 
-  <section class="quoteband">
-    <div class="wrap">
-      <div class="q reveal">„Du musst den Fluss nicht beherrschen – du darfst lernen, <em>mit ihm zu fließen</em>."</div>
+  <section class="haltung">
+    <div class="wrap inner">
+      <div class="eyebrow reveal">Gehalten von der Natur</div>
+      <h3 class="reveal d1">Ein Tag, der sich <em>selbst gestaltet</em></h3>
+      <p class="reveal d2">Das Ganze findet draußen statt, zwischen Lech, Wald und Wiesen – und die Natur ist dabei kein Hintergrund, sondern trägt mit. Sie gibt den Takt vor, sie beruhigt, und oft stellt sie die besseren Fragen als ich. Was der Tag sonst mit sich bringt, bleibt offen: Es gibt nichts, was am Ende herauskommen muss, und nichts, was du für mich erfüllen müsstest.</p>
     </div>
   </section>
 
@@ -241,11 +273,11 @@
     <span class="koru koru-wm"></span>
     <div class="wrap inner">
       <div class="eyebrow reveal">Weniger Tun – mehr Sein</div>
-      <h2 class="reveal d1">Bereit, in deinen <em>Fluss</em> zu kommen?</h2>
-      <p class="reveal d2">Schreib mir einfach – erzähl mir, wo du gerade stehst. Wir finden gemeinsam heraus, ob ein Tag auf dem Wasser für dich der richtige nächste Schritt ist.</p>
+      <h2 class="reveal d1">Bereit für einen Tag <em>nur für dich</em>?</h2>
+      <p class="reveal d2">Schreib mir einfach und erzähl mir, wo du gerade stehst. Du musst noch nicht wissen, was du suchst – wir telefonieren vorher in Ruhe und schauen gemeinsam, ob das für dich der richtige nächste Schritt ist.</p>
       <div class="hero-cta reveal d2" style="justify-content:center;display:flex;gap:14px;flex-wrap:wrap;">
         <a href="https://wa.me/491602302132" class="btn btn-primary">Auf WhatsApp schreiben</a>
-        <a href="index.html" class="btn btn-ghost">← zurück zu WAIRUA</a>
+        <a href="index.html" class="btn btn-ghost">← zurück zu Wairua.Spirit</a>
       </div>
     </div>
   </section>
@@ -253,7 +285,7 @@
   <footer>
     <div class="wrap">
       <div class="brand"><img class="brand-logo" src="assets/logo-cream.png" alt="" />Wairua.Spirit</div>
-      <p>Dein Kanu-Partner · Im Fluss des Lebens · <a href="index.html">Wairua.Spirit</a></p>
+      <p>Einzelbegleitung · Im Fluss des Lebens · <a href="index.html">Wairua.Spirit</a></p>
       <p style="margin-top:8px;"><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></p>
     </div>
   </footer>
