@@ -22,27 +22,46 @@ Stand: siehe letzter Commit unten. Diese Datei ist eine Arbeitsnotiz für die n�
   `gh api -X PUT repos/lechcode/wairua-vorschau/pages -f cname='wairua-spirit.de'`
 - DNS bei IONOS unverändert (4× A auf 185.199.108–111.153). Der `www`-CNAME zeigt zwar noch auf `cominghomemira.github.io`, funktioniert aber – GitHub löst die Weiterleitung selbst auf. Bei Gelegenheit auf `lechcode.github.io` umstellen. ⚠️ MX-Einträge niemals anfassen (Google Workspace).
 
-## 3. 🔴 Unmittelbar nächster Task (unterbrochen, noch NICHT umgesetzt)
+## 3. ✅ Technische Überarbeitung (21.07.2026) — erledigt
 
-Der Nutzer hat zwei konkrete Korrekturen an den Guide-Porträts in `retreat.html` verlangt, bevor die Session endete:
+Nach einer Bau- und Technik-Analyse der sechs Seiten wurde die **technische**
+Substanz überarbeitet. Inhaltliches (Texte, Headlines, Bildauswahl, Preise,
+Termine, Zielgruppen-Frage) wurde bewusst **nicht** angefasst, ebenso bleibt
+`noindex` auf `retreat.html` und `rituale.html`.
 
-**Datei:** `retreat.html`, CSS-Regel ca. Zeile 115–120 (`.guides-portraits`)
+**Was sich strukturell geändert hat — bitte vor dem nächsten Bau lesen:**
 
-1. **Schwarzen/dunklen Rahmen um die zwei Porträtbilder (Michael + Oskar) entfernen.**
-   Aktuell: `.guides-portraits figure{...border:3px solid var(--panel);...}` — genau dieser `border` erzeugt den vom Nutzer bemängelten dunklen Rand. → Regel entfernen oder auf `border:none` setzen (Schatten `box-shadow` kann bleiben).
+- **Neu: `assets/base.css` + `assets/site.js`** als gemeinsame Grundlage aller
+  sechs Seiten. Details und die kanonischen Werte stehen in `CLAUDE.md`.
+  Die `<style>`-Blöcke schrumpften zusammen von 773 auf 424 Zeilen.
+- **Mobile Navigation** (Burger + Menü) gibt es jetzt auf **allen** Seiten,
+  nicht mehr nur auf der Startseite. Vorher wurde die Wortmarke auf den fünf
+  Unterseiten bei 390 px auf 146–165 px gequetscht (nötig: 176 px).
+- **Bilder:** alle ausgelieferten Fotos neu aufgebaut (q80, begrenzte
+  Pixelbreiten) → 5.284 KB auf 3.308 KB. `srcset` für Heroes und Karten,
+  `width`/`height` an jedem `<img>`, `fetchpriority` auf den Heroes.
+  `logo-cream.png` von 1573 px auf 160 px (wurde auf 32 px dargestellt).
+- **32 ungenutzte Bilder** nach `_projekt/archiv-assets-ungenutzt/` ausgelagert:
+  `assets/` von 56 MB auf 7,1 MB. Die sechs `moment-*.jpg` blieben liegen.
+- **Barrierefreiheit:** `:focus-visible` global, Karussell mit `aria-hidden`
+  auf inaktiven Slides und ohne Autoplay-Zwang, echte Überschriften auf
+  `rituale.html`, Campbell-Zitat als `blockquote`.
+- **Kontrast** der zwei Stellen unter AA angehoben: Startseiten-Lead
+  4,22 → 5,35:1, Rituale-Untertitel 4,73 → 6,10:1 (gemessen).
+- **Datenschutz:** neuer Abschnitt 7 zur YouTube-Zwei-Klick-Lösung.
+- **Favicon**, Apple-Touch-Icon, `theme-color` und vier dedizierte
+  og:images (1200×630) ergänzt.
 
-2. **Hover-Effekt ergänzen** — beim Drüberfahren mit der Maus soll sich das Bild "ein bisschen bewegen" (Zoom/Scale), analog zu den anderen Bild-Hovers auf der Seite, z. B.:
-   ```css
-   .pillar img{transition:transform 1.1s cubic-bezier(.2,.7,.2,1);}
-   .pillar:hover img{transform:scale(1.07);}
-   ```
-   Dieses Muster (Bild in `overflow:hidden`-Container, `transition` auf `img`, `:hover img{transform:scale(...)}`) zieht sich durch die ganze Seite (`.thema`, `.trio figure`, `.ort-grid figure`, `.essen-media`, `.video-facade` etc.) — bei `.guides-portraits img` fehlt das noch. Einfach dasselbe Pattern ergänzen:
-   ```css
-   .guides-portraits img{transition:transform 1.1s cubic-bezier(.2,.7,.2,1);}
-   .guides-portraits figure:hover img{transform:scale(1.06);}
-   ```
+**Zwei Befunde, die sich als Fehlalarm herausgestellt haben** (nicht erneut „fixen"):
 
-Danach wie gewohnt: lokal öffnen, kurz prüfen, direkt committen + pushen.
+1. Dass in `assets/fonts.css` die Gewichte 400/500/600 auf **dieselbe**
+   `.woff2` zeigen, ist **korrekt**: beide Familien sind Variable Fonts, das
+   ist Googles eigene Ausgabe. Nachgemessen — die Gewichte rendern
+   unterschiedlich (Cormorant +33 % Deckung von 400 auf 600, Inter +35 %).
+   Separate Schnitt-Dateien gibt es bei Google nicht.
+2. Im lokalen Vorschau-Tab steht die Animations-Timeline still, weshalb
+   Hero-Texte dort dauerhaft `opacity: 0` zeigen. Ebenfalls kein Fehler,
+   siehe `CLAUDE.md`.
 
 ## 4. Was in dieser Session komplett fertiggestellt wurde
 
@@ -89,6 +108,10 @@ Danach wie gewohnt: lokal öffnen, kurz prüfen, direkt committen + pushen.
 ## 6. Technische Eigenheiten / Fallstricke (für die nächste Session)
 
 - **PowerShell + System.Drawing:** funktioniert für JPG/PNG-Verarbeitung (Resize, Crop, Rotate, Qualitätskomprimierung), aber **kann kein WebP lesen** (`FromFile` wirft „Nicht genügend Arbeitsspeicher"-Fehler bei WebP). WebP-Dateien wurden deshalb unverändert kopiert bzw. nur im Read-Tool angeschaut (Read kann WebP anzeigen).
+- **Kein ImageMagick, kein ffmpeg, kein cwebp** auf der Maschine. `convert.exe` in `system32` ist das Windows-Dateisystem-Werkzeug, **nicht** ImageMagick. GDI+ ist als JPEG-Encoder schwach: lieber die Pixelbreite begrenzen als die Qualität unter ~78 drücken.
+- **`perl -i -pe` niemals mit Umlauten in den Ersetzungs-Strings** benutzen — das erzeugt doppelt kodiertes UTF-8 (`Ã¤` statt `ä`). Für Text mit Umlauten das Edit-Tool nehmen oder PowerShell mit `[System.IO.File]::ReadAllText/WriteAllText` und `UTF8Encoding($false)`.
+- **Sandbox-Eigenheit:** `Remove-Item` in einem PowerShell-Skript, das an anderer Stelle eine Division (`/2`) enthält, wird geblockt („system path '/2'"). Löschen in einen eigenen Aufruf legen.
+- **Headless-Chrome ignoriert `--window-size`** auf dieser Maschine (rendert immer ~512–758 px breit). Für echte Breiten-Tests den Browser-Pane mit `resize_window` nehmen; Screenshots aus Headless taugen nur zur Optik-Kontrolle, nicht zur Breiten-Messung.
 - **`[math]::Min(1, $scale)`-Falle:** Wenn `1` als Int übergeben wird statt `1.0`, wird der Double-Skalierungsfaktor auf `0` abgeschnitten → Bitmap(0,0) → „Ungültiger Parameter"-Fehler. Immer `1.0` (Double) schreiben.
 - **Chat-Bilder sind keine Dateien:** Vom Nutzer inline in den Chat gepastete Bilder können nicht direkt als Datei gespeichert/verarbeitet werden. Der Nutzer muss sie manuell in einen lokalen Ordner legen (in dieser Session genutzt: `Desktop\Neuer Ordner\` und `Desktop\Neuer Ordner (2)\`), danach per `ls`/ `Bash` auffindbar.
 - **`git add -A` auf Windows:** erzeugt harmlose `LF will be replaced by CRLF`-Warnungen bei `.html`/`.css`/`.xml` — kann ignoriert werden, kein Fehler.
@@ -96,6 +119,10 @@ Danach wie gewohnt: lokal öffnen, kurz prüfen, direkt committen + pushen.
 
 ## 7. Kurz-Referenz aller Assets, die neu dazugekommen sind
 
+- `assets/base.css`, `assets/site.js` — gemeinsame Grundlage aller Seiten (seit 21.07.2026)
+- `assets/koru.png` — Koru-Maske (ersetzt das 1573 px grosse `logo.png`)
+- `assets/favicon-32.png`, `assets/apple-touch-icon.png`, `assets/og-*.jpg`
+- `assets/*-600.jpg`, `*-800.jpg`, `*-900.jpg` — kleinere Varianten fuer srcset
 - `assets/fonts.css`, `assets/fonts/*.woff2` — selbst gehostete Schriften
 - `assets/logo-cream.png` — Header/Footer-Logo als Bilddatei
 - `assets/moment-*.jpg` — Momente-Galerie (Startseite)
