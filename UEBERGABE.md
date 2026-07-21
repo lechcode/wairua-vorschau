@@ -12,17 +12,15 @@ Stand: siehe letzter Commit unten. Diese Datei ist eine Arbeitsnotiz für die n�
 - Commit-Message-Stil: kurze deutsche Zusammenfassung + `Co-Authored-By: Claude Opus 4.8 <noreply@anthropic.com>`
 - Git-Identität ist lokal bereits gesetzt: Michael Storz / info@wairua-spirit.de
 
-## 2. ⚠️ Wichtigster offener Punkt: Domain-Cutover
+## 2. ✅ Domain-Cutover: erledigt (21.07.2026)
 
-- `wairua-spirit.de` (Live-Domain) zeigt **aktuell auf einen älteren Stand**, der `retreat.html` (und ggf. weitere neue Dateien) noch nicht enthält.
-- Die `CNAME`-Datei wurde im Lechcode-Repo **bewusst entfernt** (Commit `df0f64f`), Cutover war als "später" geplant.
-- **Funktionierender Übergangs-Link für alles Neue:**
-  `https://lechcode.github.io/wairua-vorschau/retreat.html` (und analog `/index.html` etc.)
-- Um `wairua-spirit.de` auf den aktuellen Stand zu bringen:
-  1. `CNAME`-Datei (Inhalt: `wairua-spirit.de`) wieder ins Repo legen + pushen
-  2. In GitHub → Repo `lechcode/wairua-vorschau` → **Settings → Pages** → Custom Domain auf `wairua-spirit.de` setzen (nur über GitHub-UI möglich, nicht per CLI/Claude)
-  3. Prüfen, ob das alte Repo/Konto die Domain noch beansprucht (DNS bleibt unverändert bei IONOS, siehe unten)
-- **Noch nicht mit dem Nutzer final geklärt, ob/wann der Cutover jetzt gemacht werden soll.** In der letzten Session wurde nur die Diagnose gemacht (404 bei `wairua-spirit.de/retreat.html`), aber der Cutover selbst wurde nicht ausgeführt.
+- `wairua-spirit.de` wird **seit 21.07.2026 aus diesem Repo** (`lechcode/wairua-vorschau`) ausgeliefert. Alle Unterseiten liefern 200, `www` leitet auf die Hauptdomain um, HTTPS ist erzwungen.
+- Die `CNAME`-Datei (Inhalt `wairua-spirit.de`) liegt wieder im Repo-Root → **nicht löschen**.
+- **Blocker war das alte Konto:** `ComingHomeMira/wairua-vorschau` hielt die Domain (eigene CNAME-Datei + Custom-Domain-Eintrag). GitHub lässt dieselbe Domain nicht zweimal beanspruchen („The custom domain is already taken"). Michael hat dort GitHub Pages abgeschaltet, danach war die Domain frei.
+- Merke für ähnliche Fälle: Nur das Feld „Custom domain" zu leeren reicht **nicht** – die `CNAME`-Datei im alten Repo setzt es beim nächsten Build wieder. Entweder Pages dort ganz abschalten oder die Datei mitlöschen.
+- Setzen der Domain ging **per CLI**, entgegen der früheren Notiz:
+  `gh api -X PUT repos/lechcode/wairua-vorschau/pages -f cname='wairua-spirit.de'`
+- DNS bei IONOS unverändert (4× A auf 185.199.108–111.153). Der `www`-CNAME zeigt zwar noch auf `cominghomemira.github.io`, funktioniert aber – GitHub löst die Weiterleitung selbst auf. Bei Gelegenheit auf `lechcode.github.io` umstellen. ⚠️ MX-Einträge niemals anfassen (Google Workspace).
 
 ## 3. 🔴 Unmittelbar nächster Task (unterbrochen, noch NICHT umgesetzt)
 
