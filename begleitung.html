@@ -13,64 +13,35 @@
 <meta property="og:type" content="article" />
 <meta property="og:title" content="Einzelbegleitung in der Natur – ein Tag draußen | Wairua.Spirit" />
 <meta property="og:description" content="Ein Tag draußen, ganz für dich. Einzelbegleitung im Raum Landsberg am Lech." />
-<meta property="og:image" content="https://wairua-spirit.de/assets/begleitung-1.jpg" />
+<meta property="og:image" content="https://wairua-spirit.de/assets/og-begleitung.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Flusslauf zwischen Wald und Wiesen bei Landsberg am Lech" />
 <meta property="og:url" content="https://wairua-spirit.de/begleitung.html" />
 <meta property="og:locale" content="de_DE" />
 <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://wairua-spirit.de/assets/og-begleitung.jpg" />
+<link rel="preload" href="assets/fonts/co3bmX5slCNuHLi8bLeY9MK7whWMhyjYqXtK.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="assets/fonts/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2" as="font" type="font/woff2" crossorigin />
 <link rel="stylesheet" href="assets/fonts.css" />
+<link rel="stylesheet" href="assets/base.css" />
+<link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png" />
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+<meta name="theme-color" content="#0c0e0b" />
+<script src="assets/site.js" defer></script>
 <style>
-  :root{
-    --bg:#0c0e0b;--bg2:#11140e;--panel:#161a12;--bone:#f1eadf;--bone-dim:#cdc6b7;--muted:#988f7f;
-    --gold:#d8a85a;--gold-2:#e8c585;--moss:#8a9a6b;--clay:#bc8155;--line:rgba(241,234,223,.13);
-    --serif:"Cormorant Garamond",Georgia,serif;--sans:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
-    --shadow:0 30px 70px -30px rgba(0,0,0,.8);
-  }
-  *{margin:0;padding:0;box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
-  body{background:var(--bg);color:var(--bone);font-family:var(--sans);line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
-  h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.06;letter-spacing:-.01em;}
-  a{color:inherit;text-decoration:none;}
-  img{max-width:100%;display:block;}
-  .wrap{width:min(1100px,92vw);margin-inline:auto;}
-  .eyebrow{font-size:12px;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);font-weight:500;}
-  em{font-style:italic;}
-  .koru{display:inline-block;-webkit-mask:url('assets/logo.png') center/contain no-repeat;mask:url('assets/logo.png') center/contain no-repeat;background:currentColor;}
-  .grain{position:fixed;inset:0;z-index:9998;pointer-events:none;opacity:.05;mix-blend-mode:soft-light;
-    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");}
+  /* Inhaltsseite mit schmalerem Satzspiegel als die Startseite */
+  .wrap{width:min(1100px,92vw);}
 
-  nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;
-    padding:20px clamp(20px,5vw,56px);transition:background .5s,backdrop-filter .5s,padding .5s,border-color .5s;border-bottom:1px solid transparent;}
-  nav.scrolled{background:rgba(12,14,11,.72);backdrop-filter:saturate(150%) blur(16px);-webkit-backdrop-filter:saturate(150%) blur(16px);border-bottom:1px solid var(--line);padding-top:13px;padding-bottom:13px;}
-  nav .brand{display:flex;align-items:center;gap:11px;font-family:var(--serif);font-size:24px;font-weight:600;letter-spacing:.02em;}
-  nav .brand .brand-logo{width:32px;height:32px;object-fit:contain;filter:drop-shadow(0 1px 3px rgba(0,0,0,.5));}
-  nav .links{display:flex;gap:clamp(16px,2.4vw,30px);align-items:center;font-size:14px;color:var(--bone-dim);}
-  nav .links a:hover{color:var(--bone);}
-  nav .links a.cta{border:1px solid var(--gold);color:var(--gold-2);padding:9px 20px;border-radius:999px;transition:background .3s,color .3s;}
-  nav .links a.cta:hover{background:var(--gold);color:#1a140a;}
-
-  .btn{display:inline-flex;align-items:center;gap:9px;font-size:15px;font-weight:500;padding:15px 30px;border-radius:999px;cursor:pointer;border:1px solid transparent;transition:transform .25s,box-shadow .25s,background .25s,color .25s,border-color .25s;}
-  .btn-primary{background:var(--gold);color:#1a140a;box-shadow:0 16px 40px -16px rgba(216,168,90,.7);}
-  .btn-primary:hover{transform:translateY(-2px);background:var(--gold-2);box-shadow:0 22px 50px -16px rgba(216,168,90,.85);}
-  .btn-ghost{border-color:var(--line);color:var(--bone);}
-  .btn-ghost:hover{border-color:var(--gold);color:var(--gold-2);}
-
-  header.hero{position:relative;min-height:92svh;display:flex;align-items:flex-end;overflow:hidden;padding-top:clamp(96px,14vh,150px);}
-  .hero-bg{position:absolute;inset:0;z-index:0;}
-  .hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 45%;transform:scale(1.05);animation:kb 26s ease-in-out infinite alternate;}
-  @keyframes kb{0%{transform:scale(1.05);}100%{transform:scale(1.15);}}
-  .hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,14,11,.55) 0%,rgba(12,14,11,.08) 24%,rgba(12,14,11,.52) 54%,rgba(12,14,11,.99) 100%);}
+  /* --- Hero ------------------------------------------------------------- */
+  header.hero{min-height:92svh;}
+  .hero-bg img{object-position:center 45%;transform:scale(1.05);animation:kb 26s ease-in-out infinite alternate;}
+  .hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,14,11,.55) 0%,rgba(12,14,11,.10) 24%,rgba(12,14,11,.62) 54%,rgba(12,14,11,.99) 100%);}
   .hero-koru{position:absolute;z-index:1;top:42%;left:50%;width:min(70vw,600px);height:min(70vw,600px);transform:translate(-50%,-50%);color:var(--gold);opacity:.07;animation:spin 120s linear infinite;}
-  @keyframes spin{to{transform:translate(-50%,-50%) rotate(360deg);}}
-  .hero-inner{position:relative;z-index:2;padding:0 0 clamp(56px,10vh,120px);text-shadow:0 2px 22px rgba(0,0,0,.5);}
-  .hero .back{display:inline-flex;align-items:center;gap:7px;font-size:13px;letter-spacing:.04em;color:var(--bone-dim);margin-bottom:22px;opacity:0;animation:rise .9s ease .1s forwards;}
-  .hero .back:hover{color:var(--gold-2);}
+  .hero .back{opacity:0;animation:rise .9s ease .1s forwards;}
   .hero h1{font-size:clamp(46px,8.5vw,104px);font-weight:400;margin:14px 0 18px;opacity:0;animation:rise 1.1s ease .35s forwards;}
-  .hero h1 em{color:var(--gold-2);}
   .hero .sub{font-family:var(--serif);font-style:italic;font-size:clamp(22px,3vw,34px);color:var(--bone);max-width:34ch;opacity:0;animation:rise 1.1s ease .55s forwards;}
-  .hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:32px;opacity:0;animation:rise 1.1s ease .75s forwards;}
-  @keyframes rise{from{opacity:0;transform:translateY(28px);}to{opacity:1;transform:none;}}
-
-  section{position:relative;padding:clamp(72px,12vw,140px) 0;}
+  .hero-cta{margin-top:32px;opacity:0;animation:rise 1.1s ease .75s forwards;}
 
   .split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(34px,5vw,72px);align-items:center;}
   .split .visual{position:relative;border-radius:18px;overflow:hidden;aspect-ratio:4/5;box-shadow:var(--shadow);}
@@ -82,8 +53,6 @@
 
   .sec-head{max-width:640px;margin:0 auto 56px;text-align:center;}
   .sec-head h2{font-size:clamp(32px,5vw,56px);font-weight:400;margin:14px 0 16px;}
-  .sec-head h2 em{color:var(--gold-2);}
-  .sec-head p{color:var(--bone-dim);font-size:17px;}
 
   .forwhom{background:var(--bg2);}
   .forwhom .inner{max-width:760px;margin:0 auto;text-align:center;}
@@ -104,20 +73,10 @@
   .cta-final h2 em{color:var(--gold-2);}
   .cta-final p{color:var(--bone-dim);font-size:18px;margin-bottom:32px;}
 
-  footer{border-top:1px solid var(--line);padding:48px 0 30px;text-align:center;}
-  footer .brand{display:inline-flex;align-items:center;gap:11px;font-family:var(--serif);font-size:24px;font-weight:600;margin-bottom:10px;}
-  footer .brand .brand-logo{width:30px;height:30px;object-fit:contain;}
-  footer p{font-size:13px;color:var(--muted);}
-  footer a{color:var(--gold-2);}
-
-  .reveal{opacity:0;transform:translateY(32px);transition:opacity 1s ease,transform 1s cubic-bezier(.2,.7,.2,1);}
-  .reveal.in{opacity:1;transform:none;}
-  .reveal.d1{transition-delay:.1s;}.reveal.d2{transition-delay:.2s;}
-
   @media(max-width:900px){
-    .split{grid-template-columns:1fr;}.split .visual{order:-1;aspect-ratio:4/4;max-height:60vh;}
+    .split{grid-template-columns:1fr;}
+    .split .visual{order:-1;aspect-ratio:4/4;max-height:60vh;}
   }
-  @media(prefers-reduced-motion:reduce){*{animation:none !important;}.reveal{opacity:1;transform:none;}}
 </style>
 <script type="application/ld+json">
 {
@@ -136,15 +95,22 @@
   <div class="grain"></div>
 
   <nav id="nav">
-    <a href="index.html" class="brand"><img class="brand-logo" src="assets/logo-cream.png" alt="" />Wairua.Spirit</a>
+    <a href="index.html" class="brand"><img class="brand-logo" src="assets/logo-cream.png" alt="" width="160" height="145" />Wairua.Spirit</a>
     <div class="links">
       <a href="index.html">Startseite</a>
       <a href="https://wa.me/491602302132" class="cta">Schreib mir</a>
     </div>
+    <button class="burger" id="burger" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
   </nav>
+  <div class="mobile-menu" id="mobileMenu" inert>
+    <a href="index.html">Startseite</a>
+    <a href="#worum">Worum es geht</a>
+    <a href="#kontakt">Lass uns sprechen</a>
+    <a href="https://wa.me/491602302132">Schreib mir</a>
+  </div>
 
   <header class="hero">
-    <div class="hero-bg"><img src="assets/begleitung-1.jpg" alt="Flusslauf zwischen Wald und Wiesen" /></div>
+    <div class="hero-bg"><img src="assets/begleitung-1.jpg" srcset="assets/begleitung-1-900.jpg 900w, assets/begleitung-1.jpg 1600w" sizes="100vw" width="1600" height="977" fetchpriority="high" alt="Flusslauf zwischen Wald und Wiesen, eine Person sitzt im flachen Wasser" /></div>
     <span class="koru hero-koru"></span>
     <div class="wrap hero-inner">
       <a href="index.html" class="back">← zurück zu Wairua.Spirit</a>
@@ -161,7 +127,7 @@
   <section id="worum" style="background:var(--bg2);">
     <div class="wrap split">
       <div class="visual reveal">
-        <img src="assets/begleitung-haende.jpg" alt="Zwei Menschen halten sich draußen an den Händen" loading="lazy" />
+        <img src="assets/begleitung-haende.jpg" width="900" height="1125" loading="lazy" alt="Zwei Menschen halten sich draußen an den Händen" />
       </div>
       <div class="reveal d1">
         <div class="eyebrow">Worum es geht</div>
@@ -227,17 +193,11 @@
 
   <footer>
     <div class="wrap">
-      <div class="brand"><img class="brand-logo" src="assets/logo-cream.png" alt="" />Wairua.Spirit</div>
+      <div class="brand"><img class="brand-logo" src="assets/logo-cream.png" alt="" width="160" height="145" loading="lazy" />Wairua.Spirit</div>
       <p>Einzelbegleitung · Im Fluss des Lebens · <a href="index.html">Wairua.Spirit</a></p>
       <p style="margin-top:8px;"><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></p>
     </div>
   </footer>
 
-  <script>
-    const nav=document.getElementById('nav');
-    addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>30),{passive:true});
-    const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.14});
-    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
-  </script>
 </body>
 </html>
