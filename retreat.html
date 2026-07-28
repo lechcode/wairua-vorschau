@@ -116,6 +116,12 @@
   .form textarea{min-height:120px;resize:vertical;}
   .form .btn{justify-content:center;width:100%;margin-top:6px;}
   .form-hint{font-size:12.5px;color:var(--muted);margin-top:14px;}
+  /* Rueckmeldung nach dem Absenden - so geht keine Anfrage still verloren */
+  .form-danke{margin-top:22px;padding:20px 22px;border:1px solid rgba(216,168,90,.4);
+    border-radius:14px;background:rgba(216,168,90,.06);text-align:left;}
+  .form-danke p{font-size:15px;color:var(--bone-dim);}
+  .form-danke p + p{margin-top:12px;}
+  .form-danke a{color:var(--gold-2);}
 
   @media(max-width:900px){
     .themen{grid-template-columns:1fr;}
@@ -312,7 +318,11 @@
         <div><label for="msg">Deine Nachricht</label><textarea id="msg" name="msg" placeholder="Was dich gerade beschäftigt, oder was du noch wissen willst."></textarea></div>
         <button type="submit" class="btn btn-primary">Auf die Liste setzen →</button>
       </form>
-      <p class="form-hint">Alternativ direkt per <a href="https://wa.me/491602302132" style="color:var(--gold-2)">WhatsApp</a> oder E-Mail an <a href="mailto:info@wairua-spirit.de" style="color:var(--gold-2)">info@wairua-spirit.de</a>.</p>
+      <div class="form-danke" id="anmeldeDanke" hidden role="status" aria-live="polite">
+        <p>Fast geschafft. Es sollte sich gerade ein Mailfenster mit deiner Nachricht geöffnet haben – schick sie einfach ab, dann setze ich dich auf die Liste und melde mich, sobald Termin und Beitrag stehen.</p>
+        <p>Hat sich nichts geöffnet? Dann schreib mir direkt an <a href="mailto:info@wairua-spirit.de">info@wairua-spirit.de</a> oder per <a href="https://wa.me/491602302132">WhatsApp</a> – das geht genauso.</p>
+      </div>
+      <p class="form-hint">Lieber direkt? Schreib mir per <a href="https://wa.me/491602302132" style="color:var(--gold-2)">WhatsApp</a> oder an <a href="mailto:info@wairua-spirit.de" style="color:var(--gold-2)">info@wairua-spirit.de</a>.</p>
     </div>
   </section>
 
@@ -329,13 +339,21 @@
   </footer>
 
   <script>
-    // Anmeldeformular: oeffnet vorausgefuellte E-Mail (bis ein Formulardienst angebunden ist)
+    // Anmeldeformular: oeffnet eine vorausgefuellte E-Mail (bis ein Formulardienst
+    // angebunden ist). Danach IMMER eine sichtbare Rueckmeldung - auf Handys ohne
+    // eingerichtete Mail-App wuerde sonst nichts passieren und die Anfrage still
+    // verloren gehen.
     const f=document.getElementById('anmeldeForm');
+    const danke=document.getElementById('anmeldeDanke');
     f.addEventListener('submit',(e)=>{
       e.preventDefault();
       const name=encodeURIComponent(f.name.value), email=encodeURIComponent(f.email.value), tel=encodeURIComponent(f.tel.value), msg=encodeURIComponent(f.msg.value);
       const body='Name: '+name+'%0D%0AE-Mail: '+email+'%0D%0ATelefon: '+tel+'%0D%0A%0D%0ANachricht:%0D%0A'+msg;
-      window.location.href='mailto:info@wairua-spirit.de?subject='+encodeURIComponent('Warteliste Winter-Retreat 2026')+'&body='+body;
+      const link='mailto:info@wairua-spirit.de?subject='+encodeURIComponent('Warteliste Winter-Retreat 2026')+'&body='+body;
+      // Mailfenster in neuem Kontext oeffnen, damit die Seite nicht wegnavigiert
+      const w=window.open(link,'_blank');
+      if(!w) window.location.href=link;
+      if(danke){ danke.hidden=false; danke.scrollIntoView({behavior:'smooth',block:'center'}); }
     });
   </script>
 </body>
