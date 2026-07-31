@@ -110,20 +110,18 @@
   .anmeldung{position:relative;text-align:center;overflow:hidden;background:var(--bg2);}
   .anmeldung .koru-wm{position:absolute;top:50%;left:50%;width:min(80vw,560px);height:min(80vw,560px);transform:translate(-50%,-50%);color:var(--gold);opacity:.05;animation:spin 150s linear infinite;}
   .anmeldung .inner{position:relative;z-index:2;max-width:640px;margin:0 auto;}
-  .form{margin-top:36px;text-align:left;display:grid;gap:16px;}
-  .form .row{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
-  .form label{display:block;font-size:13px;letter-spacing:.04em;color:var(--bone-dim);margin-bottom:7px;}
-  .form input,.form textarea{width:100%;background:rgba(241,234,223,.04);border:1px solid var(--line);border-radius:12px;padding:13px 15px;color:var(--bone);font-family:var(--sans);font-size:15px;transition:border-color .3s;}
-  .form input:focus-visible,.form textarea:focus-visible{border-color:var(--gold);}
-  .form textarea{min-height:120px;resize:vertical;}
-  .form .btn{justify-content:center;width:100%;margin-top:6px;}
-  .form-hint{font-size:12.5px;color:var(--muted);margin-top:14px;}
-  /* Rueckmeldung nach dem Absenden - so geht keine Anfrage still verloren */
-  .form-danke{margin-top:22px;padding:20px 22px;border:1px solid rgba(216,168,90,.4);
-    border-radius:14px;background:rgba(216,168,90,.06);text-align:left;}
-  .form-danke p{font-size:15px;color:var(--bone-dim);}
-  .form-danke p + p{margin-top:12px;}
-  .form-danke a{color:var(--gold-2);}
+  .anmelden-cta{margin-top:34px;}
+  /* Fragen -> WhatsApp */
+  .frage{margin-top:34px;font-size:15px;color:var(--bone-dim);}
+  .wa-btn{display:inline-flex;align-items:center;gap:9px;margin-top:12px;border:1px solid var(--line);
+    color:var(--bone);border-radius:999px;padding:11px 22px;font-size:14px;transition:border-color .3s,color .3s;}
+  .wa-btn:hover{border-color:var(--gold);color:var(--gold-2);}
+  .wa-btn svg{width:19px;height:19px;flex:none;}
+  .frage-mail{display:block;margin-top:16px;font-size:13px;color:var(--muted);}
+  .frage-mail a{color:var(--gold-2);}
+  /* Mitten-CTA-Band */
+  .cta-band{padding:clamp(48px,8vw,84px) 0;text-align:center;border-top:1px solid var(--line);}
+  .cta-band p{font-family:var(--serif);font-style:italic;font-size:clamp(20px,2.6vw,28px);color:var(--gold-2);margin-bottom:22px;}
 
   @media(max-width:900px){
     .themen{grid-template-columns:1fr;}
@@ -131,7 +129,6 @@
     .guides-portraits{order:-1;max-width:360px;}
     .ort-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:clamp(150px,30vw,210px);}
     .trio{grid-template-columns:1fr;}
-    .form .row{grid-template-columns:1fr;}
   }
 </style>
 <script type="application/ld+json">
@@ -173,7 +170,7 @@
     <a href="index.html" class="brand"><img class="brand-logo" src="assets/logo-cream.png" alt="" width="160" height="145" />Wairua.Spirit</a>
     <div class="links">
       <a href="index.html">Startseite</a>
-      <a href="#anmeldung" class="cta">Jetzt anmelden</a>
+      <a href="https://forms.gle/2gdLzgLvR4rXx53V7" target="_blank" rel="noopener" class="cta">Jetzt anmelden</a>
     </div>
     <button class="burger" id="burger" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
   </nav>
@@ -182,7 +179,7 @@
     <a href="#worum">Worum es geht</a>
     <a href="#ort">Der Ort</a>
     <a href="#details">Der Rahmen</a>
-    <a href="#anmeldung">Jetzt anmelden</a>
+    <a href="https://forms.gle/2gdLzgLvR4rXx53V7" target="_blank" rel="noopener">Jetzt anmelden</a>
   </div>
 
   <header class="hero">
@@ -198,7 +195,7 @@
         <span>offen für alle · <b>790 €</b></span>
       </div>
       <div class="hero-cta">
-        <a href="#anmeldung" class="btn btn-primary">Jetzt anmelden →</a>
+        <a href="https://forms.gle/2gdLzgLvR4rXx53V7" target="_blank" rel="noopener" class="btn btn-primary">Jetzt anmelden →</a>
         <a href="#worum" class="btn btn-ghost">Worum es geht</a>
       </div>
     </div>
@@ -277,6 +274,13 @@
     </div>
   </section>
 
+  <div class="cta-band reveal">
+    <div class="wrap">
+      <p>Klingt nach deinem Dezember?</p>
+      <a href="https://forms.gle/2gdLzgLvR4rXx53V7" target="_blank" rel="noopener" class="btn btn-primary">Zum Anmeldeformular →</a>
+    </div>
+  </div>
+
   <section id="rituale" class="glut" style="background:var(--bg2);border-top:1px solid var(--line);">
     <div class="wrap">
       <div class="sec-head reveal">
@@ -331,21 +335,16 @@
     <div class="wrap inner">
       <div class="eyebrow reveal">Dabei sein</div>
       <h2 class="reveal d1" style="font-size:clamp(32px,5.5vw,60px);font-weight:400;margin:16px 0 16px;">Sichere dir deinen <em>Platz</em></h2>
-      <p class="reveal d2" style="color:var(--bone-dim);font-size:18px;">Die Gruppe ist bewusst klein, deshalb läuft die Anmeldung persönlich. Schreib mir kurz über das Formular, warum du dabei sein möchtest – ich melde mich bei dir und wir klären alles Weitere in Ruhe.</p>
-      <form class="form reveal d2" id="anmeldeForm">
-        <div class="row">
-          <div><label for="name">Name</label><input type="text" id="name" name="name" required /></div>
-          <div><label for="email">E-Mail</label><input type="email" id="email" name="email" required /></div>
-        </div>
-        <div><label for="tel">Telefon (optional)</label><input type="tel" id="tel" name="tel" /></div>
-        <div><label for="msg">Deine Nachricht</label><textarea id="msg" name="msg" placeholder="Was dich gerade beschäftigt, oder was du noch wissen willst."></textarea></div>
-        <button type="submit" class="btn btn-primary">Jetzt anmelden →</button>
-      </form>
-      <div class="form-danke" id="anmeldeDanke" hidden role="status" aria-live="polite">
-        <p>Fast geschafft. Es sollte sich gerade ein Mailfenster mit deiner Nachricht geöffnet haben – schick sie einfach ab, dann melde ich mich bei dir mit allen Details zur Anmeldung.</p>
-        <p>Hat sich nichts geöffnet? Dann schreib mir direkt an <a href="mailto:info@wairua-spirit.de">info@wairua-spirit.de</a> oder per <a href="https://wa.me/491602302132">WhatsApp</a> – das geht genauso.</p>
+      <p class="reveal d2" style="color:var(--bone-dim);font-size:18px;">Die Gruppe ist bewusst klein. Deine Anmeldung läuft über ein kurzes Formular – danach melde ich mich persönlich bei dir, und wir klären alles Weitere in Ruhe.</p>
+      <div class="anmelden-cta reveal d2">
+        <a href="https://forms.gle/2gdLzgLvR4rXx53V7" target="_blank" rel="noopener" class="btn btn-primary">Zum Anmeldeformular →</a>
       </div>
-      <p class="form-hint">Lieber direkt? Schreib mir per <a href="https://wa.me/491602302132" style="color:var(--gold-2)">WhatsApp</a> oder an <a href="mailto:info@wairua-spirit.de" style="color:var(--gold-2)">info@wairua-spirit.de</a>.</p>
+      <p class="frage reveal d2">Noch Fragen? Schreib mir einfach – am schnellsten per WhatsApp.</p>
+      <a class="wa-btn reveal d2" href="https://wa.me/491602302132" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.04 2.4c-5.3 0-9.6 4.3-9.6 9.6 0 1.69.44 3.34 1.28 4.8L2.4 21.6l4.94-1.29a9.56 9.56 0 0 0 4.7 1.2h.01c5.3 0 9.6-4.3 9.6-9.6 0-2.56-1-4.97-2.81-6.78a9.53 9.53 0 0 0-6.8-2.83zm0 1.8c2.08 0 4.04.81 5.51 2.29a7.74 7.74 0 0 1 2.28 5.5c0 4.3-3.5 7.8-7.8 7.8a7.8 7.8 0 0 1-3.97-1.09l-.28-.17-2.93.77.78-2.86-.19-.29a7.74 7.74 0 0 1-1.19-4.16c0-4.3 3.5-7.79 7.79-7.79zm-3.46 4.1c-.16 0-.43.06-.66.3-.22.25-.86.84-.86 2.05 0 1.21.88 2.38 1 2.55.12.16 1.72 2.74 4.27 3.74 2.12.84 2.55.67 3.01.63.46-.04 1.48-.6 1.69-1.19.21-.58.21-1.08.15-1.18-.06-.1-.22-.16-.46-.28-.24-.12-1.42-.7-1.64-.78-.22-.08-.38-.12-.54.12-.16.25-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1.01-.37-1.93-1.19-.71-.64-1.19-1.42-1.33-1.66-.14-.24-.01-.37.11-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.19-.46-.39-.4-.54-.4h-.46z"/></svg>
+        Schreib mir per WhatsApp
+      </a>
+      <span class="frage-mail reveal d2">Kein WhatsApp? Dann per E-Mail an <a href="mailto:info@wairua-spirit.de">info@wairua-spirit.de</a>.</span>
     </div>
   </section>
 
@@ -361,23 +360,5 @@
     </div>
   </footer>
 
-  <script>
-    // Anmeldeformular: oeffnet eine vorausgefuellte E-Mail (bis ein Formulardienst
-    // angebunden ist). Danach IMMER eine sichtbare Rueckmeldung - auf Handys ohne
-    // eingerichtete Mail-App wuerde sonst nichts passieren und die Anfrage still
-    // verloren gehen.
-    const f=document.getElementById('anmeldeForm');
-    const danke=document.getElementById('anmeldeDanke');
-    f.addEventListener('submit',(e)=>{
-      e.preventDefault();
-      const name=encodeURIComponent(f.name.value), email=encodeURIComponent(f.email.value), tel=encodeURIComponent(f.tel.value), msg=encodeURIComponent(f.msg.value);
-      const body='Name: '+name+'%0D%0AE-Mail: '+email+'%0D%0ATelefon: '+tel+'%0D%0A%0D%0ANachricht:%0D%0A'+msg;
-      const link='mailto:info@wairua-spirit.de?subject='+encodeURIComponent('Anmeldung Winter-Retreat Dez 2026')+'&body='+body;
-      // Mailfenster in neuem Kontext oeffnen, damit die Seite nicht wegnavigiert
-      const w=window.open(link,'_blank');
-      if(!w) window.location.href=link;
-      if(danke){ danke.hidden=false; danke.scrollIntoView({behavior:'smooth',block:'center'}); }
-    });
-  </script>
 </body>
 </html>
