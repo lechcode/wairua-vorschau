@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <!--
-  Unterseite: "Winter-Retreat für Männer" (Nordsee, Dezember 2026)
+  Unterseite: "Winter-Retreat an der Nordsee" (9.-13. Dezember 2026, offen für alle)
   Teil des Wairua.Spirit-Designs · gleiche dunkle Bildsprache · Single-File.
-  Entwurf – noch nicht in die Haupt-Navigation eingebunden.
 -->
 <html lang="de">
 <head>
@@ -10,16 +9,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <script>document.documentElement.classList.add("js");</script>
 <meta name="robots" content="noindex, nofollow" />
-<title>Winter-Retreat für Männer · Nordsee | Wairua.Spirit</title>
-<meta name="description" content="Fünf Tage Einkehr an der Nordsee, nur für Männer: Feuer, Kakaozeremonie und viel Zeit draußen. Termin und Beitrag folgen – trag dich unverbindlich ein." />
+<title>Winter-Retreat an der Nordsee · Dez 2026 | Wairua.Spirit</title>
+<meta name="description" content="Fünf Tage Einkehr an der Nordsee, 9.–13. Dezember 2026, offen für alle: Kakaozeremonie, Yoga, Breathwork, Lagerfeuer und viel Zeit draußen. Kleine Gruppe, 790 €." />
 <link rel="canonical" href="https://wairua-spirit.de/retreat.html" />
 <meta property="og:type" content="website" />
-<meta property="og:title" content="Winter-Retreat für Männer · Nordsee | Wairua.Spirit" />
-<meta property="og:description" content="Fünf Tage Einkehr an der Nordsee, nur für Männer. Termin und Beitrag folgen – trag dich unverbindlich ein." />
+<meta property="og:title" content="Winter-Retreat an der Nordsee · 9.–13. Dezember 2026" />
+<meta property="og:description" content="Fünf Tage Einkehr an der Nordsee, offen für alle: Kakaozeremonie, Yoga, Breathwork, Lagerfeuer und viel Zeit draußen. Kleine Gruppe, 790 €." />
 <meta property="og:image" content="https://wairua-spirit.de/assets/og-retreat.jpg" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
-<meta property="og:image:alt" content="Männer im Kreis am Lagerfeuer" />
+<meta property="og:image:alt" content="Menschen im Kreis am Lagerfeuer" />
 <meta property="og:url" content="https://wairua-spirit.de/retreat.html" />
 <meta property="og:locale" content="de_DE" />
 <meta name="twitter:card" content="summary_large_image" />
@@ -132,13 +131,37 @@
     .form .row{grid-template-columns:1fr;}
   }
 </style>
-<!--
-  Event-Schema bewusst noch nicht eingebunden.
-  Ein Event braucht ein gueltiges startDate ("2026-12" ist keins) und darf
-  keinen Preis behaupten, solange die Seite selbst "ca. 1.000 EUR, Endpreis
-  folgt" sagt. Sobald Termin und Beitrag feststehen, hier ein vollstaendiges
-  Event-Schema ergaenzen - Vorlage steht in rituale.html.
--->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "Winter-Retreat an der Nordsee – Wairua.Spirit",
+  "description": "Fünf Tage Einkehr in der dunklen Jahreszeit an der Nordsee, offen für alle: Kakaozeremonie, Yoga, Meditation, Breathwork, Lagerfeuer und viel Zeit draußen. Ein warmer Gegenpol zur hektischen Vorweihnachtszeit, in einer kleinen Gruppe.",
+  "startDate": "2026-12-09T16:00:00+01:00",
+  "endDate": "2026-12-13T12:00:00+01:00",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "image": "https://wairua-spirit.de/assets/og-retreat.jpg",
+  "location": {
+    "@type": "Place",
+    "name": "Seminarhaus Alte Schule",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Bordelum (Büttjebüll)",
+      "addressRegion": "Nordfriesland",
+      "addressCountry": "DE"
+    }
+  },
+  "organizer": { "@type": "Person", "name": "Michael Storz", "url": "https://wairua-spirit.de" },
+  "offers": {
+    "@type": "Offer",
+    "price": "790",
+    "priceCurrency": "EUR",
+    "availability": "https://schema.org/InStock",
+    "url": "https://wairua-spirit.de/retreat.html"
+  }
+}
+</script>
 </head>
 <body>
   <div class="grain"></div>
@@ -147,7 +170,7 @@
     <a href="index.html" class="brand"><img class="brand-logo" src="assets/logo-cream.png" alt="" width="160" height="145" />Wairua.Spirit</a>
     <div class="links">
       <a href="index.html">Startseite</a>
-      <a href="#anmeldung" class="cta">Auf die Warteliste</a>
+      <a href="#anmeldung" class="cta">Jetzt anmelden</a>
     </div>
     <button class="burger" id="burger" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
   </nav>
@@ -156,23 +179,23 @@
     <a href="#worum">Worum es geht</a>
     <a href="#ort">Der Ort</a>
     <a href="#details">Der Rahmen</a>
-    <a href="#anmeldung">Auf die Warteliste</a>
+    <a href="#anmeldung">Jetzt anmelden</a>
   </div>
 
   <header class="hero">
-    <div class="hero-bg"><img src="assets/moment-fire.jpg" srcset="assets/moment-fire-800.jpg 800w, assets/moment-fire.jpg 1400w" sizes="100vw" width="1400" height="933" fetchpriority="high" alt="Mann am Feuer in der Dämmerung – Winter-Retreat für Männer" /></div>
+    <div class="hero-bg"><img src="assets/moment-fire.jpg" srcset="assets/moment-fire-800.jpg 800w, assets/moment-fire.jpg 1400w" sizes="100vw" width="1400" height="933" fetchpriority="high" alt="Mensch am Feuer in der Dämmerung" /></div>
     <div class="wrap hero-inner">
       <a href="index.html" class="back">← zurück zu Wairua.Spirit</a>
-      <div class="eyebrow">Winter-Retreat für Männer · Nordsee</div>
+      <div class="eyebrow">Winter-Retreat · Nordsee</div>
       <h1>Wenn das Jahr zur <em>Ruhe</em> kommt</h1>
-      <div class="sub">Fünf Tage Einkehr in der dunklen Jahreszeit an der Nordsee: eine kleine Runde Männer, ein altes Haus, ein Feuer und Zeit, die niemand verplant hat.</div>
+      <div class="sub">Fünf Tage Einkehr in der dunklen Jahreszeit an der Nordsee: eine kleine Gruppe, ein altes Haus, ein Feuer und Zeit, die niemand verplant hat.</div>
       <div class="meta">
-        <span><b>Dezember 2026</b> · 5 Tage</span>
+        <span><b>9.–13. Dezember 2026</b> · 5 Tage</span>
         <span>Seminarhaus Alte Schule · <b>Nordfriesland</b></span>
-        <span>nur für <b>Männer</b></span>
+        <span>offen für alle · <b>790 €</b></span>
       </div>
       <div class="hero-cta">
-        <a href="#anmeldung" class="btn btn-primary">Auf die Warteliste →</a>
+        <a href="#anmeldung" class="btn btn-primary">Jetzt anmelden →</a>
         <a href="#worum" class="btn btn-ghost">Worum es geht</a>
       </div>
     </div>
@@ -180,7 +203,7 @@
 
   <section class="quoteband">
     <div class="wrap">
-      <div class="q reveal">„Die dunkle Jahreszeit lädt uns ein, innezuhalten – und wieder bei uns anzukommen."</div>
+      <div class="q reveal">Während draußen alles auf Weihnachten zurast, machen wir für fünf Tage das Gegenteil: langsamer werden, warm werden, <em>ankommen</em>.</div>
     </div>
   </section>
 
@@ -192,8 +215,8 @@
       </div>
       <div class="lead-text narrow reveal d1">
         <p>Wenn die Tage kürzer werden, zieht sich draußen alles zurück – und wir machen weiter wie im Juni: Weihnachtsfeiern, Jahresabschluss, Geschenke, und irgendwo dazwischen soll auch noch ein Jahr zu Ende gehen. Dabei liegt in dieser Zeit eine Einladung: langsamer zu werden, nach innen zu schauen und das Jahr wirklich abzuschließen.</p>
-        <p>Dieses Retreat ist ein Raum für Männer, um in der dunklen Jahreszeit anzukommen – bei sich selbst und miteinander. Fünf Tage zum Stillwerden, Reflektieren und Erinnern, wer wir jenseits von Leistung und Alltag wirklich sind.</p>
-        <p>Am Feuer, in der Zeremonie und in der weiten Landschaft der Nordsee muss fünf Tage lang niemand erklären, warum er da ist – und genau da entsteht oft das, was im Alltag fehlt: echte Verbindung zu dir, zu anderen Männern und zur Natur.</p>
+        <p>Dieses Retreat ist ein Raum, um in der dunklen Jahreszeit anzukommen – bei dir selbst und in der Gruppe. Fünf Tage zum Stillwerden, Reflektieren und Erinnern, wer du jenseits von Leistung und Alltag wirklich bist. Die Gruppe ist bewusst klein, damit eine vertraute, fast familiäre Atmosphäre entstehen kann.</p>
+        <p>Am Feuer, im Yoga, in der Zeremonie und in der weiten Landschaft der Nordsee muss fünf Tage lang niemand etwas beweisen. Es ist der warme Gegenpol zu der lauten, hektischen Zeit vor Weihnachten – und genau da entsteht oft das, was im Alltag fehlt: echte Verbindung zu dir, zu den Menschen um dich herum und zur Natur.</p>
       </div>
     </div>
   </section>
@@ -205,11 +228,11 @@
       </div>
       <div class="themen stagger">
         <div class="thema"><span class="koru ic"></span><h3>Kakaozeremonie</h3><p>Wir sitzen im Kreis, und jeder bekommt eine Tasse zeremoniellen Kakao. Danach wird es still, und von dort aus fangen wir an. Eine bestimmte Wirkung musst du dabei nicht erwarten – der Kakao wärmt, er schmeckt bitter und gut, und er gibt dem Abend einen Anfang.</p><p class="hinweis">Kakao ist ein Lebensmittel, kein Heilmittel.</p></div>
+        <div class="thema"><span class="koru ic"></span><h3>Yoga</h3><p>Sanftes Yoga am Morgen, das dich aus dem Kopf zurück in den Körper bringt. Kein Leistungssport – es geht ums Spüren, ums Atmen und darum, wieder ein bisschen Raum in dir zu schaffen.</p></div>
+        <div class="thema"><span class="koru ic"></span><h3>Meditation</h3><p>Zeit in der Stille, angeleitet und einfach gehalten. Du musst nichts können und nichts richtig machen – nur da sein und schauen, was passiert, wenn es einmal leise wird.</p></div>
         <div class="thema"><span class="koru ic"></span><h3>Breathwork</h3><p>Du liegst, es läuft Musik, und wir leiten den Atem an. Was dabei kommt, ist bei jedem anders: Manche weinen, manche lachen, manche schlafen fast ein. Nichts davon musst du erreichen, und nichts davon musst du erklären.</p><p class="hinweis">Breathwork ist keine Therapie. Wenn du Herz-Kreislauf-Beschwerden hast oder in psychiatrischer Behandlung bist, sprich vorher mit mir.</p></div>
-        <div class="thema"><span class="koru ic"></span><h3>Zeit am Lagerfeuer</h3><p>Am Feuer sitzen, erzählen, schweigen. Die Wärme, das Licht und die Runde der Männer als Ort echter Begegnung.</p></div>
+        <div class="thema"><span class="koru ic"></span><h3>Zeit am Lagerfeuer</h3><p>Am Feuer sitzen, erzählen, schweigen. Die Wärme, das Licht und die Runde als Ort echter Begegnung – wenn draußen der Wind geht und drinnen das Holz knackt.</p></div>
         <div class="thema"><span class="koru ic"></span><h3>Natur & Wattenmeer</h3><p>Die weite, raue Landschaft der Nordsee: am Deich entlanggehen, still in der Heide stehen, hinaus aufs Watt. Wir gehen jeden Tag raus, auch bei Wind – im Dezember an der Nordsee ist das keine Kleinigkeit.</p></div>
-        <div class="thema"><span class="koru ic"></span><h3>Gemeinschaft & Verbindung</h3><p>Gesehen werden, dazugehören, gemeinsam wachsen – am dritten Tag redet man anders miteinander als am ersten, und genau deshalb sind es fünf Tage und nicht zwei.</p></div>
-        <div class="thema"><span class="koru ic"></span><h3>Einkehr & Reflexion</h3><p>Raum, um das Jahr noch einmal durchzugehen und zu würdigen: was gut war, was schwer war und was du nicht mit ins nächste Jahr nehmen möchtest.</p></div>
       </div>
     </div>
   </section>
@@ -246,7 +269,7 @@
         <div class="eyebrow">Zu zweit</div>
         <h2>Wer euch begleitet</h2>
         <p>Michael Storz ist Wildnispädagoge und lebt in Landsberg am Lech. Er hält die Naturseite dieses Retreats: die Tage draußen, das Feuer, die Zeremonien.</p>
-        <p>Oskar Hass arbeitet mit Männern. Er hört mit dir hin, wenn in dir mehrere Stimmen unterwegs sind: Eine will vorwärts, eine bremst, eine ist längst müde. Statt eine davon zum Gegner zu erklären, bekommt jede ihren Platz. Das ist Begleitung und Coaching, keine Therapie.</p>
+        <p>Oskar Hass ist Coach und begleitet Menschen dabei, sich selbst besser zu verstehen. Er hört mit dir hin, wenn in dir mehrere Stimmen unterwegs sind: Eine will vorwärts, eine bremst, eine ist längst müde. Statt eine davon zum Gegner zu erklären, bekommt jede ihren Platz. Das ist Begleitung und Coaching, keine Therapie.</p>
         <p>Kennengelernt haben wir uns unterwegs, auf Reisen. Seitdem ist viel gemeinsame Zeit dazugekommen, und irgendwann stand fest, dass wir das hier zusammen machen.</p>
         <p>Fünf Tage lang ist immer einer von uns ansprechbar. Wenn dir etwas zu viel wird, sagst du das, und dann ist es zu viel – hier muss niemand durch irgendetwas hindurch, nur weil es auf dem Plan steht.</p>
         <div class="names">Michael Storz &amp; Oskar Hass</div>
@@ -278,9 +301,9 @@
         <div class="eyebrow">Genährt werden</div>
         <h2 style="font-size:clamp(30px,4.6vw,52px);font-weight:400;margin:14px 0 18px;">Liebevoll gekocht, rein pflanzlich</h2>
         <div class="lead-text">
-          <p>Gutes Essen ist Teil der Fürsorge. Fünf Tage lang wird für uns gekocht, frisch, vegetarisch und vegan – niemand muss einkaufen, schnippeln oder abends überlegen, was es gibt, und wer schon einmal in einer Gruppe gekocht hat, weiß, was das wert ist.</p>
+          <p>Gutes Essen ist Teil der Fürsorge. Fünf Tage lang kochen Laura und Lucie für uns – frisch, vegetarisch und vegan, richtig nährend. Niemand muss einkaufen, schnippeln oder abends überlegen, was es gibt, und wer schon einmal in einer Gruppe gekocht hat, weiß, was das wert ist.</p>
         </div>
-        <div class="who">Küche von Madhu &amp; Moon</div>
+        <div class="who">Küche von Laura &amp; Lucie · Madhu &amp; Moon</div>
         <div class="who-avatar"><img src="assets/madhu-moon.jpg" width="300" height="300" alt="Madhu und Moon" loading="lazy" /></div>
       </div>
     </div>
@@ -293,12 +316,12 @@
         <h2>Alles auf einen Blick</h2>
       </div>
       <div class="details-grid stagger">
-        <div class="detail"><div class="k">Termin</div><div class="v">Dezember 2026<small>Die genauen Tage stehen noch nicht fest.</small></div></div>
+        <div class="detail"><div class="k">Termin</div><div class="v">9.–13. Dez 2026<small>Anreise ab 16 Uhr · Abreise bis 12 Uhr</small></div></div>
         <div class="detail"><div class="k">Dauer</div><div class="v">5 Tage<small>Anreise · 3 volle Tage · Abreise</small></div></div>
         <div class="detail"><div class="k">Ort</div><div class="v">Nordsee<small>Seminarhaus Alte Schule, Nordfriesland</small></div></div>
-        <div class="detail"><div class="k">Für</div><div class="v">Männer<small>In einer geschlossenen Gruppe</small></div></div>
+        <div class="detail"><div class="k">Für</div><div class="v">Offen für alle<small>In einer kleinen, vertrauten Gruppe</small></div></div>
         <div class="detail"><div class="k">Unterkunft</div><div class="v">Mehrbettzimmer<small>Gemeinschaftlich, mit Vollverpflegung</small></div></div>
-        <div class="detail"><div class="k">Beitrag</div><div class="v">Steht noch nicht fest<small>Wir rechnen mit rund 1.000 €. Sobald es sicher ist, sagen wir es allen auf der Liste zuerst.</small></div></div>
+        <div class="detail"><div class="k">Beitrag</div><div class="v">790 €<small>Für alle fünf Tage, inkl. Unterkunft und Vollverpflegung</small></div></div>
       </div>
     </div>
   </section>
@@ -306,9 +329,9 @@
   <section class="anmeldung" id="anmeldung">
     <span class="koru koru-wm"></span>
     <div class="wrap inner">
-      <div class="eyebrow reveal">Interesse</div>
-      <h2 class="reveal d1" style="font-size:clamp(32px,5.5vw,60px);font-weight:400;margin:16px 0 16px;">Trag dich unverbindlich ein</h2>
-      <p class="reveal d2" style="color:var(--bone-dim);font-size:18px;">Termin und Beitrag stehen noch nicht endgültig fest. Trag dich einfach ein, dann hörst du als Erster davon und kannst in Ruhe entscheiden, ob das etwas für dich ist. Verpflichtet bist du zu nichts.</p>
+      <div class="eyebrow reveal">Dabei sein</div>
+      <h2 class="reveal d1" style="font-size:clamp(32px,5.5vw,60px);font-weight:400;margin:16px 0 16px;">Sichere dir deinen <em>Platz</em></h2>
+      <p class="reveal d2" style="color:var(--bone-dim);font-size:18px;">Die Gruppe ist bewusst klein, deshalb läuft die Anmeldung persönlich. Schreib mir kurz über das Formular, warum du dabei sein möchtest – ich melde mich bei dir und wir klären alles Weitere in Ruhe.</p>
       <form class="form reveal d2" id="anmeldeForm">
         <div class="row">
           <div><label for="name">Name</label><input type="text" id="name" name="name" required /></div>
@@ -316,10 +339,10 @@
         </div>
         <div><label for="tel">Telefon (optional)</label><input type="tel" id="tel" name="tel" /></div>
         <div><label for="msg">Deine Nachricht</label><textarea id="msg" name="msg" placeholder="Was dich gerade beschäftigt, oder was du noch wissen willst."></textarea></div>
-        <button type="submit" class="btn btn-primary">Auf die Liste setzen →</button>
+        <button type="submit" class="btn btn-primary">Jetzt anmelden →</button>
       </form>
       <div class="form-danke" id="anmeldeDanke" hidden role="status" aria-live="polite">
-        <p>Fast geschafft. Es sollte sich gerade ein Mailfenster mit deiner Nachricht geöffnet haben – schick sie einfach ab, dann setze ich dich auf die Liste und melde mich, sobald Termin und Beitrag stehen.</p>
+        <p>Fast geschafft. Es sollte sich gerade ein Mailfenster mit deiner Nachricht geöffnet haben – schick sie einfach ab, dann melde ich mich bei dir mit allen Details zur Anmeldung.</p>
         <p>Hat sich nichts geöffnet? Dann schreib mir direkt an <a href="mailto:info@wairua-spirit.de">info@wairua-spirit.de</a> oder per <a href="https://wa.me/491602302132">WhatsApp</a> – das geht genauso.</p>
       </div>
       <p class="form-hint">Lieber direkt? Schreib mir per <a href="https://wa.me/491602302132" style="color:var(--gold-2)">WhatsApp</a> oder an <a href="mailto:info@wairua-spirit.de" style="color:var(--gold-2)">info@wairua-spirit.de</a>.</p>
@@ -329,7 +352,7 @@
   <footer>
     <div class="wrap">
       <div class="brand"><img class="brand-logo" src="assets/logo-cream.png" alt="" width="160" height="145" loading="lazy" />Wairua.Spirit</div>
-      <p>Winter-Retreat für Männer · Nordsee · Dezember 2026</p>
+      <p>Winter-Retreat · Nordsee · 9.–13. Dezember 2026</p>
       <div class="f-links">
         <a href="index.html">Startseite</a>
         <a href="impressum.html">Impressum</a>
@@ -349,7 +372,7 @@
       e.preventDefault();
       const name=encodeURIComponent(f.name.value), email=encodeURIComponent(f.email.value), tel=encodeURIComponent(f.tel.value), msg=encodeURIComponent(f.msg.value);
       const body='Name: '+name+'%0D%0AE-Mail: '+email+'%0D%0ATelefon: '+tel+'%0D%0A%0D%0ANachricht:%0D%0A'+msg;
-      const link='mailto:info@wairua-spirit.de?subject='+encodeURIComponent('Warteliste Winter-Retreat 2026')+'&body='+body;
+      const link='mailto:info@wairua-spirit.de?subject='+encodeURIComponent('Anmeldung Winter-Retreat Dez 2026')+'&body='+body;
       // Mailfenster in neuem Kontext oeffnen, damit die Seite nicht wegnavigiert
       const w=window.open(link,'_blank');
       if(!w) window.location.href=link;
