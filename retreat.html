@@ -81,6 +81,9 @@
   .guides-portraits figcaption{position:absolute;left:0;right:0;bottom:0;padding:24px 10px 11px;font-family:var(--serif);font-style:italic;font-size:16px;color:var(--bone);text-align:center;background:linear-gradient(transparent,rgba(8,7,5,.75));}
   .guides-portraits .gp-1{z-index:1;}
   .guides-portraits .gp-2{margin-left:-13%;margin-top:46px;z-index:2;}
+  /* Solo: nur ein Portrait, etwas groesser und mittig */
+  .guides-portraits.solo{padding-top:0;}
+  .guides-portraits.solo figure{width:min(80%,320px);}
   .guides-body h2{font-size:clamp(30px,4.4vw,50px);font-weight:400;margin:14px 0 18px;}
   .guides-body h2 em{color:var(--gold-2);}
   .guides-body p{color:var(--bone-dim);font-size:16.5px;margin-bottom:16px;}
@@ -261,18 +264,15 @@
 
   <section id="guides">
     <div class="wrap guides-grid">
-      <div class="guides-portraits reveal">
+      <div class="guides-portraits solo reveal">
         <figure class="gp-1"><img src="assets/guide-michael.jpg" width="800" height="803" alt="Michael Storz" loading="lazy" /></figure>
-        <figure class="gp-2"><img src="assets/guide-oskar.jpg" width="800" height="721" alt="Oskar Hass" loading="lazy" /></figure>
       </div>
       <div class="guides-body reveal d1">
-        <div class="eyebrow">Zu zweit</div>
-        <h2>Wer euch begleitet</h2>
-        <p>Michael Storz ist Wildnispädagoge und lebt in Landsberg am Lech. Er hält die Naturseite dieses Retreats: die Tage draußen, das Feuer, die Zeremonien.</p>
-        <p>Oskar Hass ist Coach und begleitet Menschen dabei, sich selbst besser zu verstehen. Er hört mit dir hin, wenn in dir mehrere Stimmen unterwegs sind: Eine will vorwärts, eine bremst, eine ist längst müde. Statt eine davon zum Gegner zu erklären, bekommt jede ihren Platz. Das ist Begleitung und Coaching, keine Therapie.</p>
-        <p>Kennengelernt haben wir uns unterwegs, auf Reisen. Seitdem ist viel gemeinsame Zeit dazugekommen, und irgendwann stand fest, dass wir das hier zusammen machen.</p>
-        <p>Fünf Tage lang ist immer einer von uns ansprechbar. Wenn dir etwas zu viel wird, sagst du das, und dann ist es zu viel – hier muss niemand durch irgendetwas hindurch, nur weil es auf dem Plan steht.</p>
-        <div class="names">Michael Storz &amp; Oskar Hass</div>
+        <div class="eyebrow">Deine Begleitung</div>
+        <h2>Wer dich begleitet</h2>
+        <p>Ich bin Michael Storz, Wildnispädagoge, und ich lebe in Landsberg am Lech. Dieses Retreat leite ich selbst – die Tage draußen, das Feuer, die Zeremonien und die stillen Morgen. Ich halte den Raum, in dem du fünf Tage lang ankommen darfst, bei dir selbst und in der Gruppe.</p>
+        <p>Ich bin die ganze Zeit für dich ansprechbar. Wenn dir etwas zu viel wird, sagst du das, und dann ist es zu viel – hier musst du durch nichts hindurch, nur weil es auf dem Plan steht.</p>
+        <div class="names">Michael Storz</div>
       </div>
     </div>
   </section>
