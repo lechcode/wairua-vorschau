@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <!--
-  Unterseite: "Winter-Retreat an der Nordsee" (9.-13. Dezember 2026, offen für alle)
+  Unterseite: "Winter-Retreat an der Nordsee" (9.-13. Dezember 2026)
   Teil des Wairua.Spirit-Designs · gleiche dunkle Bildsprache · Single-File.
+  Aufbau & Texte nach Michaels Dokument (wörtlich übernommen).
 -->
 <html lang="de">
 <head>
@@ -10,11 +11,11 @@
 <script>document.documentElement.classList.add("js");</script>
 <meta name="robots" content="noindex, nofollow" />
 <title>Winter-Retreat an der Nordsee · Dez 2026 | Wairua.Spirit</title>
-<meta name="description" content="Fünf Tage Einkehr an der Nordsee, 9.–13. Dezember 2026, offen für alle: Kakaozeremonie, Yoga, Breathwork, Lagerfeuer und viel Zeit draußen. Kleine Gruppe, 790 €." />
+<meta name="description" content="Fünf Tage Auszeit an der Nordsee, 9.–13. Dezember 2026: Kakaozeremonie, Yoga, Meditation, Breathwork, Lagerfeuer und viel Zeit draußen. Kleine Gruppe, 790 €." />
 <link rel="canonical" href="https://wairua-spirit.de/retreat.html" />
 <meta property="og:type" content="website" />
 <meta property="og:title" content="Winter-Retreat an der Nordsee · 9.–13. Dezember 2026" />
-<meta property="og:description" content="Fünf Tage Einkehr an der Nordsee, offen für alle: Kakaozeremonie, Yoga, Breathwork, Lagerfeuer und viel Zeit draußen. Kleine Gruppe, 790 €." />
+<meta property="og:description" content="Fünf Tage Auszeit an der Nordsee: Kakaozeremonie, Yoga, Meditation, Breathwork, Lagerfeuer und viel Zeit draußen. Kleine Gruppe, 790 €." />
 <meta property="og:image" content="https://wairua-spirit.de/assets/og-retreat.jpg" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
@@ -46,26 +47,20 @@
   .hero .meta a:hover{border-color:var(--gold-2);}
   .hero-cta{margin-top:32px;opacity:0;animation:rise 1.1s ease .85s forwards;}
 
-  .quoteband{background:var(--bg2);text-align:center;}
-  .quoteband .q{font-family:var(--serif);font-style:italic;font-size:clamp(26px,4.4vw,50px);font-weight:400;line-height:1.2;max-width:20ch;margin:0 auto;color:var(--bone);}
-  .quoteband .q em{color:var(--gold-2);}
-
   .sec-head{max-width:680px;margin:0 auto clamp(44px,6vw,66px);text-align:center;}
   .sec-head h2{font-size:clamp(32px,5vw,58px);font-weight:400;margin:14px 0 16px;}
 
   .lead-text em{color:var(--gold-2);font-style:italic;}
 
-  /* kernthemen */
-  .themen{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
-  .thema{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:32px 28px;transition:transform .4s,border-color .4s;}
-  .thema:hover{transform:translateY(-6px);border-color:rgba(216,168,90,.45);}
-  .thema .ic{width:34px;height:34px;color:var(--gold);margin-bottom:16px;}
-  .thema h3{font-size:23px;font-weight:500;margin-bottom:10px;}
-  .thema p{font-size:15px;color:var(--bone-dim);}
-  .thema .hinweis{font-size:13px;color:var(--muted);margin-top:10px;}
+  /* Was dich erwartet – schlichte Liste der Kernelemente */
+  .erwartet-liste{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:840px;margin-inline:auto;}
+  .ew-item{display:flex;align-items:center;gap:15px;background:var(--panel);border:1px solid var(--line);border-radius:14px;
+    padding:22px 26px;font-family:var(--serif);font-size:clamp(20px,2.3vw,25px);color:var(--bone);
+    transition:transform .4s,border-color .4s;}
+  .ew-item:hover{transform:translateY(-4px);border-color:rgba(216,168,90,.45);}
+  .ew-item .ic{width:26px;height:26px;flex:none;color:var(--gold);}
 
   /* ort */
-  .ort{background:var(--bg2);}
   .ort-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:190px;gap:14px;grid-auto-flow:dense;margin-top:8px;}
   .ort-grid figure{position:relative;overflow:hidden;border-radius:14px;}
   .ort-grid img{width:100%;height:100%;object-fit:cover;transition:transform 1.1s cubic-bezier(.2,.7,.2,1);}
@@ -73,29 +68,6 @@
   .ort-grid .big{grid-column:span 2;grid-row:span 2;}
   .ort-note{text-align:center;font-size:13px;color:var(--muted);margin-top:16px;}
   .ort-note a{color:var(--gold-2);}
-
-  /* guides */
-  .guides-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(32px,5vw,64px);align-items:center;}
-  .guides-portraits{display:flex;justify-content:center;align-items:flex-start;padding-top:10px;}
-  .guides-portraits figure{position:relative;flex:none;width:56%;aspect-ratio:1/1;border-radius:16px;overflow:hidden;box-shadow:0 30px 60px -22px rgba(0,0,0,.85);background:var(--panel);}
-  .guides-portraits img{width:100%;height:100%;object-fit:cover;transition:transform 1.1s cubic-bezier(.2,.7,.2,1);}
-  .guides-portraits figure:hover img{transform:scale(1.06);}
-  .guides-portraits figcaption{position:absolute;left:0;right:0;bottom:0;padding:24px 10px 11px;font-family:var(--serif);font-style:italic;font-size:16px;color:var(--bone);text-align:center;background:linear-gradient(transparent,rgba(8,7,5,.75));}
-  .guides-portraits .gp-1{z-index:1;}
-  .guides-portraits .gp-2{margin-left:-13%;margin-top:46px;z-index:2;}
-  /* Solo: nur ein Portrait, etwas groesser und mittig */
-  .guides-portraits.solo{padding-top:0;}
-  .guides-portraits.solo figure{width:min(80%,320px);}
-  .guides-body h2{font-size:clamp(30px,4.4vw,50px);font-weight:400;margin:14px 0 18px;}
-  .guides-body h2 em{color:var(--gold-2);}
-  .guides-body p{color:var(--bone-dim);font-size:16.5px;margin-bottom:16px;}
-  .guides-body .names{font-family:var(--serif);font-size:20px;color:var(--gold-2);font-style:italic;}
-
-  /* naturrituale */
-  .trio{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
-  .trio figure{overflow:hidden;border-radius:14px;aspect-ratio:4/3;box-shadow:var(--shadow);}
-  .trio img{width:100%;height:100%;object-fit:cover;filter:saturate(.97);transition:transform 1.1s cubic-bezier(.2,.7,.2,1);}
-  .trio figure:hover img{transform:scale(1.06);}
 
   /* essen */
   .essen{position:relative;background:#0c0a08 url('assets/essen-buffet.jpg') center 42%/cover no-repeat;text-align:center;overflow:hidden;}
@@ -106,7 +78,8 @@
   .essen .who-avatar{width:98px;height:98px;border-radius:50%;overflow:hidden;margin:16px auto 0;border:2px solid rgba(216,168,90,.65);box-shadow:0 14px 34px -14px rgba(0,0,0,.8);}
   .essen .who-avatar img{width:100%;height:100%;object-fit:cover;}
 
-  /* details */
+  /* der rahmen – vier Kacheln, zentriert */
+  .details-grid{grid-template-columns:repeat(2,1fr);max-width:720px;margin-inline:auto;}
 
   /* anmeldung */
   .anmeldung{position:relative;text-align:center;overflow:hidden;background:var(--bg2);}
@@ -119,18 +92,14 @@
     color:var(--bone);border-radius:999px;padding:11px 22px;font-size:14px;transition:border-color .3s,color .3s;}
   .wa-btn:hover{border-color:var(--gold);color:var(--gold-2);}
   .wa-btn svg{width:19px;height:19px;flex:none;}
-  .frage-mail{display:block;margin-top:16px;font-size:13px;color:var(--muted);}
-  .frage-mail a{color:var(--gold-2);}
-  /* Mitten-CTA-Band */
-  .cta-band{padding:clamp(48px,8vw,84px) 0;text-align:center;border-top:1px solid var(--line);}
-  .cta-band p{font-family:var(--serif);font-style:italic;font-size:clamp(20px,2.6vw,28px);color:var(--gold-2);margin-bottom:22px;}
 
   @media(max-width:900px){
-    .themen{grid-template-columns:1fr;}
-    .guides-grid{grid-template-columns:1fr;}
-    .guides-portraits{order:-1;max-width:360px;}
+    .erwartet-liste{grid-template-columns:1fr 1fr;}
     .ort-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:clamp(150px,30vw,210px);}
-    .trio{grid-template-columns:1fr;}
+  }
+  @media(max-width:540px){
+    .erwartet-liste{grid-template-columns:1fr;}
+    .details-grid{grid-template-columns:1fr;}
   }
 </style>
 <script type="application/ld+json">
@@ -138,7 +107,7 @@
   "@context": "https://schema.org",
   "@type": "Event",
   "name": "Winter-Retreat an der Nordsee – Wairua.Spirit",
-  "description": "Fünf Tage Einkehr in der dunklen Jahreszeit an der Nordsee, offen für alle: Kakaozeremonie, Yoga, Meditation, Breathwork, Lagerfeuer und viel Zeit draußen. Ein warmer Gegenpol zur hektischen Vorweihnachtszeit, in einer kleinen Gruppe.",
+  "description": "Fünf Tage Auszeit in der dunklen Jahreszeit an der Nordsee: Kakaozeremonie, Yoga, Meditation, Breathwork, Lagerfeuer und viel Zeit draußen. Eine kleine, vertraute Gruppe.",
   "startDate": "2026-12-09T16:00:00+01:00",
   "endDate": "2026-12-13T12:00:00+01:00",
   "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
@@ -178,7 +147,8 @@
   </nav>
   <div class="mobile-menu" id="mobileMenu" inert>
     <a href="index.html">Startseite</a>
-    <a href="#worum">Worum es geht</a>
+    <a href="#einladung">Deine Einladung</a>
+    <a href="#erwartet">Was dich erwartet</a>
     <a href="#ort">Der Ort</a>
     <a href="#details">Der Rahmen</a>
     <a href="https://forms.gle/2gdLzgLvR4rXx53V7" target="_blank" rel="noopener">Jetzt anmelden</a>
@@ -188,53 +158,48 @@
     <div class="hero-bg"><img src="assets/moment-fire.jpg" srcset="assets/moment-fire-800.jpg 800w, assets/moment-fire.jpg 1400w" sizes="100vw" width="1400" height="933" fetchpriority="high" alt="Mensch am Feuer in der Dämmerung" /></div>
     <div class="wrap hero-inner">
       <a href="index.html" class="back">← zurück zu Wairua.Spirit</a>
-      <div class="eyebrow">Winter-Retreat · Nordsee</div>
+      <div class="eyebrow">Dein Winter-Retreat an der Nordsee</div>
       <h1>Wenn das Jahr zur <em>Ruhe</em> kommt</h1>
-      <div class="sub">Fünf Tage Einkehr in der dunklen Jahreszeit an der Nordsee: Eine kleine Gruppe, ein altes Haus, und Zeit innezuhalten.</div>
+      <div class="sub">Fünf Tage Auszeit nur für dich:<br>Eine kleine Gruppe, ein altes Haus und Zeit, einmal innezuhalten.</div>
       <div class="meta">
-        <span><b>9.–13. Dezember 2026</b> · 5 Tage</span>
-        <span><a href="https://seminarhaus-alte-schule.de/seminarhaus-nordsee/" target="_blank" rel="noopener">Seminarhaus Alte Schule</a> · <b>Nordfriesland</b></span>
-        <span>Preis · <b>790 €</b></span>
+        <span><b>9.–13. Dezember 2026</b></span>
+        <span><a href="https://seminarhaus-alte-schule.de/seminarhaus-nordsee/" target="_blank" rel="noopener">Seminarhaus Alte Schule</a></span>
+        <span><b>790 €</b></span>
       </div>
       <div class="hero-cta">
         <a href="https://forms.gle/2gdLzgLvR4rXx53V7" target="_blank" rel="noopener" class="btn btn-primary">Jetzt anmelden →</a>
-        <a href="#worum" class="btn btn-ghost">Worum es geht</a>
+        <a href="#erwartet" class="btn btn-ghost">Was dich erwartet</a>
       </div>
     </div>
   </header>
 
-  <section class="quoteband">
-    <div class="wrap">
-      <div class="q reveal">Während draußen alles auf Weihnachten zurast, machen wir für fünf Tage das Gegenteil: langsamer werden, warm werden, <em>ankommen</em>.</div>
-    </div>
-  </section>
-
-  <section id="worum">
+  <section id="einladung">
     <div class="wrap">
       <div class="sec-head reveal">
-        <div class="eyebrow">Die Einladung</div>
-        <h2>Das Jahr abschließen – gemeinsam</h2>
+        <div class="eyebrow">Deine Einladung</div>
+        <h2>Das Jahr gemeinsam abschließen</h2>
       </div>
       <div class="lead-text narrow reveal d1">
-        <p>Wenn die Tage kürzer werden, zieht sich draußen alles zurück – und wir machen weiter wie im Juni: Weihnachtsfeiern, Jahresabschluss, Geschenke, und irgendwo dazwischen soll auch noch ein Jahr zu Ende gehen. Dabei liegt in dieser Zeit eine Einladung: langsamer zu werden, nach innen zu schauen und das Jahr wirklich abzuschließen.</p>
-        <p>Dieses Retreat ist ein Raum, um in der dunklen Jahreszeit anzukommen – bei dir selbst und in der Gruppe. Fünf Tage zum Stillwerden, Reflektieren und Erinnern, wer du jenseits von Leistung und Alltag wirklich bist. Die Gruppe ist bewusst klein, damit eine vertraute, fast familiäre Atmosphäre entstehen kann.</p>
-        <p>Am Feuer, im Yoga, in der Zeremonie und in der weiten Landschaft der Nordsee muss fünf Tage lang niemand etwas beweisen. Es ist der warme Gegenpol zu der lauten, hektischen Zeit vor Weihnachten – und genau da entsteht oft das, was im Alltag fehlt: echte Verbindung zu dir, zu den Menschen um dich herum und zur Natur.</p>
+        <p>Während die Tage kürzer werden, sich die Natur langsam zurückzieht und im Außen alles hektisch auf Weihnachten zurennt, bietet dir dieses Retreat einen Raum, um bei dir und in der dunklen Jahreszeit anzukommen.</p>
+        <p>Dies ist deine Einladung, still zu werden, zu reflektieren und dieses Jahr abzuschließen – jenseits des Trubels des Alltags.</p>
+        <p>In einer kleinen, vertrauten Gruppe entsteht eine familiäre Atmosphäre, in der du einfach da sein darfst.</p>
+        <p>Die weite Landschaft der Nordsee, wärmende Abende am Lagerfeuer, sanftes Yoga und tiefe Atemarbeit schaffen Momente der echten Verbindung – zu dir selbst, zu den Menschen, die diese Zeit mit dir teilen, und zur Natur um dich herum.</p>
       </div>
     </div>
   </section>
 
-  <section style="background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
+  <section id="erwartet" style="background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
     <div class="wrap">
       <div class="sec-head reveal">
         <h2>Was dich erwartet</h2>
       </div>
-      <div class="themen stagger">
-        <div class="thema"><span class="koru ic"></span><h3>Kakaozeremonie</h3><p>Wir sitzen im Kreis, und jeder bekommt eine Tasse zeremoniellen Kakao. Danach wird es still, und von dort aus fangen wir an. Eine bestimmte Wirkung musst du dabei nicht erwarten – der Kakao wärmt, er schmeckt bitter und gut, und er gibt dem Abend einen Anfang.</p><p class="hinweis">Kakao ist ein Lebensmittel, kein Heilmittel.</p></div>
-        <div class="thema"><span class="koru ic"></span><h3>Yoga</h3><p>Sanftes Yoga am Morgen, das dich aus dem Kopf zurück in den Körper bringt. Kein Leistungssport – es geht ums Spüren, ums Atmen und darum, wieder ein bisschen Raum in dir zu schaffen.</p></div>
-        <div class="thema"><span class="koru ic"></span><h3>Meditation</h3><p>Zeit in der Stille, angeleitet und einfach gehalten. Du musst nichts können und nichts richtig machen – nur da sein und schauen, was passiert, wenn es einmal leise wird.</p></div>
-        <div class="thema"><span class="koru ic"></span><h3>Breathwork</h3><p>Du liegst, es läuft Musik, und wir leiten den Atem an. Was dabei kommt, ist bei jedem anders: Manche weinen, manche lachen, manche schlafen fast ein. Nichts davon musst du erreichen, und nichts davon musst du erklären.</p><p class="hinweis">Breathwork ist keine Therapie. Wenn du Herz-Kreislauf-Beschwerden hast oder in psychiatrischer Behandlung bist, sprich vorher mit mir.</p></div>
-        <div class="thema"><span class="koru ic"></span><h3>Zeit am Lagerfeuer</h3><p>Am Feuer sitzen, erzählen, schweigen. Die Wärme, das Licht und die Runde als Ort echter Begegnung – wenn draußen der Wind geht und drinnen das Holz knackt.</p></div>
-        <div class="thema"><span class="koru ic"></span><h3>Natur & Wattenmeer</h3><p>Die weite, raue Landschaft der Nordsee: am Deich entlanggehen, still in der Heide stehen, hinaus aufs Watt. Wir gehen jeden Tag raus, auch bei Wind – im Dezember an der Nordsee ist das keine Kleinigkeit.</p></div>
+      <div class="erwartet-liste stagger">
+        <div class="ew-item"><span class="koru ic"></span>Kakaozeremonie</div>
+        <div class="ew-item"><span class="koru ic"></span>Yoga</div>
+        <div class="ew-item"><span class="koru ic"></span>Meditation</div>
+        <div class="ew-item"><span class="koru ic"></span>Breathwork</div>
+        <div class="ew-item"><span class="koru ic"></span>Zeit am Lagerfeuer</div>
+        <div class="ew-item"><span class="koru ic"></span>Natur &amp; Wattenmeer</div>
       </div>
     </div>
   </section>
@@ -243,12 +208,12 @@
     <div class="wrap">
       <div class="sec-head reveal">
         <div class="eyebrow">Der Ort</div>
-        <h2>Seminarhaus <em>Alte Schule</em> · Nordsee</h2>
-        <p>Eine historische Schule von 1872 in idyllischer Alleinlage am Rande eines Naturschutzgebiets – nur wenige Kilometer vom Meer.</p>
+        <h2>Seminarhaus <em>Alte Schule</em></h2>
       </div>
       <div class="lead-text narrow reveal d1" style="margin-bottom:36px;">
-        <p>In Büttjebüll, Nordfriesland, liegt unser Zuhause für diese fünf Tage: ein liebevoll renoviertes Backsteinhaus mit Lehmputz-Wänden, großen Fenstern, hellen Räumen und warmen Holzböden. Ein großer Seminarraum, Kaminöfen und ein weiter Garten mit einer windgeschützten Feuerstelle hinter der Düne – zusammen ergibt das genau die Geborgenheit, die es in der dunklen Jahreszeit braucht.</p>
-        <p>Rundherum: die Bordelumer Heide mit Wäldern, Wiesen und Heideflächen – und das Wattenmeer, das die Weite und Ruhe des Nordens in den Raum trägt.</p>
+        <p>Fünf Tage werden wir in Büttjebüll in Nordfriesland Zuhause sein – in einer historischen Schule von 1872, idyllisch gelegen am Rande eines Naturschutzgebiets und nur wenige Kilometer vom Meer entfernt.</p>
+        <p>Das liebevoll renovierte Backsteinhaus mit seinem großzügigen Seminarraum, knisternden Kaminöfen, hellen Räumen und einem weitläufigen Garten mit windgeschützter Feuerstelle schenkt uns genau die Geborgenheit, nach der wir uns in der dunklen Jahreszeit sehnen.</p>
+        <p>Die Wälder der Bordelumer Heide und das angrenzende Wattenmeer umrahmen unsere gemeinsame Zeit mit tiefer Ruhe und der Weite der Nordsee.</p>
       </div>
       <div class="ort-grid stagger">
         <figure class="big"><img src="assets/venue-winter.webp" width="2016" height="908" alt="Das Seminarhaus im Schnee – Winterlandschaft in Nordfriesland" loading="lazy" /></figure>
@@ -261,56 +226,17 @@
     </div>
   </section>
 
-  <section id="guides">
-    <div class="wrap guides-grid">
-      <div class="guides-portraits solo reveal">
-        <figure class="gp-1"><img src="assets/guide-michael.jpg" width="800" height="803" alt="Michael Storz" loading="lazy" /></figure>
-      </div>
-      <div class="guides-body reveal d1">
-        <div class="eyebrow">Deine Begleitung</div>
-        <h2>Wer dich begleitet</h2>
-        <p>Ich bin Michael Storz, Wildnispädagoge, und ich lebe in Landsberg am Lech. Dieses Retreat leite ich selbst – die Tage draußen, das Feuer, die Zeremonien und die stillen Morgen. Ich halte den Raum, in dem du fünf Tage lang ankommen darfst, bei dir selbst und in der Gruppe.</p>
-        <p>Ich bin die ganze Zeit für dich ansprechbar. Wenn dir etwas zu viel wird, sagst du das, und dann ist es zu viel – hier musst du durch nichts hindurch, nur weil es auf dem Plan steht.</p>
-        <div class="names">Michael Storz</div>
-      </div>
-    </div>
-  </section>
-
-  <div class="cta-band reveal">
-    <div class="wrap">
-      <p>Klingt nach deinem Dezember?</p>
-      <a href="https://forms.gle/2gdLzgLvR4rXx53V7" target="_blank" rel="noopener" class="btn btn-primary">Zum Anmeldeformular →</a>
-    </div>
-  </div>
-
-  <section id="rituale" class="glut" style="background:var(--bg2);border-top:1px solid var(--line);">
-    <div class="wrap">
-      <div class="sec-head reveal">
-        <div class="eyebrow">Verwurzelt in der Natur</div>
-        <h2>Alte <em>Naturrituale</em></h2>
-        <p>Ein Ritual ist nichts Kompliziertes und verlangt weder einen bestimmten Glauben noch Vorerfahrung.</p>
-      </div>
-      <div class="lead-text narrow reveal d1" style="text-align:center;margin-bottom:38px;">
-        <p>Wir arbeiten mit alten, schlichten Ritualen in der Natur: eine Feuerzeremonie, das Schlagen der Trommel, kleine Gaben an die Erde. Sie markieren Übergänge, ehren die dunkle Jahreszeit und geben dem Abend eine Form, für die man keine Worte braucht.</p>
-      </div>
-      <div class="trio stagger">
-        <figure><img src="assets/moment-stones.jpg" width="1000" height="666" alt="Naturritual mit Steinen am Boden" loading="lazy" /></figure>
-        <figure><img src="assets/moment-drum.jpg" width="1400" height="935" alt="Trommel im Ritual" loading="lazy" /></figure>
-        <figure><img src="assets/retreat-verbindung.jpg" width="1000" height="667" alt="Verbindung von Herz zu Herz" loading="lazy" /></figure>
-      </div>
-    </div>
-  </section>
-
   <section class="essen" id="essen">
     <div class="wrap">
       <div class="inner reveal">
-        <div class="eyebrow">Genährt werden</div>
-        <h2 style="font-size:clamp(30px,4.6vw,52px);font-weight:400;margin:14px 0 18px;">Liebevoll gekocht, rein pflanzlich</h2>
+        <div class="eyebrow">Liebevoll genährt werden</div>
+        <h2 style="font-size:clamp(30px,4.6vw,52px);font-weight:400;margin:14px 0 18px;">Genuss als Ritual</h2>
         <div class="lead-text">
-          <p>Gutes Essen ist Teil der Fürsorge. Fünf Tage lang kochen Laura und Lucie für uns – frisch, vegetarisch und vegan, richtig nährend. Niemand muss einkaufen, schnippeln oder abends überlegen, was es gibt, und wer schon einmal in einer Gruppe gekocht hat, weiß, was das wert ist.</p>
+          <p>Essen ist Fürsorge – für Körper, Geist und Gemeinschaft. Abgestimmt auf die dunkle Jahreszeit werden wir fünf Tage lang von Laura und Lucie kulinarisch umsorgt.</p>
+          <p>Mit ihrer liebevollen, ayurvedischen Küche zaubern die beiden täglich frische Mahlzeiten, die von innen wärmen, Ausgleich schenken und uns am Tisch zusammenbringen. Jede Mahlzeit wird so zu einem kleinen Ritual, in dem wir Nahrung und Genuss bewusst zelebrieren.</p>
         </div>
-        <div class="who">Küche von Laura &amp; Lucie · Madhu &amp; Moon</div>
-        <div class="who-avatar"><img src="assets/madhu-moon.jpg" width="300" height="300" alt="Madhu und Moon" loading="lazy" /></div>
+        <div class="who">Küche &amp; Magie von Madhu &amp; Moon</div>
+        <div class="who-avatar"><img src="assets/madhu-moon.jpg" width="300" height="300" alt="Laura und Lucie – Madhu &amp; Moon" loading="lazy" /></div>
       </div>
     </div>
   </section>
@@ -322,12 +248,10 @@
         <h2>Alles auf einen Blick</h2>
       </div>
       <div class="details-grid stagger">
-        <div class="detail"><div class="k">Termin</div><div class="v">9.–13. Dez 2026<small>Anreise ab 16 Uhr · Abreise bis 12 Uhr</small></div></div>
-        <div class="detail"><div class="k">Dauer</div><div class="v">5 Tage<small>Anreise · 3 volle Tage · Abreise</small></div></div>
+        <div class="detail"><div class="k">Datum</div><div class="v">9.–13. Dez 2026<small>Anreise ab 16 Uhr · Abreise bis 12 Uhr</small></div></div>
         <div class="detail"><div class="k">Ort</div><div class="v">Nordsee<small>Seminarhaus Alte Schule, Nordfriesland</small></div></div>
-        <div class="detail"><div class="k">Für</div><div class="v">Offen für alle<small>In einer kleinen, vertrauten Gruppe</small></div></div>
-        <div class="detail"><div class="k">Unterkunft</div><div class="v">Mehrbettzimmer<small>Gemeinschaftlich, mit Vollverpflegung</small></div></div>
-        <div class="detail"><div class="k">Beitrag</div><div class="v">790 €<small>Für alle fünf Tage, inkl. Unterkunft und Vollverpflegung</small></div></div>
+        <div class="detail"><div class="k">Unterkunft</div><div class="v">Mehrbettzimmer<small>Zimmerwunsch im Anmeldeformular angeben</small></div></div>
+        <div class="detail"><div class="k">Dein Beitrag</div><div class="v">790 €<small>Fünf Tage, inkl. Übernachtung und Vollverpflegung</small></div></div>
       </div>
     </div>
   </section>
@@ -335,18 +259,17 @@
   <section class="anmeldung" id="anmeldung">
     <span class="koru koru-wm"></span>
     <div class="wrap inner">
-      <div class="eyebrow reveal">Dabei sein</div>
+      <div class="eyebrow reveal">Du willst dabei sein?</div>
       <h2 class="reveal d1" style="font-size:clamp(32px,5.5vw,60px);font-weight:400;margin:16px 0 16px;">Sichere dir deinen <em>Platz</em></h2>
-      <p class="reveal d2" style="color:var(--bone-dim);font-size:18px;">Die Gruppe ist bewusst klein. Deine Anmeldung läuft über ein kurzes Formular – danach melde ich mich persönlich bei dir, und wir klären alles Weitere in Ruhe.</p>
+      <p class="reveal d2" style="color:var(--bone-dim);font-size:18px;">Deine Anmeldung läuft über ein kurzes Formular – danach melde ich mich persönlich bei dir, und wir klären alles Weitere in Ruhe.</p>
       <div class="anmelden-cta reveal d2">
         <a href="https://forms.gle/2gdLzgLvR4rXx53V7" target="_blank" rel="noopener" class="btn btn-primary">Zum Anmeldeformular →</a>
       </div>
-      <p class="frage reveal d2">Noch Fragen? Schreib mir einfach – am schnellsten per WhatsApp.</p>
+      <p class="frage reveal d2">Noch Fragen? Schreib mir per WhatsApp.</p>
       <a class="wa-btn reveal d2" href="https://wa.me/491602302132" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.04 2.4c-5.3 0-9.6 4.3-9.6 9.6 0 1.69.44 3.34 1.28 4.8L2.4 21.6l4.94-1.29a9.56 9.56 0 0 0 4.7 1.2h.01c5.3 0 9.6-4.3 9.6-9.6 0-2.56-1-4.97-2.81-6.78a9.53 9.53 0 0 0-6.8-2.83zm0 1.8c2.08 0 4.04.81 5.51 2.29a7.74 7.74 0 0 1 2.28 5.5c0 4.3-3.5 7.8-7.8 7.8a7.8 7.8 0 0 1-3.97-1.09l-.28-.17-2.93.77.78-2.86-.19-.29a7.74 7.74 0 0 1-1.19-4.16c0-4.3 3.5-7.79 7.79-7.79zm-3.46 4.1c-.16 0-.43.06-.66.3-.22.25-.86.84-.86 2.05 0 1.21.88 2.38 1 2.55.12.16 1.72 2.74 4.27 3.74 2.12.84 2.55.67 3.01.63.46-.04 1.48-.6 1.69-1.19.21-.58.21-1.08.15-1.18-.06-.1-.22-.16-.46-.28-.24-.12-1.42-.7-1.64-.78-.22-.08-.38-.12-.54.12-.16.25-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1.01-.37-1.93-1.19-.71-.64-1.19-1.42-1.33-1.66-.14-.24-.01-.37.11-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.19-.46-.39-.4-.54-.4h-.46z"/></svg>
         Schreib mir per WhatsApp
       </a>
-      <span class="frage-mail reveal d2">Kein WhatsApp? Dann per E-Mail an <a href="mailto:info@wairua-spirit.de">info@wairua-spirit.de</a>.</span>
     </div>
   </section>
 
