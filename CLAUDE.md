@@ -9,7 +9,7 @@ Statische Website, **eine Datei pro Seite** — kein Build-System, kein npm, kei
 |---|---|
 | `index.html` | Startseite |
 | `begleitung.html` | Einzelbegleitung in der Natur – ein Tag draußen |
-| `retreat.html` | Winter-Retreat für Männer, Nordsee (noch `noindex`) |
+| `retreat.html` | Winter-Retreat an der Nordsee, 9.–13.12.2026 (**live**, indexierbar) |
 | `rituale.html` | Rituale & Jahreskreisfeste, Anmeldung über PayPal (noch `noindex`) |
 | `impressum.html` · `datenschutz.html` | Rechtsseiten (bewusst `noindex`) |
 | `assets/` | Bilder, Schriften, `base.css`, `site.js` |
@@ -82,13 +82,12 @@ via GitHub Pages auf wairua-spirit.de.
 - **E-Mail läuft über Google Workspace** (MX-Records). ⚠️ **MX-Einträge niemals anfassen.**
 
 ## Offen
-1. `retreat.html`: Termin, Endpreis, Oskars Nachname, Bildrechte Seminarhaus.
-   Erst danach `noindex` raus, Event-Schema ergänzen (Vorlage in `rituale.html`)
-   und die Seite in die Startseiten-Navigation nehmen.
-2. `rituale.html`: `noindex` raus, sobald der Termin final ist.
+1. `rituale.html`: `noindex` raus, sobald der Termin final ist.
    Beim Entfernen eines `noindex` **immer** die URL in `sitemap.xml` nachtragen.
-3. Anmeldeformular auf `retreat.html` ist ein `mailto:` — auf Handys ohne
-   Mail-App geht die Anfrage verloren. Ein echter Formulardienst fehlt noch.
+2. `retreat.html` ist seit 03.08.2026 frei gegeben: `noindex` raus, in der
+   `sitemap.xml`, und die Startseiten-Kachel verlinkt wieder darauf. Die
+   Anmeldung läuft über ein Google-Formular, Rückfragen über WhatsApp.
+   Der frühere `mailto:`-Weg ist damit erledigt.
 
 ## Inhalte
 Texte & Bilder stammen von Michael. Die Testimonials sind echt — nur mit seiner
