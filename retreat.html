@@ -9,7 +9,6 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <script>document.documentElement.classList.add("js");</script>
-<meta name="robots" content="noindex, nofollow" />
 <title>Winter-Retreat an der Nordsee · Dez 2026 | Wairua.Spirit</title>
 <meta name="description" content="Fünf Tage Auszeit an der Nordsee, 9.–13. Dezember 2026: Kakaozeremonie, Yoga, Meditation, Breathwork, Lagerfeuer und viel Zeit draußen. Kleine Gruppe, 790 €." />
 <link rel="canonical" href="https://wairua-spirit.de/retreat.html" />
@@ -52,13 +51,23 @@
 
   .lead-text em{color:var(--gold-2);font-style:italic;}
 
-  /* Was dich erwartet – schlichte Liste der Kernelemente */
-  .erwartet-liste{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:840px;margin-inline:auto;}
-  .ew-item{display:flex;align-items:center;gap:15px;background:var(--panel);border:1px solid var(--line);border-radius:14px;
-    padding:22px 26px;font-family:var(--serif);font-size:clamp(20px,2.3vw,25px);color:var(--bone);
-    transition:transform .4s,border-color .4s;}
-  .ew-item:hover{transform:translateY(-4px);border-color:rgba(216,168,90,.45);}
-  .ew-item .ic{width:26px;height:26px;flex:none;color:var(--gold);}
+  /* Fliesstexte durchgehend zentriert – ruhigeres, einheitliches Bild */
+  .lead-text{text-align:center;}
+  .lead-text.narrow{max-width:680px;}
+
+  /* Was dich erwartet – Kernelement mit Untersatz, ohne Kachel-Rahmen */
+  .erwartet-liste{display:grid;grid-template-columns:repeat(3,1fr);
+    gap:clamp(40px,5.5vw,62px) 26px;max-width:980px;margin-inline:auto;}
+  .ew-item{text-align:center;}
+  .ew-item h3{font-family:var(--serif);font-weight:400;font-size:clamp(27px,3.4vw,38px);
+    color:var(--bone);transition:color .4s;}
+  .ew-item .rule{display:block;width:46px;height:1px;margin:15px auto;
+    background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:.7;
+    transition:width .55s var(--ease-out),opacity .4s;}
+  .ew-item p{font-family:var(--serif);font-style:italic;font-size:clamp(17px,2vw,21px);
+    color:var(--bone-dim);line-height:1.5;}
+  .ew-item:hover h3{color:var(--gold-2);}
+  .ew-item:hover .rule{width:78px;opacity:1;}
 
   /* ort – Feature-Bild oben, darunter die Haus-Galerie */
   .ort-feature{margin:0 0 14px;border-radius:16px;overflow:hidden;box-shadow:var(--shadow);}
@@ -178,7 +187,7 @@
     </div>
   </header>
 
-  <section id="einladung">
+  <section id="einladung" class="glut">
     <div class="wrap">
       <div class="sec-head reveal">
         <div class="eyebrow">Deine Einladung</div>
@@ -193,30 +202,30 @@
     </div>
   </section>
 
-  <section id="erwartet" style="background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
+  <section id="erwartet" class="glut" style="background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
     <div class="wrap">
       <div class="sec-head reveal">
         <h2>Was dich erwartet</h2>
       </div>
       <div class="erwartet-liste stagger">
-        <div class="ew-item"><span class="koru ic"></span>Kakaozeremonie</div>
-        <div class="ew-item"><span class="koru ic"></span>Yoga</div>
-        <div class="ew-item"><span class="koru ic"></span>Meditation</div>
-        <div class="ew-item"><span class="koru ic"></span>Breathwork</div>
-        <div class="ew-item"><span class="koru ic"></span>Zeit am Lagerfeuer</div>
-        <div class="ew-item"><span class="koru ic"></span>Natur &amp; Wattenmeer</div>
+        <div class="ew-item"><h3>Kakaozeremonie</h3><span class="rule"></span><p>Achtsame Herzöffnung</p></div>
+        <div class="ew-item"><h3>Yoga &amp; Meditation</h3><span class="rule"></span><p>Einklang von Bewegung und Stille</p></div>
+        <div class="ew-item"><h3>Breathwork</h3><span class="rule"></span><p>Sanfte Reise nach innen</p></div>
+        <div class="ew-item"><h3>Lagerfeuer</h3><span class="rule"></span><p>Wärme, Geschichten &amp; Magie</p></div>
+        <div class="ew-item"><h3>Gemeinschaft</h3><span class="rule"></span><p>Raum für Verbindung &amp; Verletzlichkeit</p></div>
+        <div class="ew-item"><h3>Natur</h3><span class="rule"></span><p>Wind und Weite der Nordsee</p></div>
       </div>
     </div>
   </section>
 
-  <div class="cta-band reveal">
+  <div class="cta-band glut reveal">
     <div class="wrap">
       <p>Klingt nach deinem Dezember?</p>
-      <a href="https://forms.gle/2gdLzgLvR4rXx53V7" target="_blank" rel="noopener" class="btn btn-primary">Zum Anmeldeformular →</a>
+      <a href="#anmeldung" class="btn btn-primary">Zur Anmeldung ↓</a>
     </div>
   </div>
 
-  <section class="ort" id="ort">
+  <section class="ort glut" id="ort">
     <div class="wrap">
       <div class="sec-head reveal">
         <div class="eyebrow">Der Ort</div>
@@ -241,7 +250,7 @@
     </div>
   </section>
 
-  <section class="essen" id="essen">
+  <section class="essen glut" id="essen">
     <div class="wrap">
       <div class="inner reveal">
         <div class="eyebrow">Liebevoll genährt werden</div>
@@ -256,7 +265,7 @@
     </div>
   </section>
 
-  <section id="details">
+  <section id="details" class="glut">
     <div class="wrap">
       <div class="sec-head reveal">
         <div class="eyebrow">Der Rahmen</div>
@@ -271,7 +280,7 @@
     </div>
   </section>
 
-  <section class="anmeldung" id="anmeldung">
+  <section class="anmeldung glut" id="anmeldung">
     <span class="koru koru-wm"></span>
     <div class="wrap inner">
       <div class="eyebrow reveal">Du willst dabei sein?</div>
@@ -280,7 +289,7 @@
       <div class="anmelden-cta reveal d2">
         <a href="https://forms.gle/2gdLzgLvR4rXx53V7" target="_blank" rel="noopener" class="btn btn-primary">Zum Anmeldeformular →</a>
       </div>
-      <p class="frage reveal d2">Noch Fragen? Schreib mir per WhatsApp.</p>
+      <p class="frage reveal d2">Noch Fragen?</p>
       <a class="wa-btn reveal d2" href="https://wa.me/491602302132" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.04 2.4c-5.3 0-9.6 4.3-9.6 9.6 0 1.69.44 3.34 1.28 4.8L2.4 21.6l4.94-1.29a9.56 9.56 0 0 0 4.7 1.2h.01c5.3 0 9.6-4.3 9.6-9.6 0-2.56-1-4.97-2.81-6.78a9.53 9.53 0 0 0-6.8-2.83zm0 1.8c2.08 0 4.04.81 5.51 2.29a7.74 7.74 0 0 1 2.28 5.5c0 4.3-3.5 7.8-7.8 7.8a7.8 7.8 0 0 1-3.97-1.09l-.28-.17-2.93.77.78-2.86-.19-.29a7.74 7.74 0 0 1-1.19-4.16c0-4.3 3.5-7.79 7.79-7.79zm-3.46 4.1c-.16 0-.43.06-.66.3-.22.25-.86.84-.86 2.05 0 1.21.88 2.38 1 2.55.12.16 1.72 2.74 4.27 3.74 2.12.84 2.55.67 3.01.63.46-.04 1.48-.6 1.69-1.19.21-.58.21-1.08.15-1.18-.06-.1-.22-.16-.46-.28-.24-.12-1.42-.7-1.64-.78-.22-.08-.38-.12-.54.12-.16.25-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1.01-.37-1.93-1.19-.71-.64-1.19-1.42-1.33-1.66-.14-.24-.01-.37.11-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.19-.46-.39-.4-.54-.4h-.46z"/></svg>
         Schreib mir per WhatsApp
