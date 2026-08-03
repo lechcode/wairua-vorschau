@@ -142,6 +142,48 @@
     }
   }
 
+  /* --- Lightbox: als .zoomable markierte Bilder beim Klick gross zeigen --
+     Funktioniert unabhaengig von der Bewegungsreduktion (rein funktional). */
+  (function () {
+    var zoombar = document.querySelectorAll('img.zoomable');
+    if (!zoombar.length) return;
+
+    var box = document.createElement('div');
+    box.className = 'lightbox';
+    box.setAttribute('aria-hidden', 'true');
+    var gross = document.createElement('img');
+    gross.alt = '';
+    var zu = document.createElement('button');
+    zu.className = 'lb-close';
+    zu.type = 'button';
+    zu.setAttribute('aria-label', 'Schließen');
+    zu.innerHTML = '&times;';
+    box.appendChild(gross);
+    box.appendChild(zu);
+    document.body.appendChild(box);
+
+    var oeffnen = function (src, alt) {
+      gross.src = src;
+      gross.alt = alt || '';
+      box.classList.add('open');
+      box.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('menu-open');
+    };
+    var schliessen = function () {
+      box.classList.remove('open');
+      box.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('menu-open');
+    };
+
+    zoombar.forEach(function (im) {
+      im.addEventListener('click', function () {
+        oeffnen(im.getAttribute('data-full') || im.currentSrc || im.src, im.alt);
+      });
+    });
+    box.addEventListener('click', schliessen);
+    addEventListener('keydown', function (e) { if (e.key === 'Escape') schliessen(); });
+  })();
+
   /* Ab hier nur noch Schmuck. Wer Bewegung reduziert haben moechte,
      bekommt die Seite ohne diese Zutaten - der Inhalt bleibt derselbe. */
   if (ruhig.matches) return;

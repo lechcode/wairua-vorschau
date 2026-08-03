@@ -60,14 +60,18 @@
   .ew-item:hover{transform:translateY(-4px);border-color:rgba(216,168,90,.45);}
   .ew-item .ic{width:26px;height:26px;flex:none;color:var(--gold);}
 
-  /* ort */
-  .ort-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:190px;gap:14px;grid-auto-flow:dense;margin-top:8px;}
-  .ort-grid figure{position:relative;overflow:hidden;border-radius:14px;}
-  .ort-grid img{width:100%;height:100%;object-fit:cover;transition:transform 1.1s cubic-bezier(.2,.7,.2,1);}
-  .ort-grid figure:hover img{transform:scale(1.06);}
-  .ort-grid .big{grid-column:span 2;grid-row:span 2;}
-  .ort-note{text-align:center;font-size:13px;color:var(--muted);margin-top:16px;}
-  .ort-note a{color:var(--gold-2);}
+  /* ort – Feature-Bild oben, darunter die Haus-Galerie */
+  .ort-feature{margin:0 0 14px;border-radius:16px;overflow:hidden;box-shadow:var(--shadow);}
+  .ort-feature img{width:100%;height:clamp(240px,42vw,520px);object-fit:cover;transition:transform 1.2s cubic-bezier(.2,.7,.2,1);}
+  .ort-feature:hover img{transform:scale(1.04);}
+  .ort-galerie{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+  .ort-galerie figure{overflow:hidden;border-radius:14px;aspect-ratio:16/10;box-shadow:0 20px 44px -26px rgba(0,0,0,.85);}
+  .ort-galerie img{width:100%;height:100%;object-fit:cover;transition:transform 1.1s cubic-bezier(.2,.7,.2,1);}
+  .ort-galerie figure:hover img{transform:scale(1.06);}
+
+  /* Mitten-CTA-Band */
+  .cta-band{padding:clamp(48px,8vw,84px) 0;text-align:center;border-top:1px solid var(--line);}
+  .cta-band p{font-family:var(--serif);font-style:italic;font-size:clamp(20px,2.6vw,28px);color:var(--gold-2);margin-bottom:22px;}
 
   /* essen */
   .essen{position:relative;background:#0c0a08 url('assets/essen-buffet.jpg') center 42%/cover no-repeat;text-align:center;overflow:hidden;}
@@ -95,11 +99,12 @@
 
   @media(max-width:900px){
     .erwartet-liste{grid-template-columns:1fr 1fr;}
-    .ort-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:clamp(150px,30vw,210px);}
+    .ort-galerie{grid-template-columns:repeat(2,1fr);}
   }
   @media(max-width:540px){
     .erwartet-liste{grid-template-columns:1fr;}
     .details-grid{grid-template-columns:1fr;}
+    .ort-galerie{grid-template-columns:1fr;}
   }
 </style>
 <script type="application/ld+json">
@@ -204,6 +209,13 @@
     </div>
   </section>
 
+  <div class="cta-band reveal">
+    <div class="wrap">
+      <p>Klingt nach deinem Dezember?</p>
+      <a href="https://forms.gle/2gdLzgLvR4rXx53V7" target="_blank" rel="noopener" class="btn btn-primary">Zum Anmeldeformular →</a>
+    </div>
+  </div>
+
   <section class="ort" id="ort">
     <div class="wrap">
       <div class="sec-head reveal">
@@ -215,14 +227,17 @@
         <p>Das liebevoll renovierte Backsteinhaus mit seinem großzügigen Seminarraum, knisternden Kaminöfen, hellen Räumen und einem weitläufigen Garten mit windgeschützter Feuerstelle schenkt uns genau die Geborgenheit, nach der wir uns in der dunklen Jahreszeit sehnen.</p>
         <p>Die Wälder der Bordelumer Heide und das angrenzende Wattenmeer umrahmen unsere gemeinsame Zeit mit tiefer Ruhe und der Weite der Nordsee.</p>
       </div>
-      <div class="ort-grid stagger">
-        <figure class="big"><img src="assets/venue-winter.webp" width="2016" height="908" alt="Das Seminarhaus im Schnee – Winterlandschaft in Nordfriesland" loading="lazy" /></figure>
-        <figure><img src="assets/venue-seminarraum.webp" width="1600" height="720" alt="Heller Seminarraum mit Gong und Kaminofen" loading="lazy" /></figure>
-        <figure><img src="assets/venue-ecke.webp" width="1600" height="720" alt="Gemütliche Fensterecke mit Sitzkissen" loading="lazy" /></figure>
-        <figure><img src="assets/venue-zimmer.webp" width="1600" height="720" alt="Mehrbettzimmer mit Holzboden" loading="lazy" /></figure>
-        <figure><img src="assets/venue-duene.webp" width="1600" height="720" alt="Das Haus hinter der Düne – Nordseecharakter" loading="lazy" /></figure>
+      <figure class="ort-feature reveal">
+        <img class="zoomable" src="assets/alte-schule-nordsee.jpg" width="1600" height="1067" alt="Winterliche Nordsee: verschneite Düne mit Strandhafer und Blick aufs Meer" loading="lazy" />
+      </figure>
+      <div class="ort-galerie stagger">
+        <figure><img class="zoomable" src="assets/alte-schule-seminarraum.webp" width="1600" height="720" alt="Großer, heller Seminarraum mit Gong und Sprossenfenstern" loading="lazy" /></figure>
+        <figure><img class="zoomable" src="assets/alte-schule-esszimmer.webp" width="1536" height="691" alt="Esszimmer mit langer Holztafel, Kachelofen und Fensterbank" loading="lazy" /></figure>
+        <figure><img class="zoomable" src="assets/alte-schule-kueche.webp" width="1536" height="691" alt="Geräumige Küche mit Kochinsel und altem Buffetschrank" loading="lazy" /></figure>
+        <figure><img class="zoomable" src="assets/alte-schule-wintergarten.webp" width="1536" height="691" alt="Sonniger Wintergarten mit Blick in die winterliche Natur" loading="lazy" /></figure>
+        <figure><img class="zoomable" src="assets/alte-schule-zimmer.webp" width="1536" height="691" alt="Helles Mehrbettzimmer mit Holzboden unter dem Dach" loading="lazy" /></figure>
+        <figure><img class="zoomable" src="assets/alte-schule-feuerstelle.jpg" width="1196" height="691" alt="Feuerstelle mit Holzbänken in der Düne, das Haus im Hintergrund" loading="lazy" /></figure>
       </div>
-      <p class="ort-note">Fotos des Hauses: <a href="https://seminarhaus-alte-schule.de/seminarhaus-nordsee/" target="_blank" rel="noopener">Seminarhaus Alte Schule</a>, mit freundlicher Genehmigung.</p>
     </div>
   </section>
 
