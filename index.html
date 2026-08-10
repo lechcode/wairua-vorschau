@@ -73,12 +73,23 @@
   .saeulen-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
   .pillar{position:relative;border-radius:16px;overflow:hidden;aspect-ratio:3/4.1;display:flex;align-items:flex-end;box-shadow:var(--shadow);}
   .pillar img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1.1s cubic-bezier(.2,.7,.2,1);}
-  .pillar::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,12,9,.15) 0%,rgba(10,12,9,.2) 45%,rgba(10,12,9,.92) 100%);}
+  /* Der Verlauf traegt den Text: oben bleibt das Foto offen, ab der Mitte
+     wird es dunkel genug, dass auch ueber belebten Fotos alles lesbar ist. */
+  .pillar::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,12,9,.12) 0%,rgba(10,12,9,.18) 38%,rgba(10,12,9,.70) 64%,rgba(10,12,9,.95) 100%);}
   .pillar:hover img{transform:scale(1.07);}
-  .pillar .p-body{position:relative;z-index:2;padding:30px 28px;}
+  /* Eigener Verlauf direkt hinter dem Text - so liegt die Schrift auch auf
+     den belebten Fotos (Gruppe vor dem Tipi) immer auf ruhigem Grund. */
+  .pillar .p-body{position:relative;z-index:2;padding:34px 28px 30px;
+    background:linear-gradient(180deg,rgba(9,11,8,0) 0%,rgba(9,11,8,.74) 26%,rgba(9,11,8,.9) 62%,rgba(9,11,8,.94) 100%);}
   .pillar h3{font-size:30px;font-weight:500;margin:6px 0 10px;}
   .pillar h3 span{display:block;font-size:14px;font-family:var(--sans);letter-spacing:.06em;color:var(--gold);font-weight:400;text-transform:uppercase;margin-top:6px;}
   .pillar p{font-size:14.5px;color:var(--bone-dim);}
+  /* Zwischen 901 und 1120 px sind die drei Spalten schmal, der Text wird
+     hoch und stuende sonst mitten im belebten Teil des Fotos. Deshalb
+     bekommen die Kacheln dort mehr Hoehe - der Text bleibt im dunklen Fuss. */
+  @media(max-width:1120px) and (min-width:901px){
+    .pillar{aspect-ratio:3/4.8;}
+  }
 
   /* über michael */
   .about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(34px,5vw,72px);align-items:center;}
@@ -293,30 +304,30 @@
   <section id="saeulen">
     <div class="wrap">
       <div class="sec-head reveal">
-        <div class="eyebrow">Die drei Wege</div>
-        <h2>Drei Wege zurück zu dir</h2>
+        <div class="eyebrow">Die 3 Wege</div>
+        <h2>Wie du wieder zurück zu dir findest</h2>
         <p>Verbindung, Gemeinschaft und Natur – daran richtet sich alles aus, was ich anbiete, ob wir zu zweit einen Tag draußen sind oder mit einer ganzen Runde am Feuer sitzen.</p>
       </div>
       <div class="saeulen-grid stagger">
         <div class="pillar">
           <img src="assets/about-1.jpg" srcset="assets/about-1-600.jpg 600w, assets/about-1.jpg 1100w" sizes="(max-width:900px) 92vw, 30vw" width="1100" height="969" loading="lazy" alt="Michael lächelt in die Ferne, im Hintergrund grünes Laub" />
           <div class="p-body">
-            <h3>Verbindung<span>Zu dir selbst</span></h3>
-            <p>Ein ehrlicher Blick nach innen, in Ruhe und in Stille. Hier musst du nichts richtig machen: Du darfst dir mit Sanftheit begegnen statt mit Anspruch – und dich daran erinnern, wer du eigentlich bist.</p>
+            <h3>Verbindung<span>Der Weg nach innen</span></h3>
+            <p>Weil wir uns im Lärm des Alltags leicht selbst verlieren. Wenn du ganz erwartungsfrei in die Stille gehst, spürst du wieder, wer du hinter all den Rollen und Anforderungen im Kern wirklich bist.</p>
           </div>
         </div>
         <div class="pillar">
           <img src="assets/pillar-gemeinschaft.jpg" srcset="assets/pillar-gemeinschaft-600.jpg 600w, assets/pillar-gemeinschaft.jpg 1051w" sizes="(max-width:900px) 92vw, 30vw" width="1051" height="1400" loading="lazy" alt="Gruppe von Männern jubelt gemeinsam vor dem Tipi" />
           <div class="p-body">
-            <h3>Gemeinschaft<span>Im Kreis</span></h3>
-            <p>Menschen, die dich sehen, wie du bist. Hier musst du niemanden spielen: Du darfst dazugehören, dich zeigen und gemeinsam mit anderen wachsen.</p>
+            <h3>Gemeinschaft<span>Der Weg ins Miteinander</span></h3>
+            <p>Weil wir nicht dafür gemacht sind, alles allein zu tragen. Im ehrlichen Austausch ohne Masken und Wertung erfährst du, wie heilsam es ist, unvoreingenommen gesehen zu werden und bedingungslos dazuzugehören.</p>
           </div>
         </div>
         <div class="pillar">
           <img src="assets/pillar-natur.jpg" srcset="assets/pillar-natur-600.jpg 600w, assets/pillar-natur.jpg 1100w" sizes="(max-width:900px) 92vw, 30vw" width="1100" height="733" loading="lazy" alt="Eine Hand mit Koru-Tätowierung liegt auf einem Baumstamm" />
           <div class="p-body">
-            <h3>Natur<span>Im Einklang</span></h3>
-            <p>Draußen verändert sich dein Tempo ganz von allein: der Wind, das Licht, der Boden unter den Füßen. Die Natur bringt dich zurück zu deinem Körper, zu deinem eigenen Rhythmus und zu dem, was schon immer da war.</p>
+            <h3>Natur<span>Der Weg in die Erdung</span></h3>
+            <p>Weil wir viel zu oft im eigenen Kopf gefangen sind. Der feste Boden unter deinen Füßen holt dich augenblicklich zurück in deinen Körper und schenkt dir deinen ganz eigenen, natürlichen Rhythmus wieder.</p>
           </div>
         </div>
       </div>
