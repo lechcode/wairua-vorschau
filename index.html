@@ -144,20 +144,29 @@
   /* stimmen */
   .voices{background:var(--bg);}
   .voices-carousel{max-width:680px;margin-inline:auto;}
-  .voices-viewport{overflow:hidden;border-radius:16px;}
+  /* Die Stimmen stehen bewusst hell auf der dunklen Seite - wie ein
+     aufgeschlagenes Blatt Papier, das den Blick haelt. */
+  .voices-viewport{overflow:hidden;border-radius:16px;box-shadow:0 34px 74px -34px rgba(0,0,0,.9);}
   .voices-track{display:flex;transition:transform .6s cubic-bezier(.2,.7,.2,1);}
-  .voices-track .voice{flex:0 0 100%;}
-  .voice{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:34px 32px;position:relative;}
-  .voice .mark{font-family:var(--serif);font-size:64px;line-height:.6;color:var(--gold);opacity:.5;}
-  .voice p{font-family:var(--serif);font-style:italic;font-size:21px;line-height:1.4;color:var(--bone);margin:6px 0 18px;}
-  .voice .who{font-size:13px;letter-spacing:.04em;color:var(--muted);}
-  .voice .who b{color:var(--gold-2);font-weight:500;}
+  /* Im Karussell ohne eigene Ecken und Rahmen - beim Weiterschieben sollen
+     die hellen Karten eine durchgehende Flaeche bilden, keine Naht zeigen. */
+  .voices-track .voice{flex:0 0 100%;border-radius:0;border:0;}
+  .voice{background:linear-gradient(180deg,#f7f2e9 0%,#ebe3d4 100%);border:1px solid rgba(255,255,255,.55);
+    border-radius:16px;padding:40px 36px;position:relative;}
+  .voice .mark{font-family:var(--serif);font-size:64px;line-height:.6;color:#c08a3c;opacity:.6;}
+  .voice p{font-family:var(--serif);font-style:italic;font-size:21px;line-height:1.45;color:#241f18;margin:6px 0 18px;}
+  .voice .who{font-size:13px;letter-spacing:.04em;color:#665e4e;}
+  .voice .who b{color:#7a5116;font-weight:600;}
   .voices-nav{display:flex;align-items:center;justify-content:center;gap:24px;margin-top:28px;}
   .v-arrow{width:44px;height:44px;flex:none;border-radius:50%;border:1px solid var(--line);background:transparent;color:var(--bone);font-size:17px;font-family:var(--sans);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:border-color .3s,color .3s;}
   .v-arrow:hover{border-color:var(--gold);color:var(--gold-2);}
   .voices-dots{display:flex;gap:9px;}
   .voices-dots button{width:8px;height:8px;padding:0;border-radius:50%;border:none;background:var(--line);cursor:pointer;transition:background .3s,transform .3s;}
   .voices-dots button.active{background:var(--gold);transform:scale(1.35);}
+  @media(max-width:540px){
+    .voice{padding:30px 24px;}
+    .voice p{font-size:19px;}
+  }
 
   /* kontakt */
   .contact{position:relative;text-align:center;overflow:hidden;background:var(--bg2);}
@@ -389,7 +398,7 @@
           </div>
         </div>
         <a class="offer" href="retreat.html">
-          <div class="media"><img src="assets/retreat-feuerkreis.jpg" srcset="assets/retreat-feuerkreis-600.jpg 600w, assets/retreat-feuerkreis.jpg 1100w" sizes="(max-width:900px) 92vw, 30vw" width="1100" height="734" loading="lazy" alt="Menschen im Kreis am Lagerfeuer" /></div>
+          <div class="media"><img src="assets/moment-fire.jpg" srcset="assets/moment-fire-800.jpg 800w, assets/moment-fire.jpg 1400w" sizes="(max-width:900px) 92vw, 30vw" width="1400" height="933" loading="lazy" alt="Mensch am Feuer in der Dämmerung" /></div>
           <div class="o-body">
             <div class="o-sub">Retreats</div>
             <h3>Auszeit an der Nordsee</h3>
@@ -402,7 +411,7 @@
           <div class="o-body">
             <div class="o-sub">Rituale</div>
             <h3>Tief verwurzelt im Wandel</h3>
-            <p>Eine Einladung, dem Rhythmus der Natur zu folgen und die Feste des Jahreskreises bewusst zu begehen. Gemeinsam schaffen wir Raum, um Altes würdevoll abzuschließen, Schwellenzeiten bewusst zu zelebrieren und das Neue aus deiner inneren Mitte heraus zu empfangen.</p>
+            <p>Eine Einladung, dem Rhythmus der Natur zu folgen und die Feste des Jahreskreises bewusst zu begehen. Raum, um Altes würdevoll abzuschließen, Schwellenzeiten bewusst zu zelebrieren und das Neue zu empfangen.</p>
             <span class="o-link">Mehr erfahren →</span>
           </div>
         </a>
