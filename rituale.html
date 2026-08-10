@@ -24,8 +24,8 @@
 <meta property="og:locale" content="de_DE" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:image" content="https://wairua-spirit.de/assets/og-rituale.jpg" />
-<link rel="preload" href="assets/fonts/co3bmX5slCNuHLi8bLeY9MK7whWMhyjYqXtK.woff2" as="font" type="font/woff2" crossorigin />
-<link rel="preload" href="assets/fonts/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="assets/fonts/alegreya-500-latin.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="assets/fonts/alegreya-sans-400-latin.woff2" as="font" type="font/woff2" crossorigin />
 <link rel="stylesheet" href="assets/fonts.css" />
 <link rel="stylesheet" href="assets/base.css" />
 <link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png" />
@@ -37,27 +37,27 @@
   /* Overlay bewusst kraeftig: der Text steht ueber einem hellen Trommelfell */
   .hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,12,9,.42) 0%,rgba(10,12,9,.62) 50%,rgba(10,12,9,.97) 100%);}
   .hero-inner{padding-bottom:clamp(48px,8vw,84px);}
-  .hero h1{font-size:clamp(46px,8vw,86px);font-weight:400;margin:14px 0 18px;}
-  .hero .sub{font-size:clamp(16px,1.8vw,20px);color:var(--bone-dim);max-width:52ch;margin-bottom:30px;}
+  .hero h1{font-size:clamp(42px,7.3vw,78px);font-weight:500;margin:14px 0 18px;}
+  .hero .sub{font-size:clamp(17px,1.9vw,21px);font-weight:300;color:var(--bone-dim);max-width:52ch;margin-bottom:30px;}
 
   /* Termin-Hinweis im Hero – springt zur Anmeldung */
   .next-date{display:inline-flex;align-items:center;gap:13px;background:rgba(12,14,11,.55);
     -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border:1px solid rgba(216,168,90,.5);
-    color:var(--bone);padding:13px 24px;border-radius:999px;font-size:15px;
+    color:var(--bone);padding:13px 24px;border-radius:999px;font-size:16px;
     transition:border-color .3s,background .3s,transform .25s;}
   .next-date:hover{border-color:var(--gold);background:rgba(216,168,90,.14);transform:translateY(-2px);}
   .next-date .dot{width:9px;height:9px;border-radius:50%;background:var(--gold);flex:none;animation:pulse 2.6s infinite;}
-  .next-date b{color:var(--gold-2);font-weight:600;}
+  .next-date b{color:var(--gold-2);font-weight:700;}
   .next-date .arr{color:var(--gold-2);}
   @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(216,168,90,.6);}70%{box-shadow:0 0 0 13px rgba(216,168,90,0);}100%{box-shadow:0 0 0 0 rgba(216,168,90,0);}}
 
   .sec-head{max-width:660px;margin-bottom:clamp(28px,5vw,48px);}
-  .sec-head h2{font-size:clamp(30px,4.4vw,50px);font-weight:400;margin:14px 0 0;}
+  .sec-head h2{font-size:clamp(28px,4.1vw,45px);font-weight:500;margin:14px 0 0;}
   .lead-text{text-align:center;}
-  .lead-text p{font-size:17px;margin-bottom:20px;}
+  .lead-text p{font-size:18px;margin-bottom:20px;}
   .lead-text em{color:var(--bone);}
   /* Zwischenueberschriften sehen aus wie die Eyebrows, sind aber echte Ueberschriften */
-  h2.eyebrow,h3.eyebrow{font-family:var(--sans);font-size:12px;font-weight:500;line-height:1.7;
+  h2.eyebrow,h3.eyebrow{font-family:var(--sans);font-size:13px;font-weight:400;line-height:1.7;
     letter-spacing:.32em;text-transform:uppercase;color:var(--gold);margin:0;}
 
   /* Bild-Band als Uebergang zwischen den Abschnitten */
@@ -71,36 +71,36 @@
   .ritual-bild{max-width:430px;margin:clamp(42px,6vw,66px) auto 0;border-radius:18px;overflow:hidden;
     box-shadow:0 40px 80px -32px rgba(0,0,0,.95),0 0 70px -24px rgba(216,168,90,.28);}
   .ritual-bild img{width:100%;height:auto;}
-  .datum-zeile{font-family:var(--serif);font-style:italic;font-size:clamp(20px,2.6vw,26px);color:var(--gold-2);margin-top:16px;}
+  .datum-zeile{font-family:var(--serif);font-style:italic;font-size:clamp(19px,2.4vw,24px);color:var(--gold-2);margin-top:16px;}
   .sub-head{text-align:center;margin:clamp(46px,7vw,78px) 0 clamp(18px,3vw,26px);}
   /* Rituale: vier kompakte, zentrierte Kacheln - Rest kommt aus base.css */
   .details-grid{grid-template-columns:repeat(4,1fr);gap:16px;}
   .detail{border-radius:14px;padding:26px 22px;text-align:center;}
-  .detail .k{font-size:11.5px;letter-spacing:.2em;margin-bottom:12px;}
-  .detail .v{font-size:clamp(20px,2.4vw,25px);color:var(--bone);line-height:1.25;}
-  .detail .v small{font-size:12.5px;color:var(--muted);margin-top:9px;}
+  .detail .k{font-size:12.5px;letter-spacing:.18em;margin-bottom:12px;}
+  .detail .v{font-size:clamp(19px,2.2vw,24px);color:var(--bone);line-height:1.25;}
+  .detail .v small{font-size:13.5px;color:var(--muted);margin-top:9px;}
 
   /* Anmeldung */
   .anmeldung{text-align:center;overflow:hidden;}
   .anmeldung .koru-wm{position:absolute;right:-70px;top:-50px;width:340px;height:340px;color:var(--gold);opacity:.05;pointer-events:none;}
-  .anmeldung h2{font-size:clamp(32px,5.5vw,60px);font-weight:400;margin:16px 0;}
+  .anmeldung h2{font-size:clamp(30px,5vw,54px);font-weight:500;margin:16px 0;}
   .anmeldung h2 em{color:var(--gold-2);}
-  .anmeldung .lead{color:var(--bone-dim);font-size:18px;max-width:52ch;margin:0 auto 36px;}
+  .anmeldung .lead{color:var(--bone-dim);font-size:18.5px;font-weight:300;max-width:52ch;margin:0 auto 36px;}
   /* PayPal-Anmeldung – an das Seitendesign angepasst */
   .pp-form{display:inline-grid;justify-items:center;gap:15px;}
-  .pp-btn{font-family:var(--sans);font-size:16px;font-weight:600;padding:17px 44px;border-radius:999px;border:none;cursor:pointer;
+  .pp-btn{font-family:var(--sans);font-size:17px;font-weight:700;padding:17px 44px;border-radius:999px;border:none;cursor:pointer;
     background:var(--gold);color:#1a140a;box-shadow:0 16px 40px -16px rgba(216,168,90,.7);
     transition:transform .25s,background .25s,box-shadow .25s;}
   .pp-btn:hover{transform:translateY(-2px);background:var(--gold-2);box-shadow:0 22px 50px -16px rgba(216,168,90,.85);}
   .pp-cards{height:24px;width:auto;opacity:.8;}
-  .pp-by{font-size:12px;color:var(--muted);letter-spacing:.02em;}
-  .pay-note{margin-top:26px;font-size:13px;color:var(--muted);max-width:52ch;margin-inline:auto;text-align:left;}
+  .pp-by{font-size:13px;color:var(--muted);letter-spacing:.02em;}
+  .pay-note{margin-top:26px;font-size:14px;color:var(--muted);max-width:52ch;margin-inline:auto;text-align:left;}
   .pay-note p + p{margin-top:12px;}
-  .pay-note b{color:var(--bone-dim);font-weight:600;}
+  .pay-note b{color:var(--bone-dim);font-weight:700;}
 
   @media(max-width:900px){
     .details-grid{grid-template-columns:repeat(2,1fr);}
-    .next-date{font-size:14px;padding:12px 18px;}
+    .next-date{font-size:15px;padding:12px 18px;}
   }
   @media(max-width:540px){
     .details-grid{grid-template-columns:1fr;}

@@ -18,16 +18,25 @@
   --moss:#8a9a6b;
   --clay:#bc8155;
   --line:rgba(241,234,223,.13);
-  --serif:"Cormorant Garamond",Georgia,"Times New Roman",serif;
-  --sans:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  --serif:"Alegreya",Georgia,"Times New Roman",serif;
+  --sans:"Alegreya Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   --shadow:0 30px 70px -30px rgba(0,0,0,.8);
   --ease-out:cubic-bezier(.2,.7,.2,1);
 }
 
 /* --- Reset & Basis ------------------------------------------------------ */
 *{margin:0;padding:0;box-sizing:border-box;}
-body{background:var(--bg);color:var(--bone);font-family:var(--sans);line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
-h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.06;letter-spacing:-.01em;}
+/* Alegreya setzt Ziffern von Haus aus als Mediaevalziffern (mit Ober- und
+   Unterlaengen). In Preisen, Daten und neben Versalien - "WAIRUA10", "790 EUR",
+   "9.-13. Dezember" - wirken sie verrutscht. Deshalb ueberall Versalziffern. */
+body{background:var(--bg);color:var(--bone);font-family:var(--sans);font-weight:400;line-height:1.68;
+  font-variant-numeric:lining-nums;font-feature-settings:"lnum" 1;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;}
+/* Alegreya traegt mehr Fleisch als die alte Cormorant: etwas mehr Zeilenluft,
+   dafuer sind die Schriftgrade in den Seiten eine Spur kleiner. */
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.1;letter-spacing:-.005em;}
+/* Akzentwoerter: Alegreya kursiv 400 - der einzige Kursivschnitt, den wir laden */
+h1 em,h2 em,h3 em{font-weight:400;}
 a{color:inherit;text-decoration:none;}
 img{max-width:100%;display:block;}
 em{font-style:italic;}
@@ -40,7 +49,7 @@ em{font-style:italic;}
 /* --- Layout-Helfer ------------------------------------------------------ */
 .wrap{width:min(1180px,92vw);margin-inline:auto;}
 .narrow{max-width:760px;margin-inline:auto;}
-.eyebrow{font-size:12px;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);font-weight:500;}
+.eyebrow{font-size:13px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);font-weight:400;}
 
 /* --- Sichtbarer Fokus fuer Tastatur-Bedienung ---------------------------- */
 :focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:3px;}
@@ -59,9 +68,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
   border-bottom:1px solid transparent;}
 nav.scrolled{background:rgba(12,14,11,.72);backdrop-filter:saturate(150%) blur(16px);-webkit-backdrop-filter:saturate(150%) blur(16px);
   border-bottom:1px solid var(--line);padding-top:13px;padding-bottom:13px;}
-nav .brand{display:flex;align-items:center;gap:11px;flex:none;font-family:var(--serif);font-size:24px;font-weight:600;letter-spacing:.02em;white-space:nowrap;}
+nav .brand{display:flex;align-items:center;gap:11px;flex:none;font-family:var(--serif);font-size:25px;font-weight:500;letter-spacing:.01em;white-space:nowrap;}
 nav .brand .brand-logo{width:32px;height:32px;flex:none;object-fit:contain;filter:drop-shadow(0 1px 3px rgba(0,0,0,.5));}
-nav .links{display:flex;gap:clamp(16px,2.4vw,30px);align-items:center;font-size:14px;color:var(--bone-dim);}
+nav .links{display:flex;gap:clamp(16px,2.4vw,30px);align-items:center;font-size:15.5px;color:var(--bone-dim);}
 nav .links a{position:relative;transition:color .25s;}
 nav .links a:not(.cta)::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:1px;background:var(--gold);transition:width .3s ease;}
 nav .links a:hover:not(.cta)::after{width:100%;}
@@ -79,7 +88,7 @@ nav .links a.cta:hover{background:var(--gold);color:#1a140a;}
 /* Mobiles Menue - im geschlossenen Zustand auch fuer Tastatur/Screenreader weg */
 .mobile-menu{position:fixed;inset:0;z-index:99;background:rgba(10,12,9,.97);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
   display:flex;flex-direction:column;align-items:center;justify-content:center;gap:28px;
-  font-family:var(--serif);font-size:30px;text-align:center;padding:24px;
+  font-family:var(--serif);font-size:31px;font-weight:500;text-align:center;padding:24px;
   opacity:0;visibility:hidden;pointer-events:none;
   transition:opacity .4s ease,visibility 0s linear .4s;}
 .mobile-menu.open{opacity:1;visibility:visible;pointer-events:auto;transition:opacity .4s ease;}
@@ -87,7 +96,7 @@ nav .links a.cta:hover{background:var(--gold);color:#1a140a;}
 body.menu-open{overflow:hidden;}
 
 /* --- Buttons ------------------------------------------------------------- */
-.btn{display:inline-flex;align-items:center;gap:9px;font-size:15px;font-weight:500;padding:15px 30px;border-radius:999px;cursor:pointer;border:1px solid transparent;
+.btn{display:inline-flex;align-items:center;gap:9px;font-size:16.5px;font-weight:400;letter-spacing:.01em;padding:15px 30px;border-radius:999px;cursor:pointer;border:1px solid transparent;
   transition:transform .25s,box-shadow .25s,background .25s,color .25s,border-color .25s;}
 .btn-primary{background:var(--gold);color:#1a140a;box-shadow:0 16px 40px -16px rgba(216,168,90,.7);}
 .btn-primary:hover{transform:translateY(-2px);background:var(--gold-2);box-shadow:0 22px 50px -16px rgba(216,168,90,.85);}
@@ -100,7 +109,7 @@ header.hero,.hero{position:relative;min-height:100svh;display:flex;align-items:f
 .hero-bg img{width:100%;height:100%;object-fit:cover;}
 .hero-inner{position:relative;z-index:2;padding:0 0 clamp(56px,10vh,120px);text-shadow:0 2px 22px rgba(0,0,0,.5);}
 .hero h1 em{color:var(--gold-2);}
-.hero .back{display:inline-flex;align-items:center;gap:7px;font-size:13px;letter-spacing:.04em;color:var(--bone-dim);margin-bottom:22px;transition:color .25s;}
+.hero .back{display:inline-flex;align-items:center;gap:7px;font-size:14px;letter-spacing:.04em;color:var(--bone-dim);margin-bottom:22px;transition:color .25s;}
 .hero .back:hover{color:var(--gold-2);}
 .hero-cta{display:flex;gap:14px;flex-wrap:wrap;}
 
@@ -111,17 +120,17 @@ header.hero,.hero{position:relative;min-height:100svh;display:flex;align-items:f
 /* --- Abschnitte ---------------------------------------------------------- */
 section{position:relative;padding:clamp(74px,12vw,140px) 0;}
 .sec-head h2 em{color:var(--gold-2);}
-.sec-head p{color:var(--bone-dim);font-size:17px;}
+.sec-head p{color:var(--bone-dim);font-size:18px;}
 
-.lead-text p{color:var(--bone-dim);font-size:clamp(16px,1.9vw,19px);margin-bottom:18px;}
+.lead-text p{color:var(--bone-dim);font-size:clamp(17px,2vw,20px);margin-bottom:18px;}
 .lead-text p:last-child{margin-bottom:0;}
 
 /* --- Fakten-Kacheln (Retreat, Rituale, Einzelbegleitung) ----------------- */
 .details-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:8px;}
 .detail{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:28px 26px;}
-.detail .k{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:9px;}
-.detail .v{font-family:var(--serif);font-size:clamp(22px,2.6vw,28px);line-height:1.2;}
-.detail .v small{display:block;font-family:var(--sans);font-size:13px;color:var(--bone-dim);letter-spacing:0;margin-top:7px;text-transform:none;line-height:1.5;}
+.detail .k{font-size:13px;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:9px;}
+.detail .v{font-family:var(--serif);font-weight:500;font-size:clamp(21px,2.4vw,26px);line-height:1.25;}
+.detail .v small{display:block;font-family:var(--sans);font-size:14px;color:var(--bone-dim);letter-spacing:0;margin-top:7px;text-transform:none;line-height:1.5;}
 
 /* --- Footer (Standard: zentriert; die Startseite ueberschreibt das) ------
    Der untere Rand ist bewusst hoch: dort brennt das Lagerfeuer, unterhalb
@@ -129,11 +138,11 @@ section{position:relative;padding:clamp(74px,12vw,140px) 0;}
 footer{position:relative;overflow:hidden;border-top:1px solid var(--line);
   padding:48px 0 clamp(128px,16vw,196px);text-align:center;}
 footer > .wrap{position:relative;z-index:2;}
-footer .brand{display:inline-flex;align-items:center;gap:11px;font-family:var(--serif);font-size:24px;font-weight:600;margin-bottom:10px;}
+footer .brand{display:inline-flex;align-items:center;gap:11px;font-family:var(--serif);font-size:25px;font-weight:500;margin-bottom:10px;}
 footer .brand .brand-logo{width:30px;height:30px;object-fit:contain;}
-footer p{font-size:13px;color:var(--muted);}
+footer p{font-size:14px;color:var(--muted);}
 footer a{color:var(--gold-2);}
-footer .f-links{margin-top:12px;display:flex;gap:18px;justify-content:center;flex-wrap:wrap;font-size:14px;}
+footer .f-links{margin-top:12px;display:flex;gap:18px;justify-content:center;flex-wrap:wrap;font-size:15px;}
 footer .f-links a{color:var(--bone-dim);}
 footer .f-links a:hover{color:var(--gold-2);}
 
