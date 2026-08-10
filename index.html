@@ -190,8 +190,8 @@
   .partner .p-link{font-size:14px;color:var(--gold-2);border-bottom:1px solid rgba(216,168,90,.45);padding-bottom:3px;transition:border-color .3s;}
   .partner:hover .p-link{border-color:var(--gold-2);}
   .partner .ad-note{font-size:11px;color:var(--muted);margin-top:12px;letter-spacing:.03em;}
-  .partner .partner-code{display:inline-block;margin-bottom:16px;font-size:13px;color:var(--gold-2);background:rgba(216,168,90,.08);border:1px dashed rgba(216,168,90,.55);border-radius:999px;padding:7px 16px;}
-  .partner .partner-code b{color:var(--gold);font-weight:600;letter-spacing:.06em;}
+  /* Der Rabattcode steht in der Zeile mit, bleibt aber deutlich sichtbar */
+  .partner p .code{color:var(--gold-2);font-weight:600;letter-spacing:.06em;}
 
   /* Footer: die Startseite hat als einzige Seite einen mehrspaltigen Footer */
   footer{padding:56px 0 clamp(128px,16vw,196px);background:var(--bg);text-align:left;}
@@ -458,9 +458,9 @@
   <section id="partner">
     <div class="wrap">
       <div class="sec-head center reveal">
-        <div class="eyebrow">In Verbindung mit</div>
-        <h2>Kooperationspartner</h2>
-        <p>Menschen und Projekte, mit denen ich wirklich verbunden bin: Ich arbeite mit ihnen, ich nutze selbst, was sie machen, und deshalb empfehle ich sie hier weiter.</p>
+        <div class="eyebrow">Herzensempfehlungen</div>
+        <h2>Meine Kooperationspartner</h2>
+        <p>Menschen und Projekte, mit denen ich verbunden bin und die ich von Herzen empfehlen kann:</p>
       </div>
       <div class="partners stagger">
         <a class="partner" href="https://wildnisschule-naturgefuehl.de/" target="_blank" rel="noopener">
@@ -471,9 +471,8 @@
         </a>
         <a class="partner" href="https://suyana.shop/?rfsn=9071264.2bb10f9" target="_blank" rel="noopener">
           <div class="logo-chip"><img src="assets/partner-suyana.svg" width="404" height="147" loading="lazy" alt="Suyana – Zeremonieller Kakao" /></div>
-          <h3>Suyana · Zeremonieller Kakao</h3>
-          <p>Den Kakao, den ich in den Ritualen ausschenke, kannst du dort auch selbst bestellen.</p>
-          <span class="partner-code">10 % Rabatt mit Code <b>WAIRUA10</b></span>
+          <h3>Suyana</h3>
+          <p>Zeremonieller Kakao – 10 % Rabatt mit <b class="code">WAIRUA10</b></p>
           <span class="p-link">Zum Kakao-Shop →</span>
           <span class="ad-note">* Affiliate-Link / Werbung</span>
         </a>
@@ -486,8 +485,7 @@
       <div>
         <div class="brand"><img class="brand-logo" src="assets/logo-cream.png" alt="" width="160" height="145" loading="lazy" />Wairua.Spirit</div>
         <p>Zurück zu deiner wahren Natur.</p>
-        <p style="margin-top:6px;">Naturverbindung, Rituale &amp; Retreats · Landsberg am Lech</p>
-        <p style="margin-top:6px;">Von Hand gebaut in Landsberg am Lech.</p>
+        <p style="margin-top:6px;">Naturverbindung, Rituale &amp; Retreats</p>
       </div>
       <div>
         <h4>Entdecken</h4>
