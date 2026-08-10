@@ -128,6 +128,9 @@
   .offers-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
   .offer{background:var(--panel);border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;transition:transform .4s ease,border-color .4s ease;}
   .offer:hover{transform:translateY(-6px);border-color:rgba(216,168,90,.5);}
+  /* Kachel ohne Ziel: sieht gleich aus, reagiert aber nicht wie ein Link */
+  .offer-static:hover{transform:none;border-color:var(--line);}
+  .offer-static:hover .media img{transform:none;}
   .offer .media{position:relative;aspect-ratio:16/10;overflow:hidden;}
   .offer .media img{width:100%;height:100%;object-fit:cover;transition:transform 1s ease;}
   .offer:hover .media img{transform:scale(1.05);}
@@ -374,15 +377,17 @@
         <p>Ob im geschützten Raum einer Einzelbegleitung, in der getragenen Gemeinschaft eines Retreats oder in der zeitlosen Tiefe eines Rituals – dies ist deine Einladung, den Alltag für einen Moment anzuhalten, dich wieder spüren zu lernen und neue Kraft aus der Natur zu schöpfen.</p>
       </div>
       <div class="offers-grid stagger">
-        <a class="offer" href="begleitung.html">
+        <!-- Kachel ohne Ziel: die Unterseite wird gerade ueberarbeitet. Zum
+             Wiederanschalten wieder <a class="offer" href="begleitung.html">
+             daraus machen und den o-link ergaenzen. -->
+        <div class="offer offer-static">
           <div class="media"><img src="assets/angebot-einzelbegleitung.jpg" srcset="assets/angebot-einzelbegleitung-600.jpg 600w, assets/angebot-einzelbegleitung.jpg 1100w" sizes="(max-width:900px) 92vw, 30vw" width="1100" height="733" loading="lazy" alt="Michael sitzt still am Wasser" /></div>
           <div class="o-body">
             <div class="o-sub">Einzelbegleitung</div>
             <h3>Der Weg des Erdhüters</h3>
             <p>Begib dich auf eine intensive Reise zu dir selbst. Zusammen erwecken wir die Kraft des Erdhüters in dir – ein Archetyp, der für tiefe Verwurzelung und Präsenz steht und aus innerer Stärke heraus handelt.</p>
-            <span class="o-link">Mehr erfahren →</span>
           </div>
-        </a>
+        </div>
         <a class="offer" href="retreat.html">
           <div class="media"><img src="assets/retreat-feuerkreis.jpg" srcset="assets/retreat-feuerkreis-600.jpg 600w, assets/retreat-feuerkreis.jpg 1100w" sizes="(max-width:900px) 92vw, 30vw" width="1100" height="734" loading="lazy" alt="Menschen im Kreis am Lagerfeuer" /></div>
           <div class="o-body">
