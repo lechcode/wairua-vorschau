@@ -46,7 +46,10 @@
     transform:translate(-50%,-50%);color:var(--gold);opacity:.07;animation:spin 120s linear infinite,breathe 7s ease-in-out infinite;}
   @keyframes breathe{0%,100%{opacity:.05;}50%{opacity:.1;}}
   .hero-inner{padding:0 0 clamp(60px,11vh,130px);text-shadow:0 2px 22px rgba(0,0,0,.45);}
-  .hero .eyebrow{opacity:0;animation:rise 1s ease .2s forwards;}
+  /* Die Vorzeile steht direkt auf dem Foto - helleres Gold plus weicher
+     dunkler Schein, damit sie auf jedem Bildausschnitt traegt. */
+  .hero .eyebrow{color:var(--gold-2);opacity:0;animation:rise 1s ease .2s forwards;
+    text-shadow:0 2px 10px rgba(8,9,7,.95),0 0 24px rgba(8,9,7,.8);}
   .hero h1{font-size:clamp(44px,8.2vw,104px);font-weight:500;margin:18px 0 24px;max-width:14ch;opacity:0;animation:rise 1.1s ease .4s forwards;}
   .hero p.lead{font-size:clamp(17px,2.1vw,21px);font-weight:300;color:var(--bone-dim);max-width:46ch;margin-bottom:34px;opacity:0;animation:rise 1.1s ease .6s forwards;}
   .hero-cta{opacity:0;animation:rise 1.1s ease .8s forwards;}
@@ -213,6 +216,18 @@
 
   @media(max-width:900px){
     .saeulen-grid{grid-template-columns:1fr;}
+    /* Am Handy steht das Foto ganz oben und in voller Hoehe - vorher schnitt
+       das hochformatige Kachelmass die Bilder mittendurch. Der Text sitzt
+       darunter auf ruhigem Grund statt darueber. */
+    .pillar{aspect-ratio:auto;display:block;background:var(--panel);}
+    .pillar img{position:relative;inset:auto;width:100%;height:auto;object-fit:contain;}
+    .pillar::after{content:none;}
+    .pillar .p-body{background:none;padding:26px 24px 30px;}
+    /* Der Hero-Verlauf traegt am Handy mehr Text auf engerem Raum */
+    .hero-bg::after{background:
+      radial-gradient(120% 90% at 50% 0%,transparent 40%,rgba(12,14,11,.5) 100%),
+      linear-gradient(180deg,rgba(12,14,11,.6) 0%,rgba(12,14,11,.18) 22%,rgba(12,14,11,.8) 54%,rgba(12,14,11,.99) 100%);}
+    .hero .eyebrow{font-size:12px;letter-spacing:.2em;}
     .about-grid{grid-template-columns:1fr;}
     .about-visual{aspect-ratio:4/4;max-height:62vh;}
     .offers-grid{grid-template-columns:1fr;}
@@ -223,6 +238,9 @@
     .hero h1{font-size:clamp(40px,11vw,66px);}
   }
   @media(max-width:540px){
+    /* "Wie du wieder zurück zu dir findest" stand sonst bis auf 4 px an den
+       Rand - auf schmalen Geraeten eine Spur kleiner. */
+    .sec-head h2{font-size:28px;}
     footer .f-grid{grid-template-columns:1fr;}
   }
 </style>
@@ -436,7 +454,6 @@
             <div class="voice"><div class="mark">„</div><p>Mit Michael in der Natur unterwegs zu sein, ist jedes Mal eine Bereicherung. Er verbindet Feingefühl und Achtsamkeit mit einer klaren, kraftvollen Präsenz – und schafft Räume für Leichtigkeit, Vertrauen und echtes Wachstum. Seine Arbeit ist eine Einladung, die Natur und sich selbst tiefer zu entdecken.</p><div class="who"><img src="assets/stimme-ingmar.jpg" width="200" height="200" loading="lazy" alt="Ingmar Gröhn" /><span><b>Ingmar Gröhn</b> · Gründer, Wildnisschule Naturgefühl</span></div></div>
             <div class="voice"><div class="mark">„</div><p>Ich kenne niemanden, der dir die Natur und ihre Schätze so gut nahebringen kann wie Michael. Durch seine Arbeit kommt der Mensch wieder bei sich selbst an, kommt wieder in Verbindung mit dem, was wirklich zählt, und kann sich erinnern, wer er tief in sich tatsächlich ist. Ein absolutes Muss für jeden, der genug hat von all dem künstlichen Lärm da draußen!</p><div class="who"><img src="assets/stimme-alexandra.jpg" width="200" height="200" loading="lazy" alt="Alexandra Kaschny" /><span><b>Alexandra Kaschny</b> · Somatische Begleiterin, Host des Podcasts „Written in the Body"</span></div></div>
             <div class="voice"><div class="mark">„</div><p>Die Begegnungen mit den Männern haben mir gezeigt, wie viel Kraft im Miteinander liegt, wenn wir uns erlauben, echt zu sein. Es waren Tage voller Tiefe, Freude, Heilung und Verbundenheit – Tage, an die ich mich mein ganzes Leben erinnern werde.</p><div class="who"><b>Teilnehmer</b> · Retreat 2025</div></div>
-            <div class="voice"><div class="mark">„</div><p>An Michael schätze ich die besondere Verbindung aus Sanftheit und Wildheit. In seiner Gegenwart fühlt man sich geborgen und gesehen.</p><div class="who"><b>Marie Wackenhut</b></div></div>
           </div>
         </div>
         <div class="voices-nav">
