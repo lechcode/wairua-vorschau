@@ -155,7 +155,10 @@
     border-radius:16px;padding:40px 36px;position:relative;}
   .voice .mark{font-family:var(--serif);font-size:64px;line-height:.6;color:#c08a3c;opacity:.6;}
   .voice p{font-family:var(--serif);font-style:italic;font-size:21px;line-height:1.45;color:#241f18;margin:6px 0 18px;}
-  .voice .who{font-size:14px;letter-spacing:.04em;color:#665e4e;}
+  /* Wo ein Foto vorliegt, steht es klein und rund vor dem Namen. */
+  .voice .who{display:flex;align-items:center;gap:13px;font-size:14px;letter-spacing:.04em;color:#665e4e;}
+  .voice .who img{width:46px;height:46px;flex:none;border-radius:50%;object-fit:cover;
+    box-shadow:0 7px 18px -9px rgba(0,0,0,.6);}
   .voice .who b{color:#7a5116;font-weight:700;}
   .voices-nav{display:flex;align-items:center;justify-content:center;gap:24px;margin-top:28px;}
   .v-arrow{width:44px;height:44px;flex:none;border-radius:50%;border:1px solid var(--line);background:transparent;color:var(--bone);font-size:17px;font-family:var(--sans);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:border-color .3s,color .3s;}
@@ -430,7 +433,8 @@
       <div class="voices-carousel" id="voicesCarousel" role="group" aria-roledescription="Karussell" aria-label="Stimmen von Teilnehmenden">
         <div class="voices-viewport">
           <div class="voices-track" id="voicesTrack">
-            <div class="voice"><div class="mark">„</div><p>Mit Michael in der Natur unterwegs zu sein, ist jedes Mal eine Bereicherung. Er verbindet Feingefühl und Achtsamkeit mit einer klaren, kraftvollen Präsenz – und schafft Räume für Leichtigkeit, Vertrauen und echtes Wachstum. Seine Arbeit ist eine Einladung, die Natur und sich selbst tiefer zu entdecken.</p><div class="who"><b>Ingmar Gröhn</b> · Gründer, Wildnisschule Naturgefühl</div></div>
+            <div class="voice"><div class="mark">„</div><p>Mit Michael in der Natur unterwegs zu sein, ist jedes Mal eine Bereicherung. Er verbindet Feingefühl und Achtsamkeit mit einer klaren, kraftvollen Präsenz – und schafft Räume für Leichtigkeit, Vertrauen und echtes Wachstum. Seine Arbeit ist eine Einladung, die Natur und sich selbst tiefer zu entdecken.</p><div class="who"><img src="assets/stimme-ingmar.jpg" width="200" height="200" loading="lazy" alt="Ingmar Gröhn" /><span><b>Ingmar Gröhn</b> · Gründer, Wildnisschule Naturgefühl</span></div></div>
+            <div class="voice"><div class="mark">„</div><p>Ich kenne niemanden, der dir die Natur und ihre Schätze so gut nahebringen kann wie Michael. Durch seine Arbeit kommt der Mensch wieder bei sich selbst an, kommt wieder in Verbindung mit dem, was wirklich zählt, und kann sich erinnern, wer er tief in sich tatsächlich ist. Ein absolutes Muss für jeden, der genug hat von all dem künstlichen Lärm da draußen!</p><div class="who"><img src="assets/stimme-alexandra.jpg" width="200" height="200" loading="lazy" alt="Alexandra Kaschny" /><span><b>Alexandra Kaschny</b> · Somatische Begleiterin, Host des Podcasts „Written in the Body"</span></div></div>
             <div class="voice"><div class="mark">„</div><p>Die Begegnungen mit den Männern haben mir gezeigt, wie viel Kraft im Miteinander liegt, wenn wir uns erlauben, echt zu sein. Es waren Tage voller Tiefe, Freude, Heilung und Verbundenheit – Tage, an die ich mich mein ganzes Leben erinnern werde.</p><div class="who"><b>Teilnehmer</b> · Retreat 2025</div></div>
             <div class="voice"><div class="mark">„</div><p>An Michael schätze ich die besondere Verbindung aus Sanftheit und Wildheit. In seiner Gegenwart fühlt man sich geborgen und gesehen.</p><div class="who"><b>Marie Wackenhut</b></div></div>
           </div>
