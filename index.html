@@ -216,13 +216,14 @@
 
   @media(max-width:900px){
     .saeulen-grid{grid-template-columns:1fr;}
-    /* Am Handy steht das Foto ganz oben und in voller Hoehe - vorher schnitt
-       das hochformatige Kachelmass die Bilder mittendurch. Der Text sitzt
-       darunter auf ruhigem Grund statt darueber. */
-    .pillar{aspect-ratio:auto;display:block;background:var(--panel);}
-    .pillar img{position:relative;inset:auto;width:100%;height:auto;object-fit:contain;}
-    .pillar::after{content:none;}
-    .pillar .p-body{background:none;padding:26px 24px 30px;}
+    /* Am Handy bleibt der Text im Bild. Damit die Fotos dabei weniger
+       angeschnitten werden, ist die Kachel breiter als am Rechner (4:5 statt
+       3:4,1), und der Grund unter der Schrift ist deutlich kraeftiger -
+       sonst steht helle Schrift auf hellem Laub. */
+    .pillar{aspect-ratio:4/5;}
+    .pillar::after{background:linear-gradient(180deg,rgba(10,12,9,.14) 0%,rgba(10,12,9,.2) 32%,rgba(10,12,9,.76) 58%,rgba(10,12,9,.96) 100%);}
+    .pillar .p-body{padding:34px 24px 30px;
+      background:linear-gradient(180deg,rgba(9,11,8,0) 0%,rgba(9,11,8,.86) 24%,rgba(9,11,8,.95) 60%,rgba(9,11,8,.97) 100%);}
     /* Der Hero-Verlauf traegt am Handy mehr Text auf engerem Raum */
     .hero-bg::after{background:
       radial-gradient(120% 90% at 50% 0%,transparent 40%,rgba(12,14,11,.5) 100%),
