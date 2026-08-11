@@ -39,12 +39,18 @@ bereits auseinandergelaufen. Jetzt gilt:
 
 ## Design-System
 - **Dunkel & cinematisch.** Alle Farben als CSS-Variablen in `base.css`.
-- **Schriften:** „Cormorant Garamond" (Überschriften) + „Inter" (Fließtext),
-  **selbst gehostet** in `assets/fonts/` über `assets/fonts.css`.
-  ⚠️ Beides sind **Variable Fonts** — 400/500/600 zeigen absichtlich auf
-  dieselbe `.woff2`, die Gewichte kommen aus der `wght`-Achse. Das ist Googles
-  eigene Ausgabe und **kein Fehler**; es gibt bei Google keine separaten
-  Schnitt-Dateien zum Nachladen.
+- **Schriften (seit 03.08.2026):** „Alegreya" (Überschriften, Zitate) + „Alegreya Sans"
+  (Fließtext, Vorzeilen, Knöpfe), **selbst gehostet** in `assets/fonts/` über
+  `assets/fonts.css`. Geladen wird nur, was benutzt wird: Alegreya 500 und
+  kursiv 400, Alegreya Sans 300/400/700 und kursiv 400 — je Schnitt zwei
+  Dateien (`latin` und `latin-ext`; letzteres trägt das ā in „Māori").
+  ⚠️ **Andere Gewichte nicht einfach benutzen** — sie existieren nicht und
+  der Browser rechnet sich dann den nächstbesten Schnitt zurecht.
+  ⚠️ Alegreya setzt Ziffern von Haus aus als **Mediävalziffern**; `base.css`
+  schaltet deshalb global `lining-nums` ein. Nicht entfernen, sonst rutschen
+  „WAIRUA10", „790 €" und Datumsangaben nach unten.
+  Die Schriftnamen stehen auch in `datenschutz.html` § 4 — bei einem Wechsel
+  dort mitziehen.
 - **Koru-Spirale** als wiederkehrendes Motiv — CSS-Maske aus `assets/koru.png`,
   Klasse `.koru` (Farbe über `color` steuerbar).
 - Sanfte Animationen: Ken-Burns im Hero, rotierende Spirale, Reveal beim Scrollen.
