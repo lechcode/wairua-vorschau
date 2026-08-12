@@ -36,9 +36,11 @@
 
   /* --- Hero ------------------------------------------------------------- */
   header.hero{min-height:92svh;}
-  .hero-bg img{object-position:center 45%;transform:scale(1.05);animation:kb 26s ease-in-out infinite alternate;}
-  /* Der Textblock beginnt bei rund einem Drittel Hoehe und liegt auf hellem
-     Gras - der Verlauf muss dort schon deutlich tragen. */
+  /* Der Anhaenger sitzt im Bild bei rund 68 % Breite. Der Ausschnitt haelt ihn
+     dort - am Handy wird seitlich stark beschnitten, sonst rutscht er raus. */
+  .hero-bg img{object-position:68% center;transform:scale(1.05);animation:kb 26s ease-in-out infinite alternate;}
+  /* Links steht der Text, rechts bleibt der Anhaenger frei - der Verlauf muss
+     schon auf halber Hoehe tragen. */
   .hero-bg::after{content:"";position:absolute;inset:0;background:
     /* Schatten von links: nur dort, wo der Text steht - rechts bleibt das Foto offen */
     linear-gradient(95deg,rgba(10,12,9,.72) 0%,rgba(10,12,9,.52) 28%,rgba(10,12,9,.14) 56%,transparent 72%),
@@ -137,7 +139,7 @@
   </div>
 
   <header class="hero">
-    <div class="hero-bg"><img src="assets/begleitung-1.jpg" srcset="assets/begleitung-1-900.jpg 900w, assets/begleitung-1.jpg 1600w" sizes="100vw" width="1600" height="977" fetchpriority="high" alt="Flusslauf zwischen Wald und Wiesen, eine Person sitzt im flachen Wasser" /></div>
+    <div class="hero-bg"><img src="assets/erdhueter-header.jpg" srcset="assets/erdhueter-header-900.jpg 900w, assets/erdhueter-header.jpg 1600w" sizes="100vw" width="1600" height="1067" fetchpriority="high" alt="Selbst geschnitzter Holzanhänger an einem Lederband auf der Brust" /></div>
     <span class="koru hero-koru"></span>
     <div class="wrap hero-inner">
       <a href="index.html" class="back">← zurück zu Wairua.Spirit</a>
