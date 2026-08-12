@@ -79,10 +79,47 @@
   .forwhom li,.koru-list li{display:flex;gap:14px;align-items:flex-start;font-size:17.5px;color:var(--bone-dim);}
   .forwhom li .koru,.koru-list li .koru{flex:none;width:20px;height:20px;color:var(--gold);margin-top:5px;}
 
+  .forwhom h2{font-size:clamp(28px,4.2vw,47px);font-weight:500;margin:14px 0 24px;}
+  .forwhom h2 em{color:var(--gold-2);}
+
   .textblock{max-width:720px;margin:0 auto;text-align:center;}
   .textblock p{color:var(--bone-dim);font-size:17.5px;margin-bottom:16px;}
   .textblock p:last-child{margin-bottom:0;}
   .koru-list{margin-bottom:26px;}
+
+  /* --- Wofuer der Erdhueter steht: eine Zeile aus Haltungen ------------- */
+  .werte{margin-top:clamp(46px,6vw,68px);text-align:center;}
+  .werte .liste{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;
+    margin-top:22px;font-family:var(--serif);font-size:clamp(20px,2.3vw,26px);color:var(--bone);}
+  .werte .liste span{position:relative;padding:6px clamp(12px,1.5vw,20px);}
+  .werte .liste span + span::before{content:"";position:absolute;left:-3px;top:50%;
+    width:5px;height:5px;margin-top:-2px;border-radius:50%;background:var(--gold);opacity:.85;}
+
+  /* --- Was er nicht ist: links der andere Archetyp, rechts der Erdhueter - */
+  .gegen{max-width:920px;margin:26px auto 0;}
+  .gegen .paar{display:grid;grid-template-columns:1fr 1fr;gap:clamp(18px,3vw,44px);
+    padding:clamp(20px,2.4vw,26px) 0;border-top:1px solid var(--line);}
+  .gegen .paar:last-child{border-bottom:1px solid var(--line);}
+  /* Linke Spalte rechtsbuendig, rechte linksbuendig: dazwischen entsteht eine
+     ruhige Mittelachse, an der sich die Gegensaetze gegenueberstehen. */
+  .gegen p{font-size:17px;margin:0;line-height:1.6;}
+  .gegen .andere{color:var(--muted);text-align:right;}
+  .gegen .huter{color:var(--bone-dim);text-align:left;}
+  .gegen .huter b{color:var(--gold-2);font-weight:400;}
+
+  .schluss{margin:clamp(42px,5vw,60px) auto 0;text-align:center;font-family:var(--serif);
+    font-style:italic;font-size:clamp(20px,2.5vw,27px);color:var(--gold-2);
+    max-width:30ch;line-height:1.36;}
+
+  /* --- Damals und heute ------------------------------------------------- */
+  .wegbilder{display:grid;grid-template-columns:1fr 1fr;gap:clamp(14px,2.4vw,32px);
+    max-width:720px;margin:clamp(38px,5vw,56px) auto;}
+  .wegbilder figure{margin:0;}
+  /* height:auto ist Pflicht - sonst gewinnt die height-Angabe im <img> und
+     aspect-ratio wird ignoriert (die Kacheln waren 800 px hoch). */
+  .wegbilder img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;border-radius:16px;box-shadow:var(--shadow);}
+  .wegbilder figcaption{margin-top:13px;text-align:center;font-size:13px;letter-spacing:.2em;
+    text-transform:uppercase;color:var(--gold);}
 
   /* Fakten-Kacheln: fuenf kompakte, zentrierte - Rest kommt aus base.css */
   .details-grid{grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px;margin-top:clamp(30px,4vw,44px);}
@@ -108,6 +145,11 @@
   @media(max-width:900px){
     .split{grid-template-columns:1fr;}
     .split .visual{order:-1;aspect-ratio:4/4;max-height:60vh;}
+    /* Gegenueberstellung untereinander - der Erdhueter-Satz eingerueckt,
+       damit die Zuordnung ohne zwei Spalten erhalten bleibt. */
+    .gegen .paar{grid-template-columns:1fr;gap:10px;}
+    .gegen .andere{text-align:left;}
+    .gegen .huter{padding-left:18px;border-left:1px solid rgba(216,168,90,.4);}
     /* Am Handy nimmt der Text die volle Breite ein - der Schleier kommt
        deshalb von unten statt von links. Oben bleibt das Symbol auf dem
        Shirt frei, ab der Mitte traegt der Grund die Schrift. */
@@ -165,55 +207,98 @@
   </header>
 
   <section id="worum" style="background:var(--bg2);">
-    <div class="wrap split">
-      <div class="visual reveal">
-        <img src="assets/begleitung-haende.jpg" width="900" height="1125" loading="lazy" alt="Zwei Menschen halten sich draußen an den Händen" />
-      </div>
-      <div class="reveal d1">
-        <div class="eyebrow">Worum es geht</div>
-        <h2>Jemand, der ein Stück <em>mitgeht</em></h2>
-        <p>Wir verbringen einen Tag draußen in der Natur rund um Landsberg am Lech – gehen, sitzen, schweigen, sprechen, je nachdem, was gerade dran ist. Wir schauen gemeinsam, was da ist, und lassen den Tag daraus entstehen.</p>
-        <p>Draußen zeigt sich vieles von allein. Die Natur ist dabei ein stiller Spiegel. Und ich höre in Ruhe hin, ich frage dort nach, wo es interessant wird, und ich teile mit dir, was ich wahrnehme. Wir tauschen uns aus, denken laut, lassen wieder los – und irgendwann liegt das Eigentliche auf dem Tisch, oft ganz woanders als erwartet.</p>
-        <p>Was ich dabei mitbringe, ist über Jahre gewachsen: viel Zeit auf Reisen und in Begegnung mit Menschen, eine Ausbildung in Wildnispädagogik und unzählige Stunden draußen in der Natur. Daraus ist ein Gespür entstanden – dafür, wann es Bewegung braucht und wann Stille, wann eine Frage weiterhilft und wann es besser ist, einfach nur da zu sein. Der Tag hat keinen Fahrplan, er hat eine Richtung.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="forwhom" style="background:var(--bg);">
-    <div class="wrap inner">
-      <div class="eyebrow reveal">Für wen</div>
-      <h2 class="reveal d1" style="font-family:var(--serif);font-weight:500;font-size:clamp(28px,4.2vw,47px);margin:14px 0 22px;">Wenn eigentlich alles okay ist – und trotzdem etwas fehlt</h2>
-      <p class="reveal d1">Von außen betrachtet stimmt vieles. Und trotzdem meldet sich da etwas, leise aber beharrlich: eine Unzufriedenheit, die sich schwer benennen lässt, oder das Gefühl, dass sich etwas verändern will. Für genau diesen Punkt ist dieser Tag gedacht.</p>
-      <ul class="reveal d2">
-        <li><span class="koru"></span><span>Du willst nicht die nächste Lösung finden, sondern erst einmal aus dem Dauer-Tun heraus.</span></li>
-        <li><span class="koru"></span><span>Du spürst eine Unzufriedenheit, die du dir selbst kaum erklären kannst – und möchtest ihr Raum geben, statt sie zu überhören.</span></li>
-        <li><span class="koru"></span><span>Du sehnst dich nach Ruhe, nach echtem Durchatmen und danach, wieder bei dir anzukommen.</span></li>
-        <li><span class="koru"></span><span>Du möchtest Zeit draußen, die mehr ist als ein Spaziergang.</span></li>
-        <li><span class="koru"></span><span>Du stehst vielleicht an einem Wendepunkt und möchtest erst sortieren, bevor du entscheidest.</span></li>
-      </ul>
-      <p class="reveal d2" style="margin-top:30px;">Was hier nicht passiert: eine weitere To-do-Liste, ein Plan, den du danach abarbeitest. Es geht nicht ums Tun, sondern ums Sein – für einen Tag darfst du nichts erreichen müssen.</p>
-    </div>
-  </section>
-
-  <section style="background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
     <div class="wrap">
       <div class="sec-head reveal">
-        <div class="eyebrow">Was du davon hast</div>
-        <h2>Warum es zu zweit leichter geht</h2>
+        <h2>Zeit für einen neuen <em>Archetypen</em></h2>
       </div>
       <div class="textblock reveal d1">
-        <p>Manches sehen wir bei uns selbst einfach nicht. Wir drehen die gleichen Gedanken seit Monaten, kommen zu denselben Schlüssen und halten das für Nachdenken. Daher hilft es, wenn dir jemand von außen gegenübersitzt.</p>
-        <p>Genau deshalb bin ich für dich da:</p>
+        <p>Wir leben in einer Zeit, in der wir mehr wissen als je zuvor – und trotzdem immer weniger in Beziehung zu dem stehen, was uns umgibt. Wir funktionieren, optimieren, beschleunigen und versuchen immer weiterzukommen. Dabei verlieren wir etwas Entscheidendes: die Fähigkeit, wirklich wahrzunehmen, was da ist, Verantwortung zu übernehmen und mit den Zyklen des Lebens zu gehen.</p>
+        <p>Vielleicht brauchen wir deshalb nicht noch mehr Wissen, noch mehr Schnelligkeit oder noch mehr Heilung, um endlich in der Tiefe bei uns anzukommen. Vielleicht brauchen wir ein anderes Vorbild, einen neuen Archetyp für unsere Zeit: den Erdhüter.</p>
+        <p>Der Erdhüter ist der, der bleibt. Während viele weiterziehen, um anderswo zu finden, was ihnen fehlt, schaut er mutig hin, gerade dann, wenn es leichter wäre wegzusehen. Er weiß, dass er Teil von etwas Größerem ist und dass er darin eine Aufgabe hat.</p>
+        <p>Er kennt die Zyklen des Lebens. Er weiß, dass alles erwacht, wächst, fällt und wieder in die Stille geht, dass es keinen Anfang gibt und kein Ende, und dass nichts für sich allein steht. Aus diesem Wissen heraus tritt er in Beziehung, zu sich selbst ebenso wie zu anderen Menschen und zur Natur. Er ist dabei kein Betrachter, der die Welt von außen bestaunt, sondern jemand, der mitten in ihr steht und weiß, dass sein Handeln Spuren hinterlässt. Er nimmt, was er braucht, und er gibt zurück.</p>
       </div>
-      <ul class="koru-list reveal d1">
-        <li><span class="koru"></span><span>Ich bin dein Spiegel. Ich sage dir, was ich sehe und höre – oft ist genau das der Moment, in dem etwas klar wird.</span></li>
-        <li><span class="koru"></span><span>Ich stelle andere Fragen als die Menschen in deinem gewohnten Umfeld.</span></li>
-        <li><span class="koru"></span><span>Ich höre wirklich zu. Ohne Ratschlag, ohne Bewertung und ohne Erwartung an dich.</span></li>
-        <li><span class="koru"></span><span>Ich bringe Erfahrung mit und spüre, wann es Bewegung braucht und wann es besser ist, einfach still zu bleiben.</span></li>
-        <li><span class="koru"></span><span>Ich halte den Raum, auch wenn es herausfordernd wird.</span></li>
+
+      <div class="werte reveal d1">
+        <div class="eyebrow">Wofür er steht</div>
+        <div class="liste">
+          <span>Verbundenheit</span><span>Präsenz</span><span>Demut</span><span>Klarheit</span><span>Integrität</span><span>Wandlungsfähigkeit</span><span>Kooperation</span>
+        </div>
+      </div>
+
+      <div class="werte reveal d1">
+        <div class="eyebrow">Was er nicht ist</div>
+        <div class="gegen">
+          <div class="paar">
+            <p class="andere">Der Weise sammelt Wissen und gibt es von oben weiter.</p>
+            <p class="huter"><b>Der Erdhüter</b> weiß, dass das Entscheidende nicht verstanden, sondern erlebt werden will.</p>
+          </div>
+          <div class="paar">
+            <p class="andere">Der Heiler sieht im anderen das, was repariert werden muss.</p>
+            <p class="huter"><b>Der Erdhüter</b> weiß, dass bereits alles vorhanden ist und nichts zu Ende geheilt werden muss.</p>
+          </div>
+          <div class="paar">
+            <p class="andere">Der Krieger kämpft gegen etwas.</p>
+            <p class="huter"><b>Der Erdhüter</b> steht für etwas ein.</p>
+          </div>
+          <div class="paar">
+            <p class="andere">Der Eremit sucht die Natur, um der Welt zu entkommen.</p>
+            <p class="huter"><b>Der Erdhüter</b> sucht sie, um wieder mit der Welt in Beziehung zu treten.</p>
+          </div>
+        </div>
+      </div>
+
+      <p class="schluss reveal d2">Der Erdhüter ist kein Ziel, das man irgendwann erreicht. Er ist eine Haltung, in die man immer wieder zurückkehrt.</p>
+    </div>
+  </section>
+
+  <section class="forwhom" id="fuer-dich" style="background:var(--bg);">
+    <div class="wrap inner">
+      <h2 class="reveal">Wenn eigentlich alles okay ist – und trotzdem <em>etwas fehlt</em></h2>
+      <div class="textblock reveal d1">
+        <p>Von außen betrachtet stimmt vieles. Die Arbeit läuft, die Beziehungen sind in Ordnung, du hast dir etwas aufgebaut, und wenn dich jemand fragt, wie es dir geht, dann sagst du gut – und meinst es nicht einmal falsch. Trotzdem gibt es diese Momente, in denen sich alles seltsam weit weg anfühlt, als würdest du dein eigenes Leben ein Stück von außen betrachten.</p>
+        <p>Du funktionierst gut. Du kennst deine Muster, hast Bücher gelesen, vielleicht Therapie gemacht oder Seminare besucht, und du kannst ziemlich genau erklären, warum du bist, wie du bist. Nur ändert dieses Verständnis erstaunlich wenig daran, wie sich dein Alltag tatsächlich anfühlt. Das Wissen ist da, aber es ist im Kopf geblieben.</p>
+        <p>Vielleicht spürst du auch, dass dir etwas fehlt, das du gar nicht so genau benennen kannst. Ein Boden unter den Füßen. Das Gefühl, irgendwo dazuzugehören, das über den Freundeskreis hinausgeht. Zeit und Momente, in denen du nicht darüber nachdenkst, ob du gerade das Richtige tust, sondern einfach da bist.</p>
+        <p>Und vielleicht ahnst du längst, dass du nicht noch eine Methode brauchst, um dich zu verstehen, sondern eine andere Art zu leben.</p>
+      </div>
+      <p class="reveal d2" style="margin-top:clamp(34px,4.5vw,48px);">Diese Begleitung ist etwas für dich, wenn du …</p>
+      <ul class="reveal d2">
+        <li><span class="koru"></span><span>spürst, dass du dein Leben eher verwaltest als lebst.</span></li>
+        <li><span class="koru"></span><span>viel über dich weißt und trotzdem im Alltag in denselben Mustern landest.</span></li>
+        <li><span class="koru"></span><span>dich nach echter Verbindung sehnst – zu dir, zu anderen, zur Natur.</span></li>
+        <li><span class="koru"></span><span>merkst, dass du dich anpasst, wo du eigentlich für etwas einstehen willst.</span></li>
+        <li><span class="koru"></span><span>das Gefühl hast, dass es dir gut geht und trotzdem etwas fehlt.</span></li>
       </ul>
-      <div class="textblock reveal d2">
-        <p>Am Ende des Tages nimmst du vielleicht keine fertige Antwort mit. Aber fast immer etwas, das mehr wert ist: Du siehst deine Situation klarer als seit Langem – und du spürst, was dein nächster Schritt sein könnte.</p>
+    </div>
+  </section>
+
+  <section id="mein-weg" style="background:var(--bg2);border-top:1px solid var(--line);">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <h2>Ich kenn <em>das</em>.</h2>
+      </div>
+      <div class="textblock reveal d1">
+        <p>Ich habe lange genau so gelebt. Von außen ein gutes und erfolgreiches Leben als Projektmanager, und wenn mich damals jemand gefragt hätte, hätte ich es auch so beschrieben.</p>
+        <p>Jedoch habe ich mich verstellt, meistens ohne es zu merken. Ich wusste ziemlich genau, wer ich in welchem Raum zu sein hatte, und das hat gut funktioniert. Was dabei aber verloren ging, war die Verbindung zu mir selbst. Meine Beziehungen blieben an der Oberfläche, weil ich selbst nicht in die Tiefe gegangen bin. Und je mehr ich erreicht habe, desto deutlicher wurde diese Leere, die sich von außen durch nichts füllen ließ.</p>
+      </div>
+
+      <div class="wegbilder stagger">
+        <figure>
+          <img src="assets/weg-damals.jpg" width="640" height="800" loading="lazy" alt="Michael im Anzug vor grauem Hintergrund, Bewerbungsfoto" />
+          <figcaption>Damals</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/weg-heute.jpg" width="640" height="800" loading="lazy" alt="Michael heute, draußen im Grünen, mit dem geschnitzten Anhänger" />
+          <figcaption>Heute</figcaption>
+        </figure>
+      </div>
+
+      <div class="textblock reveal d1">
+        <p>Was mir dabei geholfen hat, war keine Methode und kein Buch. Sondern ich habe mir Zeit für mich genommen, mit der Natur und Menschen, die mir ehrlich begegnet sind. Es hat gedauert, und es war nicht immer angenehm. Aber irgendwann stand ich wieder auf eigenem Boden. Heute fühle ich mich verbunden, mit mir selbst und mit dem, was mich umgibt. Ich bin bei mir angekommen und in Frieden mit dem Weg, der mich hierher gebracht hat.</p>
+        <p>Und genau deshalb begleite ich dich auf diesem Weg. Nicht, weil ich alles verstanden habe und alles weiß, sondern weil ich diesen Weg selbst gegangen bin.</p>
+      </div>
+
+      <div class="reveal d2" style="text-align:center;margin-top:clamp(36px,4.5vw,50px);">
+        <a href="#kontakt" class="btn btn-primary">Lass uns herausfinden, wie dein Weg aussieht →</a>
       </div>
     </div>
   </section>
