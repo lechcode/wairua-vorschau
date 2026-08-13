@@ -221,8 +221,12 @@
        aelteren Handy-Browsern ausgefallen - dann hatte die Kachel keine Hoehe
        mehr, das Bild schrumpfte zum Streifen und der Grund wurde undurchsichtig.
        Jetzt laeuft das Bild normal im Textfluss: es ist immer ganz zu sehen. */
-    .pillar{display:block;position:relative;aspect-ratio:auto;min-height:340px;background:var(--panel);}
+    .pillar{display:block;position:relative;aspect-ratio:auto;background:var(--panel);}
     .pillar img{position:relative;inset:auto;width:100%;height:auto;}
+    /* Das Natur-Foto ist das flachste. Ohne Zutun endet es vor dem Kachelende
+       und darunter entsteht eine harte Kante. Auf annaehernd quadratisch
+       gebracht laeuft es bis unten durch und fadet weich aus wie die anderen. */
+    .saeulen-grid .pillar:nth-child(3) img{aspect-ratio:1/1;object-fit:cover;object-position:center 42%;}
     .pillar::after{content:none;}
     .pillar h3{font-size:25px;margin:4px 0 8px;}
     .pillar h3 span{font-size:12.5px;margin-top:5px;}
