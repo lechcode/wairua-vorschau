@@ -216,36 +216,22 @@
 
   @media(max-width:900px){
     .saeulen-grid{grid-template-columns:1fr;}
-    /* Am Handy bekommt jede Kachel das Seitenverhaeltnis ihres eigenen Fotos -
-       so ist das ganze Bild zu sehen, nichts wird angeschnitten. */
-    .saeulen-grid .pillar:nth-child(1){aspect-ratio:1100/969;}
-    .saeulen-grid .pillar:nth-child(2){aspect-ratio:1051/1400;}
-    .saeulen-grid .pillar:nth-child(3){aspect-ratio:1100/733;}
-    /* ACHTUNG: hier kein min-height setzen - zusammen mit aspect-ratio waechst
-       die Kachel dann in die BREITE (aus 359 wurden 528 px) und die Seite
-       laeuft seitlich ueber. Stattdessen ist der Text am Handy kompakter,
-       damit er auch in die flachste Kachel passt. */
+    /* Am Handy bestimmt das FOTO die Hoehe der Kachel: kein aspect-ratio, kein
+       backdrop-filter, keine Maske. Genau diese drei Techniken sind vorher auf
+       aelteren Handy-Browsern ausgefallen - dann hatte die Kachel keine Hoehe
+       mehr, das Bild schrumpfte zum Streifen und der Grund wurde undurchsichtig.
+       Jetzt laeuft das Bild normal im Textfluss: es ist immer ganz zu sehen. */
+    .pillar{display:block;position:relative;aspect-ratio:auto;min-height:340px;background:var(--panel);}
+    .pillar img{position:relative;inset:auto;width:100%;height:auto;}
+    .pillar::after{content:none;}
     .pillar h3{font-size:25px;margin:4px 0 8px;}
     .pillar h3 span{font-size:12.5px;margin-top:5px;}
     .pillar p{font-size:14.5px;line-height:1.55;}
-    /* Nur noch ein Hauch Tiefe ueber dem Foto statt einer schwarzen Decke */
-    .pillar::after{background:linear-gradient(180deg,rgba(10,12,9,.06) 0%,rgba(10,12,9,.1) 45%,rgba(10,12,9,.28) 100%);}
-    /* Der Text sitzt auf einer milchigen Scheibe: das Foto scheint gedaempft
-       durch, die Schrift steht trotzdem ruhig. Die Scheibe blendet nach oben
-       weich aus, damit keine harte Kante im Bild steht. */
-    .pillar .p-body{position:relative;padding:24px 22px 22px;background:none;
-      text-shadow:0 2px 10px rgba(6,8,5,.85);}
-    .pillar .p-body::before{content:"";position:absolute;inset:0;z-index:-1;
-      background:linear-gradient(180deg,rgba(9,11,8,.12) 0%,rgba(9,11,8,.42) 30%,rgba(9,11,8,.5) 100%);
-      -webkit-backdrop-filter:blur(16px) brightness(.72) saturate(1.05);
-      backdrop-filter:blur(16px) brightness(.72) saturate(1.05);
-      -webkit-mask-image:linear-gradient(180deg,transparent 0%,#000 20%);
-      mask-image:linear-gradient(180deg,transparent 0%,#000 20%);}
-    /* Wo der Browser nicht weichzeichnen kann, traegt allein die Farbe -
-       dann muss sie kraeftiger sein, sonst steht die Schrift im Laub. */
-    @supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
-      .pillar .p-body::before{background:linear-gradient(180deg,rgba(9,11,8,0) 0%,rgba(9,11,8,.8) 30%,rgba(9,11,8,.9) 100%);}
-    }
+    /* Der Text liegt unten im Bild auf einem einfachen Verlauf - oben laeuft er
+       durchsichtig aus, sodass das Foto sichtbar bleibt. */
+    .pillar .p-body{position:absolute;left:0;right:0;bottom:0;padding:26px 22px 22px;
+      text-shadow:0 2px 10px rgba(6,8,5,.9);
+      background:linear-gradient(180deg,rgba(9,11,8,0) 0%,rgba(9,11,8,.58) 24%,rgba(9,11,8,.84) 58%,rgba(9,11,8,.92) 100%);}
     /* Der Hero-Verlauf traegt am Handy mehr Text auf engerem Raum */
     .hero-bg::after{background:
       radial-gradient(120% 90% at 50% 0%,transparent 40%,rgba(12,14,11,.5) 100%),
