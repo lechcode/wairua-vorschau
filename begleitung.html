@@ -104,25 +104,22 @@
   .textblock p:last-child{margin-bottom:0;}
   .koru-list{margin-bottom:26px;}
 
+  /* --- Die drei "Jemanden"-Zeilen: der Kern des Archetyps --------------- */
+  .jemand{max-width:760px;margin:clamp(38px,5vw,54px) auto 0;text-align:center;}
+  .jemand p{font-family:var(--serif);font-size:clamp(20px,2.4vw,26px);line-height:1.42;
+    color:var(--bone);}
+  .jemand p + p{margin-top:clamp(16px,2vw,22px);}
+  .jemand p:last-child{color:var(--gold-2);font-style:italic;}
+
   /* --- Wofuer der Erdhueter steht: eine Zeile aus Haltungen ------------- */
-  .werte{margin-top:clamp(46px,6vw,68px);text-align:center;}
+  .werte{margin-top:clamp(30px,4vw,44px);text-align:center;}
   .werte .liste{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;
     margin-top:22px;font-family:var(--serif);font-size:clamp(20px,2.3vw,26px);color:var(--bone);}
   .werte .liste span{position:relative;padding:6px clamp(12px,1.5vw,20px);}
-  .werte .liste span + span::before{content:"";position:absolute;left:-3px;top:50%;
+  /* Der Trennpunkt haengt HINTEN am Wort, nicht vorne am naechsten: sonst
+     beginnt eine umgebrochene Zeile mit einem einzelnen Punkt. */
+  .werte .liste span:not(:last-child)::after{content:"";position:absolute;right:-3px;top:50%;
     width:5px;height:5px;margin-top:-2px;border-radius:50%;background:var(--gold);opacity:.85;}
-
-  /* --- Was er nicht ist: links der andere Archetyp, rechts der Erdhueter - */
-  .gegen{max-width:920px;margin:26px auto 0;}
-  .gegen .paar{display:grid;grid-template-columns:1fr 1fr;gap:clamp(18px,3vw,44px);
-    padding:clamp(20px,2.4vw,26px) 0;border-top:1px solid var(--line);}
-  .gegen .paar:last-child{border-bottom:1px solid var(--line);}
-  /* Linke Spalte rechtsbuendig, rechte linksbuendig: dazwischen entsteht eine
-     ruhige Mittelachse, an der sich die Gegensaetze gegenueberstehen. */
-  .gegen p{font-size:17px;margin:0;line-height:1.6;}
-  .gegen .andere{color:var(--muted);text-align:right;}
-  .gegen .huter{color:var(--bone-dim);text-align:left;}
-  .gegen .huter b{color:var(--gold-2);font-weight:400;}
 
   /* --- Bildband ueber "Der Weg, der vor dir liegt" ---------------------- */
   #ablauf{padding-top:0;}
@@ -269,44 +266,24 @@
         <h2>Zeit für einen neuen <em>Archetypen</em></h2>
       </div>
       <div class="textblock reveal d1">
-        <p>Wir leben in einer Zeit, in der wir mehr wissen als je zuvor – und trotzdem immer weniger in Beziehung zu dem stehen, was uns umgibt. Wir funktionieren, optimieren, beschleunigen und versuchen immer weiterzukommen. Dabei verlieren wir etwas Entscheidendes: die Fähigkeit, wirklich wahrzunehmen, was da ist, Verantwortung zu übernehmen und mit den Zyklen des Lebens zu gehen.</p>
-        <p>Vielleicht brauchen wir deshalb nicht noch mehr Wissen, noch mehr Schnelligkeit oder noch mehr Heilung, um endlich in der Tiefe bei uns anzukommen. Vielleicht brauchen wir ein anderes Vorbild, einen neuen Archetyp für unsere Zeit: den Erdhüter.</p>
-        <p>Der Erdhüter ist der, der bleibt. Während viele weiterziehen, um anderswo zu finden, was ihnen fehlt, schaut er mutig hin, gerade dann, wenn es leichter wäre wegzusehen. Er weiß, dass er Teil von etwas Größerem ist und dass er darin eine Aufgabe hat.</p>
-        <p>Er kennt die Zyklen des Lebens. Er weiß, dass alles erwacht, wächst, fällt und wieder in die Stille geht, dass es keinen Anfang gibt und kein Ende, und dass nichts für sich allein steht. Aus diesem Wissen heraus tritt er in Beziehung, zu sich selbst ebenso wie zu anderen Menschen und zur Natur. Er ist dabei kein Betrachter, der die Welt von außen bestaunt, sondern jemand, der mitten in ihr steht und weiß, dass sein Handeln Spuren hinterlässt. Er nimmt, was er braucht, und er gibt zurück.</p>
+        <p>Wir leben in einer Zeit, in der wir mehr wissen als je zuvor – und trotzdem immer weniger in Beziehung zu dem stehen, was uns umgibt. Wir funktionieren, optimieren, beschleunigen und versuchen immer weiterzukommen. Dabei verlieren wir etwas Entscheidendes: die Fähigkeit, das wahrzunehmen, was da ist, Verantwortung zu übernehmen und mit den Zyklen des Lebens zu gehen.</p>
+        <p>Vielleicht brauchen wir deshalb nicht noch mehr Wissen, noch mehr Schnelligkeit oder noch mehr Heilung, um endlich in der Tiefe bei uns anzukommen. Vielleicht brauchen wir ein anderes Vorbild, einen neuen Archetyp für unsere Zeit: Ich nenne ihn den <em>Erdhüter</em>.</p>
       </div>
 
-      <div class="werte reveal d1">
-        <div class="eyebrow">Wofür er steht</div>
+      <div class="jemand reveal d2">
+        <p>Jemanden, der wieder in Beziehung tritt. Mit sich selbst, mit anderen Menschen und mit der Natur.</p>
+        <p>Jemanden, der seinen Platz in der Welt kennt und weiß, dass sein Handeln Spuren hinterlässt.</p>
+        <p>Und jemanden, der Werte vertritt, die unsere Welt mehr denn je braucht:</p>
+      </div>
+
+      <div class="werte reveal d2">
         <div class="liste">
           <span>Verbundenheit</span><span>Präsenz</span><span>Demut</span><span>Klarheit</span><span>Integrität</span><span>Wandlungsfähigkeit</span><span>Kooperation</span>
         </div>
       </div>
 
-      <div class="werte reveal d1">
-        <div class="eyebrow">Was er nicht ist</div>
-        <div class="gegen">
-          <div class="paar">
-            <p class="andere">Der Weise sammelt Wissen und gibt es von oben weiter.</p>
-            <p class="huter"><b>Der Erdhüter</b> weiß, dass das Entscheidende nicht verstanden, sondern erlebt werden will.</p>
-          </div>
-          <div class="paar">
-            <p class="andere">Der Heiler sieht im anderen das, was repariert werden muss.</p>
-            <p class="huter"><b>Der Erdhüter</b> weiß, dass bereits alles vorhanden ist und nichts zu Ende geheilt werden muss.</p>
-          </div>
-          <div class="paar">
-            <p class="andere">Der Krieger kämpft gegen etwas.</p>
-            <p class="huter"><b>Der Erdhüter</b> steht für etwas ein.</p>
-          </div>
-          <div class="paar">
-            <p class="andere">Der Eremit sucht die Natur, um der Welt zu entkommen.</p>
-            <p class="huter"><b>Der Erdhüter</b> sucht sie, um wieder mit der Welt in Beziehung zu treten.</p>
-          </div>
-        </div>
-      </div>
-
     </div>
   </section>
-
   <section class="forwhom" id="fuer-dich" style="background:var(--bg);">
     <div class="wrap inner">
       <h2 class="reveal">Wenn eigentlich alles okay ist – und trotzdem <em>etwas fehlt</em></h2>
