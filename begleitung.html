@@ -2,8 +2,8 @@
 <!--
   Unterseite: "Der Weg des Erdhüters" – 4-monatige Einzelbegleitung.
   Teil des wairua-Redesigns · gleiche dunkle Bildsprache · Single-File.
-  Stand: Hero, Archetyp, "Für wen" und "Mein Weg" stehen. Es fehlen noch
-  die Etappen der vier Monate und die Eckdaten (Termine, Ort, Beitrag).
+  Alle Abschnitte stehen: Hero, Archetyp, "Für wen", "Mein Weg", der Ablauf
+  und die Eckdaten. Alle Handlungsaufrufe fuehren auf den Google-Buchungslink.
 -->
 <html lang="de">
 <head>
@@ -84,6 +84,18 @@
   .forwhom li,.koru-list li{display:flex;gap:14px;align-items:flex-start;font-size:17.5px;color:var(--bone-dim);}
   .forwhom li .koru,.koru-list li .koru{flex:none;width:20px;height:20px;color:var(--gold);margin-top:5px;}
 
+  /* Die Liste "wenn du ..." ist der Moment, in dem sich jemand wiedererkennt.
+     Deshalb steht sie auf einer eigenen Flaeche, groesser und heller als der
+     Fliesstext ringsum, mit mehr Luft zwischen den Punkten. */
+  .forwhom .wenn{max-width:720px;margin:clamp(38px,5vw,54px) auto 0;
+    background:var(--panel);border:1px solid var(--line);border-radius:18px;
+    padding:clamp(30px,4vw,44px) clamp(24px,3.4vw,44px);box-shadow:var(--shadow);}
+  .forwhom .wenn > p{font-family:var(--serif);font-size:clamp(21px,2.5vw,27px);
+    color:var(--bone);max-width:none;margin-bottom:6px;}
+  .forwhom .wenn ul{gap:18px;margin-top:24px;max-width:none;}
+  .forwhom .wenn li{font-size:clamp(17px,1.9vw,19.5px);color:var(--bone);line-height:1.6;}
+  .forwhom .wenn li .koru{width:22px;height:22px;margin-top:6px;}
+
   .forwhom h2{font-size:clamp(28px,4.2vw,47px);font-weight:500;margin:14px 0 24px;}
   .forwhom h2 em{color:var(--gold-2);}
 
@@ -112,9 +124,18 @@
   .gegen .huter{color:var(--bone-dim);text-align:left;}
   .gegen .huter b{color:var(--gold-2);font-weight:400;}
 
-  .schluss{margin:clamp(42px,5vw,60px) auto 0;text-align:center;font-family:var(--serif);
-    font-style:italic;font-size:clamp(20px,2.5vw,27px);color:var(--gold-2);
-    max-width:30ch;line-height:1.36;}
+  /* --- Bildband ueber "Der Weg, der vor dir liegt" ---------------------- */
+  #ablauf{padding-top:0;}
+  .weg-kopf{position:relative;margin-bottom:clamp(46px,6vw,74px);}
+  .weg-kopf img{display:block;width:100%;height:clamp(260px,34vw,440px);object-fit:cover;
+    object-position:center 62%;}
+  /* Laeuft nach unten in die Abschnittsfarbe aus, damit keine Kante entsteht */
+  .weg-kopf::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,
+    rgba(10,12,9,.55) 0%,rgba(10,12,9,.22) 30%,rgba(10,12,9,.72) 74%,var(--bg) 100%);}
+  .weg-kopf .wrap{position:absolute;left:50%;bottom:clamp(20px,3.4vw,40px);
+    transform:translateX(-50%);z-index:2;text-align:center;}
+  .weg-kopf h2{font-size:clamp(30px,4.6vw,50px);font-weight:500;
+    text-shadow:0 3px 22px rgba(0,0,0,.85);}
 
   /* --- Damals und heute ------------------------------------------------- */
   .wegbilder{display:grid;grid-template-columns:1fr 1fr;gap:clamp(14px,2.4vw,32px);
@@ -212,7 +233,7 @@
     <a href="index.html" class="brand"><img class="brand-logo" src="assets/logo-cream.png" alt="" width="160" height="145" />Wairua.Spirit</a>
     <div class="links">
       <a href="index.html">Startseite</a>
-      <a href="https://wa.me/491602302132" class="cta">Lass uns sprechen</a>
+      <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2i0Vx8xFoRCatp5ziVwaZX3h1qlk818U7wEY_MlVofft-BHb06Cm6aDspk8QOPUvIlA_4ARGyz?gv=true" target="_blank" rel="noopener" class="cta">Gespräch buchen</a>
     </div>
     <button class="burger" id="burger" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
   </nav>
@@ -283,7 +304,6 @@
         </div>
       </div>
 
-      <p class="schluss reveal d2">Der Erdhüter ist kein Ziel, das man irgendwann erreicht. Er ist eine Haltung, in die man immer wieder zurückkehrt.</p>
     </div>
   </section>
 
@@ -296,14 +316,16 @@
         <p>Vielleicht spürst du auch, dass dir etwas fehlt, das du gar nicht so genau benennen kannst. Ein Boden unter den Füßen. Das Gefühl, irgendwo dazuzugehören, das über den Freundeskreis hinausgeht. Zeit und Momente, in denen du nicht darüber nachdenkst, ob du gerade das Richtige tust, sondern einfach da bist.</p>
         <p>Und vielleicht ahnst du längst, dass du nicht noch eine Methode brauchst, um dich zu verstehen, sondern eine andere Art zu leben.</p>
       </div>
-      <p class="reveal d2" style="margin-top:clamp(34px,4.5vw,48px);">Diese Begleitung ist etwas für dich, wenn du …</p>
-      <ul class="reveal d2">
-        <li><span class="koru"></span><span>spürst, dass du dein Leben eher verwaltest als lebst.</span></li>
-        <li><span class="koru"></span><span>viel über dich weißt und trotzdem im Alltag in denselben Mustern landest.</span></li>
-        <li><span class="koru"></span><span>dich nach echter Verbindung sehnst – zu dir, zu anderen, zur Natur.</span></li>
-        <li><span class="koru"></span><span>merkst, dass du dich anpasst, wo du eigentlich für etwas einstehen willst.</span></li>
-        <li><span class="koru"></span><span>das Gefühl hast, dass es dir gut geht und trotzdem etwas fehlt.</span></li>
-      </ul>
+      <div class="wenn reveal d2">
+        <p>Diese Begleitung ist etwas für dich, wenn du …</p>
+        <ul>
+          <li><span class="koru"></span><span>spürst, dass du dein Leben eher verwaltest als lebst.</span></li>
+          <li><span class="koru"></span><span>viel über dich weißt und trotzdem im Alltag in denselben Mustern landest.</span></li>
+          <li><span class="koru"></span><span>dich nach echter Verbindung sehnst – zu dir, zu anderen, zur Natur.</span></li>
+          <li><span class="koru"></span><span>merkst, dass du dich anpasst, wo du eigentlich für etwas einstehen willst.</span></li>
+          <li><span class="koru"></span><span>das Gefühl hast, dass es dir gut geht und trotzdem etwas fehlt.</span></li>
+        </ul>
+      </div>
     </div>
   </section>
 
@@ -340,16 +362,17 @@
   </section>
 
   <section id="ablauf">
+    <div class="weg-kopf">
+      <img src="assets/der-weg.jpg" srcset="assets/der-weg-900.jpg 900w, assets/der-weg.jpg 1600w" sizes="100vw" width="1600" height="1067" loading="lazy" alt="Kanu am Ufer eines stillen, grün gespiegelten Sees" />
+      <div class="wrap"><h2 class="reveal">Der Weg, der vor dir liegt</h2></div>
+    </div>
     <div class="wrap">
-      <div class="sec-head reveal">
-        <h2>Der Weg, der vor dir liegt</h2>
-      </div>
 
       <div class="ausrichtung reveal d1">
         <h3>Bevor es losgeht: Die Ausrichtung</h3>
         <p>Um gemeinsam zu entscheiden, ob wir den Weg zusammen gehen, ist es wichtig, dass wir uns Zeit nehmen, deine Situation ganz in Ruhe anzuschauen. Wo stehst du aktuell, was bewegt dich und wo willst du hin? Im Gespräch klären wir all diese Fragen, denn vier Monate sind eine lange Zeit – und nur so können wir herausfinden, ob ich dich auf deinem Weg unterstützen kann.</p>
         <p class="frage">Bereit, den ersten Schritt zu gehen? Dann lass uns sprechen.</p>
-        <a href="https://wa.me/491602302132" target="_blank" rel="noopener" class="btn btn-primary">Gespräch vereinbaren →</a>
+        <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2i0Vx8xFoRCatp5ziVwaZX3h1qlk818U7wEY_MlVofft-BHb06Cm6aDspk8QOPUvIlA_4ARGyz?gv=true" target="_blank" rel="noopener" class="btn btn-primary">Gespräch buchen →</a>
       </div>
 
       <div class="etappen stagger">
@@ -362,7 +385,6 @@
           <span class="koru" aria-hidden="true"></span>
           <h3>Vier Online-Treffen zur Integration</h3>
           <p>Zwischen den Tagen draußen treffen wir uns online. Das Entscheidende passiert nämlich dann, wenn du wieder in deinem normalen Leben stehst – mit denselben Menschen, derselben Arbeit und denselben Mustern.</p>
-          <p>Wir schauen gemeinsam hin: Was ist von den Tagen geblieben? Was sind deine nächsten konkreten Schritte? Nur so wird aus einem Erlebnis eine echte Veränderung.</p>
         </div>
         <div class="etappe">
           <span class="koru" aria-hidden="true"></span>
@@ -394,9 +416,9 @@
     <div class="wrap inner">
       <div class="eyebrow reveal">Der erste Schritt</div>
       <h2 class="reveal d1">Lass uns herausfinden, wie <em>dein Weg</em> aussieht</h2>
-      <p class="reveal d2">Schreib mir einfach und erzähl mir, wo du gerade stehst. Du musst noch nicht wissen, was du suchst – wir telefonieren vorher in Ruhe und schauen gemeinsam, ob das für dich der richtige nächste Schritt ist.</p>
+      <p class="reveal d2">Erzähl mir, wo du gerade stehst. Du musst noch nicht wissen, was du suchst – wir schauen in Ruhe gemeinsam, ob das für dich der richtige nächste Schritt ist.</p>
       <div class="hero-cta reveal d2" style="justify-content:center;display:flex;gap:14px;flex-wrap:wrap;">
-        <a href="https://wa.me/491602302132" class="btn btn-primary">Lass uns sprechen</a>
+        <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2i0Vx8xFoRCatp5ziVwaZX3h1qlk818U7wEY_MlVofft-BHb06Cm6aDspk8QOPUvIlA_4ARGyz?gv=true" target="_blank" rel="noopener" class="btn btn-primary">Gespräch buchen →</a>
         <a href="index.html" class="btn btn-ghost">← zurück zu Wairua.Spirit</a>
       </div>
     </div>
