@@ -126,6 +126,34 @@
   .wegbilder figcaption{margin-top:13px;text-align:center;font-size:13px;letter-spacing:.2em;
     text-transform:uppercase;color:var(--gold);}
 
+  /* --- Der Weg: erst die Ausrichtung, dann die drei Bausteine ----------- */
+  .ausrichtung{max-width:740px;margin:0 auto clamp(44px,5.5vw,66px);text-align:center;}
+  .ausrichtung h3{font-family:var(--serif);font-size:clamp(24px,3vw,32px);font-weight:500;
+    margin-bottom:16px;line-height:1.2;}
+  .ausrichtung p{color:var(--bone-dim);font-size:17.5px;}
+  .ausrichtung .frage{font-family:var(--serif);font-style:italic;color:var(--gold-2);
+    font-size:clamp(19px,2.3vw,25px);margin:28px 0 22px;}
+
+  /* Gleiche Kachelhoehe: der mittlere Text ist doppelt so lang wie die anderen,
+     unterschiedlich hohe Karten wirkten daneben unruhig. */
+  .etappen{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(18px,2.6vw,28px);}
+  .etappe{background:var(--panel);border:1px solid var(--line);border-radius:16px;
+    padding:clamp(26px,3vw,32px) clamp(22px,2.4vw,28px);
+    transition:transform .4s var(--ease-out),border-color .4s;}
+  .etappe:hover{transform:translateY(-4px);border-color:rgba(216,168,90,.4);}
+  .etappe .koru{display:block;width:26px;height:26px;color:var(--gold);margin-bottom:16px;}
+  .etappe h3{font-size:21px;font-weight:500;line-height:1.25;margin-bottom:11px;}
+  .etappe p{font-size:16.5px;color:var(--bone-dim);}
+  .etappe p + p{margin-top:12px;}
+  @media(max-width:900px){ .etappen{grid-template-columns:1fr;} }
+
+  /* Fussnote zur Spende - leiser als der Rest, aber lesbar */
+  .fussnote{max-width:640px;margin:clamp(28px,3.4vw,38px) auto 0;text-align:center;
+    font-size:14.5px;line-height:1.65;color:var(--muted);}
+  .fussnote b{color:var(--bone-dim);font-weight:700;}
+  .fussnote a{color:var(--gold-2);border-bottom:1px solid rgba(216,168,90,.4);transition:border-color .3s;}
+  .fussnote a:hover{border-color:var(--gold-2);}
+
   /* Fakten-Kacheln: fuenf kompakte, zentrierte - Rest kommt aus base.css */
   .details-grid{grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px;margin-top:clamp(30px,4vw,44px);}
   .detail{border-radius:14px;padding:24px 18px;text-align:center;}
@@ -193,6 +221,8 @@
     <a href="#worum">Der Erdhüter</a>
     <a href="#fuer-dich">Für wen</a>
     <a href="#mein-weg">Mein Weg</a>
+    <a href="#ablauf">Der Weg</a>
+    <a href="#rahmen">Details</a>
     <a href="#kontakt">Lass uns sprechen</a>
   </div>
 
@@ -306,6 +336,56 @@
       <div class="reveal d2" style="text-align:center;margin-top:clamp(36px,4.5vw,50px);">
         <a href="#kontakt" class="btn btn-primary">Lass uns herausfinden, wie dein Weg aussieht →</a>
       </div>
+    </div>
+  </section>
+
+  <section id="ablauf">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <h2>Der Weg, der vor dir liegt</h2>
+      </div>
+
+      <div class="ausrichtung reveal d1">
+        <h3>Bevor es losgeht: Die Ausrichtung</h3>
+        <p>Um gemeinsam zu entscheiden, ob wir den Weg zusammen gehen, ist es wichtig, dass wir uns Zeit nehmen, deine Situation ganz in Ruhe anzuschauen. Wo stehst du aktuell, was bewegt dich und wo willst du hin? Im Gespräch klären wir all diese Fragen, denn vier Monate sind eine lange Zeit – und nur so können wir herausfinden, ob ich dich auf deinem Weg unterstützen kann.</p>
+        <p class="frage">Bereit, den ersten Schritt zu gehen? Dann lass uns sprechen.</p>
+        <a href="https://wa.me/491602302132" target="_blank" rel="noopener" class="btn btn-primary">Gespräch vereinbaren →</a>
+      </div>
+
+      <div class="etappen stagger">
+        <div class="etappe">
+          <span class="koru" aria-hidden="true"></span>
+          <h3>Vier Tage in der Natur</h3>
+          <p>Insgesamt verbringen wir vier Tage draußen. Diese Zeit gestalten wir frei und ganz davon abhängig, was du gerade brauchst. Völlig ohne Ablenkung und ohne Termine kommt vieles an die Oberfläche, was im Alltag sonst keinen Platz findet.</p>
+        </div>
+        <div class="etappe">
+          <span class="koru" aria-hidden="true"></span>
+          <h3>Vier Online-Treffen zur Integration</h3>
+          <p>Zwischen den Tagen draußen treffen wir uns online. Das Entscheidende passiert nämlich dann, wenn du wieder in deinem normalen Leben stehst – mit denselben Menschen, derselben Arbeit und denselben Mustern.</p>
+          <p>Wir schauen gemeinsam hin: Was ist von den Tagen geblieben? Was sind deine nächsten konkreten Schritte? Nur so wird aus einem Erlebnis eine echte Veränderung.</p>
+        </div>
+        <div class="etappe">
+          <span class="koru" aria-hidden="true"></span>
+          <h3>Persönlicher Austausch</h3>
+          <p>Veränderung ist ein Prozess, der Zeit braucht. Damit du dich auf dieser Reise zu jedem Zeitpunkt begleitet fühlst, bin ich auch zwischen unseren festen Terminen per WhatsApp für dich da.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="rahmen" style="background:var(--bg2);border-top:1px solid var(--line);">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <h2>Alle Details auf einen Blick</h2>
+      </div>
+      <div class="details-grid stagger">
+        <div class="detail"><div class="k">Dauer</div><div class="v">4 Monate<small>von der Ausrichtung bis zum Abschluss</small></div></div>
+        <div class="detail"><div class="k">Draußen</div><div class="v">4 Tage<small>ganztägig, in Landsberg am Lech und Umgebung</small></div></div>
+        <div class="detail"><div class="k">Online</div><div class="v">4 Treffen<small>je 60 Minuten, zur Integration</small></div></div>
+        <div class="detail"><div class="k">Dazwischen</div><div class="v">WhatsApp<small>persönlich erreichbar über den gesamten Zeitraum</small></div></div>
+        <div class="detail"><div class="k">Dein Beitrag</div><div class="v">850 €*<small>für die vier Monate</small></div></div>
+      </div>
+      <p class="fussnote reveal d2">* Der Weg des Erdhüters handelt davon, wieder in Beziehung zur Natur zu treten und für das einzustehen, was einem wichtig ist. Deshalb fließen <b>50 €</b> als Spende an <a href="https://missionerde.de/" target="_blank" rel="noopener">Mission Erde e.&nbsp;V.</a> – für Umwelt- und Artenschutzprojekte weltweit.</p>
     </div>
   </section>
 
