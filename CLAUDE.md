@@ -87,13 +87,25 @@ via GitHub Pages auf wairua-spirit.de.
 - DNS bei IONOS: 4× **A** (`@` → 185.199.108–111.153) + **CNAME** (`www`).
 - **E-Mail läuft über Google Workspace** (MX-Records). ⚠️ **MX-Einträge niemals anfassen.**
 
+## Stand der Seiten (24.08.2026)
+Alle drei Angebotsseiten sind frei gegeben, indexierbar und in der `sitemap.xml`:
+`begleitung.html` (Der Weg des Erdhüters, 4 Monate, 850 €), `retreat.html`
+(Winter-Retreat, 9.–13.12.2026, 790 €) und `rituale.html` (Jahreskreisfeste).
+Nur `impressum.html` und `datenschutz.html` bleiben absichtlich auf `noindex`.
+⚠️ Beim Entfernen eines `noindex` **immer** die URL in `sitemap.xml` nachtragen.
+
+**Anmelde- und Buchungswege** (in `datenschutz.html` § 8–10 beschrieben, bei
+Änderung dort mitziehen): Rituale über PayPal-Link · Retreat über ein
+Google-Formular · Einzelbegleitung über Google-Terminbuchung (Link steht
+**dreimal** in `begleitung.html`: Navigation, Ausrichtung, Schluss).
+
 ## Offen
-1. `rituale.html`: `noindex` raus, sobald der Termin final ist.
-   Beim Entfernen eines `noindex` **immer** die URL in `sitemap.xml` nachtragen.
-2. `retreat.html` ist seit 03.08.2026 frei gegeben: `noindex` raus, in der
-   `sitemap.xml`, und die Startseiten-Kachel verlinkt wieder darauf. Die
-   Anmeldung läuft über ein Google-Formular, Rückfragen über WhatsApp.
-   Der frühere `mailto:`-Weg ist damit erledigt.
+- Auf `begleitung.html` fehlen Stimmen früherer Begleitungen; die strukturierten
+  Daten dort kennen den Preis nicht (beim Retreat sind Preis/Termin hinterlegt).
+- `retreat.html`: Der Sicherheitshinweis zu Breathwork (Kontraindikationen) ist
+  beim Umbau der „Was dich erwartet"-Liste weggefallen — Michael weiß davon.
+- Das Hero-Bild der Startseite ist mit 245 KB der größte Einzelposten beim
+  ersten Aufruf (gesamt rund 386 KB).
 
 ## Inhalte
 Texte & Bilder stammen von Michael. Die Testimonials sind echt — nur mit seiner
