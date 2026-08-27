@@ -52,7 +52,11 @@
   /* Symbol auf dem Shirt und Anhaenger stehen im Bild uebereinander bei rund
      58 % Breite. Der Ausschnitt haelt beide - am Handy wird seitlich stark
      beschnitten, sonst rutschen sie aus dem Bild. */
-  .hero-bg img{object-position:58% center;transform:scale(1.05);animation:kb 26s ease-in-out infinite alternate;}
+  /* Am Rechner der weite Ausschnitt, am Handy ein enger auf die
+     ineinandergelegten Haende - dort stuenden sie sonst hinter dem Text. */
+  .hero-bg picture{position:absolute;inset:0;display:block;}
+  .hero-bg img{object-position:62% 42%;transform:scale(1.05);animation:kb 26s ease-in-out infinite alternate;}
+  @media(max-width:700px){ .hero-bg img{object-position:center 40%;} }
   /* Der Schatten kommt fast nur von links, wo der Text steht. Rechts bleibt
      das Foto ueber die ganze Hoehe offen, damit Symbol und Anhaenger zu sehen
      sind; unten nur so viel, dass der Uebergang zum naechsten Abschnitt sitzt. */
@@ -260,7 +264,10 @@
   </div>
 
   <header class="hero">
-    <div class="hero-bg"><img src="assets/erdhueter-header.jpg" srcset="assets/erdhueter-header-900.jpg 900w, assets/erdhueter-header.jpg 1600w" sizes="100vw" width="1600" height="1067" fetchpriority="high" alt="Selbst geschnitzter Holzanhänger an einem Lederband auf der Brust" /></div>
+    <div class="hero-bg"><picture>
+      <source media="(max-width:700px)" srcset="assets/begleiten-header-hoch.jpg" width="860" height="957" />
+      <img src="assets/begleiten-header.jpg" srcset="assets/begleiten-header-800.jpg 800w, assets/begleiten-header.jpg 1200w" sizes="100vw" width="1200" height="1290" fetchpriority="high" alt="Michael steht mit geschlossenen Augen im Wald und hält die Hand eines anderen Menschen" />
+    </picture></div>
     <div class="wrap hero-inner">
       <a href="index.html" class="back">← zurück zu Wairua.Spirit</a>
       <div class="eyebrow">4-monatige Einzelbegleitung</div>
