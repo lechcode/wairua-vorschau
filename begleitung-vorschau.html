@@ -52,11 +52,7 @@
   /* Symbol auf dem Shirt und Anhaenger stehen im Bild uebereinander bei rund
      58 % Breite. Der Ausschnitt haelt beide - am Handy wird seitlich stark
      beschnitten, sonst rutschen sie aus dem Bild. */
-  /* Am Rechner der weite Ausschnitt, am Handy ein enger auf die
-     ineinandergelegten Haende - dort stuenden sie sonst hinter dem Text. */
-  .hero-bg picture{position:absolute;inset:0;display:block;}
-  .hero-bg img{object-position:62% 42%;transform:scale(1.05);animation:kb 26s ease-in-out infinite alternate;}
-  @media(max-width:700px){ .hero-bg img{object-position:center 40%;} }
+  .hero-bg img{object-position:58% center;transform:scale(1.05);animation:kb 26s ease-in-out infinite alternate;}
   /* Der Schatten kommt fast nur von links, wo der Text steht. Rechts bleibt
      das Foto ueber die ganze Hoehe offen, damit Symbol und Anhaenger zu sehen
      sind; unten nur so viel, dass der Uebergang zum naechsten Abschnitt sitzt. */
@@ -99,6 +95,38 @@
   /* Die Liste "wenn du ..." ist der Moment, in dem sich jemand wiedererkennt.
      Deshalb steht sie auf einer eigenen Flaeche, groesser und heller als der
      Fliesstext ringsum, mit mehr Luft zwischen den Punkten. */
+  /* Zwei Kaesten nebeneinander: was passt und was nicht. Der Gegen-Kasten
+     steht bewusst ruhiger - er soll abgrenzen, nicht abschrecken. */
+  .wenn-paar{display:grid;grid-template-columns:1fr 1fr;gap:clamp(18px,2.4vw,28px);
+    max-width:1000px;margin:clamp(38px,5vw,54px) auto 0;}
+  .wenn-paar .wenn{margin:0;max-width:none;}
+  .wenn.nicht{background:transparent;box-shadow:none;}
+  .wenn.nicht > p{color:var(--bone-dim);}
+  .wenn.nicht li{color:var(--muted);}
+  /* Statt der Koru ein kurzer Strich - macht sichtbar, dass hier nichts
+     zusammenkommt, ohne ein Verbotszeichen zu setzen. */
+  .wenn.nicht .strich{flex:none;width:16px;height:1px;margin-top:14px;
+    background:var(--muted);opacity:.8;}
+
+  /* Stimmen: dieselbe helle Karte wie auf der Startseite, hier fest */
+  .stimmen-paar{display:grid;grid-template-columns:1fr 1fr;gap:clamp(18px,2.4vw,28px);
+    max-width:1000px;margin:clamp(46px,6vw,74px) auto 0;}
+  .stimme{margin:0;background:linear-gradient(180deg,#f7f2e9 0%,#ebe3d4 100%);
+    border-radius:16px;padding:clamp(26px,3vw,34px) clamp(22px,2.6vw,30px);
+    box-shadow:0 30px 66px -34px rgba(0,0,0,.9);display:flex;flex-direction:column;}
+  .stimme blockquote{margin:0 0 20px;font-family:var(--serif);font-style:italic;
+    font-size:clamp(17.5px,1.9vw,20px);line-height:1.45;color:#241f18;flex:1;}
+  .stimme blockquote::before{content:"„";display:block;font-family:var(--serif);
+    font-size:52px;line-height:.5;color:#c08a3c;opacity:.6;margin-bottom:14px;}
+  .stimme figcaption{display:flex;align-items:center;gap:13px;font-size:14px;
+    letter-spacing:.04em;color:#665e4e;}
+  .stimme figcaption img{width:46px;height:46px;flex:none;border-radius:50%;
+    object-fit:cover;box-shadow:0 7px 18px -9px rgba(0,0,0,.6);}
+  .stimme figcaption b{color:#7a5116;font-weight:700;}
+
+  @media(max-width:820px){
+    .wenn-paar,.stimmen-paar{grid-template-columns:1fr;}
+  }
   .forwhom .wenn{max-width:720px;margin:clamp(38px,5vw,54px) auto 0;
     background:var(--panel);border:1px solid var(--line);border-radius:18px;
     padding:clamp(30px,4vw,44px) clamp(24px,3.4vw,44px);box-shadow:var(--shadow);}
@@ -264,10 +292,7 @@
   </div>
 
   <header class="hero">
-    <div class="hero-bg"><picture>
-      <source media="(max-width:700px)" srcset="assets/begleiten-header-hoch.jpg" width="860" height="957" />
-      <img src="assets/begleiten-header.jpg" srcset="assets/begleiten-header-800.jpg 800w, assets/begleiten-header.jpg 1200w" sizes="100vw" width="1200" height="1290" fetchpriority="high" alt="Michael steht mit geschlossenen Augen im Wald und hält die Hand eines anderen Menschen" />
-    </picture></div>
+    <div class="hero-bg"><img src="assets/erdhueter-header.jpg" srcset="assets/erdhueter-header-900.jpg 900w, assets/erdhueter-header.jpg 1600w" sizes="100vw" width="1600" height="1067" fetchpriority="high" alt="Selbst geschnitzter Holzanhänger an einem Lederband auf der Brust" /></div>
     <div class="wrap hero-inner">
       <a href="index.html" class="back">← zurück zu Wairua.Spirit</a>
       <div class="eyebrow">4-monatige Einzelbegleitung</div>
@@ -317,15 +342,47 @@
         <p>Vielleicht fehlt dir etwas, das du nicht genau benennen kannst. Ein Boden unter den Füßen. Das Gefühl, irgendwo dazuzugehören. Momente, in denen du nicht überlegst, ob du das Richtige tust, sondern einfach da bist.</p>
         <p>Und vielleicht ahnst du längst, dass du nicht noch eine Methode brauchst, um dich zu verstehen, sondern eine andere Art zu leben.</p>
       </div>
-      <div class="wenn reveal d2">
-        <p>Diese Begleitung ist etwas für dich, wenn du …</p>
-        <ul>
-          <li><span class="koru"></span><span>spürst, dass du dein Leben eher verwaltest als lebst.</span></li>
-          <li><span class="koru"></span><span>viel über dich weißt und trotzdem im Alltag in denselben Mustern landest.</span></li>
-          <li><span class="koru"></span><span>dich nach echter Verbindung sehnst – zu dir, zu anderen, zur Natur.</span></li>
-          <li><span class="koru"></span><span>merkst, dass du dich anpasst, wo du eigentlich für etwas einstehen willst.</span></li>
-          <li><span class="koru"></span><span>das Gefühl hast, dass es dir gut geht und trotzdem etwas fehlt.</span></li>
-        </ul>
+    </div>
+
+    <div class="wrap">
+      <div class="wenn-paar stagger">
+        <div class="wenn">
+          <p>Diese Begleitung ist etwas für dich, wenn du …</p>
+          <ul>
+            <li><span class="koru"></span><span>spürst, dass du dein Leben eher verwaltest als lebst.</span></li>
+            <li><span class="koru"></span><span>viel über dich weißt und trotzdem im Alltag in denselben Mustern landest.</span></li>
+            <li><span class="koru"></span><span>dich nach echter Verbindung sehnst – zu dir, zu anderen, zur Natur.</span></li>
+            <li><span class="koru"></span><span>merkst, dass du dich anpasst, wo du eigentlich für etwas einstehen willst.</span></li>
+            <li><span class="koru"></span><span>das Gefühl hast, dass es dir gut geht und trotzdem etwas fehlt.</span></li>
+          </ul>
+        </div>
+        <div class="wenn nicht">
+          <p>Und nichts für dich, wenn du …</p>
+          <ul>
+            <li><span class="strich" aria-hidden="true"></span><span>eine schnelle Lösung suchst und in vier Monaten „fertig" sein willst.</span></li>
+            <li><span class="strich" aria-hidden="true"></span><span>erwartest, dass ich dir sage, wie dein Leben auszusehen hat.</span></li>
+            <li><span class="strich" aria-hidden="true"></span><span>lieber über Veränderung sprichst, als sie tatsächlich zu leben.</span></li>
+            <li><span class="strich" aria-hidden="true"></span><span>nur an schönen Tagen rausgehen willst – wir sind draußen, auch wenn es regnet.</span></li>
+            <li><span class="strich" aria-hidden="true"></span><span>dir die Zeit dafür eigentlich nicht nehmen kannst oder willst.</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="stimmen-paar stagger">
+        <figure class="stimme">
+          <blockquote>Mit Michael in der Natur unterwegs zu sein, ist jedes Mal eine Bereicherung. Er verbindet Feingefühl und Achtsamkeit mit einer klaren, kraftvollen Präsenz – und schafft Räume für Leichtigkeit, Vertrauen und echtes Wachstum. Seine Arbeit ist eine Einladung, die Natur und sich selbst tiefer zu entdecken.</blockquote>
+          <figcaption>
+            <img src="assets/stimme-ingmar.jpg" width="200" height="200" loading="lazy" alt="Ingmar Gröhn" />
+            <span><b>Ingmar Gröhn</b> · Gründer, Wildnisschule Naturgefühl</span>
+          </figcaption>
+        </figure>
+        <figure class="stimme">
+          <blockquote>Ich kenne niemanden, der dir die Natur und ihre Schätze so gut nahebringen kann wie Michael. Durch seine Arbeit kommt der Mensch wieder bei sich selbst an, kommt wieder in Verbindung mit dem, was wirklich zählt, und kann sich erinnern, wer er tief in sich tatsächlich ist. Ein absolutes Muss für jeden, der genug hat von all dem künstlichen Lärm da draußen!</blockquote>
+          <figcaption>
+            <img src="assets/stimme-alexandra.jpg" width="200" height="200" loading="lazy" alt="Alexandra Kaschny" />
+            <span><b>Alexandra Kaschny</b> · Somatische Begleiterin, Host des Podcasts „Written in the Body"</span>
+          </figcaption>
+        </figure>
       </div>
     </div>
   </section>
