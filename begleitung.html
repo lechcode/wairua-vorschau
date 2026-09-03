@@ -102,8 +102,8 @@
     background:var(--muted);opacity:.8;}
 
   /* Stimmen: dieselbe helle Karte wie auf der Startseite, hier fest */
-  .stimmen-paar{display:grid;grid-template-columns:1fr 1fr;gap:clamp(18px,2.4vw,28px);
-    max-width:1000px;margin:clamp(46px,6vw,74px) auto 0;}
+  .stimmen-paar{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));
+    gap:clamp(18px,2.4vw,26px);max-width:1100px;margin:clamp(46px,6vw,74px) auto 0;}
   .stimme{margin:0;background:linear-gradient(180deg,#f7f2e9 0%,#ebe3d4 100%);
     border-radius:16px;padding:clamp(26px,3vw,34px) clamp(22px,2.6vw,30px);
     box-shadow:0 30px 66px -34px rgba(0,0,0,.9);display:flex;flex-direction:column;}
@@ -372,6 +372,13 @@
           <figcaption>
             <img src="assets/stimme-alexandra.jpg" width="200" height="200" loading="lazy" alt="Alexandra Kaschny" />
             <span><b>Alexandra Kaschny</b> · Somatische Begleiterin, Host des Podcasts „Written in the Body"</span>
+          </figcaption>
+        </figure>
+        <figure class="stimme">
+          <blockquote>Michael hat die Fähigkeit, auf die leisen Töne zu lauschen – im Innen und im Außen – und dadurch so eine Präsenz zu schaffen, die dir in jedem Moment eine unbeschreibliche Sicherheit und Wertschätzung bietet. Seine feine spürige Art durchs Leben und die Natur zu gehen, inspiriert mich immer wieder aufs Neue. Ich bin über jeden Schritt dankbar, den wir gemeinsam gehen dürfen und ihn als Wegbegleiter zu wissen. Als nahestehenden Freund und als Naturmentor.</blockquote>
+          <figcaption>
+            <img src="assets/stimme-fabienne.jpg" width="200" height="200" loading="lazy" alt="Fabienne Mäutner" />
+            <span><b>Fabienne Mäutner</b> · Wildnispädagogin</span>
           </figcaption>
         </figure>
       </div>
