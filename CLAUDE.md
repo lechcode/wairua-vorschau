@@ -100,7 +100,7 @@ Google-Formular · Einzelbegleitung über Google-Terminbuchung (Link steht
 **dreimal** in `begleitung.html`: Navigation, Ausrichtung, Schluss).
 
 ## Offen
-- Auf `begleitung.html` fehlen Stimmen früherer Begleitungen; die strukturierten
+- Auf `begleitung.html` fehlt eine Stimme aus einer Einzelbegleitung (die Männerstimme dort stammt vom Männer-Retreat 2025); die strukturierten
   Daten dort kennen den Preis nicht (beim Retreat sind Preis/Termin hinterlegt).
 - `retreat.html`: Der Sicherheitshinweis zu Breathwork (Kontraindikationen) ist
   beim Umbau der „Was dich erwartet"-Liste weggefallen — Michael weiß davon.
