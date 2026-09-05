@@ -105,7 +105,7 @@ Google-Formular · Einzelbegleitung über Google-Terminbuchung (Link steht
 - `retreat.html`: Der Sicherheitshinweis zu Breathwork (Kontraindikationen) ist
   beim Umbau der „Was dich erwartet"-Liste weggefallen — Michael weiß davon.
 - Das Hero-Bild der Startseite ist mit 245 KB der größte Einzelposten beim
-  ersten Aufruf (gesamt rund 386 KB).
+  ersten Aufruf (gesamt rund 386 KB); auf `begleitung.html` wiegt das Fluss-Hero 344 KB (q82 – Laub komprimiert schlecht, nicht weiter drücken).
 
 ## Inhalte
 Texte & Bilder stammen von Michael. Die Testimonials sind echt — nur mit seiner

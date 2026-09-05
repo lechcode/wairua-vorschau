@@ -42,15 +42,15 @@
 
   /* --- Hero ------------------------------------------------------------- */
   header.hero{min-height:92svh;}
-  /* Die beiden Maenner im Gespraech stehen rechts der Mitte, die Gesichter im
-     oberen Drittel. Der Ausschnitt haelt beide Koepfe - am Handy wird
-     seitlich stark beschnitten, sonst rutscht der Sprechende aus dem Bild. */
-  .hero-bg img{object-position:50% 15%;transform:scale(1.05);animation:kb 26s ease-in-out infinite alternate;}
-  /* Der Schatten kommt fast nur von links, wo der Text steht. Rechts bleibt
-     das Foto ueber die ganze Hoehe offen, damit die beiden Maenner zu sehen
-     sind; unten nur so viel, dass der Uebergang zum naechsten Abschnitt sitzt. */
+  /* Zwei Maenner von hinten, Arm in Arm; die Koepfe sitzen ganz oben im Bild,
+     deshalb oben buendig. Am Handy zeigt der Ausschnitt den linken Mann mit
+     der Hand seines Freundes auf der Schulter. */
+  .hero-bg img{object-position:42% 0;transform:scale(1.05);animation:kb 26s ease-in-out infinite alternate;}
+  /* Der Schatten kommt fast nur von links, wo der Text ueber dem Ruecken des
+     linken Mannes steht - dort kraeftiger als sonst. Rechts bleibt das Foto offen,
+     unten nur so viel, dass der Uebergang zum naechsten Abschnitt sitzt. */
   .hero-bg::after{content:"";position:absolute;inset:0;background:
-    linear-gradient(95deg,rgba(10,12,9,.9) 0%,rgba(10,12,9,.78) 26%,rgba(10,12,9,.4) 48%,rgba(10,12,9,.1) 66%,transparent 82%),
+    linear-gradient(95deg,rgba(10,12,9,.92) 0%,rgba(10,12,9,.84) 28%,rgba(10,12,9,.58) 48%,rgba(10,12,9,.22) 66%,transparent 84%),
     linear-gradient(180deg,rgba(12,14,11,.5) 0%,rgba(12,14,11,.1) 22%,rgba(12,14,11,.14) 58%,rgba(12,14,11,.72) 100%);}
   /* Vorzeile steht direkt im Bild: helleres Gold plus weicher dunkler Schein */
   .hero .eyebrow{color:var(--gold-2);text-shadow:0 2px 10px rgba(8,9,7,.95),0 0 24px rgba(8,9,7,.8);}
@@ -60,19 +60,17 @@
   @media(max-width:540px){ .hero .eyebrow{font-size:12px;letter-spacing:.15em;} }
   .hero .back{opacity:0;animation:rise .9s ease .1s forwards;}
   /* Ueberschrift bewusst schmal: sie bricht auf zwei Zeilen und laesst die
-     rechte Bildhaelfte frei - dort stehen die beiden Maenner. */
+     rechte Bildhaelfte frei - dort stehen der zweite Mann und der Fluss. */
   .hero h1{font-size:clamp(42px,7vw,84px);font-weight:500;margin:14px 0 14px;max-width:11ch;
     opacity:0;animation:rise 1.1s ease .35s forwards;}
-  /* Zwei Saetze statt einer Zeile: kleiner und breiter als sonst, damit der
-     Hero nicht zur Textwand wird. Der zweite Satz steht etwas ruhiger. */
-  /* Unterzeile: traegt das Anliegen, groesser als der Fliesstext darunter */
+  /* Unterzeile und Satz: kleiner und breiter als sonst, damit der Hero nicht
+     zur Textwand wird. Die Unterzeile bricht nach "Maennlichkeit" um. */
   .hero .claim{font-family:var(--serif);font-style:italic;font-size:clamp(22px,2.8vw,32px);
-    line-height:1.25;color:var(--gold-2);margin:0 0 18px;max-width:30ch;
+    line-height:1.25;color:var(--gold-2);margin:0 0 18px;max-width:32ch;text-wrap:balance;
     opacity:0;animation:rise 1.1s ease .45s forwards;}
   .hero .sub{font-family:var(--serif);font-style:italic;font-size:clamp(18px,2vw,23px);
     color:var(--bone);max-width:min(56ch,100%);line-height:1.45;
     opacity:0;animation:rise 1.1s ease .55s forwards;}
-  .hero .sub p + p{margin-top:14px;color:var(--bone-dim);}
   .hero-cta{margin-top:32px;opacity:0;animation:rise 1.1s ease .75s forwards;}
 
   .split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(34px,5vw,72px);align-items:center;}
@@ -247,7 +245,7 @@
     .gegen .andere{text-align:left;}
     .gegen .huter{padding-left:18px;border-left:1px solid rgba(216,168,90,.4);}
     /* Am Handy nimmt der Text die volle Breite ein - der Schleier kommt
-       deshalb von unten statt von links. Oben bleiben die Gesichter
+       deshalb von unten statt von links. Oben bleiben Kopf und Schulter
        frei, ab der Mitte traegt der Grund die Schrift. */
     .hero-bg::after{background:linear-gradient(180deg,
       rgba(12,14,11,.42) 0%,rgba(12,14,11,.06) 14%,rgba(12,14,11,.12) 24%,
@@ -292,15 +290,14 @@
   </div>
 
   <header class="hero">
-    <div class="hero-bg"><img src="assets/erdhueter-header-maenner.jpg" srcset="assets/erdhueter-header-maenner-900.jpg 900w, assets/erdhueter-header-maenner.jpg 1600w" sizes="100vw" width="1600" height="1067" fetchpriority="high" alt="Männerrunde draußen im Grünen: ein Mann mit vor der Brust gefalteten Händen im Gespräch mit seinem Gegenüber" /></div>
+    <div class="hero-bg"><img src="assets/erdhueter-header-fluss.jpg" srcset="assets/erdhueter-header-fluss-900.jpg 900w, assets/erdhueter-header-fluss.jpg 1600w" sizes="100vw" width="1600" height="1067" fetchpriority="high" alt="Zwei Männer von hinten, Arm in Arm, blicken über einen Fluss auf eine Brücke im Wald" /></div>
     <div class="wrap hero-inner">
       <a href="index.html" class="back">← zurück zu Wairua.Spirit</a>
       <div class="eyebrow">4-monatige Einzelbegleitung für Männer</div>
       <h1>Der Weg des <em>Erdhüters</em></h1>
-      <p class="claim">Ein Ende des inneren Kampfes</p>
+      <p class="claim">Die Zeit ist reif für eine neue Männlichkeit und ein Ende des inneren Kampfes.</p>
       <div class="sub">
-        <p>Vier Monate gemeinsam unterwegs – draußen in der Natur und in der Arbeit mit dir selbst.</p>
-        <p>Damit du wieder spürst, wer du als Mann eigentlich bist.</p>
+        <p>Vier Monate sind wir gemeinsam unterwegs – draußen in der Natur und in der Arbeit mit dir selbst, damit du wieder spürst, wer du als Mann eigentlich bist.</p>
       </div>
       <div class="hero-cta">
         <a href="#worum" class="btn btn-primary">Erfahre mehr →</a>
