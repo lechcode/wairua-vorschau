@@ -8,9 +8,9 @@ Statische Website, **eine Datei pro Seite** — kein Build-System, kein npm, kei
 | Datei | Inhalt |
 |---|---|
 | `index.html` | Startseite |
-| `begleitung.html` | Einzelbegleitung in der Natur – ein Tag draußen |
+| `begleitung.html` | Der Weg des Erdhüters – 4-monatige Einzelbegleitung für Männer (**live**, indexierbar) |
 | `retreat.html` | Winter-Retreat an der Nordsee, 9.–13.12.2026 (**live**, indexierbar) |
-| `rituale.html` | Rituale & Jahreskreisfeste, Anmeldung über PayPal (noch `noindex`) |
+| `rituale.html` | Rituale & Jahreskreisfeste, Anmeldung über PayPal (**live**, indexierbar seit 24.08.2026) |
 | `impressum.html` · `datenschutz.html` | Rechtsseiten (bewusst `noindex`) |
 | `assets/` | Bilder, Schriften, `base.css`, `site.js` |
 | `CNAME` | verbindet die Domain mit GitHub Pages → **nicht löschen** |
@@ -89,7 +89,7 @@ via GitHub Pages auf wairua-spirit.de.
 
 ## Stand der Seiten (24.08.2026)
 Alle drei Angebotsseiten sind frei gegeben, indexierbar und in der `sitemap.xml`:
-`begleitung.html` (Der Weg des Erdhüters, 4 Monate, 850 €), `retreat.html`
+`begleitung.html` (Der Weg des Erdhüters, 4-monatige Einzelbegleitung **für Männer**, 850 € — seit 05.09.2026 so positioniert: Kern ist „ein Ende des inneren Kampfes"), `retreat.html`
 (Winter-Retreat, 9.–13.12.2026, 790 €) und `rituale.html` (Jahreskreisfeste).
 Nur `impressum.html` und `datenschutz.html` bleiben absichtlich auf `noindex`.
 ⚠️ Beim Entfernen eines `noindex` **immer** die URL in `sitemap.xml` nachtragen.

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--
-  Unterseite: "Der Weg des Erdhüters" – 4-monatige Einzelbegleitung.
+  Unterseite: "Der Weg des Erdhüters" – 4-monatige Einzelbegleitung für Männer.
   Teil des wairua-Redesigns · gleiche dunkle Bildsprache · Single-File.
   Alle Abschnitte stehen: Hero, Archetyp, "Für wen", "Mein Weg", der Ablauf
   und die Eckdaten. Alle Handlungsaufrufe fuehren auf den Google-Buchungslink.
@@ -10,24 +10,24 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <script>document.documentElement.classList.add("js");</script>
-<title>Der Weg des Erdhüters · Einzelbegleitung | Wairua.Spirit</title>
-<meta name="description" content="Vier Monate Einzelbegleitung, draußen in der Natur und entlang der Zyklen des Jahres. Nicht, um jemand anders zu werden – sondern um wieder zu spüren, wer du eigentlich bist." />
+<title>Der Weg des Erdhüters · Einzelbegleitung für Männer | Wairua.Spirit</title>
+<meta name="description" content="Vier Monate Einzelbegleitung für Männer in Landsberg am Lech: draußen in der Natur, für ein Ende des inneren Kampfes – damit du wieder spürst, wer du bist." />
 <link rel="canonical" href="https://wairua-spirit.de/begleitung.html" />
 
 <meta property="og:type" content="article" />
-<meta property="og:title" content="Der Weg des Erdhüters · 4-monatige Einzelbegleitung" />
-<meta property="og:description" content="Vier Monate draußen in der Natur und in der Arbeit mit dir selbst – damit du wieder spürst, wer du eigentlich bist." />
-<meta property="og:image" content="https://wairua-spirit.de/assets/og-erdhueter.jpg" />
-<meta property="og:image:secure_url" content="https://wairua-spirit.de/assets/og-erdhueter.jpg" />
+<meta property="og:title" content="Der Weg des Erdhüters · Einzelbegleitung für Männer" />
+<meta property="og:description" content="Vier Monate draußen in der Natur und in der Arbeit mit dir selbst – für ein Ende des inneren Kampfes." />
+<meta property="og:image" content="https://wairua-spirit.de/assets/og-erdhueter-maenner.jpg" />
+<meta property="og:image:secure_url" content="https://wairua-spirit.de/assets/og-erdhueter-maenner.jpg" />
 <meta property="og:image:type" content="image/jpeg" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
-<meta property="og:image:alt" content="Geschnitzter Holzanhänger an einem Lederband, darauf: Der Weg des Erdhüters" />
+<meta property="og:image:alt" content="Geschnitzter Holzanhänger an einem Lederband, darauf: Der Weg des Erdhüters – Einzelbegleitung für Männer" />
 <meta property="og:url" content="https://wairua-spirit.de/begleitung.html" />
 <meta property="og:site_name" content="Wairua.Spirit" />
 <meta property="og:locale" content="de_DE" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://wairua-spirit.de/assets/og-erdhueter.jpg" />
+<meta name="twitter:image" content="https://wairua-spirit.de/assets/og-erdhueter-maenner.jpg" />
 <link rel="preload" href="assets/fonts/alegreya-500-latin.woff2" as="font" type="font/woff2" crossorigin />
 <link rel="preload" href="assets/fonts/alegreya-sans-400-latin.woff2" as="font" type="font/woff2" crossorigin />
 <link rel="stylesheet" href="assets/fonts.css" />
@@ -54,6 +54,10 @@
     linear-gradient(180deg,rgba(12,14,11,.5) 0%,rgba(12,14,11,.1) 22%,rgba(12,14,11,.14) 58%,rgba(12,14,11,.72) 100%);}
   /* Vorzeile steht direkt im Bild: helleres Gold plus weicher dunkler Schein */
   .hero .eyebrow{color:var(--gold-2);text-shadow:0 2px 10px rgba(8,9,7,.95),0 0 24px rgba(8,9,7,.8);}
+  /* "4-monatige Einzelbegleitung fuer Maenner" ist 40 Zeichen lang - am Handy
+     enger gesetzt, damit die Vorzeile auf einer Zeile bleibt (gemessen bei
+     390 px: 298 von 359 px). */
+  @media(max-width:540px){ .hero .eyebrow{font-size:12px;letter-spacing:.15em;} }
   .hero .back{opacity:0;animation:rise .9s ease .1s forwards;}
   /* Ueberschrift bewusst schmal: sie bricht auf zwei Zeilen und laesst die
      rechte Bildhaelfte frei - dort haengen Symbol und Anhaenger. */
@@ -256,8 +260,9 @@
   "@context": "https://schema.org",
   "@type": "Service",
   "serviceType": "Einzelbegleitung in der Natur (Naturcoaching)",
-  "name": "Der Weg des Erdhüters – 4-monatige Einzelbegleitung",
-  "description": "Vier Monate Einzelbegleitung, draußen in der Natur und in der Arbeit mit dir selbst, entlang der Zyklen des Jahres.",
+  "name": "Der Weg des Erdhüters – 4-monatige Einzelbegleitung für Männer",
+  "description": "Vier Monate Einzelbegleitung für Männer, draußen in der Natur und in der Arbeit mit sich selbst, für ein Ende des inneren Kampfes.",
+  "audience": { "@type": "PeopleAudience", "suggestedGender": "male" },
   "provider": { "@type": "Person", "name": "Michael Storz", "url": "https://wairua-spirit.de" },
   "areaServed": "Bayern",
   "url": "https://wairua-spirit.de/begleitung.html"
@@ -290,12 +295,12 @@
     <div class="hero-bg"><img src="assets/erdhueter-header.jpg" srcset="assets/erdhueter-header-900.jpg 900w, assets/erdhueter-header.jpg 1600w" sizes="100vw" width="1600" height="1067" fetchpriority="high" alt="Selbst geschnitzter Holzanhänger an einem Lederband auf der Brust" /></div>
     <div class="wrap hero-inner">
       <a href="index.html" class="back">← zurück zu Wairua.Spirit</a>
-      <div class="eyebrow">4-monatige Einzelbegleitung</div>
+      <div class="eyebrow">4-monatige Einzelbegleitung für Männer</div>
       <h1>Der Weg des <em>Erdhüters</em></h1>
       <p class="claim">Ein Ende des inneren Kampfes</p>
       <div class="sub">
         <p>Vier Monate gemeinsam unterwegs – draußen in der Natur und in der Arbeit mit dir selbst.</p>
-        <p>Damit du wieder spürst, wer du eigentlich bist.</p>
+        <p>Damit du wieder spürst, wer du als Mann eigentlich bist.</p>
       </div>
       <div class="hero-cta">
         <a href="#worum" class="btn btn-primary">Erfahre mehr →</a>
@@ -309,16 +314,16 @@
         <h2>Zeit für einen neuen <em>Archetypen</em></h2>
       </div>
       <div class="textblock reveal d1">
-        <p>Wir wissen mehr als je zuvor – und stehen immer weniger in Beziehung zu dem, was uns umgibt. Wir funktionieren, optimieren, beschleunigen. Dabei verlieren wir die Fähigkeit, wahrzunehmen, was da ist, und mit den Zyklen des Lebens zu gehen.</p>
-        <p>Vielleicht brauchen wir deshalb nicht mehr Wissen, mehr Tempo oder mehr Heilung. Vielleicht brauchen wir ein anderes Vorbild, einen neuen Archetyp für unsere Zeit:</p>
+        <p>Die meisten von uns Männern haben gelernt, zu funktionieren: stark zu sein, zu leisten, voranzukommen und dabei möglichst wenig zu spüren. Was uns dabei verloren geht, merken wir oft erst spät – die Verbindung zu uns selbst, zu anderen und zu dem, was uns umgibt.</p>
+        <p>Vieles, was in unserer Welt gerade schiefläuft, kommt aus genau diesem Kampf. Aus dem Gegeneinander, aus Konkurrenz und Ellenbogen, aus einem Ego, das ständig beweisen muss, dass es genügt. Ich glaube nicht, dass wir dafür noch mehr Stärke brauchen, noch mehr Tempo oder noch mehr Wissen. Ich glaube, wir brauchen ein anderes Bild davon, was es heißt, ein Mann zu sein:</p>
       </div>
 
       <p class="nenne reveal d2">Ich nenne ihn den Erdhüter.</p>
 
       <div class="jemand reveal d2">
-        <p>Jemanden, der wieder in Beziehung tritt. Mit sich, mit anderen, mit der Natur.</p>
-        <p>Jemanden, der seinen Platz kennt und weiß, dass sein Handeln Spuren hinterlässt.</p>
-        <p>Und jemanden, der nach Werten lebt, die unsere Welt mehr denn je braucht:</p>
+        <p>Einen Mann, der den Kampf gegen sich selbst beendet und damit auch den gegen andere.</p>
+        <p>Einen Mann, der wieder in Beziehung tritt: mit sich, mit anderen Menschen und mit der Natur.</p>
+        <p>Und einen Mann, der seinen Platz kennt, Verantwortung übernimmt und nach Werten lebt, die unsere Welt mehr denn je braucht:</p>
       </div>
 
       <div class="werte reveal d2">
@@ -333,10 +338,10 @@
     <div class="wrap inner">
       <h2 class="reveal">Wenn eigentlich alles okay ist – und trotzdem <em>etwas fehlt</em></h2>
       <div class="textblock reveal d1">
-        <p>Von außen stimmt vieles. Die Arbeit läuft, die Beziehungen sind in Ordnung, und wenn dich jemand fragt, sagst du gut – und meinst es nicht einmal falsch. Trotzdem gibt es Momente, in denen sich alles weit weg anfühlt, als würdest du dein eigenes Leben von außen betrachten.</p>
-        <p>Du kennst deine Muster, hast Bücher gelesen, vielleicht Therapie gemacht. Du kannst genau erklären, warum du bist, wie du bist. Nur ändert das erstaunlich wenig daran, wie sich dein Alltag anfühlt. Das Wissen ist da – aber es ist im Kopf geblieben.</p>
-        <p>Vielleicht fehlt dir etwas, das du nicht genau benennen kannst. Ein Boden unter den Füßen. Das Gefühl, irgendwo dazuzugehören. Momente, in denen du nicht überlegst, ob du das Richtige tust, sondern einfach da bist.</p>
-        <p>Und vielleicht ahnst du längst, dass du nicht noch eine Methode brauchst, um dich zu verstehen, sondern eine andere Art zu leben.</p>
+        <p>Von außen stimmt vieles. Die Arbeit läuft, die Beziehung ist in Ordnung, und wenn dich jemand fragt, sagst du gut – und meinst es nicht einmal falsch. Trotzdem gibt es Momente, in denen sich alles weit weg anfühlt, als würdest du dein eigenes Leben von außen betrachten.</p>
+        <p>Du kennst deine Muster, hast Bücher gelesen, vielleicht Therapie gemacht. Du kannst genau erklären, warum du bist, wie du bist. Nur ändert das erstaunlich wenig daran, wie sich dein Alltag anfühlt. Das Wissen ist da, aber es ist im Kopf geblieben.</p>
+        <p>Und vielleicht kennst du diesen Kampf, der nie ganz aufhört: gegen die eigene Müdigkeit, gegen das Gefühl, nicht zu genügen, gegen alles in dir, was weich ist und keinen Platz haben darf. Ein Kampf, der sich nach Stärke anfühlt und in Wahrheit nur Kraft kostet. Was dir fehlt, ist kein weiterer Sieg, sondern ein Boden unter den Füßen.</p>
+        <p>Vielleicht ahnst du längst, dass du nicht noch eine Methode brauchst, um dich zu verstehen, sondern eine andere Art, als Mann in der Welt zu stehen.</p>
       </div>
     </div>
 
@@ -348,7 +353,7 @@
             <li><span class="koru"></span><span>spürst, dass du dein Leben eher verwaltest als lebst.</span></li>
             <li><span class="koru"></span><span>viel über dich weißt und trotzdem im Alltag in denselben Mustern landest.</span></li>
             <li><span class="koru"></span><span>dich nach echter Verbindung sehnst – zu dir, zu anderen, zur Natur.</span></li>
-            <li><span class="koru"></span><span>merkst, dass du dich anpasst, wo du eigentlich für etwas einstehen willst.</span></li>
+            <li><span class="koru"></span><span>merkst, dass du kämpfst, wo du eigentlich in Ruhe für etwas einstehen willst.</span></li>
             <li><span class="koru"></span><span>das Gefühl hast, dass es dir gut geht und trotzdem etwas fehlt.</span></li>
           </ul>
         </div>
