@@ -10,7 +10,7 @@ Statische Website, **eine Datei pro Seite** — kein Build-System, kein npm, kei
 | `index.html` | Startseite |
 | `begleitung.html` | Der Weg des Erdhüters – 4-monatige Einzelbegleitung für Männer (**live**, indexierbar) |
 | `retreat.html` | Winter-Retreat an der Nordsee, 9.–13.12.2026 (**live**, indexierbar) |
-| `rituale.html` | Rituale & Jahreskreisfeste, Anmeldung über PayPal (**live**, indexierbar seit 24.08.2026) |
+| `rituale.html` | Rituale & Jahreskreisfeste, Anmeldung über PayPal (**live**, indexierbar seit 24.08.2026; seit 12.09.2026 **nicht mehr von der Startseite verlinkt** – Angebote zeigen nur Einzelbegleitung und Retreat) |
 | `impressum.html` · `datenschutz.html` | Rechtsseiten (bewusst `noindex`) |
 | `assets/` | Bilder, Schriften, `base.css`, `site.js` |
 | `CNAME` | verbindet die Domain mit GitHub Pages → **nicht löschen** |

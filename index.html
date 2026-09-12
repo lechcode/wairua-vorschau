@@ -128,7 +128,8 @@
 
   /* angebote */
   .offers{background:var(--bg);}
-  .offers-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  /* Zwei Kacheln seit 12.09.2026 (Rituale raus) - begrenzt und mittig, sonst werden sie zu Riesen */
+  .offers-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;max-width:960px;margin:0 auto;}
   .offer{background:var(--panel);border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;transition:transform .4s ease,border-color .4s ease;}
   .offer:hover{transform:translateY(-6px);border-color:rgba(216,168,90,.5);}
   .offer .media{position:relative;aspect-ratio:16/10;overflow:hidden;}
@@ -304,15 +305,6 @@
           "name": "Winter-Retreat an der Nordsee",
           "description": "Fünf Tage Auszeit in der dunklen Jahreszeit, in kleiner Gruppe."
         }
-      },
-      {
-        "@type": "Offer",
-        "url": "https://wairua-spirit.de/rituale.html",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Rituale im Jahreskreis",
-          "description": "Ritualabende entlang der alten Jahreskreisfeste in Landsberg am Lech."
-        }
       }
     ]
   },
@@ -393,21 +385,21 @@
       </div>
       <div class="saeulen-grid stagger">
         <div class="pillar">
-          <img src="assets/about-1.jpg" srcset="assets/about-1-600.jpg 600w, assets/about-1.jpg 1100w" sizes="(max-width:900px) 92vw, 30vw" width="1100" height="969" loading="lazy" alt="Michael lächelt in die Ferne, im Hintergrund grünes Laub" />
+          <img src="assets/about-1.jpg" srcset="assets/about-1-600.jpg 600w, assets/about-1.jpg 1100w" sizes="(max-width:900px) 92vw, 470px" width="1100" height="969" loading="lazy" alt="Michael lächelt in die Ferne, im Hintergrund grünes Laub" />
           <div class="p-body">
             <h3>Verbindung<span>Der Weg nach innen</span></h3>
             <p>Weil wir uns im Lärm des Alltags leicht selbst verlieren. Wenn du ganz erwartungsfrei in die Stille gehst, spürst du wieder, wer du hinter all den Rollen und Anforderungen im Kern wirklich bist.</p>
           </div>
         </div>
         <div class="pillar">
-          <img src="assets/pillar-gemeinschaft.jpg" srcset="assets/pillar-gemeinschaft-600.jpg 600w, assets/pillar-gemeinschaft.jpg 1051w" sizes="(max-width:900px) 92vw, 30vw" width="1051" height="1400" loading="lazy" alt="Gruppe von Männern jubelt gemeinsam vor dem Tipi" />
+          <img src="assets/pillar-gemeinschaft.jpg" srcset="assets/pillar-gemeinschaft-600.jpg 600w, assets/pillar-gemeinschaft.jpg 1051w" sizes="(max-width:900px) 92vw, 470px" width="1051" height="1400" loading="lazy" alt="Gruppe von Männern jubelt gemeinsam vor dem Tipi" />
           <div class="p-body">
             <h3>Gemeinschaft<span>Der Weg ins Miteinander</span></h3>
             <p>Weil wir nicht dafür gemacht sind, alles allein zu tragen. Im ehrlichen Austausch ohne Masken und Wertung erfährst du, wie heilsam es ist, unvoreingenommen gesehen zu werden und bedingungslos dazuzugehören.</p>
           </div>
         </div>
         <div class="pillar">
-          <img src="assets/pillar-natur.jpg" srcset="assets/pillar-natur-600.jpg 600w, assets/pillar-natur.jpg 1100w" sizes="(max-width:900px) 92vw, 30vw" width="1100" height="733" loading="lazy" alt="Eine Hand mit Koru-Tätowierung liegt auf einem Baumstamm" />
+          <img src="assets/pillar-natur.jpg" srcset="assets/pillar-natur-600.jpg 600w, assets/pillar-natur.jpg 1100w" sizes="(max-width:900px) 92vw, 470px" width="1100" height="733" loading="lazy" alt="Eine Hand mit Koru-Tätowierung liegt auf einem Baumstamm" />
           <div class="p-body">
             <h3>Natur<span>Der Weg ins Fühlen</span></h3>
             <p>Weil wir viel zu oft im eigenen Kopf gefangen sind. Der feste Boden unter deinen Füßen holt dich augenblicklich zurück in deinen Körper und schenkt dir deinen ganz eigenen, natürlichen Rhythmus wieder.</p>
@@ -457,11 +449,11 @@
       <div class="sec-head center reveal">
         <div class="eyebrow">Angebote</div>
         <h2>Komm mit nach <em>draußen</em></h2>
-        <p>Ob im geschützten Raum einer Einzelbegleitung, in der getragenen Gemeinschaft eines Retreats oder in der zeitlosen Tiefe eines Rituals – dies ist deine Einladung, den Alltag für einen Moment anzuhalten, dich wieder spüren zu lernen und neue Kraft aus der Natur zu schöpfen.</p>
+        <p>Ob im geschützten Raum meiner Einzelbegleitung oder in der getragenen Gemeinschaft eines Retreats – dies ist deine Einladung, den Alltag für einen Moment anzuhalten, dich wieder spüren zu lernen und neue Kraft aus der Natur zu schöpfen.</p>
       </div>
       <div class="offers-grid stagger">
         <a class="offer" href="begleitung.html">
-          <div class="media"><img src="assets/angebot-einzelbegleitung.jpg" srcset="assets/angebot-einzelbegleitung-600.jpg 600w, assets/angebot-einzelbegleitung.jpg 1100w" sizes="(max-width:900px) 92vw, 30vw" width="1100" height="733" loading="lazy" alt="Michael sitzt still am Wasser" /></div>
+          <div class="media"><img src="assets/angebot-einzelbegleitung.jpg" srcset="assets/angebot-einzelbegleitung-600.jpg 600w, assets/angebot-einzelbegleitung.jpg 1100w" sizes="(max-width:900px) 92vw, 470px" width="1100" height="733" loading="lazy" alt="Michael sitzt still am Wasser" /></div>
           <div class="o-body">
             <div class="o-sub">Einzelbegleitung für Männer</div>
             <h3>Der Weg des Erdhüters</h3>
@@ -470,20 +462,11 @@
           </div>
         </a>
         <a class="offer" href="retreat.html">
-          <div class="media"><img src="assets/moment-fire.jpg" srcset="assets/moment-fire-800.jpg 800w, assets/moment-fire.jpg 1400w" sizes="(max-width:900px) 92vw, 30vw" width="1400" height="933" loading="lazy" alt="Mensch am Feuer in der Dämmerung" /></div>
+          <div class="media"><img src="assets/moment-fire.jpg" srcset="assets/moment-fire-800.jpg 800w, assets/moment-fire.jpg 1400w" sizes="(max-width:900px) 92vw, 470px" width="1400" height="933" loading="lazy" alt="Mensch am Feuer in der Dämmerung" /></div>
           <div class="o-body">
             <div class="o-sub">Retreats</div>
             <h3>Auszeit an der Nordsee</h3>
             <p>Das Winter-Retreat im Dezember 2026, um in der dunklen Jahreszeit anzukommen und gemeinsam das Jahr abzuschließen. Deine Einladung, still zu werden, zu reflektieren und dich tief mit dir zu verbinden.</p>
-            <span class="o-link">Mehr erfahren →</span>
-          </div>
-        </a>
-        <a class="offer" href="rituale.html">
-          <div class="media"><img src="assets/angebot-workshops.jpg" srcset="assets/angebot-workshops-600.jpg 600w, assets/angebot-workshops.jpg 1100w" sizes="(max-width:900px) 92vw, 30vw" width="1100" height="733" loading="lazy" alt="Ritual-Kreis aus Naturmaterialien, von Hand gelegt" /></div>
-          <div class="o-body">
-            <div class="o-sub">Rituale</div>
-            <h3>Tief verwurzelt im Wandel</h3>
-            <p>Eine Einladung, dem Rhythmus der Natur zu folgen und die Feste des Jahreskreises bewusst zu begehen. Raum, um Altes würdevoll abzuschließen, Schwellenzeiten bewusst zu zelebrieren und das Neue zu empfangen.</p>
             <span class="o-link">Mehr erfahren →</span>
           </div>
         </a>
