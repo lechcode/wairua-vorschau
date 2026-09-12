@@ -1,259 +1,30 @@
 <!DOCTYPE html>
 <!--
-  Unterseite: "Rituale"
-  Teil des Wairua.Spirit-Designs · gleiche dunkle Bildsprache · Single-File.
-  Anmeldung/Zahlung laeuft ueber einen PayPal-Zahlungslink (Formular unten).
+  Die Rituale-Seite ist seit 12.09.2026 auf Michaels Wunsch offline ("erstmal").
+  Das Original liegt unter _projekt/archiv-seiten/rituale.html, die Bilder in
+  _projekt/archiv-assets-ungenutzt/. Diese Datei faengt alte Links (Google,
+  WhatsApp, Instagram) ab und leitet auf die Startseite - Google soll die
+  Adresse nicht mehr fuehren (noindex), deshalb steht sie auch nicht mehr in
+  der sitemap.xml. Zum Reaktivieren: Original zurueckkopieren, Bilder zurueck,
+  Sitemap-Eintrag und Startseiten-Kachel wieder einbauen, Datenschutz (PayPal).
 -->
 <html lang="de">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<script>document.documentElement.classList.add("js");</script>
-<title>Rituale &amp; Jahreskreisfeste in Landsberg | Wairua.Spirit</title>
-<meta name="description" content="Abende entlang der alten Jahreskreisfeste in Landsberg am Lech. Nächstes Ritual: Samhain, 31. Oktober 2026, 18:30 Uhr im Yoga Loft. 40 € inkl. Kakao." />
-<link rel="canonical" href="https://wairua-spirit.de/rituale.html" />
-<meta property="og:type" content="website" />
-<meta property="og:title" content="Rituale &amp; Jahreskreisfeste in Landsberg | Wairua.Spirit" />
-<meta property="og:description" content="Abende entlang der alten Jahreskreisfeste – innehalten, erinnern und gemeinsam Übergänge feiern." />
-<meta property="og:image" content="https://wairua-spirit.de/assets/og-rituale.jpg" />
-<meta property="og:image:width" content="1200" />
-<meta property="og:image:height" content="630" />
-<meta property="og:image:alt" content="Schamanentrommel in der Hand, draußen in der Natur" />
-<meta property="og:url" content="https://wairua-spirit.de/rituale.html" />
-<meta property="og:locale" content="de_DE" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://wairua-spirit.de/assets/og-rituale.jpg" />
-<link rel="preload" href="assets/fonts/alegreya-500-latin.woff2" as="font" type="font/woff2" crossorigin />
-<link rel="preload" href="assets/fonts/alegreya-sans-400-latin.woff2" as="font" type="font/woff2" crossorigin />
-<link rel="stylesheet" href="assets/fonts.css" />
-<link rel="stylesheet" href="assets/base.css" />
+<title>Rituale | Wairua.Spirit</title>
+<meta name="robots" content="noindex" />
+<meta http-equiv="refresh" content="0; url=https://wairua-spirit.de/" />
 <link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png" />
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
-<meta name="theme-color" content="#0c0e0b" />
-<script src="assets/site.js" defer></script>
 <style>
-  /* --- Hero ------------------------------------------------------------- */
-  /* Overlay bewusst kraeftig: der Text steht ueber einem hellen Trommelfell */
-  .hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,12,9,.42) 0%,rgba(10,12,9,.62) 50%,rgba(10,12,9,.97) 100%);}
-  .hero-inner{padding-bottom:clamp(48px,8vw,84px);}
-  .hero h1{font-size:clamp(42px,7.3vw,78px);font-weight:500;margin:14px 0 18px;}
-  .hero .sub{font-size:clamp(17px,1.9vw,21px);font-weight:300;color:var(--bone-dim);max-width:52ch;margin-bottom:30px;}
-
-  /* Termin-Hinweis im Hero – springt zur Anmeldung */
-  .next-date{display:inline-flex;align-items:center;gap:13px;background:rgba(12,14,11,.55);
-    -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border:1px solid rgba(216,168,90,.5);
-    color:var(--bone);padding:13px 24px;border-radius:999px;font-size:16px;
-    transition:border-color .3s,background .3s,transform .25s;}
-  .next-date:hover{border-color:var(--gold);background:rgba(216,168,90,.14);transform:translateY(-2px);}
-  .next-date .dot{width:9px;height:9px;border-radius:50%;background:var(--gold);flex:none;animation:pulse 2.6s infinite;}
-  .next-date b{color:var(--gold-2);font-weight:700;}
-  .next-date .arr{color:var(--gold-2);}
-  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(216,168,90,.6);}70%{box-shadow:0 0 0 13px rgba(216,168,90,0);}100%{box-shadow:0 0 0 0 rgba(216,168,90,0);}}
-
-  .sec-head{max-width:660px;margin-bottom:clamp(28px,5vw,48px);}
-  .sec-head h2{font-size:clamp(28px,4.1vw,45px);font-weight:500;margin:14px 0 0;}
-  .lead-text{text-align:center;}
-  .lead-text p{font-size:18px;margin-bottom:20px;}
-  .lead-text em{color:var(--bone);}
-  /* Zwischenueberschriften sehen aus wie die Eyebrows, sind aber echte Ueberschriften */
-  h2.eyebrow,h3.eyebrow{font-family:var(--sans);font-size:13px;font-weight:400;line-height:1.7;
-    letter-spacing:.32em;text-transform:uppercase;color:var(--gold);margin:0;}
-
-  /* Bild-Band als Uebergang zwischen den Abschnitten */
-  .bild-band{position:relative;height:clamp(240px,40vh,460px);overflow:hidden;}
-  .bild-band img{width:100%;height:100%;object-fit:cover;}
-  .bild-band::after{content:"";position:absolute;inset:0;
-    background:linear-gradient(180deg,var(--bg) 0%,rgba(12,14,11,.04) 22%,rgba(17,20,14,.10) 72%,var(--bg2) 100%);}
-
-  /* Naechstes Ritual */
-  .termin{background:var(--bg2);border-bottom:1px solid var(--line);}
-  .ritual-bild{max-width:430px;margin:clamp(42px,6vw,66px) auto 0;border-radius:18px;overflow:hidden;
-    box-shadow:0 40px 80px -32px rgba(0,0,0,.95),0 0 70px -24px rgba(216,168,90,.28);}
-  .ritual-bild img{width:100%;height:auto;}
-  .datum-zeile{font-family:var(--serif);font-style:italic;font-size:clamp(19px,2.4vw,24px);color:var(--gold-2);margin-top:16px;}
-  .sub-head{text-align:center;margin:clamp(46px,7vw,78px) 0 clamp(18px,3vw,26px);}
-  /* Rituale: vier kompakte, zentrierte Kacheln - Rest kommt aus base.css */
-  .details-grid{grid-template-columns:repeat(4,1fr);gap:16px;}
-  .detail{border-radius:14px;padding:26px 22px;text-align:center;}
-  .detail .k{font-size:12.5px;letter-spacing:.18em;margin-bottom:12px;}
-  .detail .v{font-size:clamp(19px,2.2vw,24px);color:var(--bone);line-height:1.25;}
-  .detail .v small{font-size:13.5px;color:var(--muted);margin-top:9px;}
-
-  /* Anmeldung */
-  .anmeldung{text-align:center;overflow:hidden;}
-  .anmeldung .koru-wm{position:absolute;right:-70px;top:-50px;width:340px;height:340px;color:var(--gold);opacity:.05;pointer-events:none;}
-  .anmeldung h2{font-size:clamp(30px,5vw,54px);font-weight:500;margin:16px 0;}
-  .anmeldung h2 em{color:var(--gold-2);}
-  .anmeldung .lead{color:var(--bone-dim);font-size:18.5px;font-weight:300;max-width:52ch;margin:0 auto 36px;}
-  /* PayPal-Anmeldung – an das Seitendesign angepasst */
-  .pp-form{display:inline-grid;justify-items:center;gap:15px;}
-  .pp-btn{font-family:var(--sans);font-size:17px;font-weight:700;padding:17px 44px;border-radius:999px;border:none;cursor:pointer;
-    background:var(--gold);color:#1a140a;box-shadow:0 16px 40px -16px rgba(216,168,90,.7);
-    transition:transform .25s,background .25s,box-shadow .25s;}
-  .pp-btn:hover{transform:translateY(-2px);background:var(--gold-2);box-shadow:0 22px 50px -16px rgba(216,168,90,.85);}
-  .pp-cards{height:24px;width:auto;opacity:.8;}
-  .pp-by{font-size:13px;color:var(--muted);letter-spacing:.02em;}
-  .pay-note{margin-top:26px;font-size:14px;color:var(--muted);max-width:52ch;margin-inline:auto;text-align:left;}
-  .pay-note p + p{margin-top:12px;}
-  .pay-note b{color:var(--bone-dim);font-weight:700;}
-
-  @media(max-width:900px){
-    .details-grid{grid-template-columns:repeat(2,1fr);}
-    .next-date{font-size:15px;padding:12px 18px;}
-  }
-  @media(max-width:540px){
-    .details-grid{grid-template-columns:1fr;}
-  }
+  body{background:#0c0e0b;color:#cdc6b7;font-family:Georgia,serif;
+    display:flex;min-height:100vh;align-items:center;justify-content:center;
+    margin:0;padding:24px;text-align:center;line-height:1.7;}
+  a{color:#e8c585;}
 </style>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Event",
-  "name": "Samhain – ein Abend an der Schwelle",
-  "description": "Ritual-Abend entlang der alten Jahreskreisfeste: Kakaozeremonie, Stille und gemeinsames Loslassen zum Beginn der dunklen Jahreszeit.",
-  "startDate": "2026-10-31T18:30:00+01:00",
-  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-  "eventStatus": "https://schema.org/EventScheduled",
-  "image": "https://wairua-spirit.de/assets/og-rituale.jpg",
-  "location": {
-    "@type": "Place",
-    "name": "Yoga Loft",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Landsberg am Lech",
-      "addressRegion": "Bayern",
-      "addressCountry": "DE"
-    }
-  },
-  "organizer": { "@type": "Person", "name": "Michael Storz", "url": "https://wairua-spirit.de" },
-  "offers": {
-    "@type": "Offer",
-    "price": "40",
-    "priceCurrency": "EUR",
-    "availability": "https://schema.org/InStock",
-    "url": "https://wairua-spirit.de/rituale.html"
-  }
-}
-</script>
 </head>
 <body>
-  <div class="grain"></div>
-
-  <nav id="nav">
-    <a href="index.html" class="brand"><img class="brand-logo" src="assets/logo-cream.png" alt="" width="160" height="145" />Wairua.Spirit</a>
-    <div class="links">
-      <a href="index.html">Startseite</a>
-      <a href="#anmeldung" class="cta">31. Okt · Anmelden</a>
-    </div>
-    <button class="burger" id="burger" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
-  </nav>
-  <div class="mobile-menu" id="mobileMenu" inert>
-    <a href="index.html">Startseite</a>
-    <a href="#was">Worum es geht</a>
-    <a href="#naechstes">Das nächste Ritual</a>
-    <a href="#anmeldung">31. Okt · Anmelden</a>
-  </div>
-
-  <header class="hero">
-    <div class="hero-bg"><img src="assets/moment-drum.jpg" srcset="assets/moment-drum-800.jpg 800w, assets/moment-drum.jpg 1400w" sizes="100vw" width="1400" height="935" fetchpriority="high" alt="Hände halten eine Rahmentrommel, im Hintergrund eine Wiese" /></div>
-    <div class="wrap hero-inner">
-      <a href="index.html" class="back">← zurück zu Wairua.Spirit</a>
-      <div class="eyebrow">Rituale</div>
-      <h1>Innehalten &amp; <em>erinnern</em></h1>
-      <div class="sub">Ein paar Mal im Jahr lade ich in Landsberg am Lech zu Ritualen entlang der alten Jahreskreisfeste ein. Innehalten, würdigen, feiern – jedes Fest trägt seine eigene Farbe.</div>
-      <a href="#naechstes" class="next-date">
-        <span class="dot" aria-hidden="true"></span>
-        <span>Nächstes Ritual: <b>31. Oktober</b> · Samhain</span>
-        <span class="arr" aria-hidden="true">→</span>
-      </a>
-    </div>
-  </header>
-
-  <section id="was">
-    <div class="wrap">
-      <div class="sec-head narrow reveal" style="text-align:center;margin-bottom:clamp(20px,3vw,32px);">
-        <h2 class="eyebrow">Worum es geht</h2>
-      </div>
-      <div class="lead-text narrow reveal d1">
-        <p>Kennst du das Gefühl, wenn du merkst, dass die Zeit einfach vorbeigezogen ist? Der Sommer ist gegangen, der Herbst schon halb vorbei, und man könnte nicht mehr sagen, wann das eine ins andere übergegangen ist. Das Leben läuft weiter, von Termin zu Termin, von einer Aufgabe zur nächsten – und selbst der Feierabend ist meist nur die Pause vor dem, was morgen wieder ansteht. Wir haben verlernt, den Übergängen einen Ort zu geben, und es fehlen uns die Momente, in denen wir spüren, dass gerade etwas endet und etwas anderes beginnt.</p>
-        <p>Über Jahrtausende war das anders. Menschen haben sich an dem orientiert, was um sie herum geschah: an den Sonnenwenden und den Phasen des Mondes, an der Ernte, am ersten Frost, an der Rückkehr des Lichts. Es gab Nächte im Jahr, in denen man zusammenkam, weil dieser Moment etwas bedeutete – und in denen gesungen, getanzt, ein Feuer entzündet oder auch nur gemeinsam geschwiegen wurde. Nicht, weil es schön aussah, sondern um zu begreifen, was gerade geschieht, und es nicht allein tragen zu müssen. Nicht der Kalender hat den Takt vorgegeben, sondern das Leben selbst.</p>
-        <p>Ein Ritual ist nichts Kompliziertes und verlangt weder einen bestimmten Glauben noch Vorerfahrung. Es braucht einen Rahmen und Menschen, die sich darauf einlassen. Manchmal ist es eine Schale Kakao, die von Hand zu Hand wandert, manchmal ein Feuer, in das man etwas hineingibt, das man nicht länger tragen möchte, manchmal ein Lied, das niemand perfekt singen muss. Was dabei entsteht, lässt sich schwer erklären und umso leichter spüren: Man kommt zur Ruhe, ohne sich dazu zwingen zu müssen, man ist nicht mehr allein mit dem, was einen beschäftigt, man wird gesehen – und kommt zurück zu seinem eigenen Rhythmus.</p>
-        <p>Genau dafür sind diese Abende gedacht. Ein paar Mal im Jahr lade ich zu Ritualen ein, meist entlang der alten Jahreskreisfeste, und jedes hat seinen eigenen Charakter: mal still, mal in Bewegung, mal draußen am Feuer. Was bleibt, ist immer dasselbe – ein Ort, an dem du für ein paar Stunden nichts leisten musst, sondern einfach da sein darfst.</p>
-      </div>
-    </div>
-  </section>
-
-  <div class="bild-band">
-    <img src="assets/ritual-sonnenuntergang.jpg" width="1600" height="667" loading="lazy" alt="Sonnenuntergang hinter kahlen Bäumen am Horizont" />
-  </div>
-
-  <section class="termin" id="naechstes">
-    <div class="wrap">
-      <div class="sec-head narrow reveal" style="text-align:center;margin-bottom:clamp(20px,3vw,32px);">
-        <div class="eyebrow">Das nächste Ritual</div>
-        <h2>Samhain – ein Abend an der <em>Schwelle</em></h2>
-        <div class="datum-zeile">31. Oktober 2026</div>
-      </div>
-      <div class="lead-text narrow reveal d1">
-        <p>Es gibt einen Moment im Jahr, in dem das Licht endgültig weicht. Die Blätter sind gefallen, die Felder liegen leer und die Nächte werden länger als die Tage. Unsere Vorfahren nannten diese Zeit <em>Samhain</em> – das Ende der Ernte und der Beginn der dunklen Hälfte des Jahres.</p>
-        <p>Was von diesem Ritual heute übrig geblieben ist, sind Kostüme und Tüten voller Süßigkeiten. Und doch trägt jeder von uns Dinge in sich, die in diesem Jahr zu Ende gegangen sind.</p>
-        <p>Genau darum geht es an diesem Abend: diesen Dingen einen Platz zu geben, sie zu würdigen und ziehen zu lassen.</p>
-      </div>
-
-      <figure class="ritual-bild reveal d1">
-        <img src="assets/ritual-kerzen.jpg" width="860" height="1075" loading="lazy" alt="Brennende Kerzen, eine Feder und Herbstlaub auf dem Boden" />
-      </figure>
-
-      <div class="sub-head reveal">
-        <h3 class="eyebrow">Was uns erwartet</h3>
-      </div>
-      <div class="lead-text narrow reveal d1">
-        <p>Wir treffen uns, wenn es draußen dunkel wird. Im Zentrum steht eine Kakaozeremonie: Jeder bekommt eine Tasse, wir trinken gemeinsam, und danach wird es still im Raum. Von dort aus gehen wir in die Stille, schauen auf das Jahr zurück und lassen liegen, was nicht mit ins nächste soll.</p>
-        <p>Du brauchst keine Vorerfahrung und musst weder etwas können noch etwas vorbereiten. Was an diesem Abend entsteht, ist ein geschützter Raum für das, was gerade in dir da ist. Das Einzige, was es wirklich braucht, ist die Bereitschaft, für ein paar Stunden ehrlich zu sein – mit dir und mit den anderen im Kreis.</p>
-      </div>
-
-      <div class="sub-head reveal">
-        <h3 class="eyebrow">Praktisches</h3>
-      </div>
-      <div class="details-grid stagger">
-        <div class="detail"><div class="k">Termin</div><div class="v">31. Oktober 2026</div></div>
-        <div class="detail"><div class="k">Beginn</div><div class="v">18:30 Uhr</div></div>
-        <div class="detail"><div class="k">Ort</div><div class="v">Yoga Loft<small>Landsberg am Lech</small></div></div>
-        <div class="detail"><div class="k">Beitrag</div><div class="v">40 €<small>inkl. Kakao · bitte eigene Tasse mitbringen</small></div></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="anmeldung glut" id="anmeldung">
-    <span class="koru koru-wm"></span>
-    <div class="wrap narrow">
-      <div class="eyebrow reveal">Dabei sein</div>
-      <h2 class="reveal d1">Sichere dir deinen <em>Platz</em></h2>
-      <p class="lead reveal d1">Deinen Platz sicherst du dir direkt hier – 40 € inklusive Kakao, und mehr brauchst du nicht mitzubringen als deine eigene Tasse.</p>
-      <div class="reveal d2">
-        <form class="pp-form" action="https://www.paypal.com/ncp/payment/5J3SBNNGVNRJS" method="post" target="_blank">
-          <input class="pp-btn" type="submit" value="Anmelden · 40 €" />
-          <img class="pp-cards" src="https://www.paypalobjects.com/images/Debit_Credit_APM.svg" width="200" height="24" loading="lazy" alt="Akzeptierte Zahlungsarten" />
-          <span class="pp-by">Zahlungsabwicklung über PayPal</span>
-        </form>
-      </div>
-      <div class="pay-note reveal d2">
-        <p>Stornierung bis <b>sieben Tage</b> vorher kostenfrei möglich.</p>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <div class="wrap">
-      <div class="brand"><img class="brand-logo" src="assets/logo-cream.png" alt="" width="160" height="145" loading="lazy" />Wairua.Spirit</div>
-      <p>Rituale &amp; Jahreskreisfeste · Landsberg am Lech</p>
-      <div class="f-links">
-        <a href="index.html">Startseite</a>
-        <a href="impressum.html">Impressum</a>
-        <a href="datenschutz.html">Datenschutz</a>
-      </div>
-    </div>
-  </footer>
-
+  <p>Die Rituale pausieren gerade.<br />
+  <a href="https://wairua-spirit.de/">Weiter zur Startseite</a></p>
 </body>
 </html>

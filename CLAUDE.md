@@ -10,7 +10,7 @@ Statische Website, **eine Datei pro Seite** — kein Build-System, kein npm, kei
 | `index.html` | Startseite |
 | `begleitung.html` | Der Weg des Erdhüters – 4-monatige Einzelbegleitung für Männer (**live**, indexierbar) |
 | `retreat.html` | Winter-Retreat an der Nordsee, 9.–13.12.2026 (**live**, indexierbar) |
-| `rituale.html` | Rituale & Jahreskreisfeste, Anmeldung über PayPal (**live**, indexierbar seit 24.08.2026; seit 12.09.2026 **nicht mehr von der Startseite verlinkt** – Angebote zeigen nur Einzelbegleitung und Retreat) |
+| `rituale.html` | seit 12.09.2026 **offline** („erstmal"): Weiterleitungs-Stub auf die Startseite mit `noindex`, nicht in der Sitemap; Original in `_projekt/archiv-seiten/`, Bilder in `_projekt/archiv-assets-ungenutzt/` |
 | `impressum.html` · `datenschutz.html` | Rechtsseiten (bewusst `noindex`) |
 | `assets/` | Bilder, Schriften, `base.css`, `site.js` |
 | `CNAME` | verbindet die Domain mit GitHub Pages → **nicht löschen** |
@@ -87,15 +87,15 @@ via GitHub Pages auf wairua-spirit.de.
 - DNS bei IONOS: 4× **A** (`@` → 185.199.108–111.153) + **CNAME** (`www`).
 - **E-Mail läuft über Google Workspace** (MX-Records). ⚠️ **MX-Einträge niemals anfassen.**
 
-## Stand der Seiten (24.08.2026)
-Alle drei Angebotsseiten sind frei gegeben, indexierbar und in der `sitemap.xml`:
+## Stand der Seiten (12.09.2026)
+Beide Angebotsseiten sind frei gegeben, indexierbar und in der `sitemap.xml`:
 `begleitung.html` (Der Weg des Erdhüters, 4-monatige Einzelbegleitung **für Männer**, 850 € — seit 05.09.2026 so positioniert: Kern ist „ein Ende des inneren Kampfes"), `retreat.html`
-(Winter-Retreat, 9.–13.12.2026, 790 €) und `rituale.html` (Jahreskreisfeste).
+(Winter-Retreat, 9.–13.12.2026, 790 €). `rituale.html` ist seit 12.09.2026 offline (Weiterleitungs-Stub, `noindex`, nicht in der Sitemap); die Startseite zeigt unter Angebote nur noch zwei Kacheln.
 Nur `impressum.html` und `datenschutz.html` bleiben absichtlich auf `noindex`.
 ⚠️ Beim Entfernen eines `noindex` **immer** die URL in `sitemap.xml` nachtragen.
 
-**Anmelde- und Buchungswege** (in `datenschutz.html` § 8–10 beschrieben, bei
-Änderung dort mitziehen): Rituale über PayPal-Link · Retreat über ein
+**Anmelde- und Buchungswege** (in `datenschutz.html` § 8–9 beschrieben, bei
+Änderung dort mitziehen): Retreat über ein
 Google-Formular · Einzelbegleitung über Google-Terminbuchung (Link steht
 **dreimal** in `begleitung.html`: Navigation, Ausrichtung, Schluss).
 
